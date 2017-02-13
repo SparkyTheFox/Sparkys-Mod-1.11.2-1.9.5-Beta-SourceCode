@@ -1,0 +1,14 @@
+ # Blocks
+
+GlowingHardClayservermod:GlowingHardClay.name=GlowingHardClay
+
+# Items
+
+Burgerservermod:Burger.name=Burgarrr
+Friesservermod:Fries.name=Sticks o' th' French Arrrmada
+ToyKnifeservermod:ToyKnife.name=Small Cutlass
+Scarletservermod:Scarlet.name=Sea Shanty Cutlass
+
+# Creative Tab
+
+itemGroup.tutorial:creative_tab=Tutorial Mod's Tab

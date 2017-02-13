@@ -1,0 +1,16 @@
+[
+{
+  "modid": "servermod",
+  "name": "Sparky's Mod",
+  "description": "We don't need no mods!, we make them ourselves!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Sparky", "Zentro"],
+  "credits": "Code by SparkyFox     Textures by ZentroCatson",
+  "logoFile": "foxpicture.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

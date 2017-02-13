@@ -1,0 +1,14 @@
+ # Blocks
+
+GlowingHardClayservermod:GlowingHardClay.name=GlowingHardClay
+
+# Items
+
+Burgerservermod:Burger.name=Burger
+Friesservermod:Fries.name=Chips
+ToyKnifeservermod:ToyKnife.name=Knife
+Scarletservermod:Scarlet.name=Finns Sword
+
+# Creative Tab
+
+itemGroup.tutorial:creative_tab=Tutorial Mod's Tab
