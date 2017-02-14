@@ -8,12 +8,15 @@ Burgerservermod:Burger.name=Burger
 Friesservermod:Fries.name=Fries
 ToyKnifeservermod:ToyKnife.name=Toy Knife
 Scarletservermod:Scarlet.name=Golden Sword
-OdstHelmetservermod:Odsthelmet.name=ODST Helmet
-OdstChestplateservermod:Odstchestplate.name=ODST Chestplate
-OdstLeggingsservermod:Odstleggings.name=Odst Leggings
-OdstBootsservermod:Odstboots.name=Odst Boots
-
 
 # Creative Tab
 
 itemGroup.tutorial:creative_tab=Tutorial Mod's Tab
+
+
+# Armor
+# -- Odst
+item.OdstHelmet.name=Void Helmet
+item.OdstChestplate.name=Void Chestplate
+item.OdstLeggings.name=Void Leggings
+item.OdstBoots.name=Void Boots

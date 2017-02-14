@@ -14,6 +14,11 @@ public class ModNames {
 	public static final String OdstLeggings = "OdstLeggings";
 	public static final String OdstBoots = "OdstBoots";
 	public static final String OdstArmor = "OdstArmor";
+	public static final String WoodenMesser = "WoodenMesser";
+	public static final String StoneMesser = "StoneMesser";
+	public static final String IronMesser = "IronMesser";
+	public static final String GoldMesser = "GoldMesser";
+	public static final String DiamondMesser = "DiamondMesser";
 	
 	/*
 	 * Blocks
