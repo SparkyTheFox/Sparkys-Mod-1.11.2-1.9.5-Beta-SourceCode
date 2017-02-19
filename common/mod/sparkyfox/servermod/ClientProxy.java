@@ -34,4 +34,9 @@ public class ClientProxy extends CommonProxy {
 		super.postInit(event);
 		
 	}
+
+	public static String stripItemPrefix(String unlocalizedName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

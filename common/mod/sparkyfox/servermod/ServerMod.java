@@ -23,6 +23,7 @@ public class ServerMod {
 	public static final String MOD_NAME = "Sparky's Mod";
 	public static final String VERSION = "ALPHA";
 	public static final String RESOURCE_PREFIX = MOD_ID.toLowerCase() + ":"; // servermod:
+	public static final int INSTANCE = 0;
 
 	
 	// Variables

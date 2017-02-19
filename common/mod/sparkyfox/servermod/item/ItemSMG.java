@@ -15,6 +15,9 @@ import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.IItemPropertyGetter;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArrow;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
@@ -86,7 +89,7 @@ private ItemStack findAmmo(EntityPlayer player)
 
 protected boolean isArrow(ItemStack stack)
 {
-    return stack.getItem() instanceof Itemx23mmRounds;
+    return stack.getItem() instanceof ItemArmor;
 }
 
 /**
@@ -108,54 +111,54 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
         {
             if (itemstack.isEmpty())
             {
-                itemstack = new ItemStack(ModItems.x23mmRounds);
+                itemstack = new ItemStack(ModItems.SMGRounds);
             }
 
             float f = getArrowVelocity(i);
 
             if ((double)f >= -100.0D)//bow charge
             {
-                boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof Itemx23mmRounds && ((Itemx23mmRounds) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
+                boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemArrow && ((ItemArrow) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
 
                 if (!worldIn.isRemote)
                 {
-                    Itemx23mmRounds itemx23mmRounds = (Itemx23mmRounds)((Itemx23mmRounds)(itemstack.getItem() instanceof Itemx23mmRounds ? itemstack.getItem() : ModItems.x23mmRounds));
-                    EntityArrow entityx23mmRounds = itemx23mmRounds.createArrow(worldIn, itemstack, entityplayer);
-                    entityx23mmRounds.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
+                    ItemArrow itemarrow = (ItemArrow)((ItemArrow)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : ModItems.SMGRounds));
+                    EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
+                    entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
 
                     if (f == 1.0F)
                     {
-                        entityx23mmRounds.setIsCritical(true);
-                        entityx23mmRounds.setDamage(5.0F);//projectile damage
+                        entityarrow.setIsCritical(true);
+                        entityarrow.setDamage(5.0F);//projectile damage
                     }
 
                     int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 
                     if (j > 0)
                     {
-                        entityx23mmRounds.setDamage(entityx23mmRounds.getDamage() + (double)j * 0.5D + 0.5D);
+                        entityarrow.setDamage(entityarrow.getDamage() + (double)j * 0.5D + 0.5D);
                     }
 
                     int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);
 
                     if (k > 0)
                     {
-                        entityx23mmRounds.setKnockbackStrength(k);
+                        entityarrow.setKnockbackStrength(k);
                     }
 
                     if (EnchantmentHelper.getEnchantmentLevel(Enchantments.FLAME, stack) > 0)
                     {
-                        entityx23mmRounds.setFire(100);
+                        entityarrow.setFire(100);
                     }
 
                     stack.damageItem(1, entityplayer);
 
                     if (flag1 || entityplayer.capabilities.isCreativeMode && (itemstack.getItem() == Items.SPECTRAL_ARROW || itemstack.getItem() == Items.TIPPED_ARROW))
                     {
-                        entityx23mmRounds.pickupStatus = EntityArrow.PickupStatus.CREATIVE_ONLY;
+                        entityarrow.pickupStatus = EntityArrow.PickupStatus.CREATIVE_ONLY;
                     }
 
-                    worldIn.spawnEntity(entityx23mmRounds);
+                    worldIn.spawnEntity(entityarrow);
                 }
 
                 worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
@@ -241,4 +244,11 @@ public int getItemEnchantability()
 							public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
 							return repair.getItem() == Items.GOLD_INGOT;
 }
+
+
+
+protected Item getItemUsedByBow() {
+	return ModItems.SMGRounds;
+}
+
 }

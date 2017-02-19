@@ -12,7 +12,7 @@ import mod.sparkyfox.servermod.item.ItemScarlet;
 import mod.sparkyfox.servermod.item.ItemStoneMesser;
 import mod.sparkyfox.servermod.item.ItemToyKnife;
 import mod.sparkyfox.servermod.item.ItemWoodenMesser;
-import mod.sparkyfox.servermod.item.Itemx23mmRounds;
+import mod.sparkyfox.servermod.item.ItemSMGRounds;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -45,7 +45,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemGoldMesser GoldMesser;
 	public static ItemDiamondMesser DiamondMesser;
 	public static ItemSMG SMG;
-	public static Itemx23mmRounds x23mmRounds;
+	public static ItemSMGRounds SMGRounds;
 	
 	
 	//Armor
@@ -112,13 +112,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		GameRegistry.register(DiamondMesser); {
 			}
 		
-		x23mmRounds = (Itemx23mmRounds) new Itemx23mmRounds();
-		x23mmRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
-		GameRegistry.register(x23mmRounds); {
-				}
 		SMG = (ItemSMG) new ItemSMG();
-		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.x23mmRounds)); 
+		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
 		GameRegistry.register(SMG); {
+				}
+		SMGRounds = (ItemSMGRounds) new ItemSMGRounds();
+		SMGRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMGRounds)); 
+		GameRegistry.register(SMGRounds); {
 				}
 				
 		//Armor
@@ -264,9 +264,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(SMG, model13);
 		mesher.register(SMG, 0, model13); {
 	}
-		ModelResourceLocation model14 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.x23mmRounds, "inventory");
-		ModelLoader.registerItemVariants(x23mmRounds, model14);
-		mesher.register(x23mmRounds, 0, model14); {
+		ModelResourceLocation model14 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMGRounds, "inventory");
+		ModelLoader.registerItemVariants(SMGRounds, model14);
+		mesher.register(SMGRounds, 0, model14); {
 		
 			
 }}}}}

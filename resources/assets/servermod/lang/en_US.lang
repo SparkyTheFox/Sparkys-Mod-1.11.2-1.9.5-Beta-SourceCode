@@ -13,7 +13,7 @@ item.OdstChestplate.name=ODST Chestplate
 item.OdstLeggings.name=ODST Leggings
 item.OdstBoots.name=ODST Boots
 SMGservermod:SMG.name=M7S Submachine Gun
-x23mmRoundsservermod:x23mmRounds.name=5x23mmRounds
+SMGRoundsservermod:SMGRounds.name=5x23mmRounds
 
 
 # Creative Tab
