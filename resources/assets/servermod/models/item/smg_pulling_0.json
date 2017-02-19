@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "servermod:items/smg_pulling_0"
+    }
+}
