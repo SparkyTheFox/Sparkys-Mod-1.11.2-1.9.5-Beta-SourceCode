@@ -4,12 +4,14 @@ import javax.annotation.Nullable;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModItems;
+import mod.sparkyfox.servermod.init.ModSounds;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
@@ -27,6 +29,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -111,7 +114,7 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
         {
             if (itemstack.isEmpty())
             {
-                itemstack = new ItemStack(ModItems.SMGRounds);
+                itemstack = new ItemStack(Items.ARROW);
             }
 
             float f = getArrowVelocity(i);
@@ -122,7 +125,7 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
 
                 if (!worldIn.isRemote)
                 {
-                    ItemArrow itemarrow = (ItemArrow)((ItemArrow)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : ModItems.SMGRounds));
+                    ItemArrow itemarrow = (ItemArrow)((ItemArrow)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : Items.ARROW));
                     EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
                     entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
 
@@ -161,7 +164,7 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
                     worldIn.spawnEntity(entityarrow);
                 }
 
-                worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSounds.SMG, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 
                 if (!flag1 && !entityplayer.capabilities.isCreativeMode)
                 {
@@ -243,12 +246,16 @@ public int getItemEnchantability()
 
 							public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
 							return repair.getItem() == Items.GOLD_INGOT;
+							}
+
+																		//Crafting Recipe\\
+
+
+							public void addRecipes() {
+							GameRegistry.addShapedRecipe(new ItemStack(this), " G ", "III", "IB ", 'G', Blocks.STAINED_GLASS_PANE, 'I',
+							new ItemStack (Items.IRON_INGOT), 'B', new ItemStack (Blocks.STONE_BUTTON));	
+}
+
 }
 
 
-
-protected Item getItemUsedByBow() {
-	return ModItems.SMGRounds;
-}
-
-}

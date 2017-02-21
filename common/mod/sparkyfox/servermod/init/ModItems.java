@@ -192,6 +192,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		IronMesser.addRecipes();
 		GoldMesser.addRecipes();
 		DiamondMesser.addRecipes();
+		SMG.addRecipes();
+		SMGRounds.addRecipes();
 		
 	}
 	@SideOnly(Side.CLIENT)

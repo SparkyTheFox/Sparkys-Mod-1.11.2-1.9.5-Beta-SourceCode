@@ -1,7 +1,15 @@
 package mod.sparkyfox.servermod;
 
+import mod.sparkyfox.servermod.entity.EntitySMGRounds;
+import mod.sparkyfox.servermod.entity.render.RenderSMGRounds;
+import mod.sparkyfox.servermod.init.ModEntity;
 import mod.sparkyfox.servermod.init.ModItems;
+import mod.sparkyfox.servermod.init.ModSounds;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -26,6 +34,9 @@ public class ClientProxy extends CommonProxy {
 		ModItems.initClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
 		
 		
+		
+
+		
 	}
 	
 	@Override
@@ -33,10 +44,5 @@ public class ClientProxy extends CommonProxy {
 		
 		super.postInit(event);
 		
-	}
-
-	public static String stripItemPrefix(String unlocalizedName) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

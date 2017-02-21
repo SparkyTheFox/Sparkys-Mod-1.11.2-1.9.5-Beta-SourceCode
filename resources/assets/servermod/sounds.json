@@ -1,0 +1,12 @@
+{
+	"smg": {
+	"category": "players", 
+	"sounds": [
+	"servermod:sounds/smg.ogg"
+},
+
+	"smg2": {
+	"category": "players", 
+	"sounds": [{"name": "servermod:sounds/smg2.ogg"
+	}
+}
