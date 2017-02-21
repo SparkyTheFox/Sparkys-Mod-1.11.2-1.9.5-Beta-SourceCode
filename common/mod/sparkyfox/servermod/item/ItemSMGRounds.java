@@ -25,7 +25,7 @@ public class ItemSMGRounds extends ItemArrow {
 		
 	}
 		
-		 public ItemSMGRounds()
+		 public ItemSMGRounds(float f)
 		    {
 		        this.setCreativeTab(CreativeTabs.COMBAT);
 		    }

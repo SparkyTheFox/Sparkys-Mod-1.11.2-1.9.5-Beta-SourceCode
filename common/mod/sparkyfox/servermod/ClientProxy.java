@@ -4,7 +4,6 @@ import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.entity.render.RenderSMGRounds;
 import mod.sparkyfox.servermod.init.ModEntity;
 import mod.sparkyfox.servermod.init.ModItems;
-import mod.sparkyfox.servermod.init.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;

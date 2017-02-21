@@ -2,8 +2,10 @@ package mod.sparkyfox.servermod;
 
 import java.util.Random;
 
-import mod.sparkyfox.servermod.init.ModSounds;
+import mod.sparkyfox.servermod.entity.EntitySMGRounds;
+import mod.sparkyfox.servermod.init.ModSoundEvent;
 import net.minecraft.client.audio.Sound;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
@@ -35,17 +37,23 @@ public class ServerMod {
 	
 	@SidedProxy(clientSide = "mod.sparkyfox.servermod.ClientProxy", serverSide = "mod.sparkyfox.servermod.CommonProxy")
 	public static CommonProxy proxy;
+	@SuppressWarnings("unused")
+	private ModSoundEvent sounds;
+	@SuppressWarnings("unused")
+	private EntitySMGRounds entity;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event); 
-		ModSounds.registerSounds();
+		sounds = new ModSoundEvent();
+		
 		
 		
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event); 
+		
 		
 		
 		

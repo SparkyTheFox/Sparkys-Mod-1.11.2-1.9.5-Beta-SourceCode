@@ -116,7 +116,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
 		GameRegistry.register(SMG); {
 				}
-		SMGRounds = (ItemSMGRounds) new ItemSMGRounds();
+		SMGRounds = (ItemSMGRounds) new ItemSMGRounds(0);
 		SMGRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMGRounds)); 
 		GameRegistry.register(SMGRounds); {
 				}
