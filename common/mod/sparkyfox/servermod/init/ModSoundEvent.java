@@ -25,4 +25,9 @@ public class ModSoundEvent {
 		GameRegistry.register(sound);
 	}
 
+	public static void registerSounds() {
+
+		
+	}
+
 }

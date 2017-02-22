@@ -18,8 +18,6 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemArrow;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
@@ -40,6 +38,7 @@ public class ItemSMG extends ItemBow
 public String getUnlocalizedName(ItemStack stack) {
 
 	return "SMG" + ServerMod.RESOURCE_PREFIX + ModNames.SMG;
+
 }
     public ItemSMG()
     {
@@ -48,12 +47,12 @@ public String getUnlocalizedName(ItemStack stack) {
     this.setCreativeTab(CreativeTabs.COMBAT);
     this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
     {
-        @SideOnly(Side.CLIENT)
-        public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-        {
-            return entityIn == null ? 0.0F : (entityIn.getActiveItemStack().getItem() != ModItems.SMG ? 0.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F);//20.0F
-        }//
-    });
+    	 @SideOnly(Side.CLIENT)
+         public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
+         {
+             return entityIn == null ? -10.0F : (entityIn.getActiveItemStack().getItem() != ModItems.SMG ? -10.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F);//20.0F
+         }//
+     });
     this.addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter()
     {
         @SideOnly(Side.CLIENT)
@@ -92,7 +91,7 @@ private ItemStack findAmmo(EntityPlayer player)
 
 protected boolean isArrow(ItemStack stack)
 {
-    return stack.getItem() instanceof ItemArmor;
+    return stack.getItem() instanceof ItemSMGRounds;
 }
 
 /**
@@ -114,25 +113,25 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
         {
             if (itemstack.isEmpty())
             {
-                itemstack = new ItemStack(Items.ARROW);
+                itemstack = new ItemStack(ModItems.SMGRounds);
             }
 
             float f = getArrowVelocity(i);
 
             if ((double)f >= -100.0D)//bow charge
             {
-                boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemArrow && ((ItemArrow) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
+                boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemSMGRounds && ((ItemSMGRounds) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
 
                 if (!worldIn.isRemote)
                 {
-                    ItemArrow itemarrow = (ItemArrow)((ItemArrow)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : Items.ARROW));
+                    ItemSMGRounds itemarrow = (ItemSMGRounds)((ItemSMGRounds)(itemstack.getItem() instanceof ItemSMGRounds ? itemstack.getItem() : ModItems.SMGRounds));
                     EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
                     entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
 
                     if (f == 1.0F)
                     {
                         entityarrow.setIsCritical(true);
-                        entityarrow.setDamage(5.0F);//projectile damage
+                        entityarrow.setDamage(5.0F);
                     }
 
                     int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
@@ -245,7 +244,7 @@ public int getItemEnchantability()
 
 
 							public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-							return repair.getItem() == Items.GOLD_INGOT;
+							return repair.getItem() == Items.IRON_INGOT;
 							}
 
 																		//Crafting Recipe\\

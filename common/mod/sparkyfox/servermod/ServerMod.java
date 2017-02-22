@@ -2,7 +2,6 @@ package mod.sparkyfox.servermod;
 
 import java.util.Random;
 
-import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.init.ModSoundEvent;
 import net.minecraft.client.audio.Sound;
 import net.minecraft.entity.Entity;
@@ -27,6 +26,9 @@ public class ServerMod {
 	public static final String MOD_NAME = "Sparky's Mod";
 	public static final String VERSION = "ALPHA";
 	public static final String RESOURCE_PREFIX = MOD_ID.toLowerCase() + ":"; // servermod:
+	
+	@Instance(MOD_ID)
+	public static ServerMod INSTANCE = new ServerMod();
 
 	
 	// Variables
@@ -39,14 +41,13 @@ public class ServerMod {
 	public static CommonProxy proxy;
 	@SuppressWarnings("unused")
 	private ModSoundEvent sounds;
-	@SuppressWarnings("unused")
-	private EntitySMGRounds entity;
+
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event); 
 		sounds = new ModSoundEvent();
-		
+	
 		
 		
 	}

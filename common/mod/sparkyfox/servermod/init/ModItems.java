@@ -26,6 +26,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -116,7 +117,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
 		GameRegistry.register(SMG); {
 				}
-		SMGRounds = (ItemSMGRounds) new ItemSMGRounds(0);
+		SMGRounds = (ItemSMGRounds) new ItemSMGRounds();
 		SMGRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMGRounds)); 
 		GameRegistry.register(SMGRounds); {
 				}

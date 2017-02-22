@@ -1,8 +1,5 @@
 package mod.sparkyfox.servermod;
 
-import mod.sparkyfox.servermod.entity.EntitySMGRounds;
-import mod.sparkyfox.servermod.entity.render.RenderSMGRounds;
-import mod.sparkyfox.servermod.init.ModEntity;
 import mod.sparkyfox.servermod.init.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.Render;
@@ -31,8 +28,6 @@ public class ClientProxy extends CommonProxy {
 		super.init(event);
 		
 		ModItems.initClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
-		
-		
 		
 
 		

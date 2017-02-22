@@ -1,5 +1,7 @@
 package mod.sparkyfox.servermod.item;
 
+import javax.annotation.Nonnull;
+
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.lib.ModNames;
@@ -17,6 +19,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSMGRounds extends ItemArrow {
 	
+	
+
 
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
@@ -25,13 +29,13 @@ public class ItemSMGRounds extends ItemArrow {
 		
 	}
 		
-		 public ItemSMGRounds(float f)
+		 public ItemSMGRounds()
 		    {
 		        this.setCreativeTab(CreativeTabs.COMBAT);
 		    }
 
-		    public EntityArrow createArrow(World worldIn, ItemStack stack, EntityLivingBase shooter) {
-				return null;
+		    public EntityArrow createArrow(@Nonnull World world, @Nonnull ItemStack itemstack, EntityLivingBase shooter) {
+		        return new EntitySMGRounds(world, shooter);
 			}
 			
 
