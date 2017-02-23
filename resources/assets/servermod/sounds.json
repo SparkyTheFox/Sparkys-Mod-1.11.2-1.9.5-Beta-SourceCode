@@ -5,6 +5,13 @@
             "servermod:smg"
         ],
         "subtitle": "pew pew pew pew"
-    }
+    },
     
+    "impact": {
+        "category": "voice",
+        "sounds": [
+            "servermod:impact"
+        ],
+        "subtitle": "ptsh"
+    }
 }

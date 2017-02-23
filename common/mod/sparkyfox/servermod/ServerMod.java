@@ -2,6 +2,7 @@ package mod.sparkyfox.servermod;
 
 import java.util.Random;
 
+import mod.sparkyfox.servermod.init.ModEntities;
 import mod.sparkyfox.servermod.init.ModSoundEvent;
 import net.minecraft.client.audio.Sound;
 import net.minecraft.entity.Entity;

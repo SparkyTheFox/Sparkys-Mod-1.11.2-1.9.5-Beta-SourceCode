@@ -1,5 +1,6 @@
 package mod.sparkyfox.servermod;
 
+import mod.sparkyfox.servermod.init.ModEntities;
 import mod.sparkyfox.servermod.init.ModItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -9,7 +10,6 @@ public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent event) {
 		ModItems.init();
-	
 		
 	}
 
@@ -19,7 +19,6 @@ public class CommonProxy {
 	}
 
 	public void postInit(FMLPostInitializationEvent event) {
-		// TODO Auto-generated method stub
 		
 	}
 
