@@ -6,10 +6,12 @@ import mod.sparkyfox.servermod.item.ItemDiamondMesser;
 import mod.sparkyfox.servermod.item.ItemFries;
 import mod.sparkyfox.servermod.item.ItemGoldMesser;
 import mod.sparkyfox.servermod.item.ItemIronMesser;
+import mod.sparkyfox.servermod.item.ItemKevlar;
 import mod.sparkyfox.servermod.item.ItemOdstArmor;
 import mod.sparkyfox.servermod.item.ItemSMG;
 import mod.sparkyfox.servermod.item.ItemScarlet;
 import mod.sparkyfox.servermod.item.ItemStoneMesser;
+import mod.sparkyfox.servermod.item.ItemTitanium;
 import mod.sparkyfox.servermod.item.ItemToyKnife;
 import mod.sparkyfox.servermod.item.ItemWoodenMesser;
 import mod.sparkyfox.servermod.item.ItemSMGRounds;
@@ -24,6 +26,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
@@ -48,6 +51,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemSMG SMG;
 	public static ItemSMGRounds SMGRounds;
 	
+	//Basic Items
+	public static ItemKevlar Kevlar;
+	public static ItemTitanium Titanium;
 	
 	//Armor
 	public static ArmorMaterial OdstArmor;
@@ -78,7 +84,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ToyKnife.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.ToyKnife)); 
 		GameRegistry.register(ToyKnife); {
 			
-		Scarlet = (ItemScarlet) new ItemScarlet(EnumHelper.addToolMaterial("Scarlet", 0, 2000, 0.0F, 9.0F, 30), -2.4F);
+		Scarlet = (ItemScarlet) new ItemScarlet(EnumHelper.addToolMaterial("Scarlet", 0, 2000, 0.0F, 1.0F, 30), -2.4F);
 		Scarlet.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Scarlet)); 
 		GameRegistry.register(Scarlet); {
 			
@@ -112,18 +118,21 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		DiamondMesser.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.DiamondMesser)); 
 		GameRegistry.register(DiamondMesser); {
 			}
-		
+		//Guns
 		SMG = (ItemSMG) new ItemSMG();
 		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
 		GameRegistry.register(SMG); {
 				}
+		//Ammo
 		SMGRounds = (ItemSMGRounds) new ItemSMGRounds();
 		SMGRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMGRounds)); 
 		GameRegistry.register(SMGRounds); {
 				}
 				
+		//Armor Material
+		OdstArmor = EnumHelper.addArmorMaterial("OdstArmor", "", 50, new int[] {3, 3, 8, 6}, 50, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 10.0F); }
+		
 		//Armor
-		OdstArmor = EnumHelper.addArmorMaterial("OdstArmor", "", 20, new int[] { 5, 5, 5, 5 }, 50, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0); }
 		OdstHelmet = (ItemArmor) new ItemOdstArmor(OdstArmor, EntityEquipmentSlot.HEAD).setUnlocalizedName("OdstHelmet");
 		OdstHelmet.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.OdstHelmet)); 
 		GameRegistry.register(OdstHelmet);
@@ -140,15 +149,24 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		OdstBoots.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.OdstBoots)); 
 		GameRegistry.register(OdstBoots);
        
+		//Basic Items
+		Kevlar = (ItemKevlar) new ItemKevlar();
+		Kevlar.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Kevlar)); 
+		GameRegistry.register(Kevlar); {
 			
-		}}
+		Titanium = (ItemTitanium) new ItemTitanium();
+		Titanium.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Titanium)); 
+		GameRegistry.register(Titanium); {	
+			
+			
+		}}}}
 
 
 
 			
 		
 		
-		
+		//////ARMOR AND TOOL INFO FALL\\\\\\                                                                                                    //SPARKY WUZ HERE ;D\\
 	
 		
 		
@@ -162,14 +180,54 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  
         /** Defines the natural enchantability factor of the material. */
 		
+		 /** The Attack Speed. */
 		
-
+		
+		/**Tools*/
 		//WOOD(0, 59, 2.0F, 0.0F, 15),
         //STONE(1, 131, 4.0F, 1.0F, 5),
         //IRON(2, 250, 6.0F, 2.0F, 14),
         //DIAMOND(3, 1561, 8.0F, 3.0F, 10),
         //GOLD(0, 32, 12.0F, 0.0F, 22);
 		
+		
+		/**Swords*/
+		//addToolMaterial("Scarlet((NAME))", 0, 2000((AMMOUNT OF USSES)), 0.0F, 9.0F((Attack Damage= 1.0F= 1heart)), 30((ENCHANTMENT LEVEL))), -2.4F((ATTACK SPEED)));
+		
+
+		
+	
+	
+		
+		/**
+        private ArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountArrayIn, int enchantabilityIn, SoundEvent soundEventIn, float toughnessIn)
+        {
+            this.name = nameIn;
+            this.maxDamageFactor = maxDamageFactorIn;
+            this.damageReductionAmountArray = damageReductionAmountArrayIn;
+            this.enchantability = enchantabilityIn;
+            this.soundEvent = soundEventIn;
+            this.toughness = toughnessIn;
+            
+            //LEATHER("leather((NAME))", 5((MAX DAMAGE)), new int[]{1, 2, 3, 1((SHOWS THE ARMOR HEALTH))}, 15((ENCHANTMENT)), SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F((ARMOR TOUGHNESS))
+            // return addEnum(ArmorMaterial.class, name, textureName, durability, reductionAmounts, enchantability, soundOnEquip, toughness);
+         */
+		
+		/**Example*/
+		//Leather new int[]{1(boots), 2(leggings), 3(Chestplate), 1(helmet)}====(3.5 armor bars)
+		//Chain new int[]{1(boots), 4(leggings), 5(Chestplate), 2(helmet)}====(6 armor bars)
+		//Iron new int[]{2(boots), 5(leggings), 6(Chestplate), 2(helmet)}====(7.5 armor bars)
+		//Gold new int[]{1(boots), 3(leggings), 5(Chestplate), 2(helmet)}====(5.5 armor bars)
+		//Diamond new int[]{3(boots), 6(leggings), 8(Chestplate), 3(helmet)}====(20 armor bars)
+		
+		
+		
+		/**Armor*/
+        //LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F),
+        //CHAIN("chainmail", 15, new int[]{1, 4, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F),
+        //IRON("iron", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F),
+        //GOLD("gold", 7, new int[]{1, 3, 5, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F),
+        //DIAMOND("diamond", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 		
 		}
 		
@@ -194,6 +252,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		GoldMesser.addRecipes();
 		DiamondMesser.addRecipes();
 		SMG.addRecipes();
+		Kevlar.addRecipes();
+		Titanium.addRecipes();
+		((ItemOdstArmor) OdstHelmet).addRecipes();
+		((ItemOdstArmor) OdstChestplate).addRecipes();
+		((ItemOdstArmor) OdstLeggings).addRecipes();
+		((ItemOdstArmor) OdstBoots).addRecipes();
+		
 		
 		
 	}
@@ -271,10 +336,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(SMGRounds, model14);
 		mesher.register(SMGRounds, 0, model14); {
 		
+	}
+		//Basic Items
+		ModelResourceLocation model15 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Kevlar, "inventory");
+		ModelLoader.registerItemVariants(Kevlar, model15);
+		mesher.register(Kevlar, 0, model15); {
+			
+		ModelResourceLocation model16 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Titanium, "inventory");
+		ModelLoader.registerItemVariants(Titanium, model16);
+		mesher.register(Titanium, 0, model16); {
+				
+				
+			}
 			
 }}}}}
 	}
 
+	
 
 
 	public static Item getItemFromModItem(Item odstHelmet) {

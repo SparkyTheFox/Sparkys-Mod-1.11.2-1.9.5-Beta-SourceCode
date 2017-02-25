@@ -35,7 +35,7 @@ public class ItemSMGRounds extends ItemArrow {
 		    }
 
 		    public EntityArrow createArrow(@Nonnull World world, @Nonnull ItemStack itemstack, EntityLivingBase shooter) {
-		        return new EntitySMGRounds(world, shooter);
+		        return new EntitySMGRounds(world, shooter, 10);
 			}
 			
 

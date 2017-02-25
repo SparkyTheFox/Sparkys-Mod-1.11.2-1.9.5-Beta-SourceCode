@@ -31,7 +31,7 @@ public class ItemToyKnife extends ItemSword {
 	
 	
     public ItemToyKnife(ToolMaterial material, float attackSpeed) {
-        super(material);;
+        super(material);
 		this.attackSpeed = attackSpeed;
 		this.attackDamage = 1.0F + material.getDamageVsEntity();
 		

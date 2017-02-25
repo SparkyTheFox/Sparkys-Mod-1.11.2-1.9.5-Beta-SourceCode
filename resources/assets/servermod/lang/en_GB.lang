@@ -12,6 +12,13 @@ Odsthelmetservermod:Odsthelmet.name=ODST Helmet
 Odstchestplateservermod:Odstchestplate.name=ODST Chestplate
 Odstleggingsservermod:Odstleggings.name=Odst Leggings
 Odstbootsservermod:Odstboots.name=Odst Boots
+item.OdstHelmet.name=ODST Helmet
+item.OdstChestplate.name=ODST Chestplate
+item.OdstLeggings.name=ODST Leggings
+item.OdstBoots.name=ODST Boots
+SMGservermod:SMG.name=M7S Submachine Gun
+SMGRoundsservermod:SMGRounds.name=5x23mmRounds
+Kevlarservermod:Kevlar.name=Kevlar
 
 # Creative Tab
 

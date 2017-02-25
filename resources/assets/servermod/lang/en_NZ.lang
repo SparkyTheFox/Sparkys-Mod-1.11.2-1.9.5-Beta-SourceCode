@@ -8,6 +8,13 @@ Burgerservermod:Burger.name=Burger
 Friesservermod:Fries.name=Chips
 ToyKnifeservermod:ToyKnife.name=Knife
 Scarletservermod:Scarlet.name=Finns Sword
+item.OdstHelmet.name=ODST Helmet
+item.OdstChestplate.name=ODST Chestplate
+item.OdstLeggings.name=ODST Leggings
+item.OdstBoots.name=ODST Boots
+SMGservermod:SMG.name=M7S Submachine Gun
+SMGRoundsservermod:SMGRounds.name=5x23mmRounds
+Kevlarservermod:Kevlar.name=Kevlar
 
 # Creative Tab
 

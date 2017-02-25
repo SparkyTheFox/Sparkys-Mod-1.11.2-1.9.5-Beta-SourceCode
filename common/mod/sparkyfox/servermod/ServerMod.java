@@ -42,12 +42,16 @@ public class ServerMod {
 	public static CommonProxy proxy;
 	@SuppressWarnings("unused")
 	private ModSoundEvent sounds;
+	
+	@SuppressWarnings("unused")
+	private ModEntities entity;
 
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event); 
 		sounds = new ModSoundEvent();
+		proxy.registerRenderer();
 	
 		
 		
@@ -55,7 +59,7 @@ public class ServerMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event); 
-		
+		entity = new ModEntities();
 		
 		
 		
@@ -64,7 +68,7 @@ public class ServerMod {
 	@EventHandler
 	public void PostInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event); 
-		
+		proxy.registerModels();
 		
 		
 	}

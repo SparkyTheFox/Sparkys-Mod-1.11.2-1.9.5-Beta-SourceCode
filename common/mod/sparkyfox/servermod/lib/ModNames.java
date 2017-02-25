@@ -21,8 +21,8 @@ public class ModNames {
 	public static final String OdstLeggings = "OdstLeggings";
 	public static final String OdstBoots = "OdstBoots";
 	public static final String OdstArmor = "OdstArmor";
-	
-	
+	public static final String Kevlar = "Kevlar";
+	public static final String Titanium = "Titanium";
 	/*
 	 * Blocks
 	 */
