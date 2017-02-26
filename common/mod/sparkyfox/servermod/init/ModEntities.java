@@ -14,7 +14,7 @@ public class ModEntities {
 		register();
 	}
 
-	private void register() {
+	public void register() {
 		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:EntitySMGRounds") , EntitySMGRounds.class, "SMGRounds", SMGRounds, ServerMod.instance, 64, 1, true);
 
 	}
