@@ -13,5 +13,21 @@
             "servermod:impact"
         ],
         "subtitle": "ptsh"
+    },
+
+    "bloodsplat": {
+        "category": "voice",
+        "sounds": [
+            "servermod:bloodsplat"
+        ],
+        "subtitle": "SPEEEELAT!!"
+    },
+
+        "ak4u": {
+        "category": "voice",
+        "sounds": [
+            "servermod:ak4u"
+        ],
+        "subtitle": "RUSSIAN PEW!"
     }
 }

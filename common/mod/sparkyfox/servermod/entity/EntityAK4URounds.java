@@ -15,7 +15,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Enchantments;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
@@ -30,7 +29,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class EntitySMGRounds extends EntityArrow {
+public class EntityAK4URounds extends EntityArrow {
 
     private EnumParticleTypes particle;
 //added by me\\
@@ -55,13 +54,13 @@ public class EntitySMGRounds extends EntityArrow {
     private int knockbackStrength;
 //added by me\\
     
-    public EntitySMGRounds(World worldIn) {
+    public EntityAK4URounds(World worldIn) {
         super(worldIn);
-        this.pickupStatus = EntitySMGRounds.PickupStatus.DISALLOWED;
+        this.pickupStatus = EntityAK4URounds.PickupStatus.DISALLOWED;
         this.setSize(0.5F, 0.5F);
     }
 //
-    public EntitySMGRounds(World worldIn, EntityLivingBase shooter) {
+    public EntityAK4URounds(World worldIn, EntityLivingBase shooter) {
         super(worldIn, shooter);
         //
         {
@@ -75,14 +74,14 @@ public class EntitySMGRounds extends EntityArrow {
         //
     }
 
-    public EntitySMGRounds(World worldIn, double x, double y, double z) {
+    public EntityAK4URounds(World worldIn, double x, double y, double z) {
         super(worldIn, x, y, z);
         
     }
 
     @Override
     public void setDamage(double damageIn) {
-        super.setDamage(5.0D);
+        super.setDamage(4.0D);
     }
 
     @Override
@@ -229,7 +228,7 @@ public class EntitySMGRounds extends EntityArrow {
 
     	                if (!this.world.isRemote && this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ < 0.0010000000474974513D)
     	                {
-    	                    if (this.pickupStatus == EntitySMGRounds.PickupStatus.ALLOWED)
+    	                    if (this.pickupStatus == EntityAK4URounds.PickupStatus.ALLOWED)
     	                    {
     	                        this.entityDropItem(this.getArrowStack(), 0.1F);
     	                    }
@@ -274,7 +273,7 @@ public class EntitySMGRounds extends EntityArrow {
     @Override
     @Nonnull
     public ItemStack getArrowStack() {
-        return new ItemStack(ModItems.SMGRounds);
+        return new ItemStack(ModItems.AK4URounds);
     }
 
     @Override

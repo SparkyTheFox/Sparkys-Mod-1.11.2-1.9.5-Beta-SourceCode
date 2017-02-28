@@ -14,10 +14,8 @@ import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.IItemPropertyGetter;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
@@ -31,16 +29,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemSMG extends ItemBow
+public class ItemAK4U extends ItemBow
 {
 
 @Override
 public String getUnlocalizedName(ItemStack stack) {
 
-	return "SMG" + ServerMod.RESOURCE_PREFIX + ModNames.SMG;
+	return "AK4U" + ServerMod.RESOURCE_PREFIX + ModNames.AK4U;
 
 }
-    public ItemSMG()
+    public ItemAK4U()
     {
 	this.maxStackSize = 1;
     this.setMaxDamage(1000);//384 //768
@@ -50,7 +48,7 @@ public String getUnlocalizedName(ItemStack stack) {
     	 @SideOnly(Side.CLIENT)
          public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
          {
-             return entityIn == null ? -10.0F : (entityIn.getActiveItemStack().getItem() != ModItems.SMG ? -10.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F);//20.0F
+             return entityIn == null ? -10.0F : (entityIn.getActiveItemStack().getItem() != ModItems.AK4U ? -10.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F);//20.0F
          }//
      });
     this.addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter()
@@ -91,7 +89,7 @@ private ItemStack findAmmo(EntityPlayer player)
 
 protected boolean isArrow(ItemStack stack)
 {
-    return stack.getItem() instanceof ItemSMGRounds;
+    return stack.getItem() instanceof ItemAK4URounds;
 }
 
 /**
@@ -113,25 +111,25 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
         {
             if (itemstack.isEmpty())
             {
-                itemstack = new ItemStack(ModItems.SMGRounds);
+                itemstack = new ItemStack(ModItems.AK4URounds);
             }
 
             float f = getArrowVelocity(i);
 
             if ((double)f >= -10000.0D)//bow charge
             {
-                boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemSMGRounds && ((ItemSMGRounds) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
+                boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemAK4URounds && ((ItemAK4URounds) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
 
                 if (!worldIn.isRemote)
                 {
-                    ItemSMGRounds itemarrow = (ItemSMGRounds)((ItemSMGRounds)(itemstack.getItem() instanceof ItemSMGRounds ? itemstack.getItem() : ModItems.SMGRounds));
+                    ItemAK4URounds itemarrow = (ItemAK4URounds)((ItemAK4URounds)(itemstack.getItem() instanceof ItemAK4URounds ? itemstack.getItem() : ModItems.AK4URounds));
                     EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
                     entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
 
                     if (f == 1.0F)
                     {
                         entityarrow.setIsCritical(true);
-                        entityarrow.setDamage(5.0F);
+                        entityarrow.setDamage(4.0F);
                     }
 
                     int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
@@ -163,7 +161,7 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
                     worldIn.spawnEntity(entityarrow);
                 }
 
-                worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSoundEvent.smg, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSoundEvent.ak4u, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 
                 if (!flag1 && !entityplayer.capabilities.isCreativeMode)
                 {
@@ -244,15 +242,15 @@ public int getItemEnchantability()
 
 
 							public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-							return repair.getItem() == ModItems.Titanium;
+							return repair.getItem() == Items.IRON_INGOT;
 							}
 
 																		//Crafting Recipe\\
 
 
 							public void addRecipes() {
-							GameRegistry.addShapedRecipe(new ItemStack(this), " G ", "TTT", "TB ", 'G', Blocks.STAINED_GLASS_PANE, 'T',
-							new ItemStack (ModItems.Titanium), 'B', new ItemStack (Blocks.STONE_BUTTON));	
+							GameRegistry.addShapedRecipe(new ItemStack(this), " G ", "WIB", "WT ", 'G', Items.GOLD_INGOT, 'W',
+							new ItemStack (Blocks.PLANKS), 'I', new ItemStack (Blocks.IRON_BLOCK), 'B', new ItemStack (Items.IRON_INGOT), 'T', new ItemStack (Blocks.WOODEN_BUTTON));	
 }
 
 }

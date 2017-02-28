@@ -14,6 +14,8 @@ item.OdstLeggings.name=ODST Leggings
 item.OdstBoots.name=ODST Boots
 SMGservermod:SMG.name=M7S Submachine Gun
 SMGRoundsservermod:SMGRounds.name=5x23mmRounds
+AK4Uservermod:AK4U.name=Kalashnikov AK-4U
+AK4URoundsservermod:AK4URounds.name=7.62x39mmRounds
 Kevlarservermod:Kevlar.name=Kevlar
 Titaniumservermod:Titanium.name=Titanium
 

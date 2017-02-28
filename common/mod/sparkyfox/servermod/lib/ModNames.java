@@ -16,6 +16,8 @@ public class ModNames {
 	public static final String DiamondMesser = "DiamondMesser";
 	public static final String SMG = "SMG";
 	public static final String SMGRounds = "SMGRounds";
+	public static final String AK4U = "AK4U";
+	public static final String AK4URounds = "AK4URounds";
 	public static final String OdstHelmet = "OdstHelmet";
 	public static final String OdstChestplate = "OdstChestplate";
 	public static final String OdstLeggings = "OdstLeggings";

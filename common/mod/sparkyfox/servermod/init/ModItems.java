@@ -1,6 +1,8 @@
 package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
+import mod.sparkyfox.servermod.item.ItemAK4U;
+import mod.sparkyfox.servermod.item.ItemAK4URounds;
 import mod.sparkyfox.servermod.item.ItemBurger;
 import mod.sparkyfox.servermod.item.ItemDiamondMesser;
 import mod.sparkyfox.servermod.item.ItemFries;
@@ -9,12 +11,12 @@ import mod.sparkyfox.servermod.item.ItemIronMesser;
 import mod.sparkyfox.servermod.item.ItemKevlar;
 import mod.sparkyfox.servermod.item.ItemOdstArmor;
 import mod.sparkyfox.servermod.item.ItemSMG;
+import mod.sparkyfox.servermod.item.ItemSMGRounds;
 import mod.sparkyfox.servermod.item.ItemScarlet;
 import mod.sparkyfox.servermod.item.ItemStoneMesser;
 import mod.sparkyfox.servermod.item.ItemTitanium;
 import mod.sparkyfox.servermod.item.ItemToyKnife;
 import mod.sparkyfox.servermod.item.ItemWoodenMesser;
-import mod.sparkyfox.servermod.item.ItemSMGRounds;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -23,13 +25,11 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -50,6 +50,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemDiamondMesser DiamondMesser;
 	public static ItemSMG SMG;
 	public static ItemSMGRounds SMGRounds;
+	public static ItemAK4U AK4U;
+	public static ItemAK4URounds AK4URounds;
 	
 	//Basic Items
 	public static ItemKevlar Kevlar;
@@ -123,11 +125,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
 		GameRegistry.register(SMG); {
 				}
+		AK4U = (ItemAK4U) new ItemAK4U();
+		AK4U.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AK4U)); 
+		GameRegistry.register(AK4U); {
+		}
 		//Ammo
 		SMGRounds = (ItemSMGRounds) new ItemSMGRounds();
 		SMGRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMGRounds)); 
 		GameRegistry.register(SMGRounds); {
 				}
+		AK4URounds = (ItemAK4URounds) new ItemAK4URounds();
+		AK4URounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AK4URounds)); 
+		GameRegistry.register(AK4URounds); {
+		}
 				
 		//Armor Material
 		OdstArmor = EnumHelper.addArmorMaterial("OdstArmor", "", 50, new int[] {3, 3, 8, 6}, 50, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 10.0F); }
@@ -252,6 +262,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		GoldMesser.addRecipes();
 		DiamondMesser.addRecipes();
 		SMG.addRecipes();
+		SMGRounds.addRecipes();
+		AK4U.addRecipes();
+		AK4URounds.addRecipes();
 		Kevlar.addRecipes();
 		Titanium.addRecipes();
 		((ItemOdstArmor) OdstHelmet).addRecipes();
@@ -335,16 +348,25 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation model14 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMGRounds, "inventory");
 		ModelLoader.registerItemVariants(SMGRounds, model14);
 		mesher.register(SMGRounds, 0, model14); {
+			
+	}
+		ModelResourceLocation model15 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.AK4U, "inventory");
+		ModelLoader.registerItemVariants(AK4U, model15);
+		mesher.register(AK4U, 0, model15); {
+	}
+		ModelResourceLocation model16 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.AK4URounds, "inventory");
+		ModelLoader.registerItemVariants(AK4URounds, model16);
+		mesher.register(AK4URounds, 0, model16); {
 		
 	}
 		//Basic Items
-		ModelResourceLocation model15 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Kevlar, "inventory");
-		ModelLoader.registerItemVariants(Kevlar, model15);
-		mesher.register(Kevlar, 0, model15); {
+		ModelResourceLocation model17 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Kevlar, "inventory");
+		ModelLoader.registerItemVariants(Kevlar, model17);
+		mesher.register(Kevlar, 0, model17); {
 			
-		ModelResourceLocation model16 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Titanium, "inventory");
-		ModelLoader.registerItemVariants(Titanium, model16);
-		mesher.register(Titanium, 0, model16); {
+		ModelResourceLocation model18 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Titanium, "inventory");
+		ModelLoader.registerItemVariants(Titanium, model18);
+		mesher.register(Titanium, 0, model18); {
 				
 				
 			}
