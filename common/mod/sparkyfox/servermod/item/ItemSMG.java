@@ -244,7 +244,7 @@ public int getItemEnchantability()
 
 
 							public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-							return repair.getItem() == ModItems.Titanium;
+							return repair.getItem() == ModItems.TitaniumIngot;
 							}
 
 																		//Crafting Recipe\\
@@ -252,7 +252,7 @@ public int getItemEnchantability()
 
 							public void addRecipes() {
 							GameRegistry.addShapedRecipe(new ItemStack(this), " G ", "TTT", "TB ", 'G', Blocks.STAINED_GLASS_PANE, 'T',
-							new ItemStack (ModItems.Titanium), 'B', new ItemStack (Blocks.STONE_BUTTON));	
+							new ItemStack (ModItems.TitaniumIngot), 'B', new ItemStack (Blocks.STONE_BUTTON));	
 }
 
 }

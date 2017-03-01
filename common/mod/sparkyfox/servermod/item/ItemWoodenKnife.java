@@ -23,15 +23,15 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemGoldMesser extends ItemSword {
+public class ItemWoodenKnife extends ItemSword {
 
 	
 	private final float attackDamage;
 	private final float attackSpeed;
 	
 	
-    public ItemGoldMesser(ToolMaterial material, float attackSpeed) {
-        super(material);
+    public ItemWoodenKnife(ToolMaterial material, float attackSpeed) {
+        super(material);;
 		this.attackSpeed = attackSpeed;
 		this.attackDamage = 0.0F + material.getDamageVsEntity();
 		
@@ -40,7 +40,7 @@ public class ItemGoldMesser extends ItemSword {
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 
-		return "GoldMesser" + ServerMod.RESOURCE_PREFIX + ModNames.GoldMesser;
+		return "WoodenKnife" + ServerMod.RESOURCE_PREFIX + ModNames.WoodenKnife;
 	}
 
 
@@ -62,15 +62,15 @@ public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquip
 
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
 										
-    return repair.getItem() == Items.GOLD_INGOT;
+    return repair.getItem() == Items.STICK;
 	}
 
 													//Crafting Recipe\\
 
 
 	public void addRecipes() {
-		GameRegistry.addShapedRecipe(new ItemStack(this), " G ", " G ", " I ", 'I', Items.field_191525_da, 'G',
-				new ItemStack(Items.GOLD_INGOT));
+		GameRegistry.addShapedRecipe(new ItemStack(this), " P ", " S ", " L ", 'P', Blocks.PLANKS, 'S',
+				new ItemStack (Items.STICK), 'L', new ItemStack (Items.LEATHER));
 	}
 		
 	}

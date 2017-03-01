@@ -17,6 +17,8 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 
 public class ItemOdstArmor extends ItemArmor {
 
@@ -59,12 +61,33 @@ public class ItemOdstArmor extends ItemArmor {
 		    
 		    }
 		  
+		  @Override
+		  public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
+		  if (itemStack.getItem().equals(ModItems.OdstHelmet))
+		      player.addPotionEffect(new PotionEffect(Potion.getPotionById(16)));
+		  {
+			  if (itemStack.getItem().equals(ModItems.OdstChestplate))
+			      player.addPotionEffect(new PotionEffect(Potion.getPotionById(13)));
+			  {
+				  if (itemStack.getItem().equals(ModItems.OdstLeggings))
+				      player.addPotionEffect(new PotionEffect(Potion.getPotionById(5)));
+				  {
+					  if (itemStack.getItem().equals(ModItems.OdstBoots))
+					      player.addPotionEffect(new PotionEffect(Potion.getPotionById(12)));
+				  }
+					
+		  }
+	 }
+
+}  
+				// TODO Auto-generated method stub
+		  
 		  
 																//Anvil Repair\\
 
 
 		        		public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		        		return repair.getItem() == ModItems.Titanium;
+		        		return repair.getItem() == ModItems.TitaniumIngot;
 		        		
 		        		}
 
@@ -72,13 +95,13 @@ public class ItemOdstArmor extends ItemArmor {
 
 
 		        		public void addRecipes() {
-		        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstHelmet), "TDT", "TGT", "TTT", 'T', ModItems.Titanium, 'D',
+		        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstHelmet), "TDT", "TGT", "TTT", 'T', ModItems.TitaniumIngot, 'D',
 		        		new ItemStack (Items.DYE), 'G', new ItemStack (Blocks.STAINED_GLASS_PANE));	
 	
 		        		{
 		        			
 		        		}
-			        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstChestplate), "T T", "TTT", "TTT", 'T', ModItems.Titanium); 
+			        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstChestplate), "T T", "TTT", "TTT", 'T', ModItems.TitaniumIngot); 
 		
 			        	{
 			        			
@@ -89,7 +112,7 @@ public class ItemOdstArmor extends ItemArmor {
 			        			
 			        	}
 		        	
-			        	   GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstBoots), "   ", "T T", "T T", 'T', ModItems.Titanium); 	
+			        	   GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstBoots), "   ", "T T", "T T", 'T', ModItems.TitaniumIngot); 	
 		
 			        		}
 			        		

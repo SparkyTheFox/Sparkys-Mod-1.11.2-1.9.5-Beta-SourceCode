@@ -1,8 +1,10 @@
 package mod.sparkyfox.servermod;
 
+import mod.sparkyfox.servermod.world.WorldGenOre;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ServerProxy extends CommonProxy {
 
@@ -14,6 +16,7 @@ public class ServerProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent e) {
         super.init(e);
+        
     }
 
     @Override

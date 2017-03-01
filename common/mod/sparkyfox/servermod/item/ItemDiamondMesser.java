@@ -62,15 +62,15 @@ public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquip
 
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
 										
-    return repair.getItem() == Items.GOLD_INGOT;
+    return repair.getItem() == Items.DIAMOND;
 	}
 
 													//Crafting Recipe\\
 
 
 	public void addRecipes() {
-		GameRegistry.addShapedRecipe(new ItemStack(this), " G ", " G ", " B ", 'B', Items.BLAZE_ROD, 'G',
-				new ItemStack(Blocks.GOLD_BLOCK));
+		GameRegistry.addShapedRecipe(new ItemStack(this), " D ", " D ", " I ", 'I', Items.field_191525_da, 'D',
+				new ItemStack(Items.DIAMOND));
 	}
 		
 	}

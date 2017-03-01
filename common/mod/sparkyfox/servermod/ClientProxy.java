@@ -2,11 +2,14 @@ package mod.sparkyfox.servermod;
 
 import mod.sparkyfox.servermod.entity.EntityAK4URounds;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
+import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.render.RenderAK4URounds;
 import mod.sparkyfox.servermod.render.RenderSMGRounds;
+import mod.sparkyfox.servermod.world.WorldGenOre;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -16,6 +19,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 public class ClientProxy extends CommonProxy {
@@ -71,8 +75,10 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
-		ModItems.initClient(Minecraft.getMinecraft().getRenderItem().getItemModelMesher());
-		
+		ItemModelMesher mesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
+		ModItems.initClient(mesher);
+		ModBlocks.initClient(mesher);
+		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);  //Register the ore generator
 	}
 	
 	@Override

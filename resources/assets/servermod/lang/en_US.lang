@@ -1,6 +1,7 @@
  # Blocks
 
-tile.servermod:GlowingHardClay.name=GlowingHardClay
+TitaniumOreservermod:TitaniumOre.name=Titanium Ore
+TitaniumBlockservermod:TitaniumBlock.name=Titanium Block
 
 # Items
 
@@ -17,7 +18,17 @@ SMGRoundsservermod:SMGRounds.name=5x23mmRounds
 AK4Uservermod:AK4U.name=Kalashnikov AK-4U
 AK4URoundsservermod:AK4URounds.name=7.62x39mmRounds
 Kevlarservermod:Kevlar.name=Kevlar
-Titaniumservermod:Titanium.name=Titanium
+TitaniumIngotservermod:TitaniumIngot.name=Titanium Ingot
+WoodenMesserservermod:WoodenMesser.name=Wooden Messer
+StoneMesserservermod:StoneMesser.name=Stone Messer
+IronMesserservermod:IronMesser.name=Iron Messer
+GoldMesserservermod:GoldMesser.name=Golden Messer
+DiamondMesserservermod:DiamondMesser.name=Diamond Messer
+WoodenKnifeservermod:WoodenKnife.name=Wooden Knife
+StoneKnifeservermod:StoneKnife.name=Stone Knife
+IronKnifeservermod:IronKnife.name=Iron Knife
+GoldKnifeservermod:GoldKnife.name=Golden Knife
+DiamondKnifeservermod:DiamondKnife.name=Diamond Knife
 
 # Creative Tab
 

@@ -14,6 +14,11 @@ public class ModNames {
 	public static final String IronMesser = "IronMesser";
 	public static final String GoldMesser = "GoldMesser";
 	public static final String DiamondMesser = "DiamondMesser";
+	public static final String WoodenKnife = "WoodenKnife";
+	public static final String StoneKnife = "StoneKnife";
+	public static final String IronKnife = "IronKnife";
+	public static final String GoldKnife = "GoldKnife";
+	public static final String DiamondKnife = "DiamondKnife";
 	public static final String SMG = "SMG";
 	public static final String SMGRounds = "SMGRounds";
 	public static final String AK4U = "AK4U";
@@ -24,8 +29,12 @@ public class ModNames {
 	public static final String OdstBoots = "OdstBoots";
 	public static final String OdstArmor = "OdstArmor";
 	public static final String Kevlar = "Kevlar";
-	public static final String Titanium = "Titanium";
+	public static final String TitaniumIngot = "TitaniumIngot";
+	
 	/*
 	 * Blocks
 	 */
+	
+	public static final String TitaniumOre = "TitaniumOre";
+	public static final String TitaniumBlock = "TitaniumBlock";
 }

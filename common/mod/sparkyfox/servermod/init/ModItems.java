@@ -4,18 +4,23 @@ import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.item.ItemAK4U;
 import mod.sparkyfox.servermod.item.ItemAK4URounds;
 import mod.sparkyfox.servermod.item.ItemBurger;
+import mod.sparkyfox.servermod.item.ItemDiamondKnife;
 import mod.sparkyfox.servermod.item.ItemDiamondMesser;
 import mod.sparkyfox.servermod.item.ItemFries;
+import mod.sparkyfox.servermod.item.ItemGoldKnife;
 import mod.sparkyfox.servermod.item.ItemGoldMesser;
+import mod.sparkyfox.servermod.item.ItemIronKnife;
 import mod.sparkyfox.servermod.item.ItemIronMesser;
 import mod.sparkyfox.servermod.item.ItemKevlar;
 import mod.sparkyfox.servermod.item.ItemOdstArmor;
 import mod.sparkyfox.servermod.item.ItemSMG;
 import mod.sparkyfox.servermod.item.ItemSMGRounds;
 import mod.sparkyfox.servermod.item.ItemScarlet;
+import mod.sparkyfox.servermod.item.ItemStoneKnife;
 import mod.sparkyfox.servermod.item.ItemStoneMesser;
-import mod.sparkyfox.servermod.item.ItemTitanium;
+import mod.sparkyfox.servermod.item.ItemTitaniumIngot;
 import mod.sparkyfox.servermod.item.ItemToyKnife;
+import mod.sparkyfox.servermod.item.ItemWoodenKnife;
 import mod.sparkyfox.servermod.item.ItemWoodenMesser;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.client.renderer.ItemModelMesher;
@@ -48,6 +53,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemIronMesser IronMesser;
 	public static ItemGoldMesser GoldMesser;
 	public static ItemDiamondMesser DiamondMesser;
+	public static ItemWoodenKnife WoodenKnife;
+	public static ItemStoneKnife StoneKnife;
+	public static ItemIronKnife IronKnife;
+	public static ItemGoldKnife GoldKnife;
+	public static ItemDiamondKnife DiamondKnife;
 	public static ItemSMG SMG;
 	public static ItemSMGRounds SMGRounds;
 	public static ItemAK4U AK4U;
@@ -55,7 +65,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	
 	//Basic Items
 	public static ItemKevlar Kevlar;
-	public static ItemTitanium Titanium;
+	public static ItemTitaniumIngot TitaniumIngot;
 	
 	//Armor
 	public static ArmorMaterial OdstArmor;
@@ -120,6 +130,37 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		DiamondMesser.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.DiamondMesser)); 
 		GameRegistry.register(DiamondMesser); {
 			}
+			
+			WoodenKnife = (ItemWoodenKnife) new ItemWoodenKnife(EnumHelper.addToolMaterial("WoodenKnife", 0, 59, 2.0F, 1.5F, 15), -1.0F);
+		WoodenKnife.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.WoodenKnife)); 
+		GameRegistry.register(WoodenKnife); {
+				
+			}
+			
+		StoneKnife = (ItemStoneKnife) new ItemStoneKnife(EnumHelper.addToolMaterial("StoneKnife", 1, 131, 2.0F, 2.5F, 5), -1.0F);
+		StoneKnife.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.StoneKnife)); 
+		GameRegistry.register(StoneKnife); {
+				
+			}
+			
+		IronKnife = (ItemIronKnife) new ItemIronKnife(EnumHelper.addToolMaterial("IronKnife", 2, 250, 6.0F, 3.5F, 14), -1.0F);
+		IronKnife.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.IronKnife)); 
+		GameRegistry.register(IronKnife); {
+				
+			}
+			
+		GoldKnife = (ItemGoldKnife) new ItemGoldKnife(EnumHelper.addToolMaterial("GoldKnife", 0, 32, 0.0F, 2.8F, 22), -1.0F);
+		GoldKnife.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.GoldKnife)); 
+		GameRegistry.register(GoldKnife); {
+				
+			}
+			
+		DiamondKnife = (ItemDiamondKnife) new ItemDiamondKnife(EnumHelper.addToolMaterial("DiamondKnife", 3, 1561, 8.0F, 4.5F, 10), -1.0F);
+		DiamondKnife.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.DiamondKnife)); 
+		GameRegistry.register(DiamondKnife); {
+		
+			}
+		
 		//Guns
 		SMG = (ItemSMG) new ItemSMG();
 		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
@@ -164,19 +205,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		Kevlar.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Kevlar)); 
 		GameRegistry.register(Kevlar); {
 			
-		Titanium = (ItemTitanium) new ItemTitanium();
-		Titanium.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Titanium)); 
-		GameRegistry.register(Titanium); {	
+		TitaniumIngot = (ItemTitaniumIngot) new ItemTitaniumIngot();
+		TitaniumIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumIngot)); 
+		GameRegistry.register(TitaniumIngot); {	
 			
 			
-		}}}}
+		}}}}}
 
 
 
 			
 		
 		
-		//////ARMOR AND TOOL INFO FALL\\\\\\                                                                                                    //SPARKY WUZ HERE ;D\\
+		//////ARMOR AND TOOL INFO WALL\\\\\\                                                                                                    //SPARKY WUZ HERE ;D\\
 	
 		
 		
@@ -239,7 +280,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
         //GOLD("gold", 7, new int[]{1, 3, 5, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F),
         //DIAMOND("diamond", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 		
-		}
+		
 		
 
 		
@@ -261,12 +302,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		IronMesser.addRecipes();
 		GoldMesser.addRecipes();
 		DiamondMesser.addRecipes();
+		WoodenKnife.addRecipes();
+		StoneKnife.addRecipes();
+		IronKnife.addRecipes();
+		GoldKnife.addRecipes();
+		DiamondKnife.addRecipes();
 		SMG.addRecipes();
 		SMGRounds.addRecipes();
 		AK4U.addRecipes();
 		AK4URounds.addRecipes();
 		Kevlar.addRecipes();
-		Titanium.addRecipes();
+		TitaniumIngot.addRecipes();
 		((ItemOdstArmor) OdstHelmet).addRecipes();
 		((ItemOdstArmor) OdstChestplate).addRecipes();
 		((ItemOdstArmor) OdstLeggings).addRecipes();
@@ -341,6 +387,26 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(DiamondMesser, model12);
 		mesher.register(DiamondMesser, 0, model12); {
 	}
+	
+		ModelResourceLocation model230 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.WoodenKnife, "inventory");
+		ModelLoader.registerItemVariants(WoodenKnife, model230);
+		mesher.register(WoodenKnife, 0, model230); {
+	}			
+		ModelResourceLocation model20 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.StoneKnife, "inventory");
+		ModelLoader.registerItemVariants(StoneKnife, model20);
+		mesher.register(StoneKnife, 0, model20); {
+	}				
+		ModelResourceLocation model21 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.IronKnife, "inventory");
+		ModelLoader.registerItemVariants(IronKnife, model21);
+		mesher.register(IronKnife, 0, model21); {
+	}				
+		ModelResourceLocation model22 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.GoldKnife, "inventory");
+		ModelLoader.registerItemVariants(GoldKnife, model22);
+		mesher.register(GoldKnife, 0, model22); {
+	}			
+		ModelResourceLocation model23 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DiamondKnife, "inventory");
+		ModelLoader.registerItemVariants(DiamondKnife, model23);
+		mesher.register(DiamondKnife, 0, model23); {
 		ModelResourceLocation model13 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMG, "inventory");
 		ModelLoader.registerItemVariants(SMG, model13);
 		mesher.register(SMG, 0, model13); {
@@ -364,14 +430,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(Kevlar, model17);
 		mesher.register(Kevlar, 0, model17); {
 			
-		ModelResourceLocation model18 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Titanium, "inventory");
-		ModelLoader.registerItemVariants(Titanium, model18);
-		mesher.register(Titanium, 0, model18); {
+		ModelResourceLocation model18 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumIngot, "inventory");
+		ModelLoader.registerItemVariants(TitaniumIngot, model18);
+		mesher.register(TitaniumIngot, 0, model18); {
 				
 				
 			}
 			
-}}}}}
+}}}}}}
 	}
 
 	
