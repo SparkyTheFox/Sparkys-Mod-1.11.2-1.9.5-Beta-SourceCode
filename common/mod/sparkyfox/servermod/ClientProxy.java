@@ -1,10 +1,14 @@
 package mod.sparkyfox.servermod;
 
 import mod.sparkyfox.servermod.entity.EntityAK4URounds;
+import mod.sparkyfox.servermod.entity.EntityFlowey;
+import mod.sparkyfox.servermod.entity.EntityFriendlynessPellet;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.render.RenderAK4URounds;
+import mod.sparkyfox.servermod.render.RenderFlowey;
+import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
 import mod.sparkyfox.servermod.render.RenderSMGRounds;
 import mod.sparkyfox.servermod.world.WorldGenOre;
 import net.minecraft.block.Block;
@@ -24,30 +28,61 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ClientProxy extends CommonProxy {
 	
+//===========================================================================================================================================================================================\\	
+																								//Model Registry\\
+	
 	public void registerModels() {
+		
+		//Bullets and Ammo
 		registerModel(ModItems.SMGRounds, 0);
 		registerModel(ModItems.AK4URounds, 0);
 	}
-
+	
+																								
+//===============================================================================================================================================================================================\\
+																								//Render Registry\\
+	
 	public void registerRenderer() {
-		RenderingRegistry.registerEntityRenderingHandler(EntitySMGRounds.class, new IRenderFactory() {
-			@Override
-			public Render createRenderFor(RenderManager manager) {
-				return new RenderSMGRounds(manager);
-			}
-		});
-		RenderingRegistry.registerEntityRenderingHandler(EntityAK4URounds.class, new IRenderFactory() {
-			@Override
-			public Render createRenderFor(RenderManager manager) {
-				return new RenderAK4URounds(manager);
-			}
-			});
-		}
-
-	public void registerEventHandler() {
-
+	
+																									//Ammo\\
+	//SMG Rounds	
+	RenderingRegistry.registerEntityRenderingHandler(EntitySMGRounds.class, new IRenderFactory() {
+		@Override
+		public Render createRenderFor(RenderManager manager) {
+			return new RenderSMGRounds(manager);
+		}});
+	
+	//AK-4U Rounds	
+	RenderingRegistry.registerEntityRenderingHandler(EntityAK4URounds.class, new IRenderFactory() {
+		@Override
+		public Render createRenderFor(RenderManager manager) {
+			return new RenderAK4URounds(manager);
+		}});
+	
+	//Flowey
+    RenderingRegistry.registerEntityRenderingHandler(EntityFlowey.class, new IRenderFactory() {
+    	@Override
+		public Render createRenderFor(RenderManager manager) {
+			return new RenderFlowey(manager, null, 0);
+    	}});
+    
+  //Friendlyness Pellet	
+  	RenderingRegistry.registerEntityRenderingHandler(EntityFriendlynessPellet.class, new IRenderFactory() {
+  		@Override
+  		public Render createRenderFor(RenderManager manager) {
+  			return new RenderFriendlynessPellet(manager);
+  		}});
+			
+//===============================================================================================================================================================================================\\
+																								//Event Handler\\
+	
 	}
-
+	public void registerEventHandler() {
+	}
+	
+//===============================================================================================================================================================================================\\
+																								//Register Model?\\
+	
 	private void registerModel(Object obj, int meta) {
 
 		Item item;
@@ -60,16 +95,13 @@ public class ClientProxy extends CommonProxy {
 		}
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
-
-
-
+	
+//===============================================================================================================================================================================================\\
+																										//Inits\\
 	
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
-
-
-
 	}
 	
 	@Override
@@ -84,8 +116,9 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		super.postInit(event);
-		
 	}
+	
+//===============================================================================================================================================================================================\\
    
     
 	}

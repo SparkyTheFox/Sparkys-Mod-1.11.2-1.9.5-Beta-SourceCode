@@ -2,6 +2,8 @@
 
 TitaniumOreservermod:TitaniumOre.name=Titanium Ore
 TitaniumBlockservermod:TitaniumBlock.name=Titanium Block
+BrassOreservermod:BrassOre.name=Brass Ore
+BrassBlockservermod:BrassBlock.name=Brass Block
 
 # Items
 
@@ -29,7 +31,14 @@ StoneKnifeservermod:StoneKnife.name=Stone Knife
 IronKnifeservermod:IronKnife.name=Iron Knife
 GoldKnifeservermod:GoldKnife.name=Golden Knife
 DiamondKnifeservermod:DiamondKnife.name=Diamond Knife
+SMGBulletCasingservermod:SMGBulletCasing.name=5x23mm Case
+SMGBulletservermod:SMGBullet.name=5x23mm Bullet
+BrassIngotservermod:BrassIngot.name=Brass Ingot
 
 # Creative Tab
 
 itemGroup.tutorial:creative_tab=Tutorial Mod's Tab
+
+# Mobs
+
+entity.Flowey.name=Flowey The Flowey

@@ -10,12 +10,10 @@ import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class WorldGenOre implements IWorldGenerator
 {
@@ -40,8 +38,8 @@ public class WorldGenOre implements IWorldGenerator
 	private void genSurfaceTitanium(World world, Random random, int chunkX, int chunkZ)
 	{
 		 addOreSpawn(ModBlocks.TitaniumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 10, 8, 10, 70, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 	addOreSpawn(ModBlocks.BrassOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 8, 10, 10, 100, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
 		}
-	
 	 private void addOreSpawn(IBlockState block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chance, int minY, int maxY, Predicate<IBlockState> blockToSpawnIn) //world generator. make sure to register in clientproxy, use GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);.
 	 {
 		  int diffMinMaxY = maxY - minY;

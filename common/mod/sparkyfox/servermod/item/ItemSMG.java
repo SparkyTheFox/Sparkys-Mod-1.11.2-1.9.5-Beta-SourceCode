@@ -43,7 +43,7 @@ public String getUnlocalizedName(ItemStack stack) {
     public ItemSMG()
     {
 	this.maxStackSize = 1;
-    this.setMaxDamage(1000);//384 //768
+    this.setMaxDamage(10000);//384 //768
     this.setCreativeTab(CreativeTabs.COMBAT);
     this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
     {
@@ -107,7 +107,7 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
 
         int i = this.getMaxItemUseDuration(stack) - timeLeft;
         i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(stack, worldIn, entityplayer, i, !itemstack.isEmpty() || flag);
-        if (i < 0) return;
+        if (i < -30) return;
 
         if (!itemstack.isEmpty() || flag)
         {
@@ -187,11 +187,11 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
 public static float getArrowVelocity(int charge)
 {
     float f = (float)charge / 0.0000001F;//Arrow Fire distance
-    f = (f * f + f * 2.0F) / 3.0F;
+    f = (f * f + f * 200.0F) / 300.0F;//dunno
 
-    if (f > 1.0F)
+    if (f > 10.0F)//bullet speed
     {
-        f = 1.0F;
+        f = 10.0F;//fire distance
     }
 
     return f;

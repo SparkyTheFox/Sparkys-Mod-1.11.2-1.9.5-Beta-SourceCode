@@ -1,14 +1,6 @@
-{
-    "smg": {
-        "category": "voice",
-        "sounds": [
-            "servermod:smg"
-        ],
-        "subtitle": "pew pew pew pew"
-    },
-    
+{    
     "impact": {
-        "category": "voice",
+        "category": "neutral",
         "sounds": [
             "servermod:impact"
         ],
@@ -16,7 +8,7 @@
     },
 
     "bloodsplat": {
-        "category": "voice",
+        "category": "neutral",
         "sounds": [
             "servermod:bloodsplat"
         ],
@@ -24,10 +16,91 @@
     },
 
         "ak4u": {
-        "category": "voice",
+        "category": "player",
         "sounds": [
             "servermod:ak4u"
         ],
         "subtitle": "RUSSIAN PEW!"
+    },
+
+        "mus_ruins": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_ruins", "stream": true}
+            
+        ],
+        "subtitle": "Take my hand, child"
+    },
+
+        "mus_wrongnumbersong": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_wrongnumbersong", "stream": true}
+            
+        ],
+        "subtitle": "*Oh it's the wrong number!"
+    },
+
+        "mus_battle1": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_battle1", "stream": true}
+            
+        ],
+        "subtitle": "Froggit Hopped in"
+    },
+   
+        "mus_battle2": {
+        "category": "record",
+        "sounds": [
+        {"name":"servermod:mus_battle2", "stream": true}
+        ],
+           
+        "subtitle": "Final Froggit Hopped in" 
+    },   
+
+        "mus_boss1": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_boss1", "stream": true}
+            
+        ],
+        "subtitle": "* Toriel blocks your path"    
+    },
+
+        "song_90s": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:song_90s", "stream": true}
+            
+        ],
+        "subtitle": "Running in the 90s!"
+    },
+
+        "floweyangry": {
+        "category": "voice",
+        "sounds": [
+       {"name":"servermod:floweyangry", "stream": true}
+            
+        ],
+        "subtitle": "hahahaha"
+    },
+
+        "floweyhurt": {
+        "category": "voice",
+        "sounds": [
+       {"name":"servermod:floweyhurt", "stream": true}
+            
+        ],
+        "subtitle": "*OW!"
+    },
+
+        "smg": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:smg", "pitch":0.1}
+        ],
+           
+        "subtitle": "pew pew pew pew"
     }
-}
+}   

@@ -4,6 +4,7 @@ import javax.annotation.Nonnull;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
+import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -34,7 +35,7 @@ public class ItemSMGRounds extends ItemArrow {
 		        this.setCreativeTab(CreativeTabs.COMBAT);
 		    }
 
-		    public EntityArrow createArrow(@Nonnull World world, @Nonnull ItemStack itemstack, EntityLivingBase shooter) {
+		    public EntitySMGRounds createArrow(@Nonnull World world, @Nonnull ItemStack itemstack, EntityLivingBase shooter) {
 		        return new EntitySMGRounds(world, shooter);
 			}
 			
@@ -51,8 +52,7 @@ public class ItemSMGRounds extends ItemArrow {
 
 
 		    		public void addRecipes() {
-		    		GameRegistry.addShapedRecipe(new ItemStack(this), "   ", "III", "DDD", 'D', Items.GUNPOWDER, 'I',
-		    		new ItemStack(Items.IRON_INGOT));
+		    		GameRegistry.addShapedRecipe(new ItemStack(this, 9), "SSS", "SSS", "SSS", 'S', ModItems.SMGBullet);
 		    		}
 
 		}

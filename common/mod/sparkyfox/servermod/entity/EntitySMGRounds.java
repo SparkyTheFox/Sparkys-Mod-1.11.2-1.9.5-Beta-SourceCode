@@ -274,13 +274,13 @@ public class EntitySMGRounds extends EntityArrow {
     @Override
     @Nonnull
     public ItemStack getArrowStack() {
-        return new ItemStack(ModItems.SMGRounds);
+        return new ItemStack(ModItems.SMGBulletCasing);//what you pick up after the arrow is shot
     }
 
     @Override
     public void arrowHit(EntityLivingBase living) {
         super.arrowHit(living);
-        this.playSound(ModSoundEvent.bloodsplat,  1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));//
+        this.playSound(ModSoundEvent.bloodsplat,  1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));//sound
  
     }
     @Override

@@ -30,6 +30,12 @@ public class ModNames {
 	public static final String OdstArmor = "OdstArmor";
 	public static final String Kevlar = "Kevlar";
 	public static final String TitaniumIngot = "TitaniumIngot";
+	public static final String BrassIngot = "BrassIngot";
+	//public static final String Record_Battle2 = "Record_Battle2";
+	//public static final String ModRecord = "ModRecord";
+	public static final String SMGBulletCasing = "SMGBulletCasing";
+	public static final String SMGBullet = "SMGBullet";
+	
 	
 	/*
 	 * Blocks
@@ -37,4 +43,6 @@ public class ModNames {
 	
 	public static final String TitaniumOre = "TitaniumOre";
 	public static final String TitaniumBlock = "TitaniumBlock";
+	public static final String BrassOre = "BrassOre";
+	public static final String BrassBlock = "BrassBlock";
 }

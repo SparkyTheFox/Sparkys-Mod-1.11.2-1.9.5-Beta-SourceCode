@@ -10,18 +10,22 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
-	// Client Stuff
+
+//===========================================================================================================================================================================================\\	
+																									//Client Stuff\\
+	
 	public void registerModels() {
 	}
 
-	// Client Stuff
 	public void registerRenderer() {
 	}
 
 	public void registerEventHandler() {
-
 	}
 
+//===============================================================================================================================================================================================\\
+																										//Inits\\
+	
 	public void preInit(FMLPreInitializationEvent event) {
 		ModItems.init();
 		ModBlocks.init();
@@ -34,10 +38,11 @@ public class CommonProxy {
 		ModBlocks.initRecipes();
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);  //Register the ore generator
 		
+		
 	}
 
 	public void postInit(FMLPostInitializationEvent event) {
 		
 	}
-
+//===============================================================================================================================================================================================\\
 }

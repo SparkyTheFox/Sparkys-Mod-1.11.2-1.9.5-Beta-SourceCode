@@ -25,6 +25,7 @@ public class ItemOdstArmor extends ItemArmor {
 	public ItemOdstArmor(ArmorMaterial materialIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, 0, equipmentSlotIn);
 		
+		
 
 	}
 
