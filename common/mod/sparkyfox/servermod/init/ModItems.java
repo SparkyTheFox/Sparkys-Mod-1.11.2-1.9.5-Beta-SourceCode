@@ -5,6 +5,7 @@ import mod.sparkyfox.servermod.item.ItemAK4U;
 import mod.sparkyfox.servermod.item.ItemAK4URounds;
 import mod.sparkyfox.servermod.item.ItemBrassIngot;
 import mod.sparkyfox.servermod.item.ItemBurger;
+import mod.sparkyfox.servermod.item.ItemCobaltIngot;
 import mod.sparkyfox.servermod.item.ItemDiamondKnife;
 import mod.sparkyfox.servermod.item.ItemDiamondMesser;
 import mod.sparkyfox.servermod.item.ItemFries;
@@ -13,16 +14,21 @@ import mod.sparkyfox.servermod.item.ItemGoldMesser;
 import mod.sparkyfox.servermod.item.ItemIronKnife;
 import mod.sparkyfox.servermod.item.ItemIronMesser;
 import mod.sparkyfox.servermod.item.ItemKevlar;
+import mod.sparkyfox.servermod.item.ItemMagnesiumIngot;
+import mod.sparkyfox.servermod.item.ItemNickelIngot;
 import mod.sparkyfox.servermod.item.ItemOdstArmor;
+import mod.sparkyfox.servermod.item.ItemPlatinumIngot;
 import mod.sparkyfox.servermod.item.ItemSMG;
 import mod.sparkyfox.servermod.item.ItemSMGBullet;
 import mod.sparkyfox.servermod.item.ItemSMGBulletCasing;
 import mod.sparkyfox.servermod.item.ItemSMGRounds;
 import mod.sparkyfox.servermod.item.ItemScarlet;
+import mod.sparkyfox.servermod.item.ItemSiliconIngot;
 import mod.sparkyfox.servermod.item.ItemStoneKnife;
 import mod.sparkyfox.servermod.item.ItemStoneMesser;
 import mod.sparkyfox.servermod.item.ItemTitaniumIngot;
 import mod.sparkyfox.servermod.item.ItemToyKnife;
+import mod.sparkyfox.servermod.item.ItemUraniumIngot;
 import mod.sparkyfox.servermod.item.ItemWoodenKnife;
 import mod.sparkyfox.servermod.item.ItemWoodenMesser;
 import mod.sparkyfox.servermod.lib.ModNames;
@@ -74,6 +80,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemSMGBulletCasing SMGBulletCasing;
 	public static ItemSMGBullet SMGBullet;
 	public static ItemBrassIngot BrassIngot;
+	public static ItemNickelIngot NickelIngot;
+	public static ItemCobaltIngot CobaltIngot;
+	public static ItemMagnesiumIngot MagnesiumIngot;
+	public static ItemSiliconIngot SiliconIngot;
+	public static ItemPlatinumIngot PlatinumIngot;
+	public static ItemUraniumIngot UraniumIngot;
 	
 //===============================================================================================================================================================================================\\
 																										//Armor Registry\\
@@ -180,7 +192,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //===============================================================================================================================================================================================\\
 				
 		//Armor Material
-		OdstArmor = EnumHelper.addArmorMaterial("OdstArmor", "", 66, new int[] {3, 6, 8, 3}, 50, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 20.0F); 
+		OdstArmor = EnumHelper.addArmorMaterial("OdstArmor", "", 66, new int[] {6, 6, 8, 6}, 50, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 20.0F); 
 		
 //===============================================================================================================================================================================================\\
 		
@@ -222,7 +234,31 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		
 		BrassIngot = (ItemBrassIngot) new ItemBrassIngot();
 		BrassIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.BrassIngot)); 
-		GameRegistry.register(BrassIngot); 
+		GameRegistry.register(BrassIngot);
+		
+		NickelIngot = (ItemNickelIngot) new ItemNickelIngot();
+		NickelIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.NickelIngot)); 
+		GameRegistry.register(NickelIngot);
+		
+		CobaltIngot = (ItemCobaltIngot) new ItemCobaltIngot();
+		CobaltIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.CobaltIngot)); 
+		GameRegistry.register(CobaltIngot);
+
+		MagnesiumIngot = (ItemMagnesiumIngot) new ItemMagnesiumIngot();
+		MagnesiumIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.MagnesiumIngot)); 
+		GameRegistry.register(MagnesiumIngot);
+
+		SiliconIngot = (ItemSiliconIngot) new ItemSiliconIngot();
+		SiliconIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SiliconIngot)); 
+		GameRegistry.register(SiliconIngot);
+
+		PlatinumIngot = (ItemPlatinumIngot) new ItemPlatinumIngot();
+		PlatinumIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.PlatinumIngot)); 
+		GameRegistry.register(PlatinumIngot);
+
+		UraniumIngot = (ItemUraniumIngot) new ItemUraniumIngot();
+		UraniumIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.UraniumIngot)); 
+		GameRegistry.register(UraniumIngot);    
 		
 //===============================================================================================================================================================================================\\
 
@@ -318,6 +354,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		((ItemOdstArmor) OdstChestplate).addRecipes();
 		((ItemOdstArmor) OdstLeggings).addRecipes();
 		((ItemOdstArmor) OdstBoots).addRecipes();
+		NickelIngot.addRecipes();		
+		CobaltIngot.addRecipes();
+		MagnesiumIngot.addRecipes();
+		SiliconIngot.addRecipes();
+		PlatinumIngot.addRecipes();
+		UraniumIngot.addRecipes();
 		
 //===============================================================================================================================================================================================\\
 																												//Texture Registry\\
@@ -454,6 +496,30 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation model27 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BrassIngot, "inventory");
 		ModelLoader.registerItemVariants(BrassIngot, model27);
 		mesher.register(BrassIngot, 0, model27);
+		
+		ModelResourceLocation model28 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.NickelIngot, "inventory");
+		ModelLoader.registerItemVariants(NickelIngot, model28);
+		mesher.register(NickelIngot, 0, model28);
+		
+		ModelResourceLocation model29 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.CobaltIngot, "inventory");
+		ModelLoader.registerItemVariants(CobaltIngot, model29);
+		mesher.register(CobaltIngot, 0, model29);
+		
+		ModelResourceLocation model30 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.MagnesiumIngot, "inventory");
+		ModelLoader.registerItemVariants(MagnesiumIngot, model30);
+		mesher.register(MagnesiumIngot, 0, model30);
+		
+		ModelResourceLocation model31 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SiliconIngot, "inventory");
+		ModelLoader.registerItemVariants(SiliconIngot, model31);
+		mesher.register(SiliconIngot, 0, model31);
+		
+		ModelResourceLocation model32 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PlatinumIngot, "inventory");
+		ModelLoader.registerItemVariants(PlatinumIngot, model32);
+		mesher.register(PlatinumIngot, 0, model32);
+		
+		ModelResourceLocation model33 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.UraniumIngot, "inventory");
+		ModelLoader.registerItemVariants(UraniumIngot, model33);
+		mesher.register(UraniumIngot, 0, model33);
 		
 //===============================================================================================================================================================================================\\
 	

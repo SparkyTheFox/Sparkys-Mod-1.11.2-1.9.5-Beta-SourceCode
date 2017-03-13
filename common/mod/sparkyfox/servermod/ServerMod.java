@@ -63,6 +63,7 @@ public class ServerMod {
 		sounds = new ModSoundEvent();
 		proxy.registerRenderer();
 		
+		
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {

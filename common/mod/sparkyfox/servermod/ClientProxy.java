@@ -72,6 +72,7 @@ public class ClientProxy extends CommonProxy {
   		public Render createRenderFor(RenderManager manager) {
   			return new RenderFriendlynessPellet(manager);
   		}});
+  	
 			
 //===============================================================================================================================================================================================\\
 																								//Event Handler\\
@@ -102,6 +103,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
+		
 	}
 	
 	@Override

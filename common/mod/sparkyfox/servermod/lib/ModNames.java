@@ -35,6 +35,12 @@ public class ModNames {
 	//public static final String ModRecord = "ModRecord";
 	public static final String SMGBulletCasing = "SMGBulletCasing";
 	public static final String SMGBullet = "SMGBullet";
+	public static final String NickelIngot = "NickelIngot";
+	public static final String CobaltIngot = "CobaltIngot";
+	public static final String MagnesiumIngot = "MagnesiumIngot";
+	public static final String SiliconIngot = "SiliconIngot";
+	public static final String PlatinumIngot = "PlatinumIngot";
+	public static final String UraniumIngot = "UraniumIngot";
 	
 	
 	/*
@@ -45,4 +51,16 @@ public class ModNames {
 	public static final String TitaniumBlock = "TitaniumBlock";
 	public static final String BrassOre = "BrassOre";
 	public static final String BrassBlock = "BrassBlock";
+	public static final String NickelOre = "NickelOre";
+	public static final String NickelBlock = "NickelBlock";
+	public static final String CobaltOre = "CobaltOre";
+	public static final String CobaltBlock = "CobaltBlock";
+	public static final String MagnesiumOre = "MagnesiumOre";
+	public static final String MagnesiumBlock = "MagnesiumBlock";
+	public static final String SiliconOre = "SiliconOre";
+	public static final String SiliconBlock = "SiliconBlock";
+	public static final String PlatinumOre = "PlatinumOre";
+	public static final String PlatinumBlock = "PlatinumBlock";
+	public static final String UraniumOre = "UraniumOre";
+	public static final String UraniumBlock = "UraniumBlock";
 }

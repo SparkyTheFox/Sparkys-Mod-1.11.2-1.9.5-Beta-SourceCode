@@ -10,7 +10,11 @@ import mod.sparkyfox.servermod.models.ModelFriendlynessPellet;
 import mod.sparkyfox.servermod.render.RenderFlowey;
 import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome.SpawnListEntry;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
@@ -29,11 +33,13 @@ public class ModEntities {
 		
 	}
 
-	public void register() {
-		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:EntitySMGRounds") , EntitySMGRounds.class, "SMGRounds", SMGRounds, ServerMod.instance, 64, 1, true);
-		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:EntityAK4URounds") , EntityAK4URounds.class, "AK4URounds", AK4URounds, ServerMod.instance, 64, 1, true);
-		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:EntityFlowey") , EntityFlowey.class, "Flowey", Flowey, ServerMod.instance, 64, 1, true, 0xffff00, 0x32cd32);
+	public static void register() {
+		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:SMGRounds") , EntitySMGRounds.class, "SMGRounds", SMGRounds, ServerMod.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:AK4URounds") , EntityAK4URounds.class, "AK4URounds", AK4URounds, ServerMod.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:Flowey") , EntityFlowey.class, "Flowey", Flowey, ServerMod.instance, 64, 1, true, 0xffff00, 0x32cd32);
 		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:FriendlynessPellet") , EntityFriendlynessPellet.class, "FriendlynessPellet", FriendlynessPellet, ServerMod.instance, 64, 1, true);
+		EntityRegistry.addSpawn(EntityFlowey.class, 1000, 50, 100, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS,
+				Biomes.PLAINS, Biomes.ROOFED_FOREST, Biomes.HELL);
 		
 	}
 	
@@ -46,4 +52,14 @@ public class ModEntities {
 	}
 
 	
+	public static void registerEntity()
+	{
+		EntityRegistry.addSpawn(EntityFlowey.class, 10000, 1, 1, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS,
+				Biomes.PLAINS, Biomes.ROOFED_FOREST, Biomes.HELL, Biomes.MUTATED_ROOFED_FOREST, Biomes.MUTATED_FOREST, Biomes.MUTATED_BIRCH_FOREST_HILLS, Biomes.MUTATED_BIRCH_FOREST, Biomes.FOREST_HILLS);
+		
 	}
+}
+
+//FFFF00
+//32CD3
+

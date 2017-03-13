@@ -29,10 +29,12 @@ public class ModSoundEvent {
 //===============================================================================================================================================================================================\\
 																									//Flowey Registry\\	
 	
-public static SoundEvent FloweyAmbient;
-public static SoundEvent FloweyAmbient2;
-public static SoundEvent FloweyHurt;
-public static SoundEvent FloweyAngry;
+	public static SoundEvent FloweyHowdy;
+	public static SoundEvent FloweyKOBK;
+	public static SoundEvent FloweyIKWYD;
+	public static SoundEvent FloweyHurt;
+	public static SoundEvent FloweyLaugh;
+	public static SoundEvent FloweyDeath;
 //public static SoundEvent mus_boss1;
 
 //===============================================================================================================================================================================================\\
@@ -62,12 +64,15 @@ public static SoundEvent FloweyAngry;
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: Flowey\\
 		
-FloweyAmbient = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyAmbient")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyAmbient"));
-FloweyAmbient2= new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyAmbient2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyAmbient2"));
-FloweyHurt = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt"));
-FloweyAngry = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyAngry")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyAngry"));
+		FloweyHowdy = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy"));
+		FloweyKOBK= new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK"));
+		FloweyIKWYD = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD"));
+		FloweyHurt = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt"));
+		FloweyLaugh = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh"));
+		FloweyDeath = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath"));
+		
 
-
+	
 
 //===============================================================================================================================================================================================\\
 																									//Sound Name Registry\\
@@ -84,10 +89,13 @@ FloweyAngry = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyAngry
 		registerSound(mus_battle2);
 		registerSound(mus_boss1);
 		registerSound(song_90s);
-		registerSound(FloweyAmbient);
-		registerSound(FloweyAmbient2);
+		registerSound(FloweyHowdy);
+		registerSound(FloweyKOBK);
+		registerSound(FloweyIKWYD);
 		registerSound(FloweyHurt);
-		registerSound(FloweyAngry);
+		registerSound(FloweyLaugh);
+		registerSound(FloweyDeath);
+		
 		
 	}
 

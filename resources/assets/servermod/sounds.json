@@ -77,15 +77,41 @@
         "subtitle": "Running in the 90s!"
     },
 
-        "floweyangry": {
+        "floweylaugh": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:floweyangry", "stream": true}
+       {"name":"servermod:floweylaugh", "stream": true}
             
         ],
         "subtitle": "hahahaha"
     },
 
+        "floweyhowdy": {
+        "category": "voice",
+        "sounds": [
+       {"name":"servermod:floweyhowdy", "stream": true}
+            
+        ],
+        "subtitle": "*Howdy"
+    },
+
+        "floweykobk": {
+        "category": "voice",
+        "sounds": [
+       {"name":"servermod:floweykobk", "stream": true}
+            
+        ],
+        "subtitle": "*In this world, It's kill or be killed!"
+       },
+
+        "floweyikwyd": {
+        "category": "voice",
+        "sounds": [
+       {"name":"servermod:floweyikwyd", "stream": true}
+            
+        ],
+        "subtitle": "*I KnOw WhAt YoU DiD!"
+    },
         "floweyhurt": {
         "category": "voice",
         "sounds": [
@@ -93,7 +119,17 @@
             
         ],
         "subtitle": "*OW!"
+        
+        },
+        "floweydeath": {
+        "category": "voice",
+        "sounds": [
+       {"name":"servermod:floweydeath", "stream": true}
+            
+        ],
+        "subtitle": "*yOu NaIVe IdIoT!"
     },
+
 
         "smg": {
         "category": "player",

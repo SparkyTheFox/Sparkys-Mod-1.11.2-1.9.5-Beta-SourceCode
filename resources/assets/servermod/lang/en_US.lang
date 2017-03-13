@@ -4,6 +4,18 @@ TitaniumOreservermod:TitaniumOre.name=Titanium Ore
 TitaniumBlockservermod:TitaniumBlock.name=Titanium Block
 BrassOreservermod:BrassOre.name=Brass Ore
 BrassBlockservermod:BrassBlock.name=Brass Block
+NickelOreservermod:NickelOre.name=Nickel Ore
+NickelBlockservermod:NickelBlock.name=Nickel Block
+CobaltOreservermod:CobaltOre.name=Cobalt Ore
+CobaltBlockservermod:CobaltBlock.name=Cobalt Block
+MagnesiumOreservermod:MagnesiumOre.name=Magnesium Ore
+MagnesiumBlockservermod:MagnesiumBlock.name=Magnesium Block
+SiliconOreservermod:SiliconOre.name=Silicon Ore
+SiliconBlockservermod:SiliconBlock.name=Silicon Block
+PlatinumOreservermod:PlatinumOre.name=Platinum Ore
+PlatinumBlockservermod:PlatniumBlock.name=Platinum Block
+UraniumOreservermod:UraniumOre.name=Uranium Ore
+UraniumBlockservermod:UraniumBlock.name=Uranium Block
 
 # Items
 
@@ -34,6 +46,13 @@ DiamondKnifeservermod:DiamondKnife.name=Diamond Knife
 SMGBulletCasingservermod:SMGBulletCasing.name=5x23mm Case
 SMGBulletservermod:SMGBullet.name=5x23mm Bullet
 BrassIngotservermod:BrassIngot.name=Brass Ingot
+NickelIngotservermod:NickelIngot.name=Nickel Ingot
+CobaltIngotservermod:CobaltIngot.name=Cobalt Ingot
+MagnesiumIngotservermod:MagnesiumIngot.name=Magnesium Ingot
+SiliconIngotservermod:SiliconIngot.name=Silicon Ingot
+PlatiniumIngotservermod:PlatiniumIngot.name=Platinium Ingot
+UraniumIngotservermod:UraniumIngot.name=Uranium Ingot
+
 
 # Creative Tab
 

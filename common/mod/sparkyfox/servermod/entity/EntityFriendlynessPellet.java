@@ -36,7 +36,7 @@ public class EntityFriendlynessPellet extends EntityFireball {
 	}
 
 	public static void registerFixesFriendlynessPellet(DataFixer fixer) {
-		EntityFireball.registerFixesFireball(fixer, "FriendlynessPellet");
+		EntityFireball.registerFixesFireball(fixer, "FriendlynessPellet");//fireball?
 	}
 
 	/**
@@ -83,11 +83,11 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		if (!this.world.isRemote) {
 			if (result.entityHit != null) {
 				if (this.shootingEntity != null) {
-					if (result.entityHit.attackEntityFrom(DamageSource.causeMobDamage(this.shootingEntity), 8.0F)) {
+					if (result.entityHit.attackEntityFrom(DamageSource.causeMobDamage(this.shootingEntity), 8.0F)) {//here
 						if (result.entityHit.isEntityAlive()) {
 							this.applyEnchantments(this.shootingEntity, result.entityHit);
 						} else {
-							this.shootingEntity.heal(5.0F);
+							this.shootingEntity.heal(10.0F);//here
 						}
 					}
 				} else {
@@ -103,14 +103,14 @@ public class EntityFriendlynessPellet extends EntityFireball {
 						i = 40;
 					}
 
-					if (i > 0) {
+					if (i > 3) {//0
 						((EntityLivingBase) result.entityHit)
-								.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 20 * i, 1));
+								.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 20 * i, 1));//here
 					}
 				}
 			}
 
-			this.world.newExplosion(this, this.posX, this.posY, this.posZ, 1.0F, false,
+			this.world.newExplosion(this, this.posX, this.posY, this.posZ, 1.0F, false,//here
 					this.world.getGameRules().getBoolean("mobGriefing"));
 			this.setDead();
 		}

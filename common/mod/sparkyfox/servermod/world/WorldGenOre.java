@@ -37,8 +37,14 @@ public class WorldGenOre implements IWorldGenerator
 	}
 	private void genSurfaceTitanium(World world, Random random, int chunkX, int chunkZ)
 	{
-		 addOreSpawn(ModBlocks.TitaniumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 10, 8, 10, 70, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
-		 	addOreSpawn(ModBlocks.BrassOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 8, 10, 10, 100, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.TitaniumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 10, 8, 1, 70, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.BrassOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 8, 10, 1, 128, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value 
+		 addOreSpawn(ModBlocks.NickelOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 9, 20, 1, 64, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.CobaltOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 9, 3, 1, 36, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.MagnesiumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 9, 7, 1, 20, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.SiliconOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 12, 4, 1, 100, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.PlatinumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 4, 1, 18, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.UraniumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 6, 1, 30, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
 		}
 	 private void addOreSpawn(IBlockState block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chance, int minY, int maxY, Predicate<IBlockState> blockToSpawnIn) //world generator. make sure to register in clientproxy, use GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);.
 	 {
@@ -145,3 +151,36 @@ public class OreNeptuneWorldGenerator implements IWorldGenerator {
 	}
 	
 */
+
+
+/**
+ *          public int coalSize = 17; Vein Size
+            public int coalCount = 20; Rarity
+            public int coalMinHeight; Min height
+            public int coalMaxHeight = 128; Max Height
+            
+            public int ironSize = 9; Vein Size
+            public int ironCount = 20; Rarity
+            public int ironMinHeight; Min height
+            public int ironMaxHeight = 64; Max Height
+            
+            public int goldSize = 9; Vein Size
+            public int goldCount = 2; Rarity
+            public int goldMinHeight; Min height
+            public int goldMaxHeight = 32; Max Height
+            
+            public int redstoneSize = 8; Vein Size
+            public int redstoneCount = 8; Rarity
+            public int redstoneMinHeight; Min height
+            public int redstoneMaxHeight = 16;Max Height
+            
+            public int diamondSize = 8; Vein Size
+            public int diamondCount = 1; Rarity
+            public int diamondMinHeight; Min height
+            public int diamondMaxHeight = 16; Max Height
+            
+            public int lapisSize = 7; Vein Size
+            public int lapisCount = 1; Rarity
+            public int lapisCenterHeight = 16; 
+            public int lapisSpread = 16; 
+ */

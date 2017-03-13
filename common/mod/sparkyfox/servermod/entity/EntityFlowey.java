@@ -25,14 +25,17 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.BossInfoServer;
+import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -98,6 +101,8 @@ public class EntityFlowey extends EntityMob implements IRangedAttackMob {
                 return ((EntityFlowey)this.taskOwner).isAngry() && super.shouldExecute();
             }
         }
+        
+        
 
 //==============================================================================================================================================================================================\\
 	//AI and Tasks\\
@@ -183,7 +188,7 @@ public class EntityFlowey extends EntityMob implements IRangedAttackMob {
 
         if (this.randomSoundDelay > 0 && --this.randomSoundDelay == 0)
         {
-            this.playSound(ModSoundEvent.FloweyAngry, this.getSoundVolume() * 2.0F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F) * 1.8F);
+            this.playSound(ModSoundEvent.FloweyIKWYD, this.getSoundVolume() * 2.0F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.0F + 1.0F) * 1.0F);
         }
 
         if (this.angerLevel > 0 && this.angerTargetUUID != null && this.getAITarget() == null)
@@ -196,7 +201,15 @@ public class EntityFlowey extends EntityMob implements IRangedAttackMob {
 
         super.updateAITasks();
     }
-	
+	//////////////////////////////////////
+	  /**
+     * Checks if the entity's current position is a valid location to spawn this entity.
+     */
+    public boolean getCanSpawnHere()
+    {
+        return this.world.getDifficulty() != EnumDifficulty.PEACEFUL;
+    }
+	//////////////////////////
 	/**
      * Causes this Flowey to become angry at the supplied Entity (which will be a player).
      */
@@ -213,9 +226,9 @@ public class EntityFlowey extends EntityMob implements IRangedAttackMob {
     
     public boolean isAngry()
     {
-       // return this.angerLevel > 0;
+      return this.angerLevel > 0;
         
-         return ((Boolean)this.dataManager.get(ATTACKING)).booleanValue();
+        // return ((Boolean)this.dataManager.get(ATTACKING)).booleanValue();
     }
   
 
@@ -224,24 +237,99 @@ public class EntityFlowey extends EntityMob implements IRangedAttackMob {
 	this.dataManager.set(ANGRY, Boolean.valueOf(invulnerable));
 	}
     
+    /**
+     * (abstract) Protected helper method to write subclass entity data to NBT.
+     */
+    public void writeEntityToNBT(NBTTagCompound compound)
+    {
+        super.writeEntityToNBT(compound);
+        compound.setShort("Anger", (short)this.angerLevel);
+
+        if (this.angerTargetUUID != null)
+        {
+            compound.setString("HurtBy", this.angerTargetUUID.toString());
+        }
+        else
+        {
+            compound.setString("HurtBy", "");
+        }
+    }
+
+    /**
+     * (abstract) Protected helper method to read subclass entity data from NBT.
+     */
+    public void readEntityFromNBT(NBTTagCompound compound)
+    {
+        super.readEntityFromNBT(compound);
+        this.angerLevel = compound.getShort("Anger");
+        String s = compound.getString("HurtBy");
+
+        if (!s.isEmpty())
+        {
+            this.angerTargetUUID = UUID.fromString(s);
+            EntityPlayer entityplayer = this.world.getPlayerEntityByUUID(this.angerTargetUUID);
+           // this.setRevengeTarget(entityplayer);
+
+           // if (entityplayer != null)
+            {
+                //this.attackingPlayer = entityplayer;
+                //this.recentlyHit = this.getRevengeTimer();
+            }
+        }
+    }
+
+    /**
+     * Called when the entity is attacked.
+     */
+    public boolean attackEntityFrom(DamageSource source, float amount)
+    {
+        if (this.isEntityInvulnerable(source))
+        {
+            return false;
+        }
+        else
+        {
+            Entity entity = source.getEntity();
+
+            if (entity instanceof EntityPlayer)
+            {
+                this.becomeAngryAt(entity);
+            }
+
+            return super.attackEntityFrom(source, amount);
+        }
+    }
+
+   
 //==============================================================================================================================================================================================\\
 	//SOUNDS\\
     protected SoundEvent getAmbientSound()
     {
-        return ModSoundEvent.FloweyAngry;
+        return this.isAngry() ? ModSoundEvent.FloweyLaugh : this.isAttacking() ? ModSoundEvent.FloweyKOBK : ModSoundEvent.FloweyHowdy;
     }
-
+    
     protected SoundEvent getHurtSound()
     {
         return ModSoundEvent.FloweyHurt;
     }
 
-    protected SoundEvent getDeathSound()
+   	protected SoundEvent getDeathSound()
     {
-        return ModSoundEvent.FloweyAngry;
+      return ModSoundEvent.FloweyDeath;
     }
     
-   
+  	protected SoundEvent getAngerSound()
+    {
+      return ModSoundEvent.FloweyKOBK;
+    }
+    
+    /**
+     * Returns the volume for the sounds this mob makes.
+     */
+    protected float getSoundVolume()
+    {
+        return 10.0F;
+    }
 	
 
 //==============================================================================================================================================================================================\\
