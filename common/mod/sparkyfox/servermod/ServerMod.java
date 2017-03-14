@@ -45,6 +45,7 @@ public class ServerMod {
 	@SidedProxy(clientSide = "mod.sparkyfox.servermod.ClientProxy", serverSide = "mod.sparkyfox.servermod.CommonProxy")
 	public static CommonProxy proxy;
 	
+	
 //===============================================================================================================================================================================================\\
 																									//Warnings\\
 	
@@ -60,15 +61,12 @@ public class ServerMod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event); 
-		//sounds = new ModSoundEvent();
-		proxy.registerRenderer();
 		
 		
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		proxy.init(event); 
-		//entity = new ModEntities();
+		proxy.init(event);
 	
 	}
 	@EventHandler

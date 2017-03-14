@@ -29,7 +29,7 @@ public class ModEntities {
 	public ModEntities() {
 		registerEntity();
 		registerRender();
-		ModEntities.registerEntity();
+		
 		
 	}
 

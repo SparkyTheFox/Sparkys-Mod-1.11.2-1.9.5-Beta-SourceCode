@@ -20,8 +20,6 @@ public class CommonProxy {
 	public void registerModels() {
 	}
 
-	public void registerRenderer() {
-	}
 
 	public void registerEntity() {
 	}
@@ -43,9 +41,7 @@ public class CommonProxy {
 		ModBlocks.init();
 		sounds = new ModSoundEvent();
 		
-		
 	}
-
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		ModItems.initRecipes();
@@ -56,9 +52,7 @@ public class CommonProxy {
 		
 	}
 
-	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		
 		
 	}
 //===============================================================================================================================================================================================\\
