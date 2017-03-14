@@ -27,19 +27,19 @@ public class ModEntities {
 	
 
 	public ModEntities() {
-		register();
-		ModEntities.registerRender();
-		
+		registerEntity();
+		registerRender();
+		ModEntities.registerEntity();
 		
 	}
 
-	public static void register() {
+	public static void registerEntity() {
 		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:SMGRounds") , EntitySMGRounds.class, "SMGRounds", SMGRounds, ServerMod.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:AK4URounds") , EntityAK4URounds.class, "AK4URounds", AK4URounds, ServerMod.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:Flowey") , EntityFlowey.class, "Flowey", Flowey, ServerMod.instance, 64, 1, true, 0xffff00, 0x32cd32);
 		EntityRegistry.registerModEntity(new ResourceLocation("ServerMod:FriendlynessPellet") , EntityFriendlynessPellet.class, "FriendlynessPellet", FriendlynessPellet, ServerMod.instance, 64, 1, true);
-		EntityRegistry.addSpawn(EntityFlowey.class, 1000, 50, 100, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS,
-				Biomes.PLAINS, Biomes.ROOFED_FOREST, Biomes.HELL);
+		EntityRegistry.addSpawn(EntityFlowey.class, 10000, 1, 1, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS,
+				Biomes.PLAINS, Biomes.ROOFED_FOREST, Biomes.HELL, Biomes.MUTATED_ROOFED_FOREST, Biomes.MUTATED_FOREST, Biomes.MUTATED_BIRCH_FOREST_HILLS, Biomes.MUTATED_BIRCH_FOREST, Biomes.FOREST_HILLS);
 		
 	}
 	
@@ -50,14 +50,7 @@ public class ModEntities {
 		RenderingRegistry.registerEntityRenderingHandler(EntityFlowey.class, new RenderFlowey(Minecraft.getMinecraft().getRenderManager(), new ModelFlowey(), 0.5F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFriendlynessPellet.class, new RenderFriendlynessPellet(Minecraft.getMinecraft().getRenderManager()));
 	}
-
 	
-	public static void registerEntity()
-	{
-		EntityRegistry.addSpawn(EntityFlowey.class, 10000, 1, 1, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS,
-				Biomes.PLAINS, Biomes.ROOFED_FOREST, Biomes.HELL, Biomes.MUTATED_ROOFED_FOREST, Biomes.MUTATED_FOREST, Biomes.MUTATED_BIRCH_FOREST_HILLS, Biomes.MUTATED_BIRCH_FOREST, Biomes.FOREST_HILLS);
-		
-	}
 }
 
 //FFFF00

@@ -360,6 +360,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		SiliconIngot.addRecipes();
 		PlatinumIngot.addRecipes();
 		UraniumIngot.addRecipes();
+		SMGBulletCasing.addRecipes();
 		
 //===============================================================================================================================================================================================\\
 																												//Texture Registry\\

@@ -48,11 +48,11 @@ public class ServerMod {
 //===============================================================================================================================================================================================\\
 																									//Warnings\\
 	
-	@SuppressWarnings("unused")
-	private ModSoundEvent sounds;
+	//@SuppressWarnings("unused")
+	//private ModSoundEvent sounds;
 	
-	@SuppressWarnings("unused")
-	private ModEntities entity;
+	//@SuppressWarnings("unused")
+	//private ModEntities entity;
 
 //===============================================================================================================================================================================================\\
 																									//Inits\\
@@ -60,7 +60,7 @@ public class ServerMod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event); 
-		sounds = new ModSoundEvent();
+		//sounds = new ModSoundEvent();
 		proxy.registerRenderer();
 		
 		
@@ -68,7 +68,7 @@ public class ServerMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event); 
-		entity = new ModEntities();
+		//entity = new ModEntities();
 	
 	}
 	@EventHandler

@@ -110,7 +110,7 @@ public class EntityFriendlynessPellet extends EntityFireball {
 				}
 			}
 
-			this.world.newExplosion(this, this.posX, this.posY, this.posZ, 1.0F, false,//here
+			this.world.newExplosion(this, this.posX, this.posY, this.posZ, 3.0F, false,//here
 					this.world.getGameRules().getBoolean("mobGriefing"));
 			this.setDead();
 		}

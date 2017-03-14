@@ -186,7 +186,7 @@ public class EntityFlowey extends EntityMob implements IRangedAttackMob {
             iattributeinstance.removeModifier(ATTACK_SPEED_BOOST_MODIFIER);
         }
 
-        if (this.randomSoundDelay > 0 && --this.randomSoundDelay == 0)
+        if (this.randomSoundDelay > 3 && --this.randomSoundDelay == 3)
         {
             this.playSound(ModSoundEvent.FloweyIKWYD, this.getSoundVolume() * 2.0F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.0F + 1.0F) * 1.0F);
         }
