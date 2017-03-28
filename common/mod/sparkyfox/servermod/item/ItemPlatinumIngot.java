@@ -21,18 +21,10 @@ public class ItemPlatinumIngot extends Item {
 	public String getUnlocalizedName(ItemStack stack) {
 		return "PlatinumIngot" + ServerMod.RESOURCE_PREFIX + ModNames.PlatinumIngot;
 		
-		}
-
-															//Smelting Recipe\\ 
-		
-	public void addRecipes() {
-		GameRegistry.addSmelting(Blocks.ANVIL, new ItemStack(ModItems.PlatinumIngot), 0.75F);
-	
+	}
 															//Crafting Recipe\\
 	
-
+			public void addRecipes() {
 			GameRegistry.addShapelessRecipe(new ItemStack(this, 9), ModBlocks.PlatinumBlock); 
 	}
 }
-/**		GameRegistry.addShapedRecipe(new ItemStack(this), "   ", " I ", " L ", 'I', Items.field_191525_da, 'L',
-new ItemStack(Items.LEATHER));*/

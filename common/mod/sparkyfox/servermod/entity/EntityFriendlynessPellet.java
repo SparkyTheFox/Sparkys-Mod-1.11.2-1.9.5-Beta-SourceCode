@@ -1,3 +1,4 @@
+/**
 package mod.sparkyfox.servermod.entity;
 
 import net.minecraft.block.Block;
@@ -39,10 +40,10 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		EntityFireball.registerFixesFireball(fixer, "FriendlynessPellet");//fireball?
 	}
 
-	/**
+	
 	 * Return the motion factor for this projectile. The factor is multiplied by
 	 * the original motion.
-	 */
+	 *
 	protected float getMotionFactor() {
 		return this.isInvulnerable() ? 0.73F : super.getMotionFactor();
 	}
@@ -54,17 +55,17 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		this.setSize(0.3125F, 0.3125F);
 	}
 
-	/**
+	
 	 * Returns true if the entity is on fire. Used by render to add the fire
 	 * effect on rendering.
-	 */
+	 
 	public boolean isBurning() {
 		return false;
 	}
 
-	/**
+	
 	 * Explosion resistance of a block relative to this entity
-	 */
+	 *
 	public float getExplosionResistance(Explosion explosionIn, World worldIn, BlockPos pos, IBlockState blockStateIn) {
 		float f = super.getExplosionResistance(explosionIn, worldIn, pos, blockStateIn);
 		Block block = blockStateIn.getBlock();
@@ -76,9 +77,9 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		return f;
 	}
 
-	/**
+	
 	 * Called when this EntityFireball hits a block or entity.
-	 */
+	 *
 	protected void onImpact(RayTraceResult result) {
 		if (!this.world.isRemote) {
 			if (result.entityHit != null) {
@@ -87,7 +88,7 @@ public class EntityFriendlynessPellet extends EntityFireball {
 						if (result.entityHit.isEntityAlive()) {
 							this.applyEnchantments(this.shootingEntity, result.entityHit);
 						} else {
-							this.shootingEntity.heal(10.0F);//here
+							this.shootingEntity.heal(100.0F);//here
 						}
 					}
 				} else {
@@ -105,7 +106,8 @@ public class EntityFriendlynessPellet extends EntityFireball {
 
 					if (i > 3) {//0
 						((EntityLivingBase) result.entityHit)
-								.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 20 * i, 1));//here
+								.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 80 * i, 3));//here
+						//addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 80(40 seconds) * i, 3(slowness IV)
 					}
 				}
 			}
@@ -116,17 +118,17 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		}
 	}
 
-	/**
+	
 	 * Returns true if other Entities should be prevented from moving through
 	 * this Entity.
-	 */
+	 *
 	public boolean canBeCollidedWith() {
 		return false;
 	}
 
-	/**
+	
 	 * Called when the entity is attacked.
-	 */
+	 *
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 		return false;
 	}
@@ -135,18 +137,18 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		this.dataManager.register(INVULNERABLE, Boolean.valueOf(false));
 	}
 
-	/**
+	
 	 * Return whether this FriendlynessPellet comes from an invulnerable (aura)
 	 * wither boss.
-	 */
+	 *
 	public boolean isInvulnerable() {
 		return ((Boolean) this.dataManager.get(INVULNERABLE)).booleanValue();
 	}
 
-	/**
+	**
 	 * Set whether this FriendlynessPellet comes from an invulnerable (aura)
 	 * wither boss.
-	 */
+	 *
 	public void setInvulnerable(boolean invulnerable) {
 		this.dataManager.set(INVULNERABLE, Boolean.valueOf(invulnerable));
 	}
@@ -155,3 +157,4 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		return false;
 	}
 }
+*/

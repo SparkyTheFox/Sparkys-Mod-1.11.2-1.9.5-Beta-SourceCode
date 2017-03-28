@@ -22,17 +22,11 @@ public class ItemCobaltIngot extends Item {
 		return "CobaltIngot" + ServerMod.RESOURCE_PREFIX + ModNames.CobaltIngot;
 		
 		}
-
-															//Smelting Recipe\\ 
-		
-	public void addRecipes() {
-		GameRegistry.addSmelting(Blocks.ANVIL, new ItemStack(ModItems.CobaltIngot), 0.75F);
+	
 	
 															//Crafting Recipe\\
 	
-
+		public void addRecipes() {
 			GameRegistry.addShapelessRecipe(new ItemStack(this, 9), ModBlocks.CobaltBlock); 
 	}
 }
-/**		GameRegistry.addShapedRecipe(new ItemStack(this), "   ", " I ", " L ", 'I', Items.field_191525_da, 'L',
-new ItemStack(Items.LEATHER));*/

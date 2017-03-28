@@ -17,22 +17,16 @@ public class ItemSiliconIngot extends Item {
 		this.setCreativeTab(CreativeTabs.MATERIALS);
 		
 	}
+	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		return "SiliconIngot" + ServerMod.RESOURCE_PREFIX + ModNames.SiliconIngot;
 		
 		}
 
-															//Smelting Recipe\\ 
-		
-	public void addRecipes() {
-		GameRegistry.addSmelting(Blocks.ANVIL, new ItemStack(ModItems.SiliconIngot), 0.75F);
-	
 															//Crafting Recipe\\
 	
-
+		public void addRecipes() {
 			GameRegistry.addShapelessRecipe(new ItemStack(this, 9), ModBlocks.SiliconBlock); 
 	}
 }
-/**		GameRegistry.addShapedRecipe(new ItemStack(this), "   ", " I ", " L ", 'I', Items.field_191525_da, 'L',
-new ItemStack(Items.LEATHER));*/

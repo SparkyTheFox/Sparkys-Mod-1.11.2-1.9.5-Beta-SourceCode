@@ -22,17 +22,10 @@ public class ItemUraniumIngot extends Item {
 		return "UraniumIngot" + ServerMod.RESOURCE_PREFIX + ModNames.UraniumIngot;
 		
 		}
-
-															//Smelting Recipe\\ 
-		
-	public void addRecipes() {
-		GameRegistry.addSmelting(Blocks.ANVIL, new ItemStack(ModItems.UraniumIngot), 0.75F);
 	
 															//Crafting Recipe\\
 	
-
+		public void addRecipes() {
 			GameRegistry.addShapelessRecipe(new ItemStack(this, 9), ModBlocks.UraniumBlock); 
 	}
 }
-/**		GameRegistry.addShapedRecipe(new ItemStack(this), "   ", " I ", " L ", 'I', Items.field_191525_da, 'L',
-new ItemStack(Items.LEATHER));*/

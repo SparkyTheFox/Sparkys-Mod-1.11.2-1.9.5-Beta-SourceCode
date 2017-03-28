@@ -3,7 +3,7 @@ package mod.sparkyfox.servermod.entity;
 import javax.annotation.Nonnull;
 
 import mod.sparkyfox.servermod.init.ModItems;
-import mod.sparkyfox.servermod.init.ModSoundEvent;
+import mod.sparkyfox.servermod.init.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -211,7 +211,7 @@ public class EntityAK4URounds extends EntityArrow {
     	                    }
     	                }
 
-    	                this.playSound(ModSoundEvent.bloodsplat,  1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
+    	                this.playSound(ModSoundEvents.bloodsplat,  1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
     	                if (!(entity instanceof EntityEnderman))
     	                {
     	                    this.setDead();
@@ -256,7 +256,7 @@ public class EntityAK4URounds extends EntityArrow {
     	            this.posX -= this.motionX / (double)f2 * 0.05000000074505806D;
     	            this.posY -= this.motionY / (double)f2 * 0.05000000074505806D;
     	            this.posZ -= this.motionZ / (double)f2 * 0.05000000074505806D;
-    	            this.playSound(ModSoundEvent.impact, 1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
+    	            this.playSound(ModSoundEvents.impact, 1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));
     	            this.inGround = true;
     	            this.setIsCritical(false);
 
@@ -279,7 +279,7 @@ public class EntityAK4URounds extends EntityArrow {
     @Override
     public void arrowHit(EntityLivingBase living) {
         super.arrowHit(living);
-        this.playSound(ModSoundEvent.bloodsplat,  1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));//
+        this.playSound(ModSoundEvents.bloodsplat,  1.0F, 1.2F / (this.rand.nextFloat() * 0.2F + 0.9F));//
  
     }
     @Override

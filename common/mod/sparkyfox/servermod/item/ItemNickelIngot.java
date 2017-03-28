@@ -22,17 +22,10 @@ public class ItemNickelIngot extends Item {
 		return "NickelIngot" + ServerMod.RESOURCE_PREFIX + ModNames.NickelIngot;
 		
 		}
-
-															//Smelting Recipe\\ 
-		
-	public void addRecipes() {
-		GameRegistry.addSmelting(Blocks.ANVIL, new ItemStack(ModItems.NickelIngot), 0.75F);
 	
 															//Crafting Recipe\\
 	
-
+			public void addRecipes() {
 			GameRegistry.addShapelessRecipe(new ItemStack(this, 9), ModBlocks.NickelBlock); 
 	}
 }
-/**		GameRegistry.addShapedRecipe(new ItemStack(this), "   ", " I ", " L ", 'I', Items.field_191525_da, 'L',
-new ItemStack(Items.LEATHER));*/

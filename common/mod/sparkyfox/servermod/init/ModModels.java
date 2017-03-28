@@ -10,5 +10,9 @@ public interface ModModels {
 	 * Exceptions to that rule are noted
 	 */
 	@SideOnly(Side.CLIENT)
-	void registerModels();
+	static
+	void registerModels() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModItems;
-import mod.sparkyfox.servermod.init.ModSoundEvent;
+import mod.sparkyfox.servermod.init.ModSoundEvents;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -163,7 +163,7 @@ public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBas
                     worldIn.spawnEntity(entityarrow);
                 }
 
-                worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSoundEvent.smg, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSoundEvents.smg, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 
                 if (!flag1 && !entityplayer.capabilities.isCreativeMode)
                 {

@@ -1,14 +1,14 @@
 package mod.sparkyfox.servermod;
 
 import mod.sparkyfox.servermod.entity.EntityAK4URounds;
-import mod.sparkyfox.servermod.entity.EntityFlowey;
-import mod.sparkyfox.servermod.entity.EntityFriendlynessPellet;
+//import mod.sparkyfox.servermod.entity.EntityFlowey;
+//import mod.sparkyfox.servermod.entity.EntityFriendlynessPellet;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.render.RenderAK4URounds;
-import mod.sparkyfox.servermod.render.RenderFlowey;
-import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
+//import mod.sparkyfox.servermod.render.RenderFlowey;
+//import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
 import mod.sparkyfox.servermod.render.RenderSMGRounds;
 import mod.sparkyfox.servermod.world.WorldGenOre;
 import net.minecraft.block.Block;
@@ -58,7 +58,7 @@ public class ClientProxy extends CommonProxy {
 		public Render createRenderFor(RenderManager manager) {
 			return new RenderAK4URounds(manager);
 		}});
-	
+	/**
 	//Flowey
     RenderingRegistry.registerEntityRenderingHandler(EntityFlowey.class, new IRenderFactory() {
     	@Override
@@ -73,7 +73,7 @@ public class ClientProxy extends CommonProxy {
   			return new RenderFriendlynessPellet(manager);
   		}});
   	
-			
+		*/	
 //===============================================================================================================================================================================================\\
 																								//Event Handler\\
 	

@@ -1,3 +1,4 @@
+/**
 package mod.sparkyfox.servermod.render;
 
 import mod.sparkyfox.servermod.ServerMod;
@@ -17,7 +18,7 @@ public class RenderFriendlynessPellet extends Render<EntityFriendlynessPellet>
 	private static final ResourceLocation Friendlyness_Pellet = new ResourceLocation(ServerMod.MOD_ID, "textures/entity/flowey/friendlynesspellet.png");
 	
 	
-    /** The Skeleton's head model. */
+   
     private final ModelFriendlynessPellet FriendlynessPelletModel = new ModelFriendlynessPellet();
 
     public RenderFriendlynessPellet(RenderManager renderManagerIn)
@@ -42,9 +43,8 @@ public class RenderFriendlynessPellet extends Render<EntityFriendlynessPellet>
         return p_82400_1_ + p_82400_3_ * f;
     }
 
-    /**
-     * Renders the desired {@code T} type Entity.
-     */
+
+     
     public void doRender(EntityFriendlynessPellet entity, double x, double y, double z, float entityYaw, float partialTicks)
     {
         GlStateManager.pushMatrix();
@@ -76,11 +76,9 @@ public class RenderFriendlynessPellet extends Render<EntityFriendlynessPellet>
         super.doRender(entity, x, y, z, entityYaw, partialTicks);
     }
 
-    /**
-     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
-     */
     protected ResourceLocation getEntityTexture(EntityFriendlynessPellet entity)
     {
     	return entity.isInvulnerable() ? Invulnerable_Friendlyness_Pellet : Friendlyness_Pellet;
     }
 }
+*/

@@ -14,7 +14,7 @@ SiliconOreservermod:SiliconOre.name=Silicon Ore
 SiliconBlockservermod:SiliconBlock.name=Silicon Block
 PlatinumOreservermod:PlatinumOre.name=Platinum Ore
 PlatinumBlockservermod:PlatniumBlock.name=Platinum Block
-UraniumOreservermod:UraniumOre.name=Uranium Ore
+UraniumOreservermod:UraniumOre.name=Uranium Ore2
 UraniumBlockservermod:UraniumBlock.name=Uranium Block
 
 # Items
@@ -29,7 +29,7 @@ item.OdstLeggings.name=ODST Leggings
 item.OdstBoots.name=ODST Boots
 SMGservermod:SMG.name=M7S Submachine Gun
 SMGRoundsservermod:SMGRounds.name=5x23mmRounds
-AK4Uservermod:AK4U.name=Kalashnikov AK-4U
+AK4Uservermod:AK4U.name=AK-47
 AK4URoundsservermod:AK4URounds.name=7.62x39mmRounds
 Kevlarservermod:Kevlar.name=Kevlar
 TitaniumIngotservermod:TitaniumIngot.name=Titanium Ingot

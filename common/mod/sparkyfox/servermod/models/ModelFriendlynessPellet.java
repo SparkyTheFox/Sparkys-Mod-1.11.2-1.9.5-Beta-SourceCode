@@ -1,3 +1,4 @@
+/**
 package mod.sparkyfox.servermod.models;
 
 import net.minecraft.client.model.ModelBase;
@@ -47,9 +48,6 @@ public class ModelFriendlynessPellet extends ModelBase
     FriendlynessPelle2.render(f5);
   }
 
-    /**
-     * Sets the models various rotation angles then renders the model.
-     */
     private void setRotation(ModelRenderer model, float x, float y, float z)
     {
       model.rotateAngleX = x;
@@ -57,11 +55,8 @@ public class ModelFriendlynessPellet extends ModelBase
       model.rotateAngleZ = z;
     }
 
-    /**
-     * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms
-     * and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how
-     * "far" arms and legs can swing at most.
-     */
+    
+
     public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5) {
     }
 
@@ -74,3 +69,4 @@ public class ModelFriendlynessPellet extends ModelBase
 
 
 
+*/

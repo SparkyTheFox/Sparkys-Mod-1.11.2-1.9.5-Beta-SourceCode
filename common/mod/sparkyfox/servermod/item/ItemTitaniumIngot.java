@@ -25,12 +25,12 @@ public class ItemTitaniumIngot extends Item {
 
 															//Smelting Recipe\\ 
 		
-	public void addRecipes() {
-		GameRegistry.addSmelting(Blocks.ANVIL, new ItemStack(ModItems.TitaniumIngot), 0.75F);
+	
+		//GameRegistry.addSmelting(Blocks.ANVIL, new ItemStack(ModItems.TitaniumIngot), 0.75F);
 	
 															//Crafting Recipe\\
 	
-
+		public void addRecipes() {
 			GameRegistry.addShapelessRecipe(new ItemStack(this, 9), ModBlocks.TitaniumBlock); 
 	}
 }

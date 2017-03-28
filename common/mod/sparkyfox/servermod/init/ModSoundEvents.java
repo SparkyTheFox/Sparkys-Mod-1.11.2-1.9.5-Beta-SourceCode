@@ -5,7 +5,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ModSoundEvent {
+public class ModSoundEvents {
 //===============================================================================================================================================================================================\\
 																									//SFX Registry\\
 	public static SoundEvent smg;
@@ -23,18 +23,18 @@ public class ModSoundEvent {
 	
 //===============================================================================================================================================================================================\\
 																									//SONG Registry\\	
-	public static SoundEvent song_90s;
+	//public static SoundEvent song_90s;
 
 
 //===============================================================================================================================================================================================\\
 																									//Flowey Registry\\	
 	
-	public static SoundEvent FloweyHowdy;
-	public static SoundEvent FloweyKOBK;
-	public static SoundEvent FloweyIKWYD;
-	public static SoundEvent FloweyHurt;
-	public static SoundEvent FloweyLaugh;
-	public static SoundEvent FloweyDeath;
+	//public static SoundEvent FloweyHowdy;
+	//public static SoundEvent FloweyKOBK;
+	//public static SoundEvent FloweyIKWYD;
+	//public static SoundEvent FloweyHurt;
+	//public static SoundEvent FloweyLaugh;
+	//public static SoundEvent FloweyDeath;
 //public static SoundEvent mus_boss1;
 
 //===============================================================================================================================================================================================\\
@@ -57,19 +57,19 @@ public class ModSoundEvent {
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: SONGS\\
 		
-		song_90s = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "song_90s")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "song_90s"));
+		//song_90s = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "song_90s")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "song_90s"));
 		
 		
 		
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: Flowey\\
 		
-		FloweyHowdy = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy"));
-		FloweyKOBK= new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK"));
-		FloweyIKWYD = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD"));
-		FloweyHurt = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt"));
-		FloweyLaugh = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh"));
-		FloweyDeath = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath"));
+		//FloweyHowdy = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy"));
+		//FloweyKOBK= new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK"));
+		//FloweyIKWYD = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD"));
+		//FloweyHurt = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt"));
+		//FloweyLaugh = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh"));
+		//FloweyDeath = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath"));
 		
 
 	
@@ -88,13 +88,13 @@ public class ModSoundEvent {
 		registerSound(mus_battle1);
 		registerSound(mus_battle2);
 		registerSound(mus_boss1);
-		registerSound(song_90s);
-		registerSound(FloweyHowdy);
-		registerSound(FloweyKOBK);
-		registerSound(FloweyIKWYD);
-		registerSound(FloweyHurt);
-		registerSound(FloweyLaugh);
-		registerSound(FloweyDeath);
+		//registerSound(song_90s);
+		//registerSound(FloweyHowdy);
+		//registerSound(FloweyKOBK);
+		//registerSound(FloweyIKWYD);
+		//registerSound(FloweyHurt);
+		//registerSound(FloweyLaugh);
+		//registerSound(FloweyDeath);
 		
 		
 	}
@@ -102,7 +102,7 @@ public class ModSoundEvent {
 //===============================================================================================================================================================================================\\
 	
 	//Init-Reg
-	public ModSoundEvent() {
+	public ModSoundEvents() {
 		init();
 		register();
 	}
