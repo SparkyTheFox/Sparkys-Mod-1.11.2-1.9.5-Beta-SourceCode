@@ -1,9 +1,8 @@
-/**
 package mod.sparkyfox.servermod.render;
 
 import mod.sparkyfox.servermod.ServerMod;
-import mod.sparkyfox.servermod.entity.EntityFriendlynessPellet;
-import mod.sparkyfox.servermod.models.ModelFriendlynessPellet;
+import mod.sparkyfox.servermod.entity.EntityDemonPellet;
+import mod.sparkyfox.servermod.models.ModelDemonPellet;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -12,16 +11,16 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderFriendlynessPellet extends Render<EntityFriendlynessPellet>
+public class RenderDemonPellet extends Render<EntityDemonPellet>
 {
-	private static final ResourceLocation Invulnerable_Friendlyness_Pellet = new ResourceLocation(ServerMod.MOD_ID, "textures/entity/flowey/friendlynesspellet_invulnerable.png");
-	private static final ResourceLocation Friendlyness_Pellet = new ResourceLocation(ServerMod.MOD_ID, "textures/entity/flowey/friendlynesspellet.png");
+	private static final ResourceLocation Invulnerable_Demon_Pellet = new ResourceLocation(ServerMod.MOD_ID, "textures/entity/flowey/DemonPellet_invulnerable.png");
+	private static final ResourceLocation Demon_Pellet = new ResourceLocation(ServerMod.MOD_ID, "textures/entity/flowey/DemonPellet.png");
 	
 	
-   
-    private final ModelFriendlynessPellet FriendlynessPelletModel = new ModelFriendlynessPellet();
+    /** The Skeleton's head model. */
+    private final ModelDemonPellet DemonPelletModel = new ModelDemonPellet();
 
-    public RenderFriendlynessPellet(RenderManager renderManagerIn)
+    public RenderDemonPellet(RenderManager renderManagerIn)
     {
         super(renderManagerIn);
     }
@@ -43,9 +42,10 @@ public class RenderFriendlynessPellet extends Render<EntityFriendlynessPellet>
         return p_82400_1_ + p_82400_3_ * f;
     }
 
-
-     
-    public void doRender(EntityFriendlynessPellet entity, double x, double y, double z, float entityYaw, float partialTicks)
+    /**
+     * Renders the desired {@code T} type Entity.
+     */
+    public void doRender(EntityDemonPellet entity, double x, double y, double z, float entityYaw, float partialTicks)
     {
         GlStateManager.pushMatrix();
         GlStateManager.disableCull();
@@ -64,7 +64,7 @@ public class RenderFriendlynessPellet extends Render<EntityFriendlynessPellet>
             GlStateManager.enableOutlineMode(this.getTeamColor(entity));
         }
 
-        this.FriendlynessPelletModel.render(entity, 0.0F, 0.0F, 0.0F, f, f1, 0.0625F);
+        this.DemonPelletModel.render(entity, 0.0F, 0.0F, 0.0F, f, f1, 0.0625F);
 
         if (this.renderOutlines)
         {
@@ -76,9 +76,11 @@ public class RenderFriendlynessPellet extends Render<EntityFriendlynessPellet>
         super.doRender(entity, x, y, z, entityYaw, partialTicks);
     }
 
-    protected ResourceLocation getEntityTexture(EntityFriendlynessPellet entity)
+    /**
+     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
+     */
+    protected ResourceLocation getEntityTexture(EntityDemonPellet entity)
     {
-    	return entity.isInvulnerable() ? Invulnerable_Friendlyness_Pellet : Friendlyness_Pellet;
+    	return entity.isInvulnerable() ? Invulnerable_Demon_Pellet : Demon_Pellet;
     }
 }
-*/

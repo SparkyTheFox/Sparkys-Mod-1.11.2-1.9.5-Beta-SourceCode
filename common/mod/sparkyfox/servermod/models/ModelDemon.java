@@ -1,4 +1,3 @@
-/**
 package mod.sparkyfox.servermod.models;
 
 import net.minecraft.client.model.ModelBase;
@@ -8,7 +7,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class ModelFlowey extends ModelBase 
+public class ModelDemon extends ModelBase 
 {
   //fields
     ModelRenderer Head;
@@ -20,7 +19,7 @@ public class ModelFlowey extends ModelBase
     ModelRenderer PetalLeft;
     ModelRenderer Body;
   
-  public ModelFlowey()
+  public ModelDemon()
   {
     textureWidth = 64;
     textureHeight = 32;
@@ -96,7 +95,9 @@ public class ModelFlowey extends ModelBase
     Body.render(f5);
   }
 
-
+  /**
+   * Sets the models various rotation angles then renders the model.
+   */
   private void setRotation(ModelRenderer model, float x, float y, float z)
   {
     model.rotateAngleX = x;
@@ -104,7 +105,11 @@ public class ModelFlowey extends ModelBase
     model.rotateAngleZ = z;
   }
 
-
+  /**
+   * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms
+   * and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how
+   * "far" arms and legs can swing at most.
+   */
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5) {
   }
 
@@ -115,6 +120,5 @@ public class ModelFlowey extends ModelBase
 	}
 }
 
-*/
 
 

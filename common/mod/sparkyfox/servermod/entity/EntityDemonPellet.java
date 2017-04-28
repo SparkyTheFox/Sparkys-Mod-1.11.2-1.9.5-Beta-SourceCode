@@ -1,4 +1,3 @@
-/**
 package mod.sparkyfox.servermod.entity;
 
 import net.minecraft.block.Block;
@@ -22,50 +21,50 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityFriendlynessPellet extends EntityFireball {
-	private static final DataParameter<Boolean> INVULNERABLE = EntityDataManager.<Boolean>createKey(EntityFriendlynessPellet.class, DataSerializers.BOOLEAN);
+public class EntityDemonPellet extends EntityFireball {
+	private static final DataParameter<Boolean> INVULNERABLE = EntityDataManager.<Boolean>createKey(EntityDemonPellet.class, DataSerializers.BOOLEAN);
 
-	public EntityFriendlynessPellet(World worldIn) {
+	public EntityDemonPellet(World worldIn) {
 		super(worldIn);
 		this.setSize(0.3125F, 0.3125F);
 	}
 
-	public EntityFriendlynessPellet(World worldIn, EntityLivingBase shooter, double accelX, double accelY,
+	public EntityDemonPellet(World worldIn, EntityLivingBase shooter, double accelX, double accelY,
 			double accelZ) {
 		super(worldIn, shooter, accelX, accelY, accelZ);
 		this.setSize(0.3125F, 0.3125F);
 	}
 
-	public static void registerFixesFriendlynessPellet(DataFixer fixer) {
-		EntityFireball.registerFixesFireball(fixer, "FriendlynessPellet");//fireball?
+	public static void registerFixesDemonPellet(DataFixer fixer) {
+		EntityFireball.registerFixesFireball(fixer, "DemonPellet");//fireball?
 	}
 
-	
+	/**
 	 * Return the motion factor for this projectile. The factor is multiplied by
 	 * the original motion.
-	 *
+	 */
 	protected float getMotionFactor() {
 		return this.isInvulnerable() ? 0.73F : super.getMotionFactor();
 	}
 
 	@SideOnly(Side.CLIENT)
-	public EntityFriendlynessPellet(World worldIn, double x, double y, double z, double accelX, double accelY,
+	public EntityDemonPellet(World worldIn, double x, double y, double z, double accelX, double accelY,
 			double accelZ) {
 		super(worldIn, x, y, z, accelX, accelY, accelZ);
 		this.setSize(0.3125F, 0.3125F);
 	}
 
-	
+	/**
 	 * Returns true if the entity is on fire. Used by render to add the fire
 	 * effect on rendering.
-	 
+	 */
 	public boolean isBurning() {
 		return false;
 	}
 
-	
+	/**
 	 * Explosion resistance of a block relative to this entity
-	 *
+	 */
 	public float getExplosionResistance(Explosion explosionIn, World worldIn, BlockPos pos, IBlockState blockStateIn) {
 		float f = super.getExplosionResistance(explosionIn, worldIn, pos, blockStateIn);
 		Block block = blockStateIn.getBlock();
@@ -77,9 +76,9 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		return f;
 	}
 
-	
+	/**
 	 * Called when this EntityFireball hits a block or entity.
-	 *
+	 */
 	protected void onImpact(RayTraceResult result) {
 		if (!this.world.isRemote) {
 			if (result.entityHit != null) {
@@ -118,17 +117,17 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		}
 	}
 
-	
+	/**
 	 * Returns true if other Entities should be prevented from moving through
 	 * this Entity.
-	 *
+	 */
 	public boolean canBeCollidedWith() {
 		return false;
 	}
 
-	
+	/**
 	 * Called when the entity is attacked.
-	 *
+	 */
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 		return false;
 	}
@@ -137,18 +136,18 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		this.dataManager.register(INVULNERABLE, Boolean.valueOf(false));
 	}
 
-	
-	 * Return whether this FriendlynessPellet comes from an invulnerable (aura)
+	/**
+	 * Return whether this DemonPellet comes from an invulnerable (aura)
 	 * wither boss.
-	 *
+	 */
 	public boolean isInvulnerable() {
 		return ((Boolean) this.dataManager.get(INVULNERABLE)).booleanValue();
 	}
 
-	**
-	 * Set whether this FriendlynessPellet comes from an invulnerable (aura)
+	/**
+	 * Set whether this DemonPellet comes from an invulnerable (aura)
 	 * wither boss.
-	 *
+	 */
 	public void setInvulnerable(boolean invulnerable) {
 		this.dataManager.set(INVULNERABLE, Boolean.valueOf(invulnerable));
 	}
@@ -157,4 +156,3 @@ public class EntityFriendlynessPellet extends EntityFireball {
 		return false;
 	}
 }
-*/

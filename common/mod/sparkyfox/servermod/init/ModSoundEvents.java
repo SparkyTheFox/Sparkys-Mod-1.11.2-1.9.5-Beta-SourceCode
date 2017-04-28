@@ -23,18 +23,18 @@ public class ModSoundEvents {
 	
 //===============================================================================================================================================================================================\\
 																									//SONG Registry\\	
-	//public static SoundEvent song_90s;
+	public static SoundEvent song_90s;
 
 
 //===============================================================================================================================================================================================\\
-																									//Flowey Registry\\	
+																									//Demon Registry\\	
 	
-	//public static SoundEvent FloweyHowdy;
-	//public static SoundEvent FloweyKOBK;
-	//public static SoundEvent FloweyIKWYD;
-	//public static SoundEvent FloweyHurt;
-	//public static SoundEvent FloweyLaugh;
-	//public static SoundEvent FloweyDeath;
+	public static SoundEvent DemonHowdy;
+	public static SoundEvent DemonKOBK;
+	public static SoundEvent DemonIKWYD;
+	public static SoundEvent DemonHurt;
+	public static SoundEvent DemonLaugh;
+	public static SoundEvent DemonDeath;
 //public static SoundEvent mus_boss1;
 
 //===============================================================================================================================================================================================\\
@@ -57,19 +57,19 @@ public class ModSoundEvents {
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: SONGS\\
 		
-		//song_90s = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "song_90s")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "song_90s"));
+		song_90s = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "song_90s")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "song_90s"));
 		
 		
 		
 //===============================================================================================================================================================================================\\
-																								//Sound Initialisation: Flowey\\
+																								//Sound Initialisation: Demon\\
 		
-		//FloweyHowdy = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHowdy"));
-		//FloweyKOBK= new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyKOBK"));
-		//FloweyIKWYD = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyIKWYD"));
-		//FloweyHurt = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyHurt"));
-		//FloweyLaugh = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyLaugh"));
-		//FloweyDeath = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "FloweyDeath"));
+		DemonHowdy = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "DemonHowdy")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "DemonHowdy"));
+		DemonKOBK= new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "DemonKOBK")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "DemonKOBK"));
+		DemonIKWYD = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "DemonIKWYD")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "DemonIKWYD"));
+		DemonHurt = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "DemonHurt")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "DemonHurt"));
+		DemonLaugh = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "DemonLaugh")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "DemonLaugh"));
+		DemonDeath = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "DemonDeath")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "DemonDeath"));
 		
 
 	
@@ -88,13 +88,13 @@ public class ModSoundEvents {
 		registerSound(mus_battle1);
 		registerSound(mus_battle2);
 		registerSound(mus_boss1);
-		//registerSound(song_90s);
-		//registerSound(FloweyHowdy);
-		//registerSound(FloweyKOBK);
-		//registerSound(FloweyIKWYD);
-		//registerSound(FloweyHurt);
-		//registerSound(FloweyLaugh);
-		//registerSound(FloweyDeath);
+		registerSound(song_90s);
+		registerSound(DemonHowdy);
+		registerSound(DemonKOBK);
+		registerSound(DemonIKWYD);
+		registerSound(DemonHurt);
+		registerSound(DemonLaugh);
+		registerSound(DemonDeath);
 		
 		
 	}

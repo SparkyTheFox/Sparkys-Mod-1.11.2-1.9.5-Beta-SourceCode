@@ -77,54 +77,54 @@
         "subtitle": "Running in the 90s!"
     },
 
-        "floweylaugh": {
+        "demonlaugh": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:floweylaugh", "stream": true}
+       {"name":"servermod:demonlaugh", "stream": true}
             
         ],
         "subtitle": "hahahaha"
     },
 
-        "floweyhowdy": {
+        "demonhowdy": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:floweyhowdy", "stream": true}
+       {"name":"servermod:demonhowdy", "stream": true}
             
         ],
         "subtitle": "*Howdy"
     },
 
-        "floweykobk": {
+        "demonkobk": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:floweykobk", "stream": true}
+       {"name":"servermod:demonkobk", "stream": true}
             
         ],
         "subtitle": "*In this world, It's kill or be killed!"
        },
 
-        "floweyikwyd": {
+        "demonikwyd": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:floweyikwyd", "stream": true}
+       {"name":"servermod:demonikwyd", "stream": true}
             
         ],
         "subtitle": "*I KnOw WhAt YoU DiD!"
     },
-        "floweyhurt": {
+        "demonhurt": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:floweyhurt", "stream": true}
+       {"name":"servermod:demonhurt", "stream": true}
             
         ],
         "subtitle": "*OW!"
         
         },
-        "floweydeath": {
+        "demondeath": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:floweydeath", "stream": true}
+       {"name":"servermod:demondeath", "stream": true}
             
         ],
         "subtitle": "*yOu NaIVe IdIoT!"

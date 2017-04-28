@@ -1,14 +1,14 @@
 package mod.sparkyfox.servermod;
 
 import mod.sparkyfox.servermod.entity.EntityAK4URounds;
-//import mod.sparkyfox.servermod.entity.EntityFlowey;
-//import mod.sparkyfox.servermod.entity.EntityFriendlynessPellet;
+import mod.sparkyfox.servermod.entity.EntityDemon;
+import mod.sparkyfox.servermod.entity.EntityDemonPellet;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.render.RenderAK4URounds;
-//import mod.sparkyfox.servermod.render.RenderFlowey;
-//import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
+import mod.sparkyfox.servermod.render.RenderDemon;
+import mod.sparkyfox.servermod.render.RenderDemonPellet;
 import mod.sparkyfox.servermod.render.RenderSMGRounds;
 import mod.sparkyfox.servermod.world.WorldGenOre;
 import net.minecraft.block.Block;
@@ -58,22 +58,22 @@ public class ClientProxy extends CommonProxy {
 		public Render createRenderFor(RenderManager manager) {
 			return new RenderAK4URounds(manager);
 		}});
-	/**
-	//Flowey
-    RenderingRegistry.registerEntityRenderingHandler(EntityFlowey.class, new IRenderFactory() {
+	
+	//Demon
+    RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory() {
     	@Override
 		public Render createRenderFor(RenderManager manager) {
-			return new RenderFlowey(manager, null, 0);
+			return new RenderDemon(manager, null, 0);
     	}});
     
   //Friendlyness Pellet	
-  	RenderingRegistry.registerEntityRenderingHandler(EntityFriendlynessPellet.class, new IRenderFactory() {
+  	RenderingRegistry.registerEntityRenderingHandler(EntityDemonPellet.class, new IRenderFactory() {
   		@Override
   		public Render createRenderFor(RenderManager manager) {
-  			return new RenderFriendlynessPellet(manager);
+  			return new RenderDemonPellet(manager);
   		}});
   	
-		*/	
+			
 //===============================================================================================================================================================================================\\
 																								//Event Handler\\
 	

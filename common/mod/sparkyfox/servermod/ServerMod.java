@@ -28,7 +28,7 @@ public class ServerMod {
 	
 	public static final String MOD_ID = "servermod";
 	public static final String MOD_NAME = "Sparky's Mod";
-	public static final String VERSION = "ALPHA";
+	public static final String VERSION = "BETA";
 	public static final String RESOURCE_PREFIX = MOD_ID.toLowerCase() + ":"; // servermod:
 	
 //===============================================================================================================================================================================================\\
@@ -68,7 +68,13 @@ public class ServerMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event); 
-		entity = new ModEntities();
+		entity = new ModEntities();//this is causing the server side problem
+		//if i take out "entity = new ModEntities();" and put in
+		/**
+		 *  ResourceLocation resourceLocation = new ResourceLocation(ServerMod.MOD_ID, "Demon");
+        EntityRegistry.registerModEntity(resourceLocation, EntityDemon.class, resourceLocation.toString(), 0, ServerMod.instance, 64, 1, true, 0x000000, 0xFFFFFF);
+		 */
+		//This seems to fix the problem, BUT, all my other entities disappear and Demons Spawn egg and Name changes.
 	
 	}
 	@EventHandler
