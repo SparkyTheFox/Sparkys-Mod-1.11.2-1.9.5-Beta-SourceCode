@@ -21,22 +21,22 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityDemonPellet extends EntityFireball {
-	private static final DataParameter<Boolean> INVULNERABLE = EntityDataManager.<Boolean>createKey(EntityDemonPellet.class, DataSerializers.BOOLEAN);
+public class EntityFriendlynessPellet extends EntityFireball {
+	private static final DataParameter<Boolean> INVULNERABLE = EntityDataManager.<Boolean>createKey(EntityFriendlynessPellet.class, DataSerializers.BOOLEAN);
 
-	public EntityDemonPellet(World worldIn) {
+	public EntityFriendlynessPellet(World worldIn) {
 		super(worldIn);
 		this.setSize(0.3125F, 0.3125F);
 	}
 
-	public EntityDemonPellet(World worldIn, EntityLivingBase shooter, double accelX, double accelY,
+	public EntityFriendlynessPellet(World worldIn, EntityLivingBase shooter, double accelX, double accelY,
 			double accelZ) {
 		super(worldIn, shooter, accelX, accelY, accelZ);
 		this.setSize(0.3125F, 0.3125F);
 	}
 
-	public static void registerFixesDemonPellet(DataFixer fixer) {
-		EntityFireball.registerFixesFireball(fixer, "DemonPellet");//fireball?
+	public static void registerFixesFriendlynessPellet(DataFixer fixer) {
+		EntityFireball.registerFixesFireball(fixer, "FriendlynessPellet");//fireball?
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class EntityDemonPellet extends EntityFireball {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public EntityDemonPellet(World worldIn, double x, double y, double z, double accelX, double accelY,
+	public EntityFriendlynessPellet(World worldIn, double x, double y, double z, double accelX, double accelY,
 			double accelZ) {
 		super(worldIn, x, y, z, accelX, accelY, accelZ);
 		this.setSize(0.3125F, 0.3125F);
@@ -137,7 +137,7 @@ public class EntityDemonPellet extends EntityFireball {
 	}
 
 	/**
-	 * Return whether this DemonPellet comes from an invulnerable (aura)
+	 * Return whether this FriendlynessPellet comes from an invulnerable (aura)
 	 * wither boss.
 	 */
 	public boolean isInvulnerable() {
@@ -145,7 +145,7 @@ public class EntityDemonPellet extends EntityFireball {
 	}
 
 	/**
-	 * Set whether this DemonPellet comes from an invulnerable (aura)
+	 * Set whether this FriendlynessPellet comes from an invulnerable (aura)
 	 * wither boss.
 	 */
 	public void setInvulnerable(boolean invulnerable) {

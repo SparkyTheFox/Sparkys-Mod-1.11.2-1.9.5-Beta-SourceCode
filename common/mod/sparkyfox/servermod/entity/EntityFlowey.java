@@ -49,7 +49,7 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
 
-public class EntityDemon extends EntityMob implements IRangedAttackMob
+public class EntityFlowey extends EntityMob implements IRangedAttackMob
 {   
 	public class AIDoNothing extends EntityAIBase {
 
@@ -60,7 +60,7 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 		}
 		
 	}
-    /** Time before Demon tries to break blocks */
+    /** Time before Flowey tries to break blocks */
     private int blockBreakCounter;
     private final BossInfoServer bossInfo = (BossInfoServer)(new BossInfoServer(this.getDisplayName(), BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS)).setDarkenSky(true);
     private static final Predicate<Entity> NOT_UNDEAD = new Predicate<Entity>()
@@ -82,10 +82,10 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 //==============================================================================================================================================================================================\\
 	//FACES\\
     
-    private static final DataParameter<Integer> ATTACKING = EntityDataManager.<Integer>createKey(EntityDemon.class, DataSerializers.VARINT);
-    private static final DataParameter<Integer> ANGER = EntityDataManager.<Integer>createKey(EntityDemon.class, DataSerializers.VARINT);
-    private static final DataParameter<Integer> INVULNERABILITY = EntityDataManager.<Integer>createKey(EntityDemon.class, DataSerializers.VARINT);
-    private static final DataParameter<Integer> HURT = EntityDataManager.<Integer>createKey(EntityDemon.class, DataSerializers.VARINT);
+    private static final DataParameter<Integer> ATTACKING = EntityDataManager.<Integer>createKey(EntityFlowey.class, DataSerializers.VARINT);
+    private static final DataParameter<Integer> ANGER = EntityDataManager.<Integer>createKey(EntityFlowey.class, DataSerializers.VARINT);
+    private static final DataParameter<Integer> INVULNERABILITY = EntityDataManager.<Integer>createKey(EntityFlowey.class, DataSerializers.VARINT);
+    private static final DataParameter<Integer> HURT = EntityDataManager.<Integer>createKey(EntityFlowey.class, DataSerializers.VARINT);
     
     
     //
@@ -150,7 +150,7 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 //==============================================================================================================================================================================================\\
 	//!!AI and Tasks!!\\
 	
-    public EntityDemon(World worldIn)
+    public EntityFlowey(World worldIn)
     {
         super(worldIn);
         this.setHealth(this.getMaxHealth());
@@ -165,15 +165,15 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 	//InitAI\\
     protected void initEntityAI()
     {
-        this.tasks.addTask(0, new EntityDemon.AIDoNothing());
+        this.tasks.addTask(0, new EntityFlowey.AIDoNothing());
         this.tasks.addTask(1, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAttackRanged(this, 1.0D, 40, 20.0F));
         this.tasks.addTask(5, new EntityAIWanderAvoidWater(this, 1.0D));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(7, new EntityAILookIdle(this));
-        //this.tasks.addTask(7, new EntityDemon.AIFireballAttack(this));
-        //this.tasks.addTask(7, new EntityDemon.AILookAround(this));
-        //this.targetTasks.addTask(1, new EntityDemon.AIFindPlayer(this));
+        //this.tasks.addTask(7, new EntityFlowey.AIFireballAttack(this));
+        //this.tasks.addTask(7, new EntityFlowey.AILookAround(this));
+        //this.targetTasks.addTask(1, new EntityFlowey.AIFindPlayer(this));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false, new Class[0]));
         this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, false, false, NOT_UNDEAD));//Cows?\\
@@ -197,8 +197,8 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 	//ApplyAI\\
     protected void applyEntityAI()
     {
-        this.targetTasks.addTask(1, new EntityDemon.AIHurtByAggressor(this));
-        this.targetTasks.addTask(2, new EntityDemon.AITargetAggressor(this));
+        this.targetTasks.addTask(1, new EntityFlowey.AIHurtByAggressor(this));
+        this.targetTasks.addTask(2, new EntityFlowey.AITargetAggressor(this));
     }
     
     //ApplyAttributes\\
@@ -238,7 +238,7 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 
             if (this.randomSoundDelay > 0 && --this.randomSoundDelay == 0)
             {
-                this.playSound(ModSoundEvents.DemonLaugh, this.getSoundVolume() * 2.0F, this.getSoundPitch() * 1.0F);
+                //this.playSound(ModSoundEvents.FloweyLaugh, this.getSoundVolume() * 2.0F, this.getSoundPitch() * 1.0F);
             }
 
             if (this.angerLevel > 0 && this.angerTargetUUID != null && this.getAITarget() == null)
@@ -268,9 +268,9 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
             return this.world.checkNoEntityCollision(this.getEntityBoundingBox(), this) && this.world.getCollisionBoxes(this, this.getEntityBoundingBox()).isEmpty() && !this.world.containsAnyLiquid(this.getEntityBoundingBox());
         }
 
-        public static void registerFixesDemon(DataFixer fixer)
+        public static void registerFixesFlowey(DataFixer fixer)
         {
-            EntityLiving.registerFixesMob(fixer, EntityDemon.class);
+            EntityLiving.registerFixesMob(fixer, EntityFlowey.class);
         }
 
         /**
@@ -337,7 +337,7 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
         }
 
         /**
-         * Causes this Demon to become angry at the supplied Entity (which will be a player).
+         * Causes this Flowey to become angry at the supplied Entity (which will be a player).
          */
         private void becomeAngryAt(Entity p_70835_1_)
         {
@@ -367,10 +367,10 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
     private static final UUID ATTACK_SPEED_BOOST_MODIFIER_UUID = UUID.fromString("49455A49-7EC5-45BA-B886-3B90B23A1718");
     private static final AttributeModifier ATTACK_SPEED_BOOST_MODIFIER = (new AttributeModifier(ATTACK_SPEED_BOOST_MODIFIER_UUID, "Attacking speed boost", 0.05D, 0)).setSaved(false);
     
-    /** Above zero if Demon is Angry. */
+    /** Above zero if Flowey is Angry. */
     private int angerLevel;
     
-    /** A random delay until Demon next makes a sound. */
+    /** A random delay until Flowey next makes a sound. */
     private int randomSoundDelay;
     private UUID angerTargetUUID;
     
@@ -414,30 +414,30 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 //==============================================================================================================================================================================================\\
 	//SOUNDS\\
     
-	protected SoundEvent getAmbientSound()
+	//protected SoundEvent getAmbientSound()
 	{
-    return ModSoundEvents.DemonHowdy;
+   // return ModSoundEvents.FloweyHowdy;
 	}
 
-	protected SoundEvent isAttacking() 
+	//protected SoundEvent isAttacking() 
 	{
 		
-	return ModSoundEvents.DemonLaugh;
+	//return ModSoundEvents.FloweyLaugh;
 	}
 
-	protected SoundEvent getHurtSound()
+	//protected SoundEvent getHurtSound()
 	{
-		return ModSoundEvents.DemonHurt;
+	//	return ModSoundEvents.FloweyHurt;
 	}
 
-	protected SoundEvent getDeathSound()
+	//protected SoundEvent getDeathSound()
 	{
-		return ModSoundEvents.DemonDeath;
+		//return ModSoundEvents.FloweyDeath;
 	}
 
-	protected SoundEvent getAngerSound()
+	//protected SoundEvent getAngerSound()
 	{
-		return ModSoundEvents.DemonKOBK;
+		//return ModSoundEvents.FloweyKOBK;
 	}
 
 	/**
@@ -480,7 +480,7 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 	
 	static class AIHurtByAggressor extends EntityAIHurtByTarget
 	    {
-	        public AIHurtByAggressor(EntityDemon p_i45828_1_)
+	        public AIHurtByAggressor(EntityFlowey p_i45828_1_)
 	        {
 	            super(p_i45828_1_, true, new Class[0]);
 	        }
@@ -489,16 +489,16 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 	        {
 	            super.setEntityAttackTarget(creatureIn, entityLivingBaseIn);
 	
-	            if (creatureIn instanceof EntityDemon)
+	            if (creatureIn instanceof EntityFlowey)
 	            {
-	                ((EntityDemon)creatureIn).becomeAngryAt(entityLivingBaseIn);
+	                ((EntityFlowey)creatureIn).becomeAngryAt(entityLivingBaseIn);
 	            }
 	        }
 	    }
 	
 	static class AITargetAggressor extends EntityAINearestAttackableTarget<EntityPlayer>
 	    {
-	        public AITargetAggressor(EntityDemon p_i45829_1_)
+	        public AITargetAggressor(EntityFlowey p_i45829_1_)
 	        {
 	            super(p_i45829_1_, EntityPlayer.class, true);
 	        }
@@ -508,7 +508,7 @@ public class EntityDemon extends EntityMob implements IRangedAttackMob
 	         */
 	        public boolean shouldExecute()
 	        {
-	            return ((EntityDemon)this.taskOwner).isAngry() && super.shouldExecute();
+	            return ((EntityFlowey)this.taskOwner).isAngry() && super.shouldExecute();
 	        }
 	    }
 	}

@@ -41,6 +41,22 @@ public class ModNames {
 	public static final String SiliconIngot = "SiliconIngot";
 	public static final String PlatinumIngot = "PlatinumIngot";
 	public static final String UraniumIngot = "UraniumIngot";
+	public static final String Credit = "Credit";
+	public static final String PremiumPermit = "PremiumPermit";
+	public static final String LegacyPermit = "LegacyPermit";
+	public static final String TitaniumSword = "TitaniumSword";
+	public static final String TitaniumHammer = "TitaniumHammer";
+	public static final String TitaniumPickaxe = "TitaniumPickaxe";
+	public static final String TitaniumAxe = "TitaniumAxe";
+	public static final String TitaniumShovel = "TitaniumShovel";
+	public static final String TitaniumHoe = "TitaniumHoe";
+	public static final String TitaniumHelmet = "TitaniumHelmet";
+	public static final String TitaniumChestplate = "TitaniumChestplate";
+	public static final String TitaniumLeggings = "TitaniumLeggings";
+	public static final String TitaniumBoots = "TitaniumBoots";
+	public static final String TitaniumArmor = "TitaniumArmor";
+	public static final String TitaniumNugget = "TitaniumNugget";
+	//public static final String TitaniumShield = "TitaniumShield";
 	
 	
 	/*

@@ -67,6 +67,69 @@
         ],
         "subtitle": "* Toriel blocks your path"    
     },
+    
+        "mus_grillbys": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_grillbys", "stream": true}
+            
+        ],
+        "subtitle": "* Hey Kiddo"    
+    },
+    
+        "mus_epicadventure": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_epicadventure", "stream": true}
+            
+        ],
+        "subtitle": "* Would you like to ride the bird?"     
+    },
+    
+        "mus_temshop": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_temshop", "stream": true}
+            
+        ],
+        "subtitle": "HoI"    
+    },
+    
+            "mus_snowy": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_snowy", "stream": true}
+            
+        ],
+        "subtitle": "* Are you lost?"    
+    },
+    
+        "mus_snowdintown": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_snowdintown", "stream": true}
+            
+        ],
+        "subtitle": "* Welcome to Snowdin"    
+    },
+    
+        "mus_dogsong": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_dogsong", "stream": true}
+            
+        ],
+        "subtitle": "ARF!"    
+    },
+    
+        "mus_shop": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_shop", "stream": true}
+            
+        ],
+        "subtitle": "* Welcome to my shop!"    
+    },
 
         "song_90s": {
         "category": "record",
@@ -77,54 +140,54 @@
         "subtitle": "Running in the 90s!"
     },
 
-        "demonlaugh": {
+        "floweylaugh": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:demonlaugh", "stream": true}
+       {"name":"servermod:floweylaugh", "stream": true}
             
         ],
         "subtitle": "hahahaha"
     },
 
-        "demonhowdy": {
+        "floweyhowdy": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:demonhowdy", "stream": true}
+       {"name":"servermod:floweyhowdy", "stream": true}
             
         ],
         "subtitle": "*Howdy"
     },
 
-        "demonkobk": {
+        "floweykobk": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:demonkobk", "stream": true}
+       {"name":"servermod:floweykobk", "stream": true}
             
         ],
         "subtitle": "*In this world, It's kill or be killed!"
        },
 
-        "demonikwyd": {
+        "floweyikwyd": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:demonikwyd", "stream": true}
+       {"name":"servermod:floweyikwyd", "stream": true}
             
         ],
         "subtitle": "*I KnOw WhAt YoU DiD!"
     },
-        "demonhurt": {
+        "floweyhurt": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:demonhurt", "stream": true}
+       {"name":"servermod:floweyhurt", "stream": true}
             
         ],
         "subtitle": "*OW!"
         
         },
-        "demondeath": {
+        "floweydeath": {
         "category": "voice",
         "sounds": [
-       {"name":"servermod:demondeath", "stream": true}
+       {"name":"servermod:floweydeath", "stream": true}
             
         ],
         "subtitle": "*yOu NaIVe IdIoT!"

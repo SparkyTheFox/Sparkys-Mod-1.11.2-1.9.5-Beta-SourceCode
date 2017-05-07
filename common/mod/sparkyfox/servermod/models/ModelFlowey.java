@@ -7,7 +7,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class ModelDemon extends ModelBase 
+public class ModelFlowey extends ModelBase 
 {
   //fields
     ModelRenderer Head;
@@ -19,7 +19,7 @@ public class ModelDemon extends ModelBase
     ModelRenderer PetalLeft;
     ModelRenderer Body;
   
-  public ModelDemon()
+  public ModelFlowey()
   {
     textureWidth = 64;
     textureHeight = 32;

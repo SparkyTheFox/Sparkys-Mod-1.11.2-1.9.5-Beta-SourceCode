@@ -71,10 +71,10 @@ public class ServerMod {
 		entity = new ModEntities();//this is causing the server side problem
 		//if i take out "entity = new ModEntities();" and put in
 		/**
-		 *  ResourceLocation resourceLocation = new ResourceLocation(ServerMod.MOD_ID, "Demon");
-        EntityRegistry.registerModEntity(resourceLocation, EntityDemon.class, resourceLocation.toString(), 0, ServerMod.instance, 64, 1, true, 0x000000, 0xFFFFFF);
+		 *  ResourceLocation resourceLocation = new ResourceLocation(ServerMod.MOD_ID, "Flowey");
+        EntityRegistry.registerModEntity(resourceLocation, EntityFlowey.class, resourceLocation.toString(), 0, ServerMod.instance, 64, 1, true, 0x000000, 0xFFFFFF);
 		 */
-		//This seems to fix the problem, BUT, all my other entities disappear and Demons Spawn egg and Name changes.
+		//This seems to fix the problem, BUT, all my other entities disappear and Floweys Spawn egg and Name changes.
 	
 	}
 	@EventHandler

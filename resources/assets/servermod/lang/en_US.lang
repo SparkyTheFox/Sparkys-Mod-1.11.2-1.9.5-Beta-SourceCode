@@ -13,7 +13,7 @@ MagnesiumBlockservermod:MagnesiumBlock.name=Magnesium Block
 SiliconOreservermod:SiliconOre.name=Silicon Ore
 SiliconBlockservermod:SiliconBlock.name=Silicon Block
 PlatinumOreservermod:PlatinumOre.name=Platinum Ore
-PlatinumBlockservermod:PlatniumBlock.name=Platinum Block
+PlatinumBlockservermod:PlatinumBlock.name=Platinum Block
 UraniumOreservermod:UraniumOre.name=Uranium Ore2
 UraniumBlockservermod:UraniumBlock.name=Uranium Block
 
@@ -33,6 +33,7 @@ AK4Uservermod:AK4U.name=AK-47
 AK4URoundsservermod:AK4URounds.name=7.62x39mmRounds
 Kevlarservermod:Kevlar.name=Kevlar
 TitaniumIngotservermod:TitaniumIngot.name=Titanium Ingot
+TitaniumNuggetservermod:TitaniumNugget.name=Titanium Nugget
 WoodenMesserservermod:WoodenMesser.name=Wooden Messer
 StoneMesserservermod:StoneMesser.name=Stone Messer
 IronMesserservermod:IronMesser.name=Iron Messer
@@ -52,7 +53,19 @@ MagnesiumIngotservermod:MagnesiumIngot.name=Magnesium Ingot
 SiliconIngotservermod:SiliconIngot.name=Silicon Ingot
 PlatiniumIngotservermod:PlatiniumIngot.name=Platinium Ingot
 UraniumIngotservermod:UraniumIngot.name=Uranium Ingot
-
+Creditservermod:Credit.name=Credit
+PremiumPermitservermod:PremiumPermit.name=Premium Permit
+LegacyPermitservermod:LegacyPermit.name=Legacy Permit
+TitaniumPickaxeservermod:TitaniumPickaxe.name=Titanium Pickaxe
+TitaniumAxeservermod:TitaniumAxe.name=Titanium Axe
+TitaniumShovelservermod:TitaniumShovel.name=Titanium Shovel
+TitaniumHoeservermod:TitaniumHoe.name=Titanium Hoe
+item.TitaniumHelmet.name=Titanium Helmet
+item.TitaniumChestplate.name=Titanium Chestplate
+item.TitaniumLeggings.name=Titanium Leggings
+item.TitaniumBoots.name=Titanium Boots
+TitaniumSwordservermod:TitaniumSword.name=Titanium Sword
+TitaniumHammerservermod:TitaniumHammer.name=Titanium Hammer
 
 # Creative Tab
 

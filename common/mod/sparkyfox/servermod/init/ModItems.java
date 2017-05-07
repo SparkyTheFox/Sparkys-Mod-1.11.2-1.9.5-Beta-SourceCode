@@ -6,6 +6,7 @@ import mod.sparkyfox.servermod.item.ItemAK4URounds;
 import mod.sparkyfox.servermod.item.ItemBrassIngot;
 import mod.sparkyfox.servermod.item.ItemBurger;
 import mod.sparkyfox.servermod.item.ItemCobaltIngot;
+import mod.sparkyfox.servermod.item.ItemCredit;
 import mod.sparkyfox.servermod.item.ItemDiamondKnife;
 import mod.sparkyfox.servermod.item.ItemDiamondMesser;
 import mod.sparkyfox.servermod.item.ItemFries;
@@ -14,10 +15,12 @@ import mod.sparkyfox.servermod.item.ItemGoldMesser;
 import mod.sparkyfox.servermod.item.ItemIronKnife;
 import mod.sparkyfox.servermod.item.ItemIronMesser;
 import mod.sparkyfox.servermod.item.ItemKevlar;
+import mod.sparkyfox.servermod.item.ItemLegacyPermit;
 import mod.sparkyfox.servermod.item.ItemMagnesiumIngot;
 import mod.sparkyfox.servermod.item.ItemNickelIngot;
 import mod.sparkyfox.servermod.item.ItemOdstArmor;
 import mod.sparkyfox.servermod.item.ItemPlatinumIngot;
+import mod.sparkyfox.servermod.item.ItemPremiumPermit;
 import mod.sparkyfox.servermod.item.ItemSMG;
 import mod.sparkyfox.servermod.item.ItemSMGBullet;
 import mod.sparkyfox.servermod.item.ItemSMGBulletCasing;
@@ -26,7 +29,16 @@ import mod.sparkyfox.servermod.item.ItemScarlet;
 import mod.sparkyfox.servermod.item.ItemSiliconIngot;
 import mod.sparkyfox.servermod.item.ItemStoneKnife;
 import mod.sparkyfox.servermod.item.ItemStoneMesser;
+import mod.sparkyfox.servermod.item.ItemTitaniumArmor;
+import mod.sparkyfox.servermod.item.ItemTitaniumAxe;
+import mod.sparkyfox.servermod.item.ItemTitaniumHammer;
+import mod.sparkyfox.servermod.item.ItemTitaniumHoe;
 import mod.sparkyfox.servermod.item.ItemTitaniumIngot;
+import mod.sparkyfox.servermod.item.ItemTitaniumNugget;
+import mod.sparkyfox.servermod.item.ItemTitaniumPickaxe;
+//import mod.sparkyfox.servermod.item.ItemTitaniumShield;
+import mod.sparkyfox.servermod.item.ItemTitaniumShovel;
+import mod.sparkyfox.servermod.item.ItemTitaniumSword;
 import mod.sparkyfox.servermod.item.ItemToyKnife;
 import mod.sparkyfox.servermod.item.ItemUraniumIngot;
 import mod.sparkyfox.servermod.item.ItemWoodenKnife;
@@ -36,8 +48,12 @@ import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
@@ -71,12 +87,25 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemSMGRounds SMGRounds;
 	public static ItemAK4U AK4U;
 	public static ItemAK4URounds AK4URounds;
+	public static ToolMaterial Titanium;
+	public static ItemTitaniumSword TitaniumSword;
+	public static ItemTitaniumHammer TitaniumHammer;
+	
+//===============================================================================================================================================================================================\\
+																									//Tools Registry\\
+	
+	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial(ServerMod.RESOURCE_PREFIX + "Titanium", 3, 500, 7.0F, 4.0F, 10);
+	public static ItemPickaxe TitaniumPickaxe;
+	public static ItemTitaniumAxe TitaniumAxe;
+	public static ItemSpade TitaniumShovel;
+	public static ItemHoe TitaniumHoe;
 	
 //===============================================================================================================================================================================================\\
 																									//Basic Item Registry\\
 
 	public static ItemKevlar Kevlar;
 	public static ItemTitaniumIngot TitaniumIngot;
+	public static ItemTitaniumNugget TitaniumNugget;
 	public static ItemSMGBulletCasing SMGBulletCasing;
 	public static ItemSMGBullet SMGBullet;
 	public static ItemBrassIngot BrassIngot;
@@ -86,6 +115,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemSiliconIngot SiliconIngot;
 	public static ItemPlatinumIngot PlatinumIngot;
 	public static ItemUraniumIngot UraniumIngot;
+	public static ItemCredit Credit;
+	public static ItemPremiumPermit PremiumPermit;
+	public static ItemLegacyPermit LegacyPermit;
+	//public static ItemTitaniumShield TitaniumShield;
 	
 //===============================================================================================================================================================================================\\
 																										//Armor Registry\\
@@ -96,6 +129,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemArmor OdstLeggings;
 	public static ItemArmor OdstBoots;
 	
+	public static ArmorMaterial TitaniumArmor;
+	public static ItemArmor TitaniumHelmet;
+	public static ItemArmor TitaniumChestplate;
+	public static ItemArmor TitaniumLeggings;
+	public static ItemArmor TitaniumBoots;
 //===============================================================================================================================================================================================\\	
     public static void init() {																			//Initialisation\\
 		
@@ -117,12 +155,39 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ToyKnife.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.ToyKnife)); 
 		GameRegistry.register(ToyKnife); 
 			
-		Scarlet = (ItemScarlet) new ItemScarlet(EnumHelper.addToolMaterial("Scarlet", 0, 2000, 0.0F, 1.0F, 30), -2.4F);
+		Scarlet = (ItemScarlet) new ItemScarlet(EnumHelper.addToolMaterial("Scarlet", 0, 2000, 12.0F, 6.0F, 30), -2.4F);
 		Scarlet.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Scarlet)); 
 		GameRegistry.register(Scarlet); 
 		
+		TitaniumSword = (ItemTitaniumSword) new ItemTitaniumSword(EnumHelper.addToolMaterial("TitaniumSword", 3, 500, 0.0F, 7.0F, 10), -2.4F);
+		TitaniumSword.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumSword)); 
+		GameRegistry.register(TitaniumSword);
+		
+		TitaniumHammer = (ItemTitaniumHammer) new ItemTitaniumHammer(EnumHelper.addToolMaterial("TitaniumHammer", 3, 500, 0.0F, 10.0F, 10), -2.8F);
+		TitaniumHammer.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumHammer)); 
+		GameRegistry.register(TitaniumHammer);
+	
+		
 //===============================================================================================================================================================================================\\
-				
+		
+		//Tools- Initialisation	
+		TitaniumPickaxe = (ItemTitaniumPickaxe) new ItemTitaniumPickaxe(toolMaterial);
+		TitaniumPickaxe.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumPickaxe)); 
+		GameRegistry.register(TitaniumPickaxe); 
+		
+		TitaniumAxe = (ItemTitaniumAxe) new ItemTitaniumAxe(toolMaterial, 8.0F, 0.0F);
+		TitaniumAxe.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumAxe)); 
+		GameRegistry.register(TitaniumAxe); 
+		
+		TitaniumShovel = (ItemTitaniumShovel) new ItemTitaniumShovel(toolMaterial);
+		TitaniumShovel.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumShovel)); 
+		GameRegistry.register(TitaniumShovel); 
+		
+		TitaniumHoe = (ItemTitaniumHoe) new ItemTitaniumHoe(toolMaterial);
+		TitaniumHoe.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumHoe)); 
+		GameRegistry.register(TitaniumHoe);
+		
+//===============================================================================================================================================================================================\\
 		//Messers- Initialisation
 		WoodenMesser = (ItemWoodenMesser) new ItemWoodenMesser(EnumHelper.addToolMaterial("WoodenMesser", 0, 59, 2.0F, 0.5F, 15), -2.0F);
 		WoodenMesser.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.WoodenMesser)); 
@@ -193,6 +258,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 				
 		//Armor Material
 		OdstArmor = EnumHelper.addArmorMaterial("OdstArmor", "", 66, new int[] {6, 6, 8, 6}, 50, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 20.0F); 
+		TitaniumArmor = EnumHelper.addArmorMaterial("TitaniumArmor", "", 30, new int[] {3, 6, 8, 3}, 11, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F);
 		
 //===============================================================================================================================================================================================\\
 		
@@ -213,6 +279,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		OdstBoots.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.OdstBoots)); 
 		GameRegistry.register(OdstBoots); 
 		
+		//Titanium Armor
+		TitaniumHelmet = (ItemArmor) new ItemTitaniumArmor(TitaniumArmor, EntityEquipmentSlot.HEAD).setUnlocalizedName("TitaniumHelmet");
+		TitaniumHelmet.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumHelmet)); 
+		GameRegistry.register(TitaniumHelmet); 
+			
+		TitaniumChestplate = (ItemArmor) new ItemTitaniumArmor(TitaniumArmor, EntityEquipmentSlot.CHEST).setUnlocalizedName("TitaniumChestplate");
+		TitaniumChestplate.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumChestplate)); 
+		GameRegistry.register(TitaniumChestplate); 
+			
+		TitaniumLeggings = (ItemArmor) new ItemTitaniumArmor(TitaniumArmor, EntityEquipmentSlot.LEGS).setUnlocalizedName("TitaniumLeggings");
+		TitaniumLeggings.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumLeggings)); 
+		GameRegistry.register(TitaniumLeggings); 
+    		
+		TitaniumBoots = (ItemArmor) new ItemTitaniumArmor(TitaniumArmor, EntityEquipmentSlot.FEET).setUnlocalizedName("TitaniumBoots");
+		TitaniumBoots.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumBoots)); 
+		GameRegistry.register(TitaniumBoots); 
+		
 //===============================================================================================================================================================================================\\
 			
 		//Basic Items
@@ -223,6 +306,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		TitaniumIngot = (ItemTitaniumIngot) new ItemTitaniumIngot();
 		TitaniumIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumIngot)); 
 		GameRegistry.register(TitaniumIngot); 
+		
+		TitaniumNugget = (ItemTitaniumNugget) new ItemTitaniumNugget();
+		TitaniumNugget.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumNugget)); 
+		GameRegistry.register(TitaniumNugget); 
 			
 		SMGBulletCasing = (ItemSMGBulletCasing) new ItemSMGBulletCasing();
 		SMGBulletCasing.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMGBulletCasing)); 
@@ -258,7 +345,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 		UraniumIngot = (ItemUraniumIngot) new ItemUraniumIngot();
 		UraniumIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.UraniumIngot)); 
-		GameRegistry.register(UraniumIngot);    
+		GameRegistry.register(UraniumIngot);
+		
+		Credit = (ItemCredit) new ItemCredit();
+		Credit.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Credit)); 
+		GameRegistry.register(Credit);
+		
+		PremiumPermit = (ItemPremiumPermit) new ItemPremiumPermit();
+		PremiumPermit.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.PremiumPermit)); 
+		GameRegistry.register(PremiumPermit);
+		
+		LegacyPermit = (ItemLegacyPermit) new ItemLegacyPermit();
+		LegacyPermit.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.LegacyPermit)); 
+		GameRegistry.register(LegacyPermit);
+		
+		//TitaniumShield = (ItemTitaniumShield) new ItemTitaniumShield();
+		//TitaniumShield.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumShield)); 
+		//GameRegistry.register(TitaniumShield);
 		
 //===============================================================================================================================================================================================\\
 
@@ -287,6 +390,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		//WOOD(0, 59, 2.0F, 0.0F, 15),
         //STONE(1, 131, 4.0F, 1.0F, 5),
         //IRON(2, 250, 6.0F, 2.0F, 14),
+    	//TITANIUM(3, 500, 7.0F, 4.0F, 10);
         //DIAMOND(3, 1561, 8.0F, 3.0F, 10),
         //GOLD(0, 32, 12.0F, 0.0F, 22);
 		
@@ -332,6 +436,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		Burger.addRecipes();
 		Fries.addRecipes();
 		ToyKnife.addRecipes();
+		Scarlet.addRecipes();
 		WoodenMesser.addRecipes();
 		StoneMesser.addRecipes();
 		IronMesser.addRecipes();
@@ -348,6 +453,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		AK4URounds.addRecipes();
 		Kevlar.addRecipes();
 		TitaniumIngot.addRecipes();
+		TitaniumNugget.addRecipes();
 		SMGBullet.addRecipes();
 		BrassIngot.addRecipes();
 		((ItemOdstArmor) OdstHelmet).addRecipes();
@@ -361,6 +467,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		PlatinumIngot.addRecipes();
 		UraniumIngot.addRecipes();
 		SMGBulletCasing.addRecipes();
+		Credit.addRecipes();
+		((ItemTitaniumPickaxe) TitaniumPickaxe).addRecipes();
+		((ItemTitaniumAxe) TitaniumAxe).addRecipes();
+		((ItemTitaniumShovel) TitaniumShovel).addRecipes();
+		((ItemTitaniumHoe) TitaniumHoe).addRecipes();
+		((ItemTitaniumArmor) TitaniumHelmet).addRecipes();
+		((ItemTitaniumArmor) TitaniumChestplate).addRecipes();
+		((ItemTitaniumArmor) TitaniumLeggings).addRecipes();
+		((ItemTitaniumArmor) TitaniumBoots).addRecipes();
+		TitaniumSword.addRecipes();
+		TitaniumHammer.addRecipes();
+		
 		
 //===============================================================================================================================================================================================\\
 																												//Texture Registry\\
@@ -406,6 +524,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation model7 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.OdstBoots, "inventory");
 		ModelLoader.registerItemVariants(OdstBoots, model7);
 		mesher.register(OdstBoots, 0, model7);
+																												//TitaniumArmor\\
+		
+		ModelResourceLocation model4a = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumHelmet, "inventory");
+		ModelLoader.registerItemVariants(TitaniumHelmet, model4a);
+		mesher.register(TitaniumHelmet, 0, model4a); 
+			
+		ModelResourceLocation model5a = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumChestplate, "inventory");
+		ModelLoader.registerItemVariants(TitaniumChestplate, model5a);
+		mesher.register(TitaniumChestplate, 0, model5a); 
+		
+		ModelResourceLocation model6a = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumLeggings, "inventory");
+		ModelLoader.registerItemVariants(TitaniumLeggings, model6a);
+		mesher.register(TitaniumLeggings, 0, model6a); 
+		
+		ModelResourceLocation model7a = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumBoots, "inventory");
+		ModelLoader.registerItemVariants(TitaniumBoots, model7a);
+		mesher.register(TitaniumBoots, 0, model7a);
 		
 //===============================================================================================================================================================================================\\
 																															//Messers\\
@@ -485,6 +620,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation model23 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumIngot, "inventory");
 		ModelLoader.registerItemVariants(TitaniumIngot, model23);
 		mesher.register(TitaniumIngot, 0, model23); 
+		
+		ModelResourceLocation model24 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumNugget, "inventory");
+		ModelLoader.registerItemVariants(TitaniumNugget, model24);
+		mesher.register(TitaniumNugget, 0, model24); 
 			
 		ModelResourceLocation model25 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMGBulletCasing, "inventory");
 		ModelLoader.registerItemVariants(SMGBulletCasing, model25);
@@ -522,11 +661,54 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(UraniumIngot, model33);
 		mesher.register(UraniumIngot, 0, model33);
 		
+		ModelResourceLocation model34 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Credit, "inventory");
+		ModelLoader.registerItemVariants(Credit, model34);
+		mesher.register(Credit, 0, model34);
+		
+		ModelResourceLocation model35 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PremiumPermit, "inventory");
+		ModelLoader.registerItemVariants(PremiumPermit, model35);
+		mesher.register(PremiumPermit, 0, model35);
+		
+		ModelResourceLocation model36 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.LegacyPermit, "inventory");
+		ModelLoader.registerItemVariants(LegacyPermit, model36);
+		mesher.register(LegacyPermit, 0, model36);
+		
+//===============================================================================================================================================================================================\\
+																										//Tools\\	
+
+		ModelResourceLocation model37 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumPickaxe, "inventory");
+		ModelLoader.registerItemVariants(TitaniumPickaxe, model37);
+		mesher.register(TitaniumPickaxe, 0, model37); 
+
+		ModelResourceLocation model38 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumAxe, "inventory");
+		ModelLoader.registerItemVariants(TitaniumAxe, model38);
+		mesher.register(TitaniumAxe, 0, model38); 
+
+		ModelResourceLocation model39 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumShovel, "inventory");
+		ModelLoader.registerItemVariants(TitaniumShovel, model39);
+		mesher.register(TitaniumShovel, 0, model39);
+
+		ModelResourceLocation model40 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumHoe, "inventory");
+		ModelLoader.registerItemVariants(TitaniumHoe, model40);
+		mesher.register(TitaniumHoe, 0, model40);
+		
+		ModelResourceLocation model41 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumSword, "inventory");
+		ModelLoader.registerItemVariants(TitaniumSword, model41);
+		mesher.register(TitaniumSword, 0, model41);
+		
+		ModelResourceLocation model42 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumHammer, "inventory");
+		ModelLoader.registerItemVariants(TitaniumHammer, model42);
+		mesher.register(TitaniumHammer, 0, model42);
+		
+		//ModelResourceLocation model41 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumShield, "inventory");
+		//ModelLoader.registerItemVariants(TitaniumShield, model41);
+		//smesher.register(TitaniumShield, 0, model41);
+		
 //===============================================================================================================================================================================================\\
 	
 				{
 			}
 		}
 	}
-	
+	//ZOO YA PH4NNY
 //===============================================================================================================================================================================================\\
