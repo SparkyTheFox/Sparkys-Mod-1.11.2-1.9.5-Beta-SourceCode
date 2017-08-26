@@ -2,9 +2,11 @@ package mod.sparkyfox.servermod.render;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
-import net.minecraft.client.renderer.entity.*;
+import net.minecraft.client.renderer.entity.RenderArrow;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.relauncher.*;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderSMGRounds extends RenderArrow<EntitySMGRounds> {

@@ -2,22 +2,34 @@ package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.block.BlockBrassBlock;
-import mod.sparkyfox.servermod.block.BlockBrassOre;
 import mod.sparkyfox.servermod.block.BlockCobaltBlock;
-import mod.sparkyfox.servermod.block.BlockCobaltOre;
 import mod.sparkyfox.servermod.block.BlockMagnesiumBlock;
-import mod.sparkyfox.servermod.block.BlockMagnesiumOre;
 import mod.sparkyfox.servermod.block.BlockNickelBlock;
-import mod.sparkyfox.servermod.block.BlockNickelOre;
 import mod.sparkyfox.servermod.block.BlockPlatinumBlock;
-import mod.sparkyfox.servermod.block.BlockPlatinumOre;
+import mod.sparkyfox.servermod.block.BlockRedButton;
+import mod.sparkyfox.servermod.block.BlockRedButton2;
 import mod.sparkyfox.servermod.block.BlockSiliconBlock;
-import mod.sparkyfox.servermod.block.BlockSiliconOre;
 import mod.sparkyfox.servermod.block.BlockTitaniumBlock;
-import mod.sparkyfox.servermod.block.BlockTitaniumOre;
 import mod.sparkyfox.servermod.block.BlockUraniumBlock;
-import mod.sparkyfox.servermod.block.BlockUraniumOre;
+import mod.sparkyfox.servermod.block.barriers.BlockBarrierButton;
+import mod.sparkyfox.servermod.block.barriers.BlockBarrierPDiorite;
+import mod.sparkyfox.servermod.block.barriers.BlockBarrierPressurePlate;
+import mod.sparkyfox.servermod.block.barriers.BlockBarrierRedClay;
+import mod.sparkyfox.servermod.block.barriers.BlockBarrierTitanium;
+import mod.sparkyfox.servermod.block.barriers.BlockBarrierWhiteClay;
+import mod.sparkyfox.servermod.block.barriers.BlockBarrierWood;
+import mod.sparkyfox.servermod.block.ores.BlockBrassOre;
+import mod.sparkyfox.servermod.block.ores.BlockCobaltOre;
+import mod.sparkyfox.servermod.block.ores.BlockMagnesiumOre;
+import mod.sparkyfox.servermod.block.ores.BlockNickelOre;
+import mod.sparkyfox.servermod.block.ores.BlockPlatinumOre;
+import mod.sparkyfox.servermod.block.ores.BlockSiliconOre;
+import mod.sparkyfox.servermod.block.ores.BlockTechiteOre;
+import mod.sparkyfox.servermod.block.ores.BlockTitaniumOre;
+import mod.sparkyfox.servermod.block.ores.BlockUraniumOre;
 import mod.sparkyfox.servermod.lib.ModNames;
+import net.minecraft.block.BlockPressurePlate.Sensitivity;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -29,6 +41,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
   public class ModBlocks {
+
 //===========================================================================================================================================================================================\\
 	  																								//Ore Registry\\
 	  
@@ -40,6 +53,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockSiliconOre SiliconOre;
 	  public static BlockPlatinumOre PlatinumOre;
 	  public static BlockUraniumOre UraniumOre;
+	  public static BlockTechiteOre TechiteOre;
 //===============================================================================================================================================================================================\\
 	  																								//Block Registry\\
 	  
@@ -51,6 +65,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockSiliconBlock SiliconBlock;
 	  public static BlockPlatinumBlock PlatinumBlock;
 	  public static BlockUraniumBlock UraniumBlock;
+	  public static BlockBarrierPressurePlate BarrierPressurePlate;
+	  public static BlockBarrierWood BarrierWood;
+	  public static BlockBarrierTitanium BarrierTitanium;
+	  public static BlockBarrierPDiorite BarrierPDiorite;
+	  public static BlockBarrierRedClay BarrierRedClay;
+	  public static BlockBarrierWhiteClay BarrierWhiteClay;
+	  public static BlockBarrierButton BarrierButton;
+	  public static BlockRedButton RedButton;
+	  public static BlockRedButton2 RedButton2;
 	  
 //===============================================================================================================================================================================================\\
 	  																								//Initialise: ORES\\
@@ -111,6 +134,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  	  UraniumOre.setRegistryName(location7);
 	  	  GameRegistry.register(UraniumOre);
 	  	  GameRegistry.register(new ItemBlock(UraniumOre), location7);
+	  	  
+		  //Techite Ore\\
+	  	  ResourceLocation location7a = new ResourceLocation(ServerMod.MOD_ID, ModNames.TechiteOre);
+	  	  TechiteOre = new BlockTechiteOre();
+	  	  TechiteOre.setRegistryName(location7a);
+	  	  GameRegistry.register(TechiteOre);
+	  	  GameRegistry.register(new ItemBlock(TechiteOre), location7a);
 			 
 			  {
 				  
@@ -177,6 +207,62 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GameRegistry.register(UraniumBlock);
 		  GameRegistry.register(new ItemBlock(UraniumBlock), location15);
 		  
+		  //Uranium Block\\
+		  ResourceLocation location16 = new ResourceLocation(ServerMod.MOD_ID, ModNames.BarrierPressurePlate);
+		  BarrierPressurePlate = new BlockBarrierPressurePlate(Material.IRON, Sensitivity.MOBS);
+		  BarrierPressurePlate.setRegistryName(location16);
+		  GameRegistry.register(BarrierPressurePlate);
+		  GameRegistry.register(new ItemBlock(BarrierPressurePlate), location16);
+		  
+		  //Uranium Block\\
+		  ResourceLocation location16a = new ResourceLocation(ServerMod.MOD_ID, ModNames.BarrierWood);
+		  BarrierWood = new BlockBarrierWood();
+		  BarrierWood.setRegistryName(location16a);
+		  GameRegistry.register(BarrierWood);
+		  GameRegistry.register(new ItemBlock(BarrierWood), location16a);
+		  
+		  ResourceLocation location16b = new ResourceLocation(ServerMod.MOD_ID, ModNames.BarrierTitanium);
+		  BarrierTitanium = new BlockBarrierTitanium();
+		  BarrierTitanium.setRegistryName(location16b);
+		  GameRegistry.register(BarrierTitanium);
+		  GameRegistry.register(new ItemBlock(BarrierTitanium), location16b);
+		  
+		  ResourceLocation location16c = new ResourceLocation(ServerMod.MOD_ID, ModNames.BarrierPDiorite);
+		  BarrierPDiorite = new BlockBarrierPDiorite();
+		  BarrierPDiorite.setRegistryName(location16c);
+		  GameRegistry.register(BarrierPDiorite);
+		  GameRegistry.register(new ItemBlock(BarrierPDiorite), location16c);
+		  
+		  ResourceLocation location16d = new ResourceLocation(ServerMod.MOD_ID, ModNames.BarrierRedClay);
+		  BarrierRedClay = new BlockBarrierRedClay();
+		  BarrierRedClay.setRegistryName(location16d);
+		  GameRegistry.register(BarrierRedClay);
+		  GameRegistry.register(new ItemBlock(BarrierRedClay), location16d);
+		  
+		  ResourceLocation location16e = new ResourceLocation(ServerMod.MOD_ID, ModNames.BarrierWhiteClay);
+		  BarrierWhiteClay = new BlockBarrierWhiteClay();
+		  BarrierWhiteClay.setRegistryName(location16e);
+		  GameRegistry.register(BarrierWhiteClay);
+		  GameRegistry.register(new ItemBlock(BarrierWhiteClay), location16e);
+		  
+		  ResourceLocation location16f = new ResourceLocation(ServerMod.MOD_ID, ModNames.BarrierButton);
+		  BarrierButton = new BlockBarrierButton();
+		  BarrierButton.setRegistryName(location16f);
+		  GameRegistry.register(BarrierButton);
+		  GameRegistry.register(new ItemBlock(BarrierButton), location16f);
+
+		  ResourceLocation location16g = new ResourceLocation(ServerMod.MOD_ID, ModNames.RedButton);
+		  RedButton = new BlockRedButton();
+		  RedButton.setRegistryName(location16g);
+		  GameRegistry.register(RedButton);
+		  GameRegistry.register(new ItemBlock(RedButton), location16g);
+		  
+		  ResourceLocation location16h = new ResourceLocation(ServerMod.MOD_ID, ModNames.RedButton2);
+		  RedButton2 = new BlockRedButton2();
+		  RedButton2.setRegistryName(location16h);
+		  GameRegistry.register(RedButton2);
+		  GameRegistry.register(new ItemBlock(RedButton2), location16h);
+		  
 	  }
 	  
 //===============================================================================================================================================================================================\\
@@ -242,6 +328,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		    mesher.register(item7, 0, model7);{
 		    }
 		    
+			//Ores: Techite
+			Item item7a = Item.getItemFromBlock(TechiteOre);
+		    ModelResourceLocation model7a = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TechiteOre, "inventory");
+		    ModelLoader.registerItemVariants(item7a, model7a);
+		    mesher.register(item7a, 0, model7a);{
+		    }
+		    
 //===============================================================================================================================================================================================\\
 																											//Model Meshes: BLOCKS\\
 		    
@@ -300,7 +393,63 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		    ModelLoader.registerItemVariants(item15, model15);
 		    mesher.register(item15, 0, model15);{
   			}
-  		}
+		    Item item16 = Item.getItemFromBlock(BarrierPressurePlate);
+		    ModelResourceLocation model16 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BarrierPressurePlate, "inventory");
+		    ModelLoader.registerItemVariants(item16, model16);
+		    mesher.register(item16, 0, model16);{
+  			}
+		    Item item16a = Item.getItemFromBlock(BarrierWood);
+		    ModelResourceLocation model16a = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BarrierWood, "inventory");
+		    ModelLoader.registerItemVariants(item16a, model16a);
+		    mesher.register(item16a, 0, model16a);{
+  			}
+		    Item item16b = Item.getItemFromBlock(BarrierTitanium);
+		    ModelResourceLocation model16b = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BarrierTitanium, "inventory");
+		    ModelLoader.registerItemVariants(item16b, model16b);
+		    mesher.register(item16b, 0, model16b);{
+		    }
+		    Item item16c = Item.getItemFromBlock(BarrierPDiorite);
+			ModelResourceLocation model16c = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BarrierPDiorite, "inventory");
+			ModelLoader.registerItemVariants(item16c, model16c);
+			mesher.register(item16c, 0, model16c);{
+				
+		    }
+		    Item item16d = Item.getItemFromBlock(BarrierRedClay);
+			ModelResourceLocation model16d = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BarrierRedClay, "inventory");
+			ModelLoader.registerItemVariants(item16d, model16d);
+			mesher.register(item16d, 0, model16d);{
+				
+		    }
+		    Item item16e = Item.getItemFromBlock(BarrierWhiteClay);
+			ModelResourceLocation model16e = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BarrierWhiteClay, "inventory");
+			ModelLoader.registerItemVariants(item16e, model16e);
+			mesher.register(item16e, 0, model16e);{
+				
+			}
+		    Item item16f = Item.getItemFromBlock(BarrierButton);
+			ModelResourceLocation model16f = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BarrierButton, "inventory");
+			ModelLoader.registerItemVariants(item16f, model16f);
+			mesher.register(item16f, 0, model16f);{
+				
+			}
+		    Item item16g = Item.getItemFromBlock(RedButton);
+			ModelResourceLocation model16g = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RedButton, "inventory");
+			ModelLoader.registerItemVariants(item16g, model16g);
+			mesher.register(item16g, 0, model16g);{
+			
+			}
+			Item item16h = Item.getItemFromBlock(RedButton2);
+			ModelResourceLocation model16h = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RedButton2, "inventory");
+			ModelLoader.registerItemVariants(item16h, model16h);
+			mesher.register(item16h, 0, model16h);{				
+				
+			//Slabs
+
+				
+				
+				
+		    }
+		    }
 	  
 //===============================================================================================================================================================================================\\
 																											//Recipe Initialisation\\	  
@@ -322,6 +471,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			PlatinumBlock.addRecipes();
 			UraniumOre.addRecipes();
 			UraniumBlock.addRecipes();
+			RedButton.addRecipes();
+			RedButton2.addRecipes();
 	  }
 	  
 //===============================================================================================================================================================================================\\

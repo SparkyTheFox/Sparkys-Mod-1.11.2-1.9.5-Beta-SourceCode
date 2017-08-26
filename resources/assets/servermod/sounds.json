@@ -22,6 +22,16 @@
         ],
         "subtitle": "RUSSIAN PEW!"
     },
+	
+	
+        "alarm": {
+        "category": "player",
+        "sounds": [
+       {"name":"servermod:alarm", "stream": true}
+	   
+        ],
+        "subtitle": "DOOM BUTTON ACTIVATED!"
+    },
 
         "mus_ruins": {
         "category": "record",
@@ -129,6 +139,35 @@
             
         ],
         "subtitle": "* Welcome to my shop!"    
+    },
+    
+        "mus_home": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_home", "stream": true}
+            
+        ],
+        "subtitle": "* Welcome Home"    
+    },
+    
+        "mus_home2": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_home2", "stream": true}
+            
+        ],
+        "subtitle": "* Goodnight my child..."
+            
+    },
+    
+     "mus_boss2": {
+     "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_boss2", "stream": true}
+            
+        ],
+        "subtitle": "* Oh...sorry..."
+            
     },
 
         "song_90s": {

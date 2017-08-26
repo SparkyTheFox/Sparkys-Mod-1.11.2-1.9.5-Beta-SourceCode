@@ -1,0 +1,7 @@
+{
+  "_comment": "Generated using MiningMark48's JSON Generator.",
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "servermod:blocks/titanium_block"
+  }
+}

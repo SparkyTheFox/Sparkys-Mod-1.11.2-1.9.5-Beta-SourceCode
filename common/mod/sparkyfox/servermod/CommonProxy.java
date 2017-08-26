@@ -3,7 +3,8 @@ package mod.sparkyfox.servermod;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.world.WorldGenOre;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -45,4 +46,34 @@ public class CommonProxy {
 		
 	}
 //===============================================================================================================================================================================================\\
+
+	public void registerRenders()
+	{
+
+	}
+
+	public World getClientWorld()
+	{
+		return null;
+	}
+
+	public EntityPlayer getClientPlayer()
+	{
+		return null;
+	}
+
+	public boolean isSinglePlayer()
+	{
+		return false;
+	}
+
+	public boolean isDedicatedServer()
+	{
+		return true;
+	}
+
+	public void preInit() {
+		// TODO Auto-generated method stub
+		
+	}
 }

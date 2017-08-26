@@ -12,6 +12,7 @@ public class ModSoundEvents {
 	public static SoundEvent impact;
 	public static SoundEvent bloodsplat;
 	public static SoundEvent ak4u;
+	public static SoundEvent alarm;
 	
 //===============================================================================================================================================================================================\\
 																									//UTM Registry\\
@@ -27,6 +28,9 @@ public class ModSoundEvents {
 	public static SoundEvent mus_snowdintown;
 	public static SoundEvent mus_dogsong;
 	public static SoundEvent mus_shop;
+	public static SoundEvent mus_home;
+	public static SoundEvent mus_home2;
+	public static SoundEvent mus_boss2;
 	
 //===============================================================================================================================================================================================\\
 																									//SONG Registry\\	
@@ -51,6 +55,7 @@ public class ModSoundEvents {
 		impact = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "impact")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "impact"));
 		bloodsplat = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "bloodsplat")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "bloodsplat"));
 		ak4u = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "ak4u")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "ak4u"));
+		alarm = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "alarm")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "alarm"));
 
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: UTM\\
@@ -67,7 +72,9 @@ public class ModSoundEvents {
 		mus_snowdintown = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_snowdintown")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_snowdintown"));
 		mus_dogsong = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_dogsong")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_dogsong"));
 		mus_shop = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_shop")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_shop"));
-		
+		mus_home = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_home")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_home"));
+		mus_home2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_home2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_home2"));
+		mus_boss2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_boss2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_boss2"));
 		
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: SONGS\\
@@ -110,6 +117,10 @@ public class ModSoundEvents {
 		registerSound(mus_snowdintown);
 		registerSound(mus_dogsong);
 		registerSound(mus_shop);
+		registerSound(mus_home);
+		registerSound(mus_home2);
+		registerSound(mus_boss2);
+		registerSound(alarm);
 		//registerSound(song_90s);
 		//registerSound(FloweyHowdy);
 		//registerSound(FloweyKOBK);

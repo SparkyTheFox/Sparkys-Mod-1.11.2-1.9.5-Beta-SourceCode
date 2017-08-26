@@ -15,7 +15,22 @@ SiliconBlockservermod:SiliconBlock.name=Silicon Block
 PlatinumOreservermod:PlatinumOre.name=Platinum Ore
 PlatinumBlockservermod:PlatinumBlock.name=Platinum Block
 UraniumOreservermod:UraniumOre.name=Uranium Ore2
-UraniumBlockservermod:UraniumBlock.name=Uranium Block
+UraniumBlockservermod:UraniumBlock.name=Uranium Block2
+BarrierPressurePlateservermod:BarrierPressurePlate.name=!^=3=^
+BarrierWoodservermod:BarrierWood.name=!?O_o
+BarrierTitaniumservermod:BarrierTitanium.name=!?Hi Shan, stop using JEI
+BarrierPDioriteservermod:BarrierPDiorite.name=!?@==+
+BarrierRedClayservermod:BarrierRedClay.name=!?@-
+BarrierWhiteClayservermod:BarrierWhiteClay.name=!?:|
+BarrierButtonservermod:BarrierButton.name=!(\/)
+RedButtonservermod:RedButton.name=The Big Red Button
+RedButton2servermod:RedButton2.name=The Red Button
+TechiteOreservermod:TechiteOre.name=Techite Ore
+
+
+
+
+
 
 # Items
 
@@ -66,6 +81,76 @@ item.TitaniumLeggings.name=Titanium Leggings
 item.TitaniumBoots.name=Titanium Boots
 TitaniumSwordservermod:TitaniumSword.name=Titanium Sword
 TitaniumHammerservermod:TitaniumHammer.name=Titanium Hammer
+EmeraldPickaxeservermod:EmeraldPickaxe.name=Emerald Pickaxe
+EmeraldSwordservermod:EmeraldSword.name=Emerald Sword
+EmeraldAxeservermod:EmeraldAxe.name=Emerald Axe
+EmeraldShovelservermod:EmeraldShovel.name=Emerald Shovel
+EmeraldHoeservermod:EmeraldHoe.name=Emerald Hoe
+item.EmeraldHelmet.name=Emerald Helmet
+item.EmeraldChestplate.name=Emerald Chestplate
+item.EmeraldLeggings.name=Emerald Leggings
+item.EmeraldBoots.name=Emerald Boots
+item.LapisHelmet.name=Lapis Helmet
+item.LapisChestplate.name=Lapis Chestplate
+item.LapisLeggings.name=Lapis Leggings
+item.LapisBoots.name=Lapis Boots
+item.LapisHelmetHeavy.name=Heavy Lapis Helmet
+item.LapisChestplateHeavy.name=Heavy Lapis Chestplate
+item.LapisLeggingsHeavy.name=Heavy Lapis Leggings
+item.LapisBootsHeavy.name=Heavy Lapis Boots
+LapisSwordservermod:LapisSword.name=Lapis Sword
+LapisPickaxeservermod:LapisPickaxe.name=Lapis Pickaxe
+LapisAxeservermod:LapisAxe.name=Lapis Axe
+LapisShovelservermod:LapisShovel.name=Lapis Shovel
+LapisHoeservermod:LapisHoe.name=Lapis Hoe
+item.FoxSpaceHelmet.name=Sparky's Space Helmet
+item.FoxSpaceChestplate.name=Sparky's Space Chestplate
+item.FoxSpaceLeggings.name=Sparky's Space Jumpsuit
+item.FoxSpaceBoots.name=Sparky's Space Boot
+item.AuzzySpaceHelmet.name=RA's Space Helmet
+item.AuzzySpaceChestplate.name=RA's Space Chestplate
+item.AuzzySpaceLeggings.name=RA's Space Jumpsuit
+item.AuzzySpaceBoots.name=RA's Space Boots
+item.SpaceHelmet.name=Space Helmet
+item.SpaceChestplate.name=Space Chestplate
+item.SpaceLeggings.name=Space Jumpsuit
+item.SpaceBoots.name=Space Boots
+item.CPSpaceHelmet.name=Cosmonaught Helmet
+item.CPSpaceChestplate.name=Cosmonaught Chestplate
+item.CPSpaceLeggings.name=Cosmonaught Jumpsuit
+item.CPSpaceBoots.name=Cosmonaught Boots
+item.KerbalSpaceHelmet.name=Kerbal Eva Helmet
+item.KerbalSpaceChestplate.name=Kerbal Eva Chestplate
+item.KerbalSpaceLeggings.name=Kerbal Iva Jumpsuit
+item.KerbalSpaceBoots.name=Kerbal Eva Boots
+item.AdventureSpaceHelmet.name=Universe Helmet
+item.AdventureSpaceChestplate.name=Universe Chestplate
+item.AdventureSpaceLeggings.name=Universe Jumpsuit
+item.AdventureSpaceBoots.name=Universe Boots
+item.LapisTechSpaceHelmet.name=Lapis Tech Space Helmet
+item.LapisTechSpaceChestplate.name=Lapis Tech Space Chestplate
+item.LapisTechSpaceLeggings.name=Lapis Tech Nano Jumpsuit
+item.LapisTechSpaceBoots.name=Lapis Tech Space Boots
+item.DiamondTechSpaceHelmet.name=Diamond Tech Space Helmet
+item.DiamondTechSpaceChestplate.name=Diamond Tech Space Chestplate
+item.DiamondTechSpaceLeggings.name=Diamond Tech Nano Jumpsuit
+item.DiamondTechSpaceBoots.name=Diamond Tech Space Boots
+item.EmeraldTechSpaceHelmet.name=Emerald Tech Space Helmet
+item.EmeraldTechSpaceChestplate.name=Emerald Tech Space Chestplate
+item.EmeraldTechSpaceLeggings.name=Emerald Tech Nano Jumpsuit
+item.EmeraldTechSpaceBoots.name=Emerald Tech Space Boots
+item.RedstoneTechSpaceHelmet.name=Redstone Tech Space Helmet
+item.RedstoneTechSpaceChestplate.name=Redstone Tech Space Chestplate
+item.RedstoneTechSpaceLeggings.name=Redstone Tech Nano Jumpsuit
+item.RedstoneTechSpaceBoots.name=Redstone Tech Space Boots
+NasaFabricservermod:NasaFabric.name=Nasa Fabric
+CommieFabricservermod:CommieFabric.name=Commie Fabric
+KerbalFabricservermod:KerbalFabric.name=Kerbal Fabric
+UniverseFabricservermod:UniverseFabric.name=Universe Fabric
+CraftingHammerservermod:CraftingHammer.name=Crafting Hammer
+RecipeBookservermod:RecipeBook.name=Sparky's Recipe Book
+
+
 
 # Creative Tab
 

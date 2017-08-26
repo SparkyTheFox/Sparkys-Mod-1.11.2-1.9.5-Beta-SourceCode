@@ -1,20 +1,110 @@
  # Blocks
 
-GlowingHardClayservermod:GlowingHardClay.name=GlowingHardClay
-
+Titaniumservermod:Titanium.name=Rockz Wif Black Stuff
+TitaniumBlockservermod:TitaniumBlock.name=Black....misterreeus...cub...
+Brassservermod:Brass.name=Rockz Wif Rusty Stuff
+BrassBlockservermod:BrassBlock.name=EW EW EW EW RUSTY CUB!
+Nickelservermod:Nickel.name=Rockz Wif Nikl Stuff 
+NickelBlockservermod:NickelBlock.name=Munz?? $$££
+Cobaltservermod:Cobalt.name=Rockz Wif Sticky Stuff 
+CobaltBlockservermod:CobaltBlock.name=EVIL MAGNUTIC THEEEEEF (=>.>=)
+Magnesiumservermod:Magnesium.name=Rockz Wif Bloo Stuff 
+MagnesiumBlockservermod:MagnesiumBlock.name=AHHHHH!!! BLOOO!!!!
+Siliconservermod:Silicon.name=Rockz Wif Soft Stuff
+SiliconBlockservermod:SiliconBlock.name=PILLOHZZZ!!!
+Platinumservermod:Platinum.name=Rockz Wif Plate Stuff
+PlatinumBlockservermod:PlatinumBlock.name=DINNER PLATE!!! SOO KWAAI!!! AHHHH! (=^w^=)
+Uraniumservermod:Uranium.name=Rockz Wif Candeeez
+UraniumBlockservermod:UraniumBlock.name= Candeee BLOCK!!
 # Items
 
 Burgerservermod:Burger.name=Cheezburgerz
 Friesservermod:Fries.name=Friez
 ToyKnifeservermod:ToyKnife.name=Ouchy Stick
 Scarletservermod:Scarlet.name=Awshum Sord
-item.OdstHelmet.name=ODST Helmet
-item.OdstChestplate.name=ODST Chestplate
-item.OdstLeggings.name=ODST Leggings
-item.OdstBoots.name=ODST Boots
-SMGservermod:SMG.name=M7S Submachine Gun
-SMGRoundsservermod:SMGRounds.name=5x23mmRounds
-Kevlarservermod:Kevlar.name=Kevlar
+item.OdstHelmet.name=Tem Armors
+item.OdstChestplate.name=Tem Armors
+item.OdstLeggings.name=Tem Armors
+item.OdstBoots.name=Tem Armors
+SMGservermod:SMG.name=MERUCA! F*CK YEA!
+SMGRoundsservermod:SMGRounds.name=MERUCA BOOLEEETZ
+AK4Uservermod:AK4U.name=Le Commiez Bang Banng
+AK4URoundsservermod:AK4URounds.name=Le Commiez Thang
+Kevlarservermod:Kevlar.name=Black Lethur
+TitaniumIngotservermod:TitaniumIngot.name=Black Ingut
+TitaniumNuggetservermod:TitaniumNugget.name=Nawt Shiny Bawl
+WoodenMesserservermod:WoodenMesser.name=Wuden Stab Stab
+StoneMesserservermod:StoneMesser.name=Pointy Stabberoo
+IronMesserservermod:IronMesser.name=Irun Stab Stab
+GoldMesserservermod:GoldMesser.name=GOLDEN STABITY STAB STAB!
+DiamondMesserservermod:DiamondMesser.name=Dimond Stab Stab
+WoodenKnifeservermod:WoodenKnife.name=Wuden Shank Shank
+StoneKnifeservermod:StoneKnife.name=Pointy Shankeroo
+IronKnifeservermod:IronKnife.name=Irun Shank Shank
+GoldKnifeservermod:GoldKnife.name=GOLDEN SHANK SHANK
+DiamondKnifeservermod:DiamondKnife.name=Dimand Shank Shank
+SMGBulletCasingservermod:SMGBulletCasing.name=MERUCA GUN POOPZ
+SMGBulletservermod:SMGBullet.name=MERUCA BOOLEET
+BrassIngotservermod:BrassIngot.name=Rusty Ingut
+NickelIngotservermod:NickelIngot.name=Nikl Ingut
+CobaltIngotservermod:CobaltIngot.name=Sticky Ingut
+MagnesiumIngotservermod:MagnesiumIngot.name=BLOO! INGUT!
+SiliconIngotservermod:SiliconIngot.name=SOFT INGUT
+PlatiniumIngotservermod:PlatiniumIngot.name=PLATE INGUT
+UraniumIngotservermod:UraniumIngot.name=Candy Ingut
+Creditservermod:Credit.name=Muns
+PremiumPermitservermod:PremiumPermit.name=Sans Lettur
+LegacyPermitservermod:LegacyPermit.name=Papyrus Lettur
+TitaniumPickaxeservermod:TitaniumPickaxe.name=Black Pikakse
+TitaniumAxeservermod:TitaniumAxe.name=Black Aks
+TitaniumShovelservermod:TitaniumShovel.name=Black Spoon
+TitaniumHoeservermod:TitaniumHoe.name=Black Hoe
+item.TitaniumHelmet.name=Black Hat
+item.TitaniumChestplate.name=Black Shurt
+item.TitaniumLeggings.name=Black Pantz
+item.TitaniumBoots.name=Black Shoez
+TitaniumSwordservermod:TitaniumSword.name=Black Sord
+TitaniumHammerservermod:TitaniumHammer.name=Black Hammr
+EmeraldPickaxeservermod:EmeraldPickaxe.name=Shiny Pikakse
+EmeraldAxeservermod:EmeraldAxe.name=Shiny Aks
+EmeraldShovelservermod:EmeraldShovel.name=Shiny Spoon
+EmeraldHoeservermod:EmeraldHoe.name=Shiny Hoe
+item.EmeraldHelmet.name=VERY VERY SHINY HAT
+item.EmeraldChestplate.name=awshum shurt
+item.EmeraldLeggings.name=VERY SHINY PANTZ
+item.EmeraldBoots.name=VERY SHINY SHOEZ
+EmeraldSwordservermod:EmeraldSword.name=VERY SHINY SORD 
+item.FoxSpaceHelmet.name=Sparky's SPAS HALM
+item.FoxSpaceChestplate.name=Sparky's SPAS SAT
+item.FoxSpaceLeggings.name=Sparky's awshum 'vallz
+item.FoxSpaceBoots.name=Sparky's O-O SHOOZEZ
+
+item.AuzzySpaceHelmet.name=RA's Space Helmet
+item.AuzzySpaceChestplate.name=RA's Space Chestplate
+item.AuzzySpaceLeggings.name=RA's Space Jumpsuit
+item.AuzzySpaceBoots.name=RA's Space Boots
+item.SpaceHelmet.name=Space Helmet
+item.SpaceChestplate.name=Space Chestplate
+item.SpaceLeggings.name=Space Jumpsuit
+item.SpaceBoots.name=Space Boots
+item.CPSpaceHelmet.name=Cosmonaught Helmet
+item.CPSpaceChestplate.name=Cosmonaught Chestplate
+item.CPSpaceLeggings.name=Cosmonaught Jumpsuit
+item.CPSpaceBoots.name=Cosmonaught Boots
+item.KerbalSpaceHelmet.name=Kerbal Eva Helmet
+item.KerbalSpaceChestplate.name=Kerbal Eva Chestplate
+item.KerbalSpaceLeggings.name=Kerbal Iva Jumpsuit
+item.KerbalSpaceBoots.name=Kerbal Eva Boots
+item.AdventureSpaceHelmet.name=Universe Helmet
+item.AdventureSpaceChestplate.name=Universe Chestplate
+item.AdventureSpaceLeggings.name=Universe Jumpsuit
+item.AdventureSpaceBoots.name=Universet Boots
+NasaFabricservermod:NasaFabric.name=Nasa Fabric
+CommieFabricservermod:CommieFabric.name=Commie Fabric
+KerbalFabricservermod:KerbalFabric.name=Kerbal Fabric
+UniverseFabricservermod:UniverseFabric.name=Universe Fabric
+CraftingHammerservermod:CraftingHammer.name=Crafting Hammer
+
 
 # Creative Tab
 

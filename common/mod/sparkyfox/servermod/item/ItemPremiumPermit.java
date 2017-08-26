@@ -17,7 +17,7 @@ public class ItemPremiumPermit extends Item {
 	public String getUnlocalizedName(ItemStack stack) {
 		return "PremiumPermit" + ServerMod.RESOURCE_PREFIX + ModNames.PremiumPermit;
 		
-		}
+		}			
 	
 															//Crafting Recipe\\
 	

@@ -1,13 +1,7 @@
 package mod.sparkyfox.servermod;
 
-import java.util.Random;
-
 import mod.sparkyfox.servermod.init.ModEntities;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
-import net.minecraft.client.audio.Sound;
-import net.minecraft.entity.Entity;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -28,7 +22,7 @@ public class ServerMod {
 	
 	public static final String MOD_ID = "servermod";
 	public static final String MOD_NAME = "Sparky's Mod";
-	public static final String VERSION = "BETA";
+	public static final String VERSION = "BETA-Spacesuit Update";
 	public static final String RESOURCE_PREFIX = MOD_ID.toLowerCase() + ":"; // servermod:
 	
 //===============================================================================================================================================================================================\\

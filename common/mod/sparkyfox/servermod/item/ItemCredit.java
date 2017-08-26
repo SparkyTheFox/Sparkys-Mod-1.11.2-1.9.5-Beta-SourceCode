@@ -1,8 +1,6 @@
 package mod.sparkyfox.servermod.item;
 
 import mod.sparkyfox.servermod.ServerMod;
-import mod.sparkyfox.servermod.init.ModBlocks;
-import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;

@@ -5,17 +5,7 @@ import mod.sparkyfox.servermod.entity.EntityAK4URounds;
 //import mod.sparkyfox.servermod.entity.EntityFlowey;
 //import mod.sparkyfox.servermod.entity.EntityFriendlynessPellet;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
-//import mod.sparkyfox.servermod.models.ModelFlowey;
-//import mod.sparkyfox.servermod.models.ModelFriendlynessPellet;
-//import mod.sparkyfox.servermod.render.RenderFlowey;
-//import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome.SpawnListEntry;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class ModEntities {
