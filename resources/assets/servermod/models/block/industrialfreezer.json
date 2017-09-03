@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "servermod:blocks/industrial_freezer_top",
+        "front": "servermod:blocks/industrial_freezer_front_off",
+        "side": "servermod:blocks/industrial_freezer_side"
+    }
+}

@@ -1,13 +1,19 @@
 package mod.sparkyfox.servermod.block.ores;
 
+import java.util.Random;
+
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStone;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -35,6 +41,13 @@ public class BlockTechiteOre extends Block {
 																		//Smelting Recipe\\ 
 	
 		public void addRecipes() {
-			GameRegistry.addSmelting(ModBlocks.TechiteOre, new ItemStack(ModItems.BrassIngot), 1.0F);
+			//GameRegistry.addSmelting(ModBlocks.TechiteOre, new ItemStack(ModItems.BrassIngot), 1.0F);
 		}
+		
+																			//Drops\\
+		
+	    public Item getItemDropped(IBlockState state, Random rand, int fortune)
+	    {
+	        return ModItems.Techite;
+	    }
 	}

@@ -23,19 +23,26 @@ public class WorldGenOre implements IWorldGenerator
 		{
 			if (dimension == 0) //two =, you can also do greater than/less than with =< and => but thats a bad idea
 			{
-				 genSurfaceTitanium(world, random, chunkX * 16, chunkZ * 16); //each one of these calls one of the methods
+				 genSurfaceOverworld(world, random, chunkX * 16, chunkZ * 16); //each one of these calls one of the methods
 
 				 
 			}
 			if (dimension == -1)
 			{
 				
-		
+				//nether genSurfaceNether(world, random, chunkX * 16, chunkZ * 16); //each one of these calls one of the methods
+				
+			}
+			if (dimension == 1)
+			{
+				
+				//end genSurfaceEnd(world, random, chunkX * 16, chunkZ * 16); //each one of these calls one of the methods
+				
 			}
 		}
 		
 	}
-	private void genSurfaceTitanium(World world, Random random, int chunkX, int chunkZ)
+	private void genSurfaceOverworld(World world, Random random, int chunkX, int chunkZ)
 	{
 		 addOreSpawn(ModBlocks.TitaniumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 10, 8, 1, 70, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
 		 addOreSpawn(ModBlocks.BrassOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 8, 10, 1, 128, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value 
@@ -45,6 +52,7 @@ public class WorldGenOre implements IWorldGenerator
 		 addOreSpawn(ModBlocks.SiliconOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 12, 4, 1, 100, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
 		 addOreSpawn(ModBlocks.PlatinumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 4, 1, 18, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
 		 addOreSpawn(ModBlocks.UraniumOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 6, 1, 30, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
+		 addOreSpawn(ModBlocks.TechiteOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 4, 1, 1, 20, BlockMatcher.forBlock(Blocks.STONE)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
 		}
 	 private void addOreSpawn(IBlockState block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chance, int minY, int maxY, Predicate<IBlockState> blockToSpawnIn) //world generator. make sure to register in clientproxy, use GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);.
 	 {

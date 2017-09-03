@@ -138,6 +138,7 @@ public class ModNames {
 	public static final String KerbalFabric = "KerbalFabric";
 	public static final String UniverseFabric = "UniverseFabric";
 	public static final String RecipeBook = "RecipeBook";
+	public static final String Techite = "Techite";
 	
 	
 	
@@ -173,4 +174,5 @@ public class ModNames {
 	public static final String RedButton = "RedButton";
 	public static final String RedButton2 = "RedButton2";
 	public static final String TechiteOre = "TechiteOre";
+	public static final String IndustrialFreezer = "IndustrialFreezer";
 }

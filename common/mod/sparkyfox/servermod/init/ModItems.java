@@ -9,6 +9,7 @@ import mod.sparkyfox.servermod.item.ItemLegacyPermit;
 import mod.sparkyfox.servermod.item.ItemNasaFabric;
 import mod.sparkyfox.servermod.item.ItemPremiumPermit;
 import mod.sparkyfox.servermod.item.ItemRecipeBook;
+import mod.sparkyfox.servermod.item.ItemTechite;
 import mod.sparkyfox.servermod.item.ItemTitaniumNugget;
 import mod.sparkyfox.servermod.item.ItemUniverseFabric;
 import mod.sparkyfox.servermod.item.armor.ItemAdventureSpaceSuit;
@@ -168,6 +169,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemKerbalFabric KerbalFabric;
 	public static ItemUniverseFabric UniverseFabric;
 	public static ItemRecipeBook RecipeBook;
+	public static ItemTechite Techite;
 	//public static ItemTitaniumShield TitaniumShield;
 	
 //===============================================================================================================================================================================================\\
@@ -793,6 +795,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		RecipeBook = (ItemRecipeBook) new ItemRecipeBook();
 		RecipeBook.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.RecipeBook)); 
 		GameRegistry.register(RecipeBook);
+		
+		Techite = (ItemTechite) new ItemTechite();
+		Techite.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Techite)); 
+		GameRegistry.register(Techite);
 		
 		
 		//TitaniumShield = (ItemTitaniumShield) new ItemTitaniumShield();
@@ -1438,6 +1444,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(RecipeBook, recipebook);
 		mesher.register(RecipeBook, 0, recipebook);
 		
+		ModelResourceLocation techite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Techite, "inventory");
+		ModelLoader.registerItemVariants(Techite, techite);
+		mesher.register(Techite, 0, techite);
 		
 		
 //===============================================================================================================================================================================================\\

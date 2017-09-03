@@ -3,6 +3,7 @@ package mod.sparkyfox.servermod.init;
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.block.BlockBrassBlock;
 import mod.sparkyfox.servermod.block.BlockCobaltBlock;
+import mod.sparkyfox.servermod.block.BlockIndustrialFreezer;
 import mod.sparkyfox.servermod.block.BlockMagnesiumBlock;
 import mod.sparkyfox.servermod.block.BlockNickelBlock;
 import mod.sparkyfox.servermod.block.BlockPlatinumBlock;
@@ -74,6 +75,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockBarrierButton BarrierButton;
 	  public static BlockRedButton RedButton;
 	  public static BlockRedButton2 RedButton2;
+	//===============================================================================================================================================================================================\\
+																									//Logic Registry\\
+	  
+	  public static BlockIndustrialFreezer IndustrialFreezer;
 	  
 //===============================================================================================================================================================================================\\
 	  																								//Initialise: ORES\\
@@ -263,6 +268,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GameRegistry.register(RedButton2);
 		  GameRegistry.register(new ItemBlock(RedButton2), location16h);
 		  
+//===============================================================================================================================================================================================\\
+																										//Initialise: Logic\\
+		  
+		  ResourceLocation industrialfreezer = new ResourceLocation(ServerMod.MOD_ID, ModNames.IndustrialFreezer);
+		  IndustrialFreezer = new BlockIndustrialFreezer(false);
+		  IndustrialFreezer.setRegistryName(industrialfreezer);
+		  GameRegistry.register(IndustrialFreezer);
+		  GameRegistry.register(new ItemBlock(IndustrialFreezer), industrialfreezer);
+		  
 	  }
 	  
 //===============================================================================================================================================================================================\\
@@ -441,7 +455,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			Item item16h = Item.getItemFromBlock(RedButton2);
 			ModelResourceLocation model16h = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RedButton2, "inventory");
 			ModelLoader.registerItemVariants(item16h, model16h);
-			mesher.register(item16h, 0, model16h);{				
+			mesher.register(item16h, 0, model16h);{	
+				
+			}
+			Item itemindustrialfreezer = Item.getItemFromBlock(IndustrialFreezer);
+			ModelResourceLocation industrialfreezer = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.IndustrialFreezer, "inventory");
+			ModelLoader.registerItemVariants(itemindustrialfreezer, industrialfreezer);
+			mesher.register(itemindustrialfreezer, 0, industrialfreezer);{			
 				
 			//Slabs
 
