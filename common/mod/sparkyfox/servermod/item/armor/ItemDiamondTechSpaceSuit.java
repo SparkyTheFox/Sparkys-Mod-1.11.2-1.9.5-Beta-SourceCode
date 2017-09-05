@@ -10,6 +10,8 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
@@ -58,27 +60,23 @@ public class ItemDiamondTechSpaceSuit extends ItemArmor {
 		        }
 		    
 		    }
-		  /**
+		  
 		  @Override
 		  public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		  if (itemStack.getItem().equals(ModItems.EmeraldHelmet))
+		  if (itemStack.getItem().equals(ModItems.DiamondTechSpaceHelmet))
 		      player.addPotionEffect(new PotionEffect(Potion.getPotionById(16)));
 		  {
-			  if (itemStack.getItem().equals(ModItems.EmeraldChestplate))
+			  if (itemStack.getItem().equals(ModItems.DiamondTechSpaceChestplate))
 			      player.addPotionEffect(new PotionEffect(Potion.getPotionById(13)));
 			  {
-				  if (itemStack.getItem().equals(ModItems.EmeraldLeggings))
-				      player.addPotionEffect(new PotionEffect(Potion.getPotionById(5)));
-				  {
-					  if (itemStack.getItem().equals(ModItems.EmeraldBoots))
-					      player.addPotionEffect(new PotionEffect(Potion.getPotionById(12)));
+					  if (itemStack.getItem().equals(ModItems.DiamondTechSpaceBoots))
+					      player.addPotionEffect(new PotionEffect(Potion.getPotionById(8)));
 				  }
 					
 		  }
 	 }
 
-}  
-*/
+
 				// TODO Auto-generated method stub
 		  
 		  

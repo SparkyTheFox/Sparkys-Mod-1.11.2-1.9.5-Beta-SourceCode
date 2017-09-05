@@ -10,6 +10,8 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
@@ -58,7 +60,7 @@ public class ItemLapisTechSpaceSuit extends ItemArmor {
 		        }
 		    
 		    }
-		  /**
+		  
 		  @Override
 		  public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		  if (itemStack.getItem().equals(ModItems.LapisTechSpaceHelmet))
@@ -67,18 +69,13 @@ public class ItemLapisTechSpaceSuit extends ItemArmor {
 			  if (itemStack.getItem().equals(ModItems.LapisTechSpaceChestplate))
 			      player.addPotionEffect(new PotionEffect(Potion.getPotionById(13)));
 			  {
-				  if (itemStack.getItem().equals(ModItems.LapisTechSpaceLeggings))
-				      player.addPotionEffect(new PotionEffect(Potion.getPotionById(5)));
-				  {
-					  if (itemStack.getItem().equals(ModItems.LapisTechSpaceboots))
-					      player.addPotionEffect(new PotionEffect(Potion.getPotionById(12)));
+					  if (itemStack.getItem().equals(ModItems.LapisTechSpaceBoots))
+					      player.addPotionEffect(new PotionEffect(Potion.getPotionById(1)));
 				  }
 					
 		  }
 	 }
-
-}  
-*/
+  
 				// TODO Auto-generated method stub
 		  
 		  
