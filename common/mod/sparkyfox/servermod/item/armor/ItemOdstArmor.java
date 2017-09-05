@@ -17,6 +17,7 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class ItemOdstArmor extends ItemArmor {
 
@@ -94,8 +95,10 @@ public class ItemOdstArmor extends ItemArmor {
 
 
 		        		public void addRecipes() {
-		        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstHelmet), "TDT", "TGT", "TTT", 'T', ModItems.TitaniumIngot, 'D',
-		        		new ItemStack (Items.DYE), 'G', new ItemStack (Blocks.STAINED_GLASS_PANE));	
+		        			
+		        		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.OdstHelmet), "TDT", "TGT", "TTT", 'T', ModItems.TitaniumIngot, 'D', "dyeBlue",
+				       'G', new ItemStack (Blocks.STAINED_GLASS_PANE, 1, 9)));			
+		        			
 	
 		        		{
 		        			
@@ -116,3 +119,7 @@ public class ItemOdstArmor extends ItemArmor {
 			        		}
 			        		
 						}
+/**
+GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstHelmet), "TDT", "TGT", "TTT", 'T', ModItems.TitaniumIngot, 'D',
+		new ItemStack (Items.DYE), 'G', new ItemStack (Blocks.STAINED_GLASS_PANE));	
+*/

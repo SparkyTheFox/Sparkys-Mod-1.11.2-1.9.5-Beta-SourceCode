@@ -5,16 +5,21 @@ import java.util.Random;
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModGuiHandler;
+import mod.sparkyfox.servermod.lib.ModNames;
 import mod.sparkyfox.servermod.tileentity.TileEntityIndustrialFreezer;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
@@ -30,19 +35,43 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 
 public class BlockIndustrialFreezer extends BlockContainer
 {
+	
+	@Override
+	public String getUnlocalizedName() {
+		return "IndustrialFreezer" + ServerMod.RESOURCE_PREFIX + ModNames.IndustrialFreezer;  // IndustrialFreezer.ServerMod:IndustrialFreezer 
+
+		}
+		
+																			//Crafting Recipe//
+
+
+			public void addRecipes() {
+				GameRegistry.addShapedRecipe(new ItemStack(this),"TPT", "IGI", "TTT", 'T', ModBlocks.TitaniumBlock, 'P',
+					new ItemStack (Blocks.PACKED_ICE), 'I', new ItemStack (Items.IRON_INGOT), 'G', new ItemStack (Blocks.GLASS));
+}
+
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
     private final boolean isFreezing;
     private static boolean keepInventory;
 
     public BlockIndustrialFreezer(boolean isFreezing)
-    {
-        super(Material.ROCK);
+    { 		
+    															  //===================================================================================================================//
+		super(Material.IRON);					  			 	 // The Material determines some properties of the block.															  //
+		this.setHardness(5.0f); 				 				// The hardness determines how long a block takes to break. 5 is a bit high, most are around 2-3.					 //
+		this.setResistance(10.0F);     					   	   // Resistance to explosions.																							//
+		this.setSoundType(SoundType.METAL);   			  	  // Sound type effects placing, breaking, and step sounds.														   	   //
+    	this.setHarvestLevel("pickaxe", 2);   			 	 // This method can be used to set a specific tool type and harvest level. Remove if you don't need any restrictions. //
+    	this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);	//===================================================================================================================// 
+    	
+    	
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.isFreezing = isFreezing;
     }

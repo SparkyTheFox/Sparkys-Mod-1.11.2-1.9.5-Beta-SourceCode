@@ -5,6 +5,7 @@ import mod.sparkyfox.servermod.init.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -14,6 +15,7 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class ItemEmeraldTechSpaceSuit extends ItemArmor {
 
@@ -84,30 +86,34 @@ public class ItemEmeraldTechSpaceSuit extends ItemArmor {
 
 
 		        		public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		        		return repair.getItem() == Items.EMERALD;
+		        		return repair.getItem() == ModItems.CompressedTechite;
 		        		
 		        		}
 
 		        													//Crafting Recipe\\
-
+		        		
 
 		        		public void addRecipes() {
-		        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.EmeraldHelmet), "EEE", "E E", "EEE", 'E', Items.EMERALD);	
+		        			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.EmeraldTechSpaceHelmet), "ITI", "TGT", "ITI", 'T', ModItems.CompressedTechite, 'I',
+					        		new ItemStack (Items.IRON_INGOT), 'G', new ItemStack (Blocks.STAINED_GLASS_PANE, 1, 5)));		
 		        		{
 		        			
 		        		}
-			        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.EmeraldChestplate), "E E", "EEE", "EEE", 'E', Items.EMERALD);
+			        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.EmeraldTechSpaceChestplate), "I I", "TTT", "ITI", 'T', ModItems.CompressedTechite, 'I',
+			        				new ItemStack(Items.IRON_INGOT));
 		
 			        	{
 			        			
 			        	}
-			        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.EmeraldLeggings), "EEE", "EEE", "E E", 'E', Items.EMERALD);	
+		        			GameRegistry.addShapedRecipe(new ItemStack(ModItems.EmeraldTechSpaceLeggings), "LTL", "TLT", "L L", 'T', ModItems.CompressedTechite, 'L',
+		        					new ItemStack(Items.LEATHER));	
 		
 			        	{
 			        			
 			        	}
 		        	
-			        	   GameRegistry.addShapedRecipe(new ItemStack(ModItems.EmeraldBoots), "   ", "E E", "E E", 'E', Items.EMERALD);	
+		        			GameRegistry.addShapedRecipe(new ItemStack(ModItems.EmeraldTechSpaceBoots), "   ", "I I", "T T", 'I', Items.IRON_INGOT, 'T',
+		        					new ItemStack(ModItems.CompressedTechite));	
 		
 			        		}
 			        		

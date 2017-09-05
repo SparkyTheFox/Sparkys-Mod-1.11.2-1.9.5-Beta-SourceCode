@@ -151,6 +151,9 @@ UniverseFabricservermod:UniverseFabric.name=Universe Fabric
 CraftingHammerservermod:CraftingHammer.name=Crafting Hammer
 RecipeBookservermod:RecipeBook.name=Sparky's Recipe Book
 Techiteservermod:Techite.name=Techite
+HotTechiteservermod:HotTechite.name=Redstone Techite
+ColdTechiteservermod:ColdTechite.name=Lapis Techite
+CompressedTechiteservermod:CompressedTechite.name=Emerald Techite
 
 
 

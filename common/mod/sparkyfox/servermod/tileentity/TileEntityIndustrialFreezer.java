@@ -321,7 +321,7 @@ public class TileEntityIndustrialFreezer extends TileEntityLockable implements I
                 itemstack2.grow(itemstack1.getCount());
             }
 
-            if (itemstack.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstack.getMetadata() == 1 && !((ItemStack)this.industrialfreezerItemStacks.get(1)).isEmpty() && ((ItemStack)this.industrialfreezerItemStacks.get(1)).getItem() == Items.BUCKET)
+            if (itemstack.getItem() == Item.getItemFromBlock(Blocks.ICE) && itemstack.getMetadata() == 1 && !((ItemStack)this.industrialfreezerItemStacks.get(1)).isEmpty() && ((ItemStack)this.industrialfreezerItemStacks.get(1)).getItem() == Items.BUCKET)
             {
                 this.industrialfreezerItemStacks.set(1, new ItemStack(Items.WATER_BUCKET));
             }
@@ -348,30 +348,9 @@ public class TileEntityIndustrialFreezer extends TileEntityLockable implements I
             {
                 Block block = Block.getBlockFromItem(item);
 
-                if (block == Blocks.WOODEN_SLAB)
-                {
-                    return 150;
-                }
-
-                if (block.getDefaultState().getMaterial() == Material.WOOD)
-                {
-                    return 300;
-                }
-
-                if (block == Blocks.COAL_BLOCK)
-                {
-                    return 16000;
-                }
             }
-
-            if (item instanceof ItemTool && "WOOD".equals(((ItemTool)item).getToolMaterialName())) return 200;
-            if (item instanceof ItemSword && "WOOD".equals(((ItemSword)item).getToolMaterialName())) return 200;
-            if (item instanceof ItemHoe && "WOOD".equals(((ItemHoe)item).getMaterialName())) return 200;
-            if (item == Items.STICK) return 100;
-            if (item == Items.COAL) return 1600;
-            if (item == Items.LAVA_BUCKET) return 20000;
             if (item == Item.getItemFromBlock(Blocks.PACKED_ICE)) return 20000;
-            if (item == Items.BLAZE_ROD) return 2400;
+            if (item == Item.getItemFromBlock(Blocks.ICE)) return 2000;
             return net.minecraftforge.fml.common.registry.GameRegistry.getFuelValue(stack);
         }
     }

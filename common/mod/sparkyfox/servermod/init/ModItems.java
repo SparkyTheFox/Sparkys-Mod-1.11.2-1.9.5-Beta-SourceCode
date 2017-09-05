@@ -1,8 +1,11 @@
 package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
+import mod.sparkyfox.servermod.item.ItemColdTechite;
 import mod.sparkyfox.servermod.item.ItemCommieFabric;
+import mod.sparkyfox.servermod.item.ItemCompressedTechite;
 import mod.sparkyfox.servermod.item.ItemCredit;
+import mod.sparkyfox.servermod.item.ItemHotTechite;
 import mod.sparkyfox.servermod.item.ItemKerbalFabric;
 import mod.sparkyfox.servermod.item.ItemKevlar;
 import mod.sparkyfox.servermod.item.ItemLegacyPermit;
@@ -170,6 +173,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemUniverseFabric UniverseFabric;
 	public static ItemRecipeBook RecipeBook;
 	public static ItemTechite Techite;
+	public static ItemHotTechite HotTechite;
+	public static ItemColdTechite ColdTechite;
+	public static ItemCompressedTechite CompressedTechite;
 	//public static ItemTitaniumShield TitaniumShield;
 	
 //===============================================================================================================================================================================================\\
@@ -800,6 +806,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		Techite.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Techite)); 
 		GameRegistry.register(Techite);
 		
+		HotTechite = (ItemHotTechite) new ItemHotTechite();
+		HotTechite.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.HotTechite)); 
+		GameRegistry.register(HotTechite);
+		
+		ColdTechite = (ItemColdTechite) new ItemColdTechite();
+		ColdTechite.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.ColdTechite)); 
+		GameRegistry.register(ColdTechite);
+		
+		CompressedTechite = (ItemCompressedTechite) new ItemCompressedTechite();
+		CompressedTechite.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.CompressedTechite)); 
+		GameRegistry.register(CompressedTechite);
+		
 		
 		//TitaniumShield = (ItemTitaniumShield) new ItemTitaniumShield();
 		//TitaniumShield.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumShield)); 
@@ -1004,6 +1022,26 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		((ItemAdventureSpaceSuit) AdventureSpaceChestplate).addRecipes();
 		((ItemAdventureSpaceSuit) AdventureSpaceLeggings).addRecipes();
 		((ItemAdventureSpaceSuit) AdventureSpaceBoots).addRecipes();
+		((ItemLapisTechSpaceSuit) LapisTechSpaceHelmet).addRecipes();
+		((ItemLapisTechSpaceSuit) LapisTechSpaceChestplate).addRecipes();
+		((ItemLapisTechSpaceSuit) LapisTechSpaceLeggings).addRecipes();
+		((ItemLapisTechSpaceSuit) LapisTechSpaceBoots).addRecipes();
+		((ItemRedstoneTechSpaceSuit) RedstoneTechSpaceHelmet).addRecipes();
+		((ItemRedstoneTechSpaceSuit) RedstoneTechSpaceChestplate).addRecipes();
+		((ItemRedstoneTechSpaceSuit) RedstoneTechSpaceLeggings).addRecipes();
+		((ItemRedstoneTechSpaceSuit) RedstoneTechSpaceBoots).addRecipes();
+		((ItemDiamondTechSpaceSuit) DiamondTechSpaceHelmet).addRecipes();
+		((ItemDiamondTechSpaceSuit) DiamondTechSpaceChestplate).addRecipes();
+		((ItemDiamondTechSpaceSuit) DiamondTechSpaceLeggings).addRecipes();
+		((ItemDiamondTechSpaceSuit) DiamondTechSpaceBoots).addRecipes();
+		((ItemEmeraldTechSpaceSuit) EmeraldTechSpaceHelmet).addRecipes();
+		((ItemEmeraldTechSpaceSuit) EmeraldTechSpaceChestplate).addRecipes();
+		((ItemEmeraldTechSpaceSuit) EmeraldTechSpaceLeggings).addRecipes();
+		((ItemEmeraldTechSpaceSuit) EmeraldTechSpaceBoots).addRecipes();
+		Techite.addRecipes();
+		HotTechite.addRecipes();
+		ColdTechite.addRecipes();
+		CompressedTechite.addRecipes();
 		
 //===============================================================================================================================================================================================\\
 																												//Texture Registry\\
@@ -1447,6 +1485,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation techite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Techite, "inventory");
 		ModelLoader.registerItemVariants(Techite, techite);
 		mesher.register(Techite, 0, techite);
+		
+		ModelResourceLocation hottechite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.HotTechite, "inventory");
+		ModelLoader.registerItemVariants(HotTechite, hottechite);
+		mesher.register(HotTechite, 0, hottechite);
+		
+		ModelResourceLocation coldtechite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.ColdTechite, "inventory");
+		ModelLoader.registerItemVariants(ColdTechite, coldtechite);
+		mesher.register(ColdTechite, 0, coldtechite);
+		
+		ModelResourceLocation compressedtechite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.CompressedTechite, "inventory");
+		ModelLoader.registerItemVariants(CompressedTechite, compressedtechite);
+		mesher.register(CompressedTechite, 0, compressedtechite);
 		
 		
 //===============================================================================================================================================================================================\\

@@ -24,8 +24,9 @@ public class ServerMod {
 	
 	public static final String MOD_ID = "servermod";
 	public static final String MOD_NAME = "Sparky's Mod";
-	public static final String VERSION = "BETA-Spacesuit Update";
+	public static final String VERSION = "BETA-Technical Update";
 	public static final String RESOURCE_PREFIX = MOD_ID.toLowerCase() + ":"; // servermod:
+
 	
 //===============================================================================================================================================================================================\\
 																									//Instances\\	

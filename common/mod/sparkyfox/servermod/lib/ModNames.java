@@ -139,6 +139,9 @@ public class ModNames {
 	public static final String UniverseFabric = "UniverseFabric";
 	public static final String RecipeBook = "RecipeBook";
 	public static final String Techite = "Techite";
+	public static final String HotTechite = "HotTechite";
+	public static final String ColdTechite = "ColdTechite";
+	public static final String CompressedTechite = "CompressedTechite";
 	
 	
 	

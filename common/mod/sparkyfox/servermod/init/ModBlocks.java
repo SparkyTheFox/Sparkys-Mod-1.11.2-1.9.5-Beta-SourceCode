@@ -495,6 +495,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			UraniumBlock.addRecipes();
 			RedButton.addRecipes();
 			RedButton2.addRecipes();
+			IndustrialFreezer.addRecipes();
 	  }
 	  
 //===============================================================================================================================================================================================\\

@@ -5,9 +5,9 @@
     "model":"cube_all",
     "textures": {
      "up": "servermod:blocks/industrial_freezer_top",
-     "down": "servermod:blocks/industrial_freezer_side",
-      "north": "servermod:blocks/industrial_freezer_top",
-      "south": "servermod:blocks/industrial_freezer_front_off",
+     "down": "servermod:blocks/industrial_freezer_top",
+      "north": "servermod:blocks/industrial_freezer_front_off",
+      "south": "servermod:blocks/industrial_freezer_back",
       "west": "servermod:blocks/industrial_freezer_side",
       "east": "servermod:blocks/industrial_freezer_side"
     }
@@ -21,3 +21,5 @@
     "normal":[{}]
     }
 }
+
+

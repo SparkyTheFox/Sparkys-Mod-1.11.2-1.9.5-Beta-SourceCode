@@ -7,14 +7,8 @@ import com.google.common.collect.Maps;
 
 import mod.sparkyfox.servermod.init.ModItems;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockStoneBrick;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFishFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 
 public class IndustrialFreezerRecipes
 {
@@ -34,6 +28,11 @@ public class IndustrialFreezerRecipes
 
     private IndustrialFreezerRecipes()
     {
+    	
+    	this.addFreezing(ModItems.Techite, new ItemStack(ModItems.ColdTechite), 0.1F);
+    	
+    	
+    	/*
     	this.addFreezingRecipeForBlock(Blocks.IRON_ORE, new ItemStack(Items.IRON_INGOT), 0.7F);
         this.addFreezingRecipeForBlock(Blocks.IRON_ORE, new ItemStack(Items.IRON_INGOT), 0.7F);
         this.addFreezingRecipeForBlock(Blocks.GOLD_ORE, new ItemStack(Items.GOLD_INGOT), 1.0F);
@@ -56,20 +55,10 @@ public class IndustrialFreezerRecipes
         this.addFreezingRecipeForBlock(Blocks.NETHERRACK, new ItemStack(Items.NETHERBRICK), 0.1F);
         this.addFreezingRecipe(new ItemStack(Blocks.SPONGE, 1, 1), new ItemStack(Blocks.SPONGE, 1, 0), 0.15F);
         this.addFreezing(Items.CHORUS_FRUIT, new ItemStack(Items.CHORUS_FRUIT_POPPED), 0.1F);
-
-        for (ItemFishFood.FishType itemfishfood$fishtype : ItemFishFood.FishType.values())
-        {
-            if (itemfishfood$fishtype.canCook())
-            {
-                this.addFreezingRecipe(new ItemStack(Items.FISH, 1, itemfishfood$fishtype.getMetadata()), new ItemStack(Items.COOKED_FISH, 1, itemfishfood$fishtype.getMetadata()), 0.35F);
-            }
-        }
-
         this.addFreezingRecipeForBlock(Blocks.COAL_ORE, new ItemStack(Items.COAL), 0.1F);
         this.addFreezingRecipeForBlock(Blocks.REDSTONE_ORE, new ItemStack(Items.REDSTONE), 0.7F);
         this.addFreezingRecipeForBlock(Blocks.LAPIS_ORE, new ItemStack(Items.DYE, 1, EnumDyeColor.BLUE.getDyeDamage()), 0.2F);
         this.addFreezingRecipeForBlock(Blocks.QUARTZ_ORE, new ItemStack(Items.QUARTZ), 0.2F);
-        this.addFreezing(ModItems.Techite, new ItemStack(ModItems.AK4U), 0.1F);
         this.addFreezing(Items.CHAINMAIL_CHESTPLATE, new ItemStack(Items.field_191525_da), 0.1F);
         this.addFreezing(Items.CHAINMAIL_LEGGINGS, new ItemStack(Items.field_191525_da), 0.1F);
         this.addFreezing(Items.CHAINMAIL_BOOTS, new ItemStack(Items.field_191525_da), 0.1F);
@@ -93,6 +82,7 @@ public class IndustrialFreezerRecipes
         this.addFreezing(Items.GOLDEN_LEGGINGS, new ItemStack(Items.GOLD_NUGGET), 0.1F);
         this.addFreezing(Items.GOLDEN_BOOTS, new ItemStack(Items.GOLD_NUGGET), 0.1F);
         this.addFreezing(Items.GOLDEN_HORSE_ARMOR, new ItemStack(Items.GOLD_NUGGET), 0.1F);
+        */
     }
 
     /**
