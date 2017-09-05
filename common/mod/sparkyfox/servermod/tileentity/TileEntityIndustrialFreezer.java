@@ -1,5 +1,6 @@
 package mod.sparkyfox.servermod.tileentity;
 
+import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -450,7 +451,7 @@ public class TileEntityIndustrialFreezer extends TileEntityLockable implements I
 
     public String getGuiID()
     {
-        return "minecraft:furnace";
+    	return ServerMod.MOD_ID + ":textures/gui/container/industrialfreezer.png";
     }
 
     public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)

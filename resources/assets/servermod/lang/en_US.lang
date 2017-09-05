@@ -26,6 +26,7 @@ BarrierButtonservermod:BarrierButton.name=!(\/)
 RedButtonservermod:RedButton.name=The Big Red Button
 RedButton2servermod:RedButton2.name=The Red Button
 TechiteOreservermod:TechiteOre.name=Techite Ore
+IndustrialFreezerservermod:IndustrialFreezer.name=Industrial Freezer
 
 
 
@@ -153,6 +154,7 @@ Techiteservermod:Techite.name=Techite
 
 
 
+
 # Creative Tab
 
 itemGroup.tutorial:creative_tab=Tutorial Mod's Tab
@@ -160,3 +162,14 @@ itemGroup.tutorial:creative_tab=Tutorial Mod's Tab
 # Mobs
 
 entity.Flowey.name=Flowey The Flowey
+
+# Containers
+
+container.industrialfreezer=Industrial Freezer
+
+# Tiles
+
+tile.entityindustrialfreezer.name=Industrial Freezer 1
+tile.EntityIndustrialFreezer.name=Industrial Freezer 2
+tile.tileentityindustrialfreezer.name=Industrial Freezer 3
+tile.TileEntityIndustrialFreezer.name=Industrial Freezer

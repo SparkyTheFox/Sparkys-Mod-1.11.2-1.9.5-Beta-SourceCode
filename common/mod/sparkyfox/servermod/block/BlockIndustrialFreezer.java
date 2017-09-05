@@ -2,8 +2,9 @@ package mod.sparkyfox.servermod.block;
 
 import java.util.Random;
 
+import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModBlocks;
-import mod.sparkyfox.servermod.tileentity.ModStatList;
+import mod.sparkyfox.servermod.init.ModGuiHandler;
 import mod.sparkyfox.servermod.tileentity.TileEntityIndustrialFreezer;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
@@ -31,6 +32,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.CapabilityItemHandler;
 
 public class BlockIndustrialFreezer extends BlockContainer
 {
@@ -134,24 +136,13 @@ public class BlockIndustrialFreezer extends BlockContainer
     /**
      * Called when the block is right clicked by a player.
      */
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
-    {
-        if (worldIn.isRemote)
-        {
-            return true;
+    @Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+        TileEntityIndustrialFreezer industrialfreezer = (TileEntityIndustrialFreezer) world.getTileEntity(pos);
+        if (industrialfreezer != null && industrialfreezer.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH)) {
+            player.openGui(ServerMod.instance, ModGuiHandler.GUI_INDUSTRIAL_FREEZER_ID, world, pos.getX(), pos.getY(), pos.getZ());
         }
-        else
-        {
-            TileEntity tileentity = worldIn.getTileEntity(pos);
-
-            if (tileentity instanceof TileEntityIndustrialFreezer)
-            {
-                playerIn.displayGUIChest((TileEntityIndustrialFreezer)tileentity);
-                playerIn.addStat(ModStatList.INDUSTRIAL_FREEZER_INTERACTION);
-            }
-
-            return true;
-        }
+        return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
     }
 
     public static void setState(boolean active, World worldIn, BlockPos pos)

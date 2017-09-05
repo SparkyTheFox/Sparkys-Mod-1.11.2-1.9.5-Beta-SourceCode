@@ -3,14 +3,21 @@
   "defaults":{
     "transform":"forge:default-block",
     "model":"cube_all",
-    "textures":{
-      "top": "servermod:blocks/industrial_freezer_top",
-      "front": "servermod:blocks/industrial_freezer_front_off",
-      "side": "servermod:blocks/industrial_freezer_side"
+    "textures": {
+     "up": "servermod:blocks/industrial_freezer_top",
+     "down": "servermod:blocks/industrial_freezer_side",
+      "north": "servermod:blocks/industrial_freezer_top",
+      "south": "servermod:blocks/industrial_freezer_front_off",
+      "west": "servermod:blocks/industrial_freezer_side",
+      "east": "servermod:blocks/industrial_freezer_side"
     }
   },
-  "variants":{
+    "variants": {
+        "facing=north": { "model": "furnace" },
+        "facing=south": { "model": "furnace", "y": 180 },
+        "facing=west":  { "model": "furnace", "y": 270 },
+        "facing=east":  { "model": "furnace", "y": 90 },
     "inventory":[{}],
     "normal":[{}]
-  }
+    }
 }

@@ -1,6 +1,7 @@
 package mod.sparkyfox.servermod;
 
 import mod.sparkyfox.servermod.init.ModEntities;
+import mod.sparkyfox.servermod.init.ModGuiHandler;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 //===========================================================================================================================================================================================\\	
 																									//Main Class\\
 
@@ -62,6 +64,7 @@ public class ServerMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event); 
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new ModGuiHandler());
 		entity = new ModEntities();//this is causing the server side problem
 		//if i take out "entity = new ModEntities();" and put in
 		/**

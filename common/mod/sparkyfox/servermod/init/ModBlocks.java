@@ -29,6 +29,7 @@ import mod.sparkyfox.servermod.block.ores.BlockTechiteOre;
 import mod.sparkyfox.servermod.block.ores.BlockTitaniumOre;
 import mod.sparkyfox.servermod.block.ores.BlockUraniumOre;
 import mod.sparkyfox.servermod.lib.ModNames;
+import mod.sparkyfox.servermod.tileentity.TileEntityIndustrialFreezer;
 import net.minecraft.block.BlockPressurePlate.Sensitivity;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
@@ -276,6 +277,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  IndustrialFreezer.setRegistryName(industrialfreezer);
 		  GameRegistry.register(IndustrialFreezer);
 		  GameRegistry.register(new ItemBlock(IndustrialFreezer), industrialfreezer);
+		  GameRegistry.registerTileEntity(TileEntityIndustrialFreezer.class, "industrialfreezer_tile_entity");
 		  
 	  }
 	  
