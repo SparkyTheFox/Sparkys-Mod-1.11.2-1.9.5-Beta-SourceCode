@@ -1,4 +1,4 @@
-package mod.sparkyfox.servermod.tileentity;
+package mod.sparkyfox.servermod.industrialFreezer;
 
 import java.util.Map;
 import java.util.Map.Entry;

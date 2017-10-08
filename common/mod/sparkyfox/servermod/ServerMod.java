@@ -1,7 +1,7 @@
 package mod.sparkyfox.servermod;
 
+import mod.sparkyfox.servermod.industrialFreezer.ModGuiHandler;
 import mod.sparkyfox.servermod.init.ModEntities;
-import mod.sparkyfox.servermod.init.ModGuiHandler;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;

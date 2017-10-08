@@ -3,10 +3,10 @@ package mod.sparkyfox.servermod.block;
 import java.util.Random;
 
 import mod.sparkyfox.servermod.ServerMod;
+import mod.sparkyfox.servermod.industrialFreezer.ModGuiHandler;
+import mod.sparkyfox.servermod.industrialFreezer.TileEntityIndustrialFreezer;
 import mod.sparkyfox.servermod.init.ModBlocks;
-import mod.sparkyfox.servermod.init.ModGuiHandler;
 import mod.sparkyfox.servermod.lib.ModNames;
-import mod.sparkyfox.servermod.tileentity.TileEntityIndustrialFreezer;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
@@ -171,7 +171,7 @@ public class BlockIndustrialFreezer extends BlockContainer
         if (industrialfreezer != null && industrialfreezer.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH)) {
             player.openGui(ServerMod.instance, ModGuiHandler.GUI_INDUSTRIAL_FREEZER_ID, world, pos.getX(), pos.getY(), pos.getZ());
         }
-        return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);
+        return true; /*return super.onBlockActivated(world, pos, state, player, hand, facing, hitX, hitY, hitZ);*/ //this caused item in hand to be placed once right clicked//
     }
 
     public static void setState(boolean active, World worldIn, BlockPos pos)

@@ -1,4 +1,4 @@
-package mod.sparkyfox.servermod.tileentity;
+package mod.sparkyfox.servermod.industrialFreezer;
 
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;

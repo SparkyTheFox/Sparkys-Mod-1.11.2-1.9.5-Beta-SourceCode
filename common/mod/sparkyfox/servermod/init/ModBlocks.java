@@ -28,8 +28,8 @@ import mod.sparkyfox.servermod.block.ores.BlockSiliconOre;
 import mod.sparkyfox.servermod.block.ores.BlockTechiteOre;
 import mod.sparkyfox.servermod.block.ores.BlockTitaniumOre;
 import mod.sparkyfox.servermod.block.ores.BlockUraniumOre;
+import mod.sparkyfox.servermod.industrialFreezer.TileEntityIndustrialFreezer;
 import mod.sparkyfox.servermod.lib.ModNames;
-import mod.sparkyfox.servermod.tileentity.TileEntityIndustrialFreezer;
 import net.minecraft.block.BlockPressurePlate.Sensitivity;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
@@ -80,6 +80,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 																									//Logic Registry\\
 	  
 	  public static BlockIndustrialFreezer IndustrialFreezer;
+	
 	  
 //===============================================================================================================================================================================================\\
 	  																								//Initialise: ORES\\
@@ -463,7 +464,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			Item itemindustrialfreezer = Item.getItemFromBlock(IndustrialFreezer);
 			ModelResourceLocation industrialfreezer = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.IndustrialFreezer, "inventory");
 			ModelLoader.registerItemVariants(itemindustrialfreezer, industrialfreezer);
-			mesher.register(itemindustrialfreezer, 0, industrialfreezer);{			
+			mesher.register(itemindustrialfreezer, 0, industrialfreezer);{	
+					
 				
 			//Slabs
 

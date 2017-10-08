@@ -1,4 +1,4 @@
-package mod.sparkyfox.servermod.tileentity;
+package mod.sparkyfox.servermod.industrialFreezer;
 
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;

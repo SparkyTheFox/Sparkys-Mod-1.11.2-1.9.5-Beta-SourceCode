@@ -1,11 +1,8 @@
-package mod.sparkyfox.servermod.init;
+package mod.sparkyfox.servermod.industrialFreezer;
 
 import javax.annotation.Nullable;
 
 import mod.sparkyfox.servermod.block.BlockIndustrialFreezer;
-import mod.sparkyfox.servermod.gui.GuiIndustrialFreezer;
-import mod.sparkyfox.servermod.tileentity.ContainerIndustrialFreezer;
-import mod.sparkyfox.servermod.tileentity.TileEntityIndustrialFreezer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;

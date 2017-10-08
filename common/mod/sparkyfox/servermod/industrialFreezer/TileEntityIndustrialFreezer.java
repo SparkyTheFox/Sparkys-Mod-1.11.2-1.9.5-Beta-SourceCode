@@ -1,4 +1,4 @@
-package mod.sparkyfox.servermod.tileentity;
+package mod.sparkyfox.servermod.industrialFreezer;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModBlocks;

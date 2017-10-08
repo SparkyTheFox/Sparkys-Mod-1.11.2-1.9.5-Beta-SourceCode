@@ -1,9 +1,8 @@
-package mod.sparkyfox.servermod.gui;
+package mod.sparkyfox.servermod.industrialFreezer;
 
 import org.lwjgl.opengl.GL11;
 
 import mod.sparkyfox.servermod.ServerMod;
-import mod.sparkyfox.servermod.tileentity.ContainerIndustrialFreezer;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
