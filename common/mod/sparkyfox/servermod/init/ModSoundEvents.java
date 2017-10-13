@@ -35,6 +35,7 @@ public class ModSoundEvents {
 //===============================================================================================================================================================================================\\
 																									//SONG Registry\\	
 	//public static SoundEvent song_90s;
+	public static SoundEvent song_ohmygodno;
 
 
 //===============================================================================================================================================================================================\\
@@ -46,7 +47,7 @@ public class ModSoundEvents {
 	//public static SoundEvent FloweyHurt;
 	//public static SoundEvent FloweyLaugh;
 	//public static SoundEvent FloweyDeath;
-//public static SoundEvent mus_boss1;
+	//public static SoundEvent mus_boss1;
 
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: SFX\\	
@@ -80,6 +81,7 @@ public class ModSoundEvents {
 																								//Sound Initialisation: SONGS\\
 		
 		//song_90s = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "song_90s")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "song_90s"));
+		song_ohmygodno = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "song_ohmygodno")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "song_ohmygodno"));
 		
 		
 		
@@ -120,6 +122,7 @@ public class ModSoundEvents {
 		registerSound(mus_home);
 		registerSound(mus_home2);
 		registerSound(mus_boss2);
+		registerSound(song_ohmygodno);
 		registerSound(alarm);
 		//registerSound(song_90s);
 		//registerSound(FloweyHowdy);

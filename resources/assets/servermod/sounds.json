@@ -177,6 +177,17 @@
             
         ],
         "subtitle": "Running in the 90s!"
+        
+    },
+    
+        "song_ohmygodno": {
+        "category": "record",
+        "sounds": [
+       {"name":"servermod:song_ohmygodno", "stream": true}
+            
+        ],
+        "subtitle": "OH MY GOD! SPARKY WHY!! WWHY!? YOU FREAKING IDIOT I HATE YOU! GO DIE!!!"
+        
     },
 
         "floweylaugh": {

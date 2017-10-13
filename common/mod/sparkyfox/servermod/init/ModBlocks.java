@@ -30,22 +30,26 @@ import mod.sparkyfox.servermod.block.ores.BlockTitaniumOre;
 import mod.sparkyfox.servermod.block.ores.BlockUraniumOre;
 import mod.sparkyfox.servermod.industrialFreezer.TileEntityIndustrialFreezer;
 import mod.sparkyfox.servermod.lib.ModNames;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockPressurePlate.Sensitivity;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 
   public class ModBlocks {
 
 //===========================================================================================================================================================================================\\
 	  																								//Ore Registry\\
+	  
 	  
 	  public static BlockTitaniumOre TitaniumOre;
 	  public static BlockBrassOre BrassOre;
@@ -92,6 +96,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  TitaniumOre.setRegistryName(location);
 		  GameRegistry.register(TitaniumOre);
 		  GameRegistry.register(new ItemBlock(TitaniumOre), location);
+		  
 		
 		  //Brass Ore\\
 		  ResourceLocation location1 = new ResourceLocation(ServerMod.MOD_ID, ModNames.BrassOre);

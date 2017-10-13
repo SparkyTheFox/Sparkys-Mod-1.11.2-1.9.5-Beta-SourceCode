@@ -17,9 +17,9 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ItemFESpaceSuit extends ItemArmor {
+public class ItemAnimieSpaceSuit extends ItemArmor {
 
-	public ItemFESpaceSuit(ArmorMaterial materialIn, EntityEquipmentSlot equipmentSlotIn) {
+	public ItemAnimieSpaceSuit(ArmorMaterial materialIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, 0, equipmentSlotIn);
 		 this.setCreativeTab(null);
 		
@@ -31,9 +31,9 @@ public class ItemFESpaceSuit extends ItemArmor {
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
 		if (slot == EntityEquipmentSlot.HEAD || slot == EntityEquipmentSlot.CHEST || slot == EntityEquipmentSlot.FEET) {
-			return ServerMod.MOD_ID + ":textures/armor/foxspacesuit_1.png";
+			return ServerMod.MOD_ID + ":textures/armor/planetessuit_layer_1.png";
 		} else if (slot == EntityEquipmentSlot.CHEST || slot == EntityEquipmentSlot.LEGS) {
-			return ServerMod.MOD_ID + ":textures/armor/foxspacesuit_2.png";
+			return ServerMod.MOD_ID + ":textures/armor/planetessuit_layer_2.png";
 		} else {
 			return null;
 	}
@@ -57,12 +57,12 @@ public class ItemFESpaceSuit extends ItemArmor {
 		        {
 		            return new ActionResult(EnumActionResult.FAIL, itemstack);
 		        }
-		    
+		    }
 	        }
-
+/*
 	  @Override
 	  public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-	  if (itemStack.getItem().equals(ModItems.FoxSpaceChestplate))
+	  if (itemStack.getItem().equals(ModItems.PlanetesSpaceChestplate))
 	      player.addPotionEffect(new PotionEffect(Potion.getPotionById(13)));
 	  {
 
@@ -76,11 +76,32 @@ public class ItemFESpaceSuit extends ItemArmor {
 
 
 		        		public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		        		return repair.getItem() == Items.EMERALD;
+		        		return repair.getItem() == Items.Nickel;
 		        		
 		        		}
 
 		        													//Crafting Recipe\\
 
-}
+
+		        		public void addRecipes() {
+		        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.NickelHelmet), "EEE", "E E", "EEE", 'E', Items.Nickel);	
+		        		{
+		        			
+		        		}
+			        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.NickelChestplate), "E E", "EEE", "EEE", 'E', Items.Nickel);
+		
+			        	{
+			        			
+			        	}
+			        		GameRegistry.addShapedRecipe(new ItemStack(ModItems.NickelLeggings), "EEE", "EEE", "E E", 'E', Items.Nickel);	
+		
+			        	{
+			        			
+			        	}
 		        	
+			        	   GameRegistry.addShapedRecipe(new ItemStack(ModItems.NickelBoots), "   ", "E E", "E E", 'E', Items.Nickel);	
+		
+			        		}
+			        		
+						}
+*/
