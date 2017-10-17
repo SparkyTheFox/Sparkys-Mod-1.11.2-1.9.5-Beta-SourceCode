@@ -39,11 +39,16 @@ public class OreDictionaryHandler {
 		
 		
 		/**Nickel*/
+		OreDictionary.registerOre("nickel", ModItems.NickelIngot);
+		OreDictionary.registerOre("nickel", ModBlocks.NickelBlock);
+		OreDictionary.registerOre("nickel", ModBlocks.NickelOre);
+		
 		OreDictionary.registerOre("Nickel", ModItems.NickelIngot);
 		OreDictionary.registerOre("Nickel", ModBlocks.NickelBlock);
 		OreDictionary.registerOre("Nickel", ModBlocks.NickelOre);
-		OreDictionary.registerOre("itemNickel", ModItems.NickelIngot);
 		
+		OreDictionary.registerOre("itemNickel", ModItems.NickelIngot);
+		//integrate(TinkerFluids.nickel, "Nickel").toolforge();
 		
 		
 		

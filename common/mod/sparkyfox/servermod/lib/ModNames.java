@@ -179,4 +179,5 @@ public class ModNames {
 	public static final String TechiteOre = "TechiteOre";
 	public static final String IndustrialFreezer = "IndustrialFreezer";
 	public static final String LiquidNitrogenFluid = "LiquidNitrogenFluid";
+	public static final String FluidTitanium = "FluidTitanium ";
 }

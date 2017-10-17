@@ -1,5 +1,6 @@
 package mod.sparkyfox.servermod.init;
 
+
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.block.BlockBrassBlock;
 import mod.sparkyfox.servermod.block.BlockCobaltBlock;
@@ -28,6 +29,8 @@ import mod.sparkyfox.servermod.block.ores.BlockSiliconOre;
 import mod.sparkyfox.servermod.block.ores.BlockTechiteOre;
 import mod.sparkyfox.servermod.block.ores.BlockTitaniumOre;
 import mod.sparkyfox.servermod.block.ores.BlockUraniumOre;
+//import mod.sparkyfox.servermod.fluid.FluidTitanium;
+//import mod.sparkyfox.servermod.fluid.FluidTitaniumBlock;
 import mod.sparkyfox.servermod.industrialFreezer.TileEntityIndustrialFreezer;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.block.Block;
@@ -40,6 +43,8 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -84,6 +89,7 @@ import net.minecraftforge.oredict.OreDictionary;
 																									//Logic Registry\\
 	  
 	  public static BlockIndustrialFreezer IndustrialFreezer;
+	  //public static FluidTitanium FluidTitanium;
 	
 	  
 //===============================================================================================================================================================================================\\
@@ -285,6 +291,7 @@ import net.minecraftforge.oredict.OreDictionary;
 		  GameRegistry.register(new ItemBlock(IndustrialFreezer), industrialfreezer);
 		  GameRegistry.registerTileEntity(TileEntityIndustrialFreezer.class, "industrialfreezer_tile_entity");
 		  
+		  
 	  }
 	  
 //===============================================================================================================================================================================================\\
@@ -470,7 +477,8 @@ import net.minecraftforge.oredict.OreDictionary;
 			ModelResourceLocation industrialfreezer = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.IndustrialFreezer, "inventory");
 			ModelLoader.registerItemVariants(itemindustrialfreezer, industrialfreezer);
 			mesher.register(itemindustrialfreezer, 0, industrialfreezer);{	
-					
+			
+
 				
 			//Slabs
 

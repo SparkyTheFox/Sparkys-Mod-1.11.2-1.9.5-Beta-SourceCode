@@ -155,6 +155,12 @@ HotTechiteservermod:HotTechite.name=Redstone Techite
 ColdTechiteservermod:ColdTechite.name=Lapis Techite
 CompressedTechiteservermod:CompressedTechite.name=Emerald Techite
 
+#################
+#    Liquids    #
+#################
+
+fluid.titanium=Molten Titanium
+
 
 
 
