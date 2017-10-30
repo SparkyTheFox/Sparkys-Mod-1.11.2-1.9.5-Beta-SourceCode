@@ -5,10 +5,12 @@ import mod.sparkyfox.servermod.item.ItemColdTechite;
 import mod.sparkyfox.servermod.item.ItemCommieFabric;
 import mod.sparkyfox.servermod.item.ItemCompressedTechite;
 import mod.sparkyfox.servermod.item.ItemCredit;
+import mod.sparkyfox.servermod.item.ItemFakeDiamond;
 import mod.sparkyfox.servermod.item.ItemHotTechite;
 import mod.sparkyfox.servermod.item.ItemKerbalFabric;
 import mod.sparkyfox.servermod.item.ItemKevlar;
 import mod.sparkyfox.servermod.item.ItemLegacyPermit;
+import mod.sparkyfox.servermod.item.ItemModRecord;
 import mod.sparkyfox.servermod.item.ItemNasaFabric;
 import mod.sparkyfox.servermod.item.ItemPremiumPermit;
 import mod.sparkyfox.servermod.item.ItemRecipeBook;
@@ -32,6 +34,14 @@ import mod.sparkyfox.servermod.item.armor.ItemTitaniumArmor;
 import mod.sparkyfox.servermod.item.armor.ItemUssrSpaceSuit;
 import mod.sparkyfox.servermod.item.food.ItemBurger;
 import mod.sparkyfox.servermod.item.food.ItemFries;
+import mod.sparkyfox.servermod.item.food.ItemPizza;
+import mod.sparkyfox.servermod.item.food.ItemPizza2;
+import mod.sparkyfox.servermod.item.food.ItemPizza3;
+import mod.sparkyfox.servermod.item.food.ItemPizza4;
+import mod.sparkyfox.servermod.item.food.ItemPizza5;
+import mod.sparkyfox.servermod.item.food.ItemPizza6;
+import mod.sparkyfox.servermod.item.food.ItemPizza7;
+import mod.sparkyfox.servermod.item.food.ItemPizza8;
 import mod.sparkyfox.servermod.item.guns.ItemAK4U;
 import mod.sparkyfox.servermod.item.guns.ItemAK4URounds;
 import mod.sparkyfox.servermod.item.guns.ItemSMG;
@@ -80,13 +90,16 @@ import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -99,6 +112,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		
 	public static ItemBurger Burger;
 	public static ItemFries Fries;
+	public static ItemPizza Pizza;
+	public static ItemPizza2 Pizza2;
+	public static ItemPizza3 Pizza3;
+	public static ItemPizza4 Pizza4;
+	public static ItemPizza5 Pizza5;
+	public static ItemPizza6 Pizza6;
+	public static ItemPizza7 Pizza7;
+	public static ItemPizza8 Pizza8;
 	
 //===============================================================================================================================================================================================\\
 																									//Weapons Registry\\
@@ -143,6 +164,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	
 	public static ToolMaterial Lapis = EnumHelper.addToolMaterial(ServerMod.RESOURCE_PREFIX + "Lapis", 3, 800, 12.0F, 2.0F, 16);
 	public static ItemPickaxe LapisPickaxe;
+	public static ItemPickaxe unobtainable_pickaxe ;
 	public static ItemLapisAxe LapisAxe;
 	public static ItemSpade LapisShovel;
 	public static ItemHoe LapisHoe;
@@ -176,6 +198,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemHotTechite HotTechite;
 	public static ItemColdTechite ColdTechite;
 	public static ItemCompressedTechite CompressedTechite;
+	public static ItemFakeDiamond FakeDiamond;
+	public static ItemModRecord ModRecord_1;
+
 	//public static ItemTitaniumShield TitaniumShield;
 	
 //===============================================================================================================================================================================================\\
@@ -285,6 +310,38 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		Fries = (ItemFries) new ItemFries(9, 0.5F, false);  
 		Fries.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Fries)); 
 		GameRegistry.register(Fries); 
+		
+		Pizza = (ItemPizza) new ItemPizza(3, 0.1F, true);
+		Pizza.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza)); 
+		GameRegistry.register(Pizza); 
+		
+		Pizza2 = (ItemPizza2) new ItemPizza2(2, 0.2F, true);//1
+		Pizza2.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza2)); 
+		GameRegistry.register(Pizza2); 
+		
+		Pizza3 = (ItemPizza3) new ItemPizza3(3, 0.3F, true);//2.5
+		Pizza3.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza3)); 
+		GameRegistry.register(Pizza3); 
+		
+		Pizza4 = (ItemPizza4) new ItemPizza4(3, 0.4F, true);//4
+		Pizza4.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza4)); 
+		GameRegistry.register(Pizza4); 
+		
+		Pizza5 = (ItemPizza5) new ItemPizza5(3, 0.5F, true);//5.5
+		Pizza5.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza5)); 
+		GameRegistry.register(Pizza5); 
+		
+		Pizza6 = (ItemPizza6) new ItemPizza6(3, 0.6F, true);//6
+		Pizza6.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza6)); 
+		GameRegistry.register(Pizza6); 
+		
+		Pizza7 = (ItemPizza7) new ItemPizza7(2, 0.7F, true);//7
+		Pizza7.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza7)); 
+		GameRegistry.register(Pizza7); 
+		
+		Pizza8 = (ItemPizza8) new ItemPizza8(2, 1.5F, true);//8
+		Pizza8.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Pizza8)); 
+		GameRegistry.register(Pizza8); 
 		
 //===============================================================================================================================================================================================\\
 
@@ -818,6 +875,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		CompressedTechite.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.CompressedTechite)); 
 		GameRegistry.register(CompressedTechite);
 		
+		FakeDiamond = (ItemFakeDiamond) new ItemFakeDiamond();
+		FakeDiamond.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.FakeDiamond)); 
+		GameRegistry.register(FakeDiamond);
+		
+		ModRecord_1 = (ItemModRecord) new ItemModRecord("dog", ModSoundEvents.mus_battle2);
+		ModRecord_1.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.CD_1)); 
+		GameRegistry.register(ModRecord_1);
+		  //registerItem(2257, "record_cat", (new ItemRecord("cat", SoundEvents.RECORD_CAT)).setUnlocalizedName("record"));
+		
 		
 		//TitaniumShield = (ItemTitaniumShield) new ItemTitaniumShield();
 		//TitaniumShield.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.TitaniumShield)); 
@@ -948,8 +1014,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		IronKnife.addRecipes();
 		GoldKnife.addRecipes();
 		DiamondKnife.addRecipes();
-		SMG.addRecipes();
-		SMGRounds.addRecipes();
+		//SMG.addRecipes();
+		//SMGRounds.addRecipes();
 		AK4U.addRecipes();
 		AK4URounds.addRecipes();
 		Kevlar.addRecipes();
@@ -1057,6 +1123,38 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation fries = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Fries, "inventory");
 		ModelLoader.registerItemVariants(Fries, fries);
 		mesher.register(Fries, 0, fries); 
+		
+		ModelResourceLocation pizza = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza, "inventory");
+		ModelLoader.registerItemVariants(Pizza, pizza);
+		mesher.register(Pizza, 0, pizza); 
+		
+		ModelResourceLocation pizza2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza2, "inventory");
+		ModelLoader.registerItemVariants(Pizza2, pizza2);
+		mesher.register(Pizza2, 0, pizza2); 
+		
+		ModelResourceLocation pizza3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza3, "inventory");
+		ModelLoader.registerItemVariants(Pizza3, pizza3);
+		mesher.register(Pizza3, 0, pizza3); 
+		
+		ModelResourceLocation pizza4 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza4, "inventory");
+		ModelLoader.registerItemVariants(Pizza4, pizza4);
+		mesher.register(Pizza4, 0, pizza4); 
+		
+		ModelResourceLocation pizza5 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza5, "inventory");
+		ModelLoader.registerItemVariants(Pizza5, pizza5);
+		mesher.register(Pizza5, 0, pizza5); 
+		
+		ModelResourceLocation pizza6 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza6, "inventory");
+		ModelLoader.registerItemVariants(Pizza6, pizza6);
+		mesher.register(Pizza6, 0, pizza6); 
+		
+		ModelResourceLocation pizza7 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza7, "inventory");
+		ModelLoader.registerItemVariants(Pizza7, pizza7);
+		mesher.register(Pizza7, 0, pizza7); 
+		
+		ModelResourceLocation pizza8 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Pizza8, "inventory");
+		ModelLoader.registerItemVariants(Pizza8, pizza8);
+		mesher.register(Pizza8, 0, pizza8); 
 		
 //===============================================================================================================================================================================================\\
 																														//Weapons\\	
@@ -1506,6 +1604,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(TitaniumPickaxe, titaniumpickaxe);
 		mesher.register(TitaniumPickaxe, 0, titaniumpickaxe); 
 
+
 		ModelResourceLocation titaniumaxe = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.TitaniumAxe, "inventory");
 		ModelLoader.registerItemVariants(TitaniumAxe, titaniumaxe);
 		mesher.register(TitaniumAxe, 0, titaniumaxe); 
@@ -1570,6 +1669,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(LapisSword, lapissword);
 		mesher.register(LapisSword, 0, lapissword);
 		
+		ModelResourceLocation fakediamond = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.FakeDiamond, "inventory");
+		ModelLoader.registerItemVariants(FakeDiamond, fakediamond);
+		mesher.register(FakeDiamond, 0, fakediamond);
 		
 //===============================================================================================================================================================================================\\
 	

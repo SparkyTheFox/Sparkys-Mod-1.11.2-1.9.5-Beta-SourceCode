@@ -142,7 +142,14 @@ public class ModNames {
 	public static final String HotTechite = "HotTechite";
 	public static final String ColdTechite = "ColdTechite";
 	public static final String CompressedTechite = "CompressedTechite";
-	
+	public static final String Pizza = "Pizza";
+	public static final String Pizza2 = "Pizza2";
+	public static final String Pizza3 = "Pizza3";
+	public static final String Pizza4 = "Pizza4";
+	public static final String Pizza5 = "Pizza5";
+	public static final String Pizza6 = "Pizza6";
+	public static final String Pizza7 = "Pizza7";
+	public static final String Pizza8 = "Pizza8";
 	
 	
 	
@@ -180,4 +187,6 @@ public class ModNames {
 	public static final String IndustrialFreezer = "IndustrialFreezer";
 	public static final String LiquidNitrogenFluid = "LiquidNitrogenFluid";
 	public static final String FluidTitanium = "FluidTitanium ";
+	public static final String FakeDiamond = "FakeDiamond";
+	public static final String CD_1 = "CD_1";
 }

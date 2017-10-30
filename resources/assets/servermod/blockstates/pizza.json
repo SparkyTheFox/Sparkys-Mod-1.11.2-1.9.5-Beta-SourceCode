@@ -1,0 +1,17 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "transform": "forge:default-item",
+        "model": "forge:item-layer"
+    },
+    "variants": {
+        "pizza: [{ "textures": { "layer0": "servermod:items/pizza8" }}],
+		 "pizza2: [{ "textures": { "layer0": "servermod:items/pizza7" }}],
+		  "pizza3: [{ "textures": { "layer0": "servermod:items/pizza6" }}],
+		   "pizza4: [{ "textures": { "layer0": "servermod:items/pizza5" }}],
+		    "pizza5: [{ "textures": { "layer0": "servermod:items/pizza4" }}],
+			 "pizza6: [{ "textures": { "layer0": "servermod:items/pizza3" }}],
+			  "pizza7: [{ "textures": { "layer0": "servermod:items/pizza2" }}],
+			   "pizza8: [{ "textures": { "layer0": "servermod:items/pizza" }}]
+			   }
+			   }

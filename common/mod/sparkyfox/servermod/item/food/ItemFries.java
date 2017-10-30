@@ -15,6 +15,7 @@ public class ItemFries extends ItemFood {
 	public ItemFries(int amount, float saturation, boolean isWolfFood) {
 		super(amount, saturation, isWolfFood);
 		this.setMaxStackSize(16);
+		
 
 	}
 
