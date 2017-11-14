@@ -1,0 +1,37 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "switch": "servermod:blocks/adventure/switch"
+    },
+    "elements": [
+        {
+            "from": [6,3,15],
+            "to": [10,12,16],
+            "faces": {
+                "up": {
+                    "texture": "#switch"
+                },
+                "down": {
+                    "texture": "#switch"
+                },
+                "west": {
+                    "uv": [10.6666765,3.7333336,11.6666765,12.733334],
+                    "texture": "#switch"
+                },
+                "east": {
+                    "uv": [10.733341,3.4666677,11.733341,12.466665],
+                    "texture": "#switch"
+                },
+                "north": {
+                    "uv": [4.266667,15.93332,11.733323,0],
+                    "texture": "#switch"
+                },
+                "south": {
+                    "uv": [5.3333335,4.466666,5.933332,13.866667],
+                    "texture": "#switch"
+                }
+            }
+        }
+    ]
+}

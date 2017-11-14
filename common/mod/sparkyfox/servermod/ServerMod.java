@@ -6,8 +6,6 @@ import mod.sparkyfox.servermod.industrialFreezer.ModGuiHandler;
 import mod.sparkyfox.servermod.init.ModEntities;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
 import mod.sparkyfox.servermod.lib.OreDictionaryHandler;
-import mod.sparkyfox.servermod.utils.ConfigManager;
-import mod.sparkyfox.servermod.utils.ModCompatibility;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -62,7 +60,6 @@ public class ServerMod {
 		proxy.preInit(event); 
 		sounds = new ModSoundEvents();
 		proxy.registerRenderer();
-		 ConfigManager.initialize(new File(event.getModConfigurationDirectory(), ServerMod.CONFIG_FILE));
 		
 		
 	}
@@ -82,7 +79,6 @@ public class ServerMod {
 	}
 	@EventHandler
 	public void PostInit(FMLPostInitializationEvent event) {
-		ModCompatibility.checkForCompatibleMods();
 		proxy.postInit(event); 
 		proxy.registerModels();
 			

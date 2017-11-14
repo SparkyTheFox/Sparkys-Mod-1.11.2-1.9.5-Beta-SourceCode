@@ -13,6 +13,10 @@ public class ModSoundEvents {
 	public static SoundEvent bloodsplat;
 	public static SoundEvent ak4u;
 	public static SoundEvent alarm;
+	public static SoundEvent switch1;
+	public static SoundEvent switch2;
+	public static SoundEvent soulbattleflash;
+	public static SoundEvent nosound;
 	
 //===============================================================================================================================================================================================\\
 																									//UTM Registry\\
@@ -57,6 +61,9 @@ public class ModSoundEvents {
 		bloodsplat = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "bloodsplat")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "bloodsplat"));
 		ak4u = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "ak4u")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "ak4u"));
 		alarm = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "alarm")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "alarm"));
+		switch1 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "switch1")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "switch1"));
+		switch2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "switch2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "switch2"));
+		soulbattleflash = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "soulbattleflash")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "soulbattleflash"));
 
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: UTM\\
@@ -124,6 +131,9 @@ public class ModSoundEvents {
 		registerSound(mus_boss2);
 		registerSound(song_ohmygodno);
 		registerSound(alarm);
+		registerSound(switch1);
+		registerSound(switch2);
+		registerSound(soulbattleflash);
 		//registerSound(song_90s);
 		//registerSound(FloweyHowdy);
 		//registerSound(FloweyKOBK);

@@ -13,6 +13,42 @@ import mod.sparkyfox.servermod.block.BlockRedButton2;
 import mod.sparkyfox.servermod.block.BlockSiliconBlock;
 import mod.sparkyfox.servermod.block.BlockTitaniumBlock;
 import mod.sparkyfox.servermod.block.BlockUraniumBlock;
+import mod.sparkyfox.servermod.block.adventure.BlockBridgeSlab;
+import mod.sparkyfox.servermod.block.adventure.BlockBridgeSlabDouble;
+import mod.sparkyfox.servermod.block.adventure.BlockBridgeSlabHalf;
+import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate;
+import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate2;
+import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate3;
+import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate4;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsBlack;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsBridge;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsCircle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsCircle2;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsCircle3;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsCrackedBlock;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWall;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallBottom;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallCracked;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallTop;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsHalfCircle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsInvertedCircle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple2;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple3;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple4;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsTriangle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsTriangle2;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWall;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallBottom;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallCracked;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallCracked2;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallCracked3;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallTop;
+import mod.sparkyfox.servermod.block.adventure.BlockSpikePressurePlate;
+import mod.sparkyfox.servermod.block.adventure.BlockSpikePressurePlate2;
+import mod.sparkyfox.servermod.block.adventure.BlockSwitch;
+import mod.sparkyfox.servermod.block.adventure.BlockSwitch2;
+import mod.sparkyfox.servermod.block.adventure.BlockSwitch3;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierButton;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierPDiorite;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierPressurePlate;
@@ -33,22 +69,18 @@ import mod.sparkyfox.servermod.block.ores.BlockUraniumOre;
 //import mod.sparkyfox.servermod.fluid.FluidTitaniumBlock;
 import mod.sparkyfox.servermod.industrialFreezer.TileEntityIndustrialFreezer;
 import mod.sparkyfox.servermod.lib.ModNames;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockPressurePlate.Sensitivity;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSlab;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.oredict.OreDictionary;
 
   public class ModBlocks {
 
@@ -91,6 +123,57 @@ import net.minecraftforge.oredict.OreDictionary;
 	  public static BlockIndustrialFreezer IndustrialFreezer;
 	  //public static FluidTitanium FluidTitanium;
 	
+	  
+//===============================================================================================================================================================================================\\
+																								//Adventure Registry\\
+	  
+	  public static BlockRuinsWall RuinsWall;
+	  public static BlockRuinsWallTop RuinsWallTop;
+	  public static BlockRuinsWallBottom RuinsWallBottom;
+	  public static BlockRuinsWallCracked RuinsWallCracked;
+	  public static BlockRuinsWallCracked2 RuinsWallCracked2;
+	  public static BlockRuinsWallCracked3 RuinsWallCracked3;
+	  public static BlockRuinsFadedWall RuinsFadedWall;
+	  public static BlockRuinsFadedWallTop RuinsFadedWallTop;
+	  public static BlockRuinsFadedWallBottom RuinsFadedWallBottom;
+	  public static BlockRuinsFadedWallCracked RuinsFadedWallCracked;
+	  public static BlockRuinsPurple RuinsPurple;
+	  public static BlockRuinsPurple2 RuinsPurple2;
+	  public static BlockRuinsPurple3 RuinsPurple3;
+	  public static BlockRuinsPurple4 RuinsPurple4;
+	  public static BlockRuinsCrackedBlock RuinsCrackedBlock;
+	  public static BlockRuinsBlack RuinsBlack;
+	  public static BlockSpikePressurePlate SpikePressurePlate;
+	  public static BlockSpikePressurePlate2 SpikePressurePlate2;
+	  public static BlockPadPressurePlate PadPressurePlate;
+	  public static BlockPadPressurePlate2 PadPressurePlate2;
+	  public static BlockPadPressurePlate3 PadPressurePlate3;
+	  public static BlockPadPressurePlate4 PadPressurePlate4;
+	  public static BlockSwitch WallSwitch;
+	  public static BlockSwitch2 WallSwitch2;
+	  public static BlockSwitch3 WallSwitch3;
+	  public static BlockRuinsTriangle RuinsTriangle;
+	  public static BlockRuinsTriangle2 RuinsTriangle2;
+	  public static BlockRuinsCircle RuinsCircle;
+	  public static BlockRuinsCircle2 RuinsCircle2;
+	  public static BlockRuinsCircle3 RuinsCircle3;
+	  public static BlockRuinsHalfCircle RuinsHalfCircle ;
+	  public static BlockRuinsInvertedCircle RuinsInvertedCircle;
+	  public static BlockRuinsBridge RuinsBridge;
+	  
+	  	public static BlockBridgeSlab BridgeSlab;
+		public static BlockBridgeSlabHalf BridgeSlabHalf;
+		public static BlockBridgeSlabDouble BridgeSlabDouble;
+	
+		
+
+	  
+	  
+	  
+	  //Stairs
+	  
+	  
+	  
 	  
 //===============================================================================================================================================================================================\\
 	  																								//Initialise: ORES\\
@@ -291,13 +374,230 @@ import net.minecraftforge.oredict.OreDictionary;
 		  GameRegistry.register(new ItemBlock(IndustrialFreezer), industrialfreezer);
 		  GameRegistry.registerTileEntity(TileEntityIndustrialFreezer.class, "industrialfreezer_tile_entity");
 		  
+//===============================================================================================================================================================================================\\
+																										//Initialise: Adventure\\
+		  
+		  ResourceLocation Wall = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWall);
+		  RuinsWall = new BlockRuinsWall();
+		  RuinsWall.setRegistryName(Wall);
+		  GameRegistry.register(RuinsWall);
+		  GameRegistry.register(new ItemBlock(RuinsWall), Wall);
+		  
+		  ResourceLocation WallTop = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallTop);
+		  RuinsWallTop = new BlockRuinsWallTop();
+		  RuinsWallTop.setRegistryName(WallTop);
+		  GameRegistry.register(RuinsWallTop);
+		  GameRegistry.register(new ItemBlock(RuinsWallTop), WallTop);
+		  
+		  ResourceLocation WallBottom = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallBottom);
+		  RuinsWallBottom = new BlockRuinsWallBottom();
+		  RuinsWallBottom.setRegistryName(WallBottom);
+		  GameRegistry.register(RuinsWallBottom);
+		  GameRegistry.register(new ItemBlock(RuinsWallBottom), WallBottom);
+		  
+		  ResourceLocation WallCracked = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallCracked);
+		  RuinsWallCracked = new BlockRuinsWallCracked();
+		  RuinsWallCracked.setRegistryName(WallCracked);
+		  GameRegistry.register(RuinsWallCracked);
+		  GameRegistry.register(new ItemBlock(RuinsWallCracked), WallCracked);
+		  
+		  ResourceLocation WallCracked2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallCracked2);
+		  RuinsWallCracked2 = new BlockRuinsWallCracked2();
+		  RuinsWallCracked2.setRegistryName(WallCracked2);
+		  GameRegistry.register(RuinsWallCracked2);
+		  GameRegistry.register(new ItemBlock(RuinsWallCracked2), WallCracked2);
+		  
+		  ResourceLocation WallCracked3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallCracked3);
+		  RuinsWallCracked3 = new BlockRuinsWallCracked3();
+		  RuinsWallCracked3.setRegistryName(WallCracked3);
+		  GameRegistry.register(RuinsWallCracked3);
+		  GameRegistry.register(new ItemBlock(RuinsWallCracked3), WallCracked3);
+		  
+		  ResourceLocation FadedWall = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWall);
+		  RuinsFadedWall = new BlockRuinsFadedWall();
+		  RuinsFadedWall.setRegistryName(FadedWall);
+		  GameRegistry.register(RuinsFadedWall);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWall), FadedWall);
+		  
+		  ResourceLocation FadedWallTop = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallTop);
+		  RuinsFadedWallTop = new BlockRuinsFadedWallTop();
+		  RuinsFadedWallTop.setRegistryName(FadedWallTop);
+		  GameRegistry.register(RuinsFadedWallTop);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallTop), FadedWallTop);
+		  
+		  ResourceLocation FadedWallBottom = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallBottom);
+		  RuinsFadedWallBottom = new BlockRuinsFadedWallBottom();
+		  RuinsFadedWallBottom.setRegistryName(FadedWallBottom);
+		  GameRegistry.register(RuinsFadedWallBottom);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallBottom), FadedWallBottom);
+		  
+		  ResourceLocation FadedWallCracked = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallCracked);
+		  RuinsFadedWallCracked = new BlockRuinsFadedWallCracked();
+		  RuinsFadedWallCracked.setRegistryName(FadedWallCracked);
+		  GameRegistry.register(RuinsFadedWallCracked);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallCracked), FadedWallCracked);
+		  
+		  ResourceLocation Purple = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPurple);
+		  RuinsPurple = new BlockRuinsPurple();
+		  RuinsPurple.setRegistryName(Purple);
+		  GameRegistry.register(RuinsPurple);
+		  GameRegistry.register(new ItemBlock(RuinsPurple), Purple);
+		  
+		  ResourceLocation Purple2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPurple2);
+		  RuinsPurple2 = new BlockRuinsPurple2();
+		  RuinsPurple2.setRegistryName(Purple2);
+		  GameRegistry.register(RuinsPurple2);
+		  GameRegistry.register(new ItemBlock(RuinsPurple2), Purple2);
+		  
+		  ResourceLocation Purple3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPurple3);
+		  RuinsPurple3 = new BlockRuinsPurple3();
+		  RuinsPurple3.setRegistryName(Purple3);
+		  GameRegistry.register(RuinsPurple3);
+		  GameRegistry.register(new ItemBlock(RuinsPurple3), Purple3);
+		  
+		  ResourceLocation Purple4 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPurple4);
+		  RuinsPurple4 = new BlockRuinsPurple4();
+		  RuinsPurple4.setRegistryName(Purple4);
+		  GameRegistry.register(RuinsPurple4);
+		  GameRegistry.register(new ItemBlock(RuinsPurple4), Purple4);
+		  
+		  ResourceLocation Black = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsBlack);
+		  RuinsBlack = new BlockRuinsBlack();
+		  RuinsBlack.setRegistryName(Black);
+		  GameRegistry.register(RuinsBlack);
+		  GameRegistry.register(new ItemBlock(RuinsBlack), Black);
+		  
+		  ResourceLocation RuinsCracked = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsCrackedBlock);
+		  RuinsCrackedBlock = new BlockRuinsCrackedBlock();
+		  RuinsCrackedBlock.setRegistryName(RuinsCracked);
+		  GameRegistry.register(RuinsCrackedBlock);
+		  GameRegistry.register(new ItemBlock(RuinsCrackedBlock), RuinsCracked);
+		  
+		  ResourceLocation SpikePlate = new ResourceLocation(ServerMod.MOD_ID, ModNames.SpikePressurePlate);
+		  SpikePressurePlate = new BlockSpikePressurePlate(Material.IRON, Sensitivity.MOBS);
+		  SpikePressurePlate.setRegistryName(SpikePlate);
+		  GameRegistry.register(SpikePressurePlate);
+		  GameRegistry.register(new ItemBlock(SpikePressurePlate), SpikePlate);
+		  
+		  ResourceLocation PadPlate = new ResourceLocation(ServerMod.MOD_ID, ModNames.PadPressurePlate);
+		  PadPressurePlate = new BlockPadPressurePlate(Material.IRON, Sensitivity.MOBS);
+		  PadPressurePlate.setRegistryName(PadPlate);
+		  GameRegistry.register(PadPressurePlate);
+		  GameRegistry.register(new ItemBlock(PadPressurePlate), PadPlate);
+		  
+		  ResourceLocation PadPlate2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.PadPressurePlate2);
+		  PadPressurePlate2 = new BlockPadPressurePlate2(Material.IRON, Sensitivity.MOBS);
+		  PadPressurePlate2.setRegistryName(PadPlate2);
+		  GameRegistry.register(PadPressurePlate2);
+		  GameRegistry.register(new ItemBlock(PadPressurePlate2), PadPlate2);
+		  
+		  ResourceLocation PadPlate3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.PadPressurePlate3);
+		  PadPressurePlate3 = new BlockPadPressurePlate3(Material.IRON, Sensitivity.MOBS);
+		  PadPressurePlate3.setRegistryName(PadPlate3);
+		  GameRegistry.register(PadPressurePlate3);
+		  GameRegistry.register(new ItemBlock(PadPressurePlate3), PadPlate3);
+		  
+		  ResourceLocation PadPlate4 = new ResourceLocation(ServerMod.MOD_ID, ModNames.PadPressurePlate4);
+		  PadPressurePlate4 = new BlockPadPressurePlate4(Material.IRON, Sensitivity.MOBS);
+		  PadPressurePlate4.setRegistryName(PadPlate4);
+		  GameRegistry.register(PadPressurePlate4);
+		  GameRegistry.register(new ItemBlock(PadPressurePlate4), PadPlate4);
+		  
+		  ResourceLocation SpikePlate2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.SpikePressurePlate2);
+		  SpikePressurePlate2 = new BlockSpikePressurePlate2(Material.IRON, Sensitivity.MOBS);
+		  SpikePressurePlate2.setRegistryName(SpikePlate2);
+		  GameRegistry.register(SpikePressurePlate2);
+		  GameRegistry.register(new ItemBlock(SpikePressurePlate2), SpikePlate2);
+		  
+		  ResourceLocation Switch = new ResourceLocation(ServerMod.MOD_ID, ModNames.Switch);
+		  WallSwitch = new BlockSwitch();
+		  WallSwitch.setRegistryName(Switch);
+		  GameRegistry.register(WallSwitch);
+		  GameRegistry.register(new ItemBlock(WallSwitch), Switch);
+		  
+		  ResourceLocation Switch2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.Switch2);
+		  WallSwitch2 = new BlockSwitch2();
+		  WallSwitch2.setRegistryName(Switch2);
+		  GameRegistry.register(WallSwitch2);
+		  GameRegistry.register(new ItemBlock(WallSwitch2), Switch2);
+		  
+		  ResourceLocation Switch3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.Switch3);
+		  WallSwitch3 = new BlockSwitch3();
+		  WallSwitch3.setRegistryName(Switch3);
+		  GameRegistry.register(WallSwitch3);
+		  GameRegistry.register(new ItemBlock(WallSwitch3), Switch3);
+		  
+		  ResourceLocation Triangle = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsTriangle);
+		  RuinsTriangle = new BlockRuinsTriangle();
+		  RuinsTriangle.setRegistryName(Triangle);
+		  GameRegistry.register(RuinsTriangle);
+		  GameRegistry.register(new ItemBlock(RuinsTriangle), Triangle);
+		  
+		  ResourceLocation Triangle2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsTriangle2);
+		  RuinsTriangle2 = new BlockRuinsTriangle2();
+		  RuinsTriangle2.setRegistryName(Triangle2);
+		  GameRegistry.register(RuinsTriangle2);
+		  GameRegistry.register(new ItemBlock(RuinsTriangle2), Triangle2);
+		  
+		  ResourceLocation Circle = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsCircle);
+		  RuinsCircle = new BlockRuinsCircle();
+		  RuinsCircle.setRegistryName(Circle);
+		  GameRegistry.register(RuinsCircle);
+		  GameRegistry.register(new ItemBlock(RuinsCircle), Circle);
+		  
+		  ResourceLocation Circle2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsCircle2);
+		  RuinsCircle2 = new BlockRuinsCircle2();
+		  RuinsCircle2.setRegistryName(Circle2);
+		  GameRegistry.register(RuinsCircle2);
+		  GameRegistry.register(new ItemBlock(RuinsCircle2), Circle2);
+		  
+		  ResourceLocation Circle3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsCircle3);
+		  RuinsCircle3 = new BlockRuinsCircle3();
+		  RuinsCircle3.setRegistryName(Circle3);
+		  GameRegistry.register(RuinsCircle3);
+		  GameRegistry.register(new ItemBlock(RuinsCircle3), Circle3);
+		  
+		  ResourceLocation HalfCircle = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsHalfCircle);
+		  RuinsHalfCircle = new BlockRuinsHalfCircle();
+		  RuinsHalfCircle.setRegistryName(HalfCircle);
+		  GameRegistry.register(RuinsHalfCircle);
+		  GameRegistry.register(new ItemBlock(RuinsHalfCircle), HalfCircle);
+		  
+		  ResourceLocation InvertedCircle = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsInvertedCircle);
+		  RuinsInvertedCircle = new BlockRuinsInvertedCircle();
+		  RuinsInvertedCircle.setRegistryName(InvertedCircle);
+		  GameRegistry.register(RuinsInvertedCircle);
+		  GameRegistry.register(new ItemBlock(RuinsInvertedCircle), InvertedCircle);
+		  
+		  ResourceLocation Bridge = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsBridge);
+		  RuinsBridge = new BlockRuinsBridge();
+		  RuinsBridge.setRegistryName(Bridge);
+		  GameRegistry.register(RuinsBridge);
+		  GameRegistry.register(new ItemBlock(RuinsBridge), Bridge);
+		  
+
+		  ResourceLocation BridgeSlab = new ResourceLocation(ServerMod.MOD_ID, ModNames.Bridge);
+		  BridgeSlabHalf = new BlockBridgeSlabHalf("BridgeSlabHalf");
+		  BridgeSlabDouble = new BlockBridgeSlabDouble("BridgeSlabDouble");
+		  GameRegistry.register(new ItemSlab(BridgeSlabHalf, BridgeSlabHalf, BridgeSlabDouble), BridgeSlab);
+		  GameRegistry.register(BridgeSlabDouble); //Doesn't need an item
+		  
+		  
+		
+		  
+
+		  
+		  
 		  
 	  }
 	  
 //===============================================================================================================================================================================================\\
 	  																									//Model Meshes: ORES\\
 	  
-	  @SideOnly(Side.CLIENT)
+
+		
+
+	@SideOnly(Side.CLIENT)
 	  public static void initClient(ItemModelMesher mesher) {
 	
 	
@@ -477,15 +777,255 @@ import net.minecraftforge.oredict.OreDictionary;
 			ModelResourceLocation industrialfreezer = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.IndustrialFreezer, "inventory");
 			ModelLoader.registerItemVariants(itemindustrialfreezer, industrialfreezer);
 			mesher.register(itemindustrialfreezer, 0, industrialfreezer);{	
+				
+//===============================================================================================================================================================================================\\
+																										//Model Meshes: Adventrue\\
+				
+			    //Blocks: RuinsWall
+			    Item itemRuinsWall = Item.getItemFromBlock(RuinsWall);
+			    ModelResourceLocation modelRuinsWall = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWall, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWall, modelRuinsWall);
+			    mesher.register(itemRuinsWall, 0, modelRuinsWall);{
+	  			}
+			    
+			    //Blocks: RuinsWallTop
+			    Item itemRuinsWallTop = Item.getItemFromBlock(RuinsWallTop);
+			    ModelResourceLocation modelRuinsWallTop = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallTop, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallTop, modelRuinsWallTop);
+			    mesher.register(itemRuinsWallTop, 0, modelRuinsWallTop);{
+	  			}
+			    
+			    //Blocks: RuinsWallBottom
+			    Item itemRuinsWallBottom = Item.getItemFromBlock(RuinsWallBottom);
+			    ModelResourceLocation modelRuinsWallBottom = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallBottom, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallBottom, modelRuinsWallBottom);
+			    mesher.register(itemRuinsWallBottom, 0, modelRuinsWallBottom);{
+	  			}
+			    
+			    //Blocks: RuinsWallCracked
+			    Item itemRuinsWallCracked = Item.getItemFromBlock(RuinsWallCracked);
+			    ModelResourceLocation modelRuinsWallCracked = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallCracked, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallCracked, modelRuinsWallCracked);
+			    mesher.register(itemRuinsWallCracked, 0, modelRuinsWallCracked);{
+	  			}
+			    
+			    //Blocks: RuinsWallCracked2
+			    Item itemRuinsWallCracked2 = Item.getItemFromBlock(RuinsWallCracked2);
+			    ModelResourceLocation modelRuinsWallCracked2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallCracked2, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallCracked2, modelRuinsWallCracked2);
+			    mesher.register(itemRuinsWallCracked2, 0, modelRuinsWallCracked2);{
+	  			}
+			    
+			    //Blocks: RuinsWallCracked3
+			    Item itemRuinsWallCracked3 = Item.getItemFromBlock(RuinsWallCracked3);
+			    ModelResourceLocation modelRuinsWallCracked3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallCracked3, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallCracked3, modelRuinsWallCracked3);
+			    mesher.register(itemRuinsWallCracked3, 0, modelRuinsWallCracked3);{
+	  			}
+			    
+			    //Blocks: RuinsFadedWall
+			    Item itemRuinsFadedWall = Item.getItemFromBlock(RuinsFadedWall);
+			    ModelResourceLocation modelRuinsFadedWall = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWall, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWall, modelRuinsFadedWall);
+			    mesher.register(itemRuinsFadedWall, 0, modelRuinsFadedWall);{
+	  			}
+			    
+			    //Blocks: RuinsFadedWallTop
+			    Item itemRuinsFadedWallTop = Item.getItemFromBlock(RuinsFadedWallTop);
+			    ModelResourceLocation modelRuinsFadedWallTop = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallTop, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallTop, modelRuinsFadedWallTop);
+			    mesher.register(itemRuinsFadedWallTop, 0, modelRuinsFadedWallTop);{
+	  			}
+			    
+			    //Blocks: RuinsFadedWallBottom
+			    Item itemRuinsFadedWallBottom = Item.getItemFromBlock(RuinsFadedWallBottom);
+			    ModelResourceLocation modelRuinsFadedWallBottom = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallBottom, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallBottom, modelRuinsFadedWallBottom);
+			    mesher.register(itemRuinsFadedWallBottom, 0, modelRuinsFadedWallBottom);{
+	  			}
+			    
+			    //Blocks: RuinsFadedWallCracked
+			    Item itemRuinsFadedWallCracked = Item.getItemFromBlock(RuinsFadedWallCracked);
+			    ModelResourceLocation modelRuinsFadedWallCracked = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallCracked, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallCracked, modelRuinsFadedWallCracked);
+			    mesher.register(itemRuinsFadedWallCracked, 0, modelRuinsFadedWallCracked);{
+	  			}
+			    
+			    //Blocks: RuinsPurple
+			    Item itemRuinsPurple = Item.getItemFromBlock(RuinsPurple);
+			    ModelResourceLocation modelRuinsPurple = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPurple, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPurple, modelRuinsPurple);
+			    mesher.register(itemRuinsPurple, 0, modelRuinsPurple);{
+	  			}
+			    
+			    //Blocks: RuinsPurple2
+			    Item itemRuinsPurple2 = Item.getItemFromBlock(RuinsPurple2);
+			    ModelResourceLocation modelRuinsPurple2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPurple2, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPurple2, modelRuinsPurple2);
+			    mesher.register(itemRuinsPurple2, 0, modelRuinsPurple2);{
+	  			}
+			    
+			    //Blocks: RuinsPurple3
+			    Item itemRuinsPurple3 = Item.getItemFromBlock(RuinsPurple3);
+			    ModelResourceLocation modelRuinsPurple3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPurple3, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPurple3, modelRuinsPurple3);
+			    mesher.register(itemRuinsPurple3, 0, modelRuinsPurple3);{
+	  			}
+			    
+			    //Blocks: RuinsPurple4
+			    Item itemRuinsPurple4 = Item.getItemFromBlock(RuinsPurple4);
+			    ModelResourceLocation modelRuinsPurple4 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPurple4, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPurple4, modelRuinsPurple4);
+			    mesher.register(itemRuinsPurple4, 0, modelRuinsPurple4);{
+	  			}
+			    
+			    //Blocks: RuinsBlack
+			    Item itemRuinsBlack = Item.getItemFromBlock(RuinsBlack);
+			    ModelResourceLocation modelRuinsBlack = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsBlack, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsBlack, modelRuinsBlack);
+			    mesher.register(itemRuinsBlack, 0, modelRuinsBlack);{
+	  			}
+			    
+			    //Blocks: RuinsCrackedBlock
+			    Item itemRuinsCrackedBlock = Item.getItemFromBlock(RuinsCrackedBlock);
+			    ModelResourceLocation modelRuinsCrackedBlock = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsCrackedBlock, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsCrackedBlock, modelRuinsCrackedBlock);
+			    mesher.register(itemRuinsCrackedBlock, 0, modelRuinsCrackedBlock);{
+	  			}
+			    
+			    Item itemSpike = Item.getItemFromBlock(SpikePressurePlate);
+			    ModelResourceLocation modelSpike = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SpikePressurePlate, "inventory");
+			    ModelLoader.registerItemVariants(itemSpike, modelSpike);
+			    mesher.register(itemSpike, 0, modelSpike);{
+			    }
+			    
+			    Item itemPad = Item.getItemFromBlock(PadPressurePlate);
+			    ModelResourceLocation modelPad = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PadPressurePlate, "inventory");
+			    ModelLoader.registerItemVariants(itemPad, modelPad);
+			    mesher.register(itemPad, 0, modelPad);{
+			    }
+			    
+			    Item itemPad2 = Item.getItemFromBlock(PadPressurePlate2);
+			    ModelResourceLocation modelPad2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PadPressurePlate2, "inventory");
+			    ModelLoader.registerItemVariants(itemPad2, modelPad2);
+			    mesher.register(itemPad2, 0, modelPad2);{
+			    }
+			    
+			    Item itemPad3 = Item.getItemFromBlock(PadPressurePlate3);
+			    ModelResourceLocation modelPad3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PadPressurePlate3, "inventory");
+			    ModelLoader.registerItemVariants(itemPad3, modelPad3);
+			    mesher.register(itemPad3, 0, modelPad3);{
+			    }
+			    
+			    Item itemPad4 = Item.getItemFromBlock(PadPressurePlate4);
+			    ModelResourceLocation modelPad4 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PadPressurePlate4, "inventory");
+			    ModelLoader.registerItemVariants(itemPad4, modelPad4);
+			    mesher.register(itemPad4, 0, modelPad4);{
+			    }
+			    
+			    Item itemSpike2 = Item.getItemFromBlock(SpikePressurePlate2);
+			    ModelResourceLocation modelSpike2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SpikePressurePlate2, "inventory");
+			    ModelLoader.registerItemVariants(itemSpike2, modelSpike2);
+			    mesher.register(itemSpike2, 0, modelSpike2);{
+			    }
+			    
+			    Item itemSwitch = Item.getItemFromBlock(WallSwitch);
+			    ModelResourceLocation modelSwitch = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Switch, "inventory");
+			    ModelLoader.registerItemVariants(itemSwitch, modelSwitch);
+			    mesher.register(itemSwitch, 0, modelSwitch);{
+			    }
+			    
+			    Item itemSwitch2 = Item.getItemFromBlock(WallSwitch2);
+			    ModelResourceLocation modelSwitch2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Switch2, "inventory");
+			    ModelLoader.registerItemVariants(itemSwitch2, modelSwitch2);
+			    mesher.register(itemSwitch2, 0, modelSwitch2);{
+			    }
+			    
+			    Item itemSwitch3 = Item.getItemFromBlock(WallSwitch3);
+			    ModelResourceLocation modelSwitch3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Switch3, "inventory");
+			    ModelLoader.registerItemVariants(itemSwitch3, modelSwitch3);
+			    mesher.register(itemSwitch3, 0, modelSwitch3);{
+			    }
+			    
+			    //Blocks: RuinsTriangle
+			    Item itemRuinsTriangle = Item.getItemFromBlock(RuinsTriangle);
+			    ModelResourceLocation modelRuinsTriangle = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsTriangle, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsTriangle, modelRuinsTriangle);
+			    mesher.register(itemRuinsTriangle, 0, modelRuinsTriangle);{
+	  			}
+				
+				//Blocks: RuinsTriangle2
+			    Item itemRuinsTriangle2 = Item.getItemFromBlock(RuinsTriangle2);
+			    ModelResourceLocation modelRuinsTriangle2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsTriangle2, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsTriangle2, modelRuinsTriangle2);
+			    mesher.register(itemRuinsTriangle2, 0, modelRuinsTriangle2);{
+	  			}
+				
+				//Blocks: RuinsCircle
+			    Item itemRuinsCircle = Item.getItemFromBlock(RuinsCircle);
+			    ModelResourceLocation modelRuinsCircle = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsCircle, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsCircle, modelRuinsCircle);
+			    mesher.register(itemRuinsCircle, 0, modelRuinsCircle);{
+	  			}
+				
+				//Blocks: RuinsCircle2
+			    Item itemRuinsCircle2 = Item.getItemFromBlock(RuinsCircle2);
+			    ModelResourceLocation modelRuinsCircle2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsCircle2, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsCircle2, modelRuinsCircle2);
+			    mesher.register(itemRuinsCircle2, 0, modelRuinsCircle2);{
+	  			}
+				
+				//Blocks: RuinsCircle3
+			    Item itemRuinsCircle3 = Item.getItemFromBlock(RuinsCircle3);
+			    ModelResourceLocation modelRuinsCircle3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsCircle3, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsCircle3, modelRuinsCircle3);
+			    mesher.register(itemRuinsCircle3, 0, modelRuinsCircle3);{
+	  			}
+				
+				//Blocks: RuinsHalfCircle
+			    Item itemRuinsHalfCircle = Item.getItemFromBlock(RuinsHalfCircle);
+			    ModelResourceLocation modelRuinsHalfCircle = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsHalfCircle, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsHalfCircle, modelRuinsHalfCircle);
+			    mesher.register(itemRuinsHalfCircle, 0, modelRuinsHalfCircle);{
+	  			}
+				
+				//Blocks: RuinsInvertedCircle
+			    Item itemRuinsInvertedCircle = Item.getItemFromBlock(RuinsInvertedCircle);
+			    ModelResourceLocation modelRuinsInvertedCircle = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsInvertedCircle, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsInvertedCircle, modelRuinsInvertedCircle);
+			    mesher.register(itemRuinsInvertedCircle, 0, modelRuinsInvertedCircle);{
+	  			}
+			    
+				//Blocks: RuinsBridge
+			    Item itemRuinsBridge = Item.getItemFromBlock(RuinsBridge);
+			    ModelResourceLocation modelRuinsBridge = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsBridge, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsBridge, modelRuinsBridge);
+			    mesher.register(itemRuinsBridge, 0, modelRuinsBridge);{
+	  			}
+			    
+				//Blocks: RBridge
+			    Item itemBridgeSlab = Item.getItemFromBlock(BridgeSlab);
+			    ModelResourceLocation modelBridgeSlab = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BridgeHalf, "inventory");
+			    ModelLoader.registerItemVariants(itemBridgeSlab, modelBridgeSlab);
+			    mesher.register(itemBridgeSlab, 0, modelBridgeSlab);{
+	  			}
+
+			    
+			    
+
+				
+
+	  		
 			
 
 				
 			//Slabs
+			    
 
 				
 				
 				
-		    }
+			}
 		    }
 	  
 //===============================================================================================================================================================================================\\

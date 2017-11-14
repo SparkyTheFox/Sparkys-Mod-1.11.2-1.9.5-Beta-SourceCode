@@ -1,7 +1,13 @@
 package mod.sparkyfox.servermod.lib;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class OreDictionaryHandler {
@@ -10,12 +16,18 @@ public class OreDictionaryHandler {
 		
 //===========================================================================================================================================================================================\\
 																								//Material\\
-		
+		 
 		/**Titanium*/
 		OreDictionary.registerOre("Titanium", ModItems.TitaniumIngot);
 		OreDictionary.registerOre("Titanium", ModItems.TitaniumNugget);
 		OreDictionary.registerOre("Titanium", ModBlocks.TitaniumBlock);
 		OreDictionary.registerOre("Titanium", ModBlocks.TitaniumOre);
+
+	
+
+		
+		
+		
 
 
 		
@@ -93,10 +105,43 @@ public class OreDictionaryHandler {
 		
 //===========================================================================================================================================================================================\\
 																								//Fluids\\
+		
+		
+//===========================================================================================================================================================================================\\
+																						//My Ore Dictionary Names\\
+	
+    // Build our list of items to replace with ore tags
+    Map<ItemStack, String> replacements = new HashMap<ItemStack, String>();
+    
+    
+//===========================================================================================================================================================================================\\
+																								//Material\\
+    
+	/**Titanium*/
+	replacements.put(new ItemStack(ModItems.TitaniumIngot), "Titanium");
+	replacements.put(new ItemStack(ModItems.TitaniumNugget), "Titanium");
+	replacements.put(new ItemStack(ModBlocks.TitaniumBlock), "Titanium");
+	replacements.put(new ItemStack(ModBlocks.TitaniumOre), "Titanium");
+    
+//===========================================================================================================================================================================================\\
+																								//Ingots\\
 
-		
-		
+
+	replacements.put(new ItemStack(ModItems.TitaniumIngot), "ingotTitanium");
+    
+//===========================================================================================================================================================================================\\
+																								//Nuggets\\ 
+    
+    
+	replacements.put(new ItemStack(ModItems.TitaniumNugget), "nuggetTitanium");
+    
+//===========================================================================================================================================================================================\\
+																								//Blocks\\
+ 
+
+    replacements.put(new ItemStack(ModBlocks.TitaniumBlock), "blockTitanium");
+
+
 		
 	}
-
 }

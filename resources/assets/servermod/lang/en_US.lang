@@ -29,6 +29,43 @@ TechiteOreservermod:TechiteOre.name=Techite Ore
 IndustrialFreezerservermod:IndustrialFreezer.name=Industrial Freezer
 
 
+ ####################
+ # Adventure Blocks #
+ ####################
+ 
+RuinsWallservermod:RuinsWall.name=!?(Ruins Wall)
+RuinsWallTopservermod:RuinsWallTop.name=!?(Ruins Wall Top)
+RuinsWallBottomservermod:RuinsWallBottom.name=!?(Ruins Wall Bottom)
+RuinsWallCrackedservermod:RuinsWallCracked.name=!?(Ruins Wall Cracked Top)
+RuinsWallCracked2servermod:RuinsWallCracked2.name=!?(Ruins Wall Cracked Middle)
+RuinsWallCracked3servermod:RuinsWallCracked3.name=!?(Ruins Wall Cracked Bottom)
+RuinsFadedWallservermod:RuinsFadedWall.name=!?(Ruins Faded Wall)
+RuinsFadedWallTopservermod:RuinsFadedWallTop.name=!?(Ruins Faded Wall Top)
+RuinsFadedWallBottomservermod:RuinsFadedWallBottom.name=!?(Ruins Faded Bottom)
+RuinsFadedWallCrackedservermod:RuinsFadedWallCracked.name=!?(Ruins Faded Wall Cracked)
+RuinsPurpleservermod:RuinsPurple.name=!?(Ruins Purple)
+RuinsPurple2servermod:RuinsPurple2.name=!?(Ruins Purple 2)
+RuinsPurple3servermod:RuinsPurple3.name=!?(Ruins Purple 3)
+RuinsPurple4servermod:RuinsPurple4.name=!?(Ruins Purple 4)
+RuinsBlackservermod:RuinsBlack.name=!?(Black Light)
+RuinsCrackedBlockservermod:RuinsCrackedBlock.name=!?(Ruins Cracked Brick)
+SpikePressurePlateservermod:SpikePressurePlate.name=!?(Ruins Spikes)
+SpikePressurePlate2servermod:SpikePressurePlate2.name=!?(Ruins Spikes2)
+PadPressurePlateservermod:PadPressurePlate.name=!?(Ruins Pads)
+PadPressurePlate2servermod:PadPressurePlate2.name=!?(Ruins Pads2)
+PadPressurePlate3servermod:PadPressurePlate3.name=!?(Ruins Pads3)
+PadPressurePlate4servermod:PadPressurePlate4.name=!?(Ruins Pads4)
+WallSwitchservermod:Switch.name=!?(Ruins Switch)
+WallSwitch2servermod:Switch2.name=!?(Ruins Switch[SBF])
+WallSwitch3servermod:Switch3.name=!?(Ruins Switch[Silent])
+RuinsTriangleservermod:RuinsTriangle.name=!?(RuinsTriangle)
+RuinsTriangle2servermod:RuinsTriangle2.name=!?(RuinsTriangle2)
+RuinsCircleservermod:RuinsCircle.name=!?(RuinsCircle)
+RuinsCircle2servermod:RuinsCircle2.name=!?(RuinsCircle2)
+RuinsCircle3servermod:RuinsCircle3.name=!?(RuinsCircle3)
+RuinsHalfCircleservermod:RuinsHalfCircle.name=!?(RuinsHalfCircle)
+RuinsInvertedCircleservermod:RuinsInvertedCircle.name=!?(RuinsInvertedCircle)
+RuinsBridgeservermod:RuinsBridge.name=!?(RuinsBridge)
 
 
 

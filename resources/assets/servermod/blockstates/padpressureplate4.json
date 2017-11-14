@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "power=0": { "model": "servermod:PadPressurePlate4_up" },
+        "power=1": { "model": "servermod:PadPressurePlate4_down" },
+        "power=2": { "model": "servermod:PadPessurePlate_down" },
+        "power=3": { "model": "servermod:PadPressurePlate4_down" },
+        "power=4": { "model": "servermod:PadPressurePlate4_down" },
+        "power=5": { "model": "servermod:PadPressurePlate4_down" },
+        "power=6": { "model": "servermod:PadPressurePlate4_down" },
+        "power=7": { "model": "servermod:PadPressurePlate4_down" },
+        "power=8": { "model": "servermod:PadPressurePlate4_down" },
+        "power=9": { "model": "servermod:PadPressurePlate4_down" },
+        "power=10": { "model": "servermod:PadPressurePlate4_down" },
+        "power=11": { "model": "servermod:PadPressurePlate4_down" },
+        "power=12": { "model": "servermod:PadPressurePlate4_down" },
+        "power=13": { "model": "servermod:PadPressurePlate4_down"},
+        "power=14": { "model": "servermod:PadPressurePlate4_down" },
+        "power=15": { "model": "servermod:PadPressurePlate4_down" }
+    }
+}

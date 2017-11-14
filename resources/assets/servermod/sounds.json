@@ -32,6 +32,33 @@
         ],
         "subtitle": "DOOM BUTTON ACTIVATED!"
     },
+    
+            "switch1": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:switch1", "stream": true}
+       
+        ],
+        "subtitle": "Secret Switch1"
+    },
+    
+        "switch2": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:switch2", "stream": true}
+       
+        ],
+        "subtitle": "Secret Switch2"
+    },
+    
+        "soulbattleflash": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:soulbattleflash", "stream": true}
+       
+        ],
+        "subtitle": "Secret Soul Flash"
+    },
 
         "mus_ruins": {
         "category": "record",

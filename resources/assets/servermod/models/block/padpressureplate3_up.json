@@ -1,0 +1,177 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "pad_pressureplate": "servermod:blocks/adventure/pad_pressureplate"
+    },
+    "elements": [
+        {
+            "from": [3,0,5.5],
+            "to": [13,2,10],
+            "faces": {
+                "up": {
+                    "uv": [0,13,16,4],
+                    "texture": "#pad_pressureplate",
+                    "rotation": 180
+                },
+                "west": {
+                    "uv": [2,13,12,15],
+                    "texture": "#pad_pressureplate"
+                },
+                "east": {
+                    "uv": [4,12,14,14],
+                    "texture": "#pad_pressureplate"
+                },
+                "north": {
+                    "uv": [4,14,14,15],
+                    "texture": "#pad_pressureplate"
+                },
+                "south": {
+                    "uv": [3,13,13,15],
+                    "texture": "#pad_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [3.5,0,10],
+            "to": [12.5,2,10.5],
+            "faces": {
+                "up": {
+                    "uv": [1,13,15,14],
+                    "texture": "#pad_pressureplate"
+                },
+                "west": {
+                    "uv": [2,13,12,15],
+                    "texture": "#pad_pressureplate"
+                },
+                "east": {
+                    "uv": [4,12,14,14],
+                    "texture": "#pad_pressureplate"
+                },
+                "north": {
+                    "uv": [4,14,14,15],
+                    "texture": "#pad_pressureplate"
+                },
+                "south": {
+                    "uv": [3,13,13,15],
+                    "texture": "#pad_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [3.5,0,5],
+            "to": [12.5,2,5.5],
+            "faces": {
+                "up": {
+                    "uv": [1,3,15,4],
+                    "texture": "#pad_pressureplate"
+                },
+                "down": {
+                    "uv": [4,2.5,12,3],
+                    "texture": "#pad_pressureplate"
+                },
+                "west": {
+                    "uv": [5,1,12,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "east": {
+                    "uv": [4,1,13,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "north": {
+                    "uv": [3,1,13,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "south": {
+                    "uv": [3,1,12,2],
+                    "texture": "#pad_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [4,0,10.5],
+            "to": [12,2,11],
+            "faces": {
+                "up": {
+                    "uv": [1,13,15,14],
+                    "texture": "#pad_pressureplate"
+                },
+                "west": {
+                    "uv": [2,13,12,15],
+                    "texture": "#pad_pressureplate"
+                },
+                "east": {
+                    "uv": [4,12,14,14],
+                    "texture": "#pad_pressureplate"
+                },
+                "north": {
+                    "uv": [5,13,15,14],
+                    "texture": "#pad_pressureplate"
+                },
+                "south": {
+                    "uv": [3,13,13,15],
+                    "texture": "#pad_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [4,0,4.5],
+            "to": [12,2,5],
+            "faces": {
+                "up": {
+                    "uv": [2,2,14,3],
+                    "texture": "#pad_pressureplate"
+                },
+                "down": {
+                    "texture": "#pad_pressureplate"
+                },
+                "west": {
+                    "uv": [4,1,12,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "east": {
+                    "uv": [4,1,12,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "north": {
+                    "uv": [3,1,13,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "south": {
+                    "uv": [3,1,10,2],
+                    "texture": "#pad_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [4.5,0,4],
+            "to": [11.5,2,4.5],
+            "faces": {
+                "up": {
+                    "uv": [3,1,13,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "down": {
+                    "uv": [5.5,1.5,10.5,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "west": {
+                    "uv": [3,1,13,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "east": {
+                    "uv": [3,1,13,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "north": {
+                    "uv": [3,1,13,2],
+                    "texture": "#pad_pressureplate"
+                },
+                "south": {
+                    "uv": [4,1,12,2],
+                    "texture": "#pad_pressureplate"
+                }
+            }
+        }
+    ]
+}

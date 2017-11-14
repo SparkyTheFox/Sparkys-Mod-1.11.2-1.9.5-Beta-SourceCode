@@ -150,6 +150,7 @@ public class ModNames {
 	public static final String Pizza6 = "Pizza6";
 	public static final String Pizza7 = "Pizza7";
 	public static final String Pizza8 = "Pizza8";
+	public static final String mus_ruins = "mus_ruins";
 	
 	
 	
@@ -189,4 +190,53 @@ public class ModNames {
 	public static final String FluidTitanium = "FluidTitanium ";
 	public static final String FakeDiamond = "FakeDiamond";
 	public static final String CD_1 = "CD_1";
+	public static final String CD_2 = "CD_2";
+	
+	
+	/*
+	 * Adventure Blocks
+	 */
+	
+	public static final String RuinsWall = "RuinsWall";
+	public static final String RuinsWallTop = "RuinsWallTop";
+	public static final String RuinsWallBottom = "RuinsWallBottom";
+	public static final String RuinsWallCracked = "RuinsWallCracked";
+	public static final String RuinsWallCracked2 = "RuinsWallCracked2";
+	public static final String RuinsWallCracked3 = "RuinsWallCracked3";
+	public static final String RuinsFadedWall = "RuinsFadedWall";
+	public static final String RuinsFadedWallTop = "RuinsFadedWallTop";
+	public static final String RuinsFadedWallBottom = "RuinsFadedWallBottom";
+    public static final String RuinsFadedWallCracked = "RuinsFadedWallCracked";
+	public static final String RuinsPurple = "RuinsPurple";
+	public static final String RuinsPurple2 = "RuinsPurple2";
+	public static final String RuinsPurple3 = "RuinsPurple3";
+	public static final String RuinsPurple4 = "RuinsPurple4";
+	public static final String RuinsBlack = "RuinsBlack";
+	public static final String RuinsCrackedBlock = "RuinsCrackedBlock";
+	public static final String SpikePressurePlate = "SpikePressurePlate";
+	public static final String SpikePressurePlate2 = "SpikePressurePlate2";
+	public static final String PadPressurePlate = "PadPressurePlate";
+	public static final String PadPressurePlate2 = "PadPressurePlate2";
+	public static final String PadPressurePlate3 = "PadPressurePlate3";
+	public static final String PadPressurePlate4 = "PadPressurePlate4";
+	public static final String Switch = "Switch";
+	public static final String Switch2 = "Switch2";
+	public static final String Switch3 = "Switch3";
+	public static final String RuinsTriangle = "RuinsTriangle";
+	public static final String RuinsTriangle2 = "RuinsTriangle2";
+	public static final String RuinsCircle = "RuinsCircle";
+	public static final String RuinsCircle2 = "RuinsCircle2";
+	public static final String RuinsCircle3 = "RuinsCircle3";
+	public static final String RuinsHalfCircle = "RuinsHalfCircle";
+	public static final String RuinsInvertedCircle = "RuinsInvertedCircle";
+	public static final String Bridge = "Bridge";
+	public static final String BridgeDouble = "BridgeDouble";
+	public static final String BridgeHalf = "BridgeHalf";
+	public static final String RuinsBridge = "RuinsBridge";
+	
+
+	
+
+
+	
 }

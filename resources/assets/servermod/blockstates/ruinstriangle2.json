@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_triangle2",
+     "down": "servermod:blocks/adventure/ruins_triangle2",
+      "north": "servermod:blocks/adventure/ruins_triangle2",
+      "south": "servermod:blocks/adventure/ruins_triangle2",
+      "west": "servermod:blocks/adventure/ruins_triangle2",
+      "east": "servermod:blocks/adventure/ruins_triangle2"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "purple_wool" },
+        "facing=south": { "model": "purple_wool", "y": 180 },
+        "facing=west":  { "model": "purple_wool", "y": 270 },
+        "facing=east":  { "model": "purple_wool", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

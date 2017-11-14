@@ -1,0 +1,39 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "spike_pressureplate": "servermod:blocks/adventure/spike_pressureplate"
+    },
+    "elements": [
+        {
+            "from": [0,0,0],
+            "to": [16,1,16],
+            "faces": {
+                "up": {
+                    "uv": [0,0,8.000006,7.999999],
+                     "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                     "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [8,15.6,16,16],
+                     "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [8,15.6,16,16],
+                     "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [8.4,15.6,16,16],
+                     "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [8,15.6,16,16],
+                     "texture": "#spike_pressureplate"
+                }
+            }
+        }
+    ]
+}

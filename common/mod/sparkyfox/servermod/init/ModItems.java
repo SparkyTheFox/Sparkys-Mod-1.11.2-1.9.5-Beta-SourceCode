@@ -1,6 +1,7 @@
 package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
+//import mod.sparkyfox.servermod.Sounds;
 import mod.sparkyfox.servermod.item.ItemColdTechite;
 import mod.sparkyfox.servermod.item.ItemCommieFabric;
 import mod.sparkyfox.servermod.item.ItemCompressedTechite;
@@ -10,7 +11,6 @@ import mod.sparkyfox.servermod.item.ItemHotTechite;
 import mod.sparkyfox.servermod.item.ItemKerbalFabric;
 import mod.sparkyfox.servermod.item.ItemKevlar;
 import mod.sparkyfox.servermod.item.ItemLegacyPermit;
-import mod.sparkyfox.servermod.item.ItemModRecord;
 import mod.sparkyfox.servermod.item.ItemNasaFabric;
 import mod.sparkyfox.servermod.item.ItemPremiumPermit;
 import mod.sparkyfox.servermod.item.ItemRecipeBook;
@@ -90,16 +90,13 @@ import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -199,7 +196,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemColdTechite ColdTechite;
 	public static ItemCompressedTechite CompressedTechite;
 	public static ItemFakeDiamond FakeDiamond;
-	public static ItemModRecord ModRecord_1;
+	//public static ItemModRecord ModRecord_2;
 
 	//public static ItemTitaniumShield TitaniumShield;
 	
@@ -879,9 +876,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		FakeDiamond.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.FakeDiamond)); 
 		GameRegistry.register(FakeDiamond);
 		
-		ModRecord_1 = (ItemModRecord) new ItemModRecord("dog", ModSoundEvents.mus_battle2);
-		ModRecord_1.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.CD_1)); 
-		GameRegistry.register(ModRecord_1);
+		//ModRecord_1 = (ItemModRecord) new ItemModRecord("mus_ruins", ModSoundEvents.mus_ruins);
+		//ModRecord_1.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.CD_1)); 
+		//GameRegistry.register(ModRecord_1);
+		
 		  //registerItem(2257, "record_cat", (new ItemRecord("cat", SoundEvents.RECORD_CAT)).setUnlocalizedName("record"));
 		
 		

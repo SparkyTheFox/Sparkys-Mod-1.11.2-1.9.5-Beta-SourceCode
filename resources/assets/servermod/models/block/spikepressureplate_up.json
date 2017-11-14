@@ -1,0 +1,279 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "spike_pressureplate": "servermod:blocks/adventure/spike_pressureplate"
+    },
+    "elements": [
+        {
+            "from": [0,0,0],
+            "to": [16,1,16],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [8.4,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [2,1,4],
+            "to": [6,7,4],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [4,1,2],
+            "to": [4,7,6],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [12,1,10],
+            "to": [12,7,14],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [10,1,12],
+            "to": [14,7,12],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [2,1,12],
+            "to": [6,7,12],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [4,1,10],
+            "to": [4,7,14],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [10,1,4],
+            "to": [14,7,4],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [8,15.6,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        },
+        {
+            "from": [12,1,2],
+            "to": [12,7,6],
+            "faces": {
+                "up": {
+                    "uv": [8,8,16,16],
+                    "texture": "#spike_pressureplate"
+                },
+                "down": {
+                    "uv": [0.4,2,0.8,3.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "west": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "east": {
+                    "uv": [4.4,12,7.2,15.2],
+                    "texture": "#spike_pressureplate"
+                },
+                "north": {
+                    "uv": [4.4,8.4,7.2,11.6],
+                    "texture": "#spike_pressureplate"
+                },
+                "south": {
+                    "uv": [0.8,8.4,3.6,11.6],
+                    "texture": "#spike_pressureplate"
+                }
+            }
+        }
+    ]
+}
