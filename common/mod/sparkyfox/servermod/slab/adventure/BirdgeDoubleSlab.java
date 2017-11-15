@@ -1,8 +1,8 @@
 package mod.sparkyfox.servermod.slab.adventure;
 
-public class CustomBlockHalfSlab extends CustomBlockSlab
+public class BirdgeDoubleSlab extends BridgeSlab
 {
-	public CustomBlockHalfSlab(String name, float hardness, float resistance)
+	public BirdgeDoubleSlab(String name, float hardness, float resistance) 
 	{
 		super(name, hardness, resistance);
 	}
@@ -10,7 +10,7 @@ public class CustomBlockHalfSlab extends CustomBlockSlab
 	@Override
 	public boolean isDouble() 
 	{
-		return false;
+		return true;
 	}
-
+	
 }

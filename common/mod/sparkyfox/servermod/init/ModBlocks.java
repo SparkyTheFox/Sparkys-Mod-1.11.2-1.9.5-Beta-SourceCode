@@ -13,9 +13,6 @@ import mod.sparkyfox.servermod.block.BlockRedButton2;
 import mod.sparkyfox.servermod.block.BlockSiliconBlock;
 import mod.sparkyfox.servermod.block.BlockTitaniumBlock;
 import mod.sparkyfox.servermod.block.BlockUraniumBlock;
-import mod.sparkyfox.servermod.block.adventure.BlockBridgeSlab;
-import mod.sparkyfox.servermod.block.adventure.BlockBridgeSlabDouble;
-import mod.sparkyfox.servermod.block.adventure.BlockBridgeSlabHalf;
 import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate;
 import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate2;
 import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate3;
@@ -161,9 +158,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockRuinsInvertedCircle RuinsInvertedCircle;
 	  public static BlockRuinsBridge RuinsBridge;
 	  
-	  	public static BlockBridgeSlab BridgeSlab;
-		public static BlockBridgeSlabHalf BridgeSlabHalf;
-		public static BlockBridgeSlabDouble BridgeSlabDouble;
 	
 		
 
@@ -575,12 +569,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GameRegistry.register(RuinsBridge);
 		  GameRegistry.register(new ItemBlock(RuinsBridge), Bridge);
 		  
-
-		  ResourceLocation BridgeSlab = new ResourceLocation(ServerMod.MOD_ID, ModNames.Bridge);
-		  BridgeSlabHalf = new BlockBridgeSlabHalf("BridgeSlabHalf");
-		  BridgeSlabDouble = new BlockBridgeSlabDouble("BridgeSlabDouble");
-		  GameRegistry.register(new ItemSlab(BridgeSlabHalf, BridgeSlabHalf, BridgeSlabDouble), BridgeSlab);
-		  GameRegistry.register(BridgeSlabDouble); //Doesn't need an item
 		  
 		  
 		
@@ -1002,13 +990,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			    ModelLoader.registerItemVariants(itemRuinsBridge, modelRuinsBridge);
 			    mesher.register(itemRuinsBridge, 0, modelRuinsBridge);{
 	  			}
-			    
-				//Blocks: RBridge
-			    Item itemBridgeSlab = Item.getItemFromBlock(BridgeSlab);
-			    ModelResourceLocation modelBridgeSlab = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BridgeHalf, "inventory");
-			    ModelLoader.registerItemVariants(itemBridgeSlab, modelBridgeSlab);
-			    mesher.register(itemBridgeSlab, 0, modelBridgeSlab);{
-	  			}
+
 
 			    
 			    

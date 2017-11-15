@@ -1,14 +1,6 @@
 {
-  "forge_marker":1,
-  "defaults":{
-    "transform":"forge:default-block",
-    "model":"cube_all",
-    "textures":{
-      "all": "servermod:blocks/brass_ore"
+    "variants": {
+        "half=top": { "model": "servermod:bridge" },
+        "half=bottom": { "model": "servermod:bridge" }
     }
-  },
-  "variants":{
-    "inventory":[{}],
-    "normal":[{}]
-  }
 }
