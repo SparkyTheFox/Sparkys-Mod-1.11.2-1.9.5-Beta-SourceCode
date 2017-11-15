@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "servermod:tutorial_slab_bottom" },
+        "half=top": { "model": "servermod:tutorial_slab_top" }
+    }
+}

@@ -6,6 +6,7 @@ import mod.sparkyfox.servermod.entity.EntityAK4URounds;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
+import mod.sparkyfox.servermod.init.ModSlabs;
 import mod.sparkyfox.servermod.render.RenderAK4URounds;
 //import mod.sparkyfox.servermod.render.RenderFlowey;
 //import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
@@ -115,7 +116,8 @@ public class ClientProxy extends CommonProxy {
 		ItemModelMesher mesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
 		ModItems.initClient(mesher);
 		ModBlocks.initClient(mesher);
-		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);  //Register the ore generator
+		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);  //Register the ore generatorY
+		RegistryHandler.Client();
 	}
 	
 	@Override
