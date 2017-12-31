@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "servermod:blocks/adventure/ruins_bridge3",
+        "top": "servermod:blocks/adventure/ruins_bridge3",
+        "side": "servermod:blocks/adventure/ruins_bridge3"
+    }
+}

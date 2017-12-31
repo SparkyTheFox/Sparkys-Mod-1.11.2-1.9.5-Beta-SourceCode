@@ -20,7 +20,10 @@ public abstract class BridgeSlab extends BlockSlab //NEEDS to be abstract (for s
 		setRegistryName(name);
 		setHardness(hardness);//i think this is the  2.5F, 4.5F vaules-float-paramters are in ModSlabs
 		setResistance(resistance);//i think this is the  2.5F, 4.5F vaules-float-paramters are in ModSlabs
-		//still need to do a modnames or just go with servermod.tile.name= in en_US.lang		
+		//still need to do a modnames or just go with servermod.tile.name= in en_US.lang	
+        this.setBlockUnbreakable();
+        this.disableStats();
+        this.setCreativeTab(null);
 		
 		IBlockState state = this.blockState.getBaseState();
 		
@@ -88,6 +91,7 @@ public abstract class BridgeSlab extends BlockSlab //NEEDS to be abstract (for s
 	protected BlockStateContainer createBlockState() 
 	{
 		return new BlockStateContainer(this, new IProperty[] {HALF});
+		
 	}
 }
 

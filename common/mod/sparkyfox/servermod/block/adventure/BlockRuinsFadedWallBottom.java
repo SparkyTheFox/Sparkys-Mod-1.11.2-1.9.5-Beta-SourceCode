@@ -25,7 +25,7 @@ public class BlockRuinsFadedWallBottom extends Block {
 		this.setSoundType(SoundType.STONE);   			  	  // Sound type effects placing, breaking, and step sounds.														   	   //
 		this.disableStats();  			 	                 // This method can be used to set a specific tool type and harvest level. Remove if you don't need any restrictions. //
 															//===================================================================================================================// 
-
+		this.setCreativeTab(null);	
 	}
     
     

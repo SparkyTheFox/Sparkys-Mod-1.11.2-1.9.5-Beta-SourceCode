@@ -1,0 +1,27 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+		"cross": "servermod:blocks/adventure/webbig",
+        "particle": "blocks/glass_green"
+    },
+    "elements": [
+        {   "from": [ -16, 0, 0 ],
+            "to": [ 16, 32, 0 ],
+            "rotation": { "origin": [ 0, 16, 0 ], "axis": "y", "angle": 45, "rescale": true },
+            "shade": false,
+            "faces": {
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" }
+            }
+        },
+        {   "from": [ 0, 0, -16 ],
+            "to": [ 0, 32, 16 ],
+            "rotation": { "origin": [ 0, 16, 0 ], "axis": "y", "angle": 45, "rescale": true },
+            "shade": false,
+            "faces": {
+                "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" },
+                "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#cross" }
+            }
+        }
+    ]
+}

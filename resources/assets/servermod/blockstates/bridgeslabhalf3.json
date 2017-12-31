@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "servermod:bridgeslabbottom3" },
+        "half=top": { "model": "servermod:bridgeslabtop3" }
+    }
+}

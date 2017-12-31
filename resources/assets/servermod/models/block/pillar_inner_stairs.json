@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "servermod:blocks/adventure/white2",
+        "top": "servermod:blocks/adventure/white2",
+        "side": "servermod:blocks/adventure/white2"
+    }
+}

@@ -23,6 +23,7 @@ import mod.sparkyfox.servermod.item.armor.ItemDiamondTechSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemEmeraldArmor;
 import mod.sparkyfox.servermod.item.armor.ItemEmeraldTechSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemFESpaceSuit;
+import mod.sparkyfox.servermod.item.armor.ItemFadedRibbon;
 import mod.sparkyfox.servermod.item.armor.ItemKerbalSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemLapisArmor;
 import mod.sparkyfox.servermod.item.armor.ItemLapisArmorHeavy;
@@ -59,8 +60,10 @@ import mod.sparkyfox.servermod.item.ingots.ItemUraniumIngot;
 import mod.sparkyfox.servermod.item.knifes.ItemDiamondKnife;
 import mod.sparkyfox.servermod.item.knifes.ItemGoldKnife;
 import mod.sparkyfox.servermod.item.knifes.ItemIronKnife;
+import mod.sparkyfox.servermod.item.knifes.ItemStick;
 import mod.sparkyfox.servermod.item.knifes.ItemStoneKnife;
 import mod.sparkyfox.servermod.item.knifes.ItemToyKnife;
+import mod.sparkyfox.servermod.item.knifes.ItemToyKnife2;
 import mod.sparkyfox.servermod.item.knifes.ItemWoodenKnife;
 import mod.sparkyfox.servermod.item.swords.ItemDiamondMesser;
 import mod.sparkyfox.servermod.item.swords.ItemEmeraldSword;
@@ -196,6 +199,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemColdTechite ColdTechite;
 	public static ItemCompressedTechite CompressedTechite;
 	public static ItemFakeDiamond FakeDiamond;
+	public static ItemToyKnife2 ToyKnife2;
+	public static ItemStick Stick;
 	//public static ItemModRecord ModRecord_2;
 
 	//public static ItemTitaniumShield TitaniumShield;
@@ -293,6 +298,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemArmor RedstoneTechSpaceLeggings;
 	public static ItemArmor RedstoneTechSpaceBoots;
 	
+	public static ArmorMaterial Undertale;
+	public static ItemArmor FadedRibbon;
 	
 //===============================================================================================================================================================================================\\	
     public static void init() {																			//Initialisation\\
@@ -370,6 +377,16 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		LapisSword = (ItemLapisSword) new ItemLapisSword(EnumHelper.addToolMaterial("LapisSword", 0, 800, 0.0F, 8.0F, 16), -2.4F);
 		LapisSword.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.LapisSword)); 
 		GameRegistry.register(LapisSword);
+		
+		ToyKnife2 = (ItemToyKnife2) new ItemToyKnife2(EnumHelper.addToolMaterial("ToyKnife2", 0, 9000, 0.0F, 1.0F, 30), 1.0F);
+		ToyKnife2.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.ToyKnife2)); 
+		GameRegistry.register(ToyKnife2); 
+		
+		Stick = (ItemStick) new ItemStick(EnumHelper.addToolMaterial("Stick", 0, 9000, 0.0F, 1.0F, 30), 1.0F);
+		Stick.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Stick)); 
+		GameRegistry.register(Stick); 
+		
+		//addToolMaterial("Scarlet((NAME))", 0, 2000((AMMOUNT OF USSES)), 0.0F, 9.0F((Attack Damage= 1.0F= 1heart)), 30((ENCHANTMENT LEVEL))), -2.4F((ATTACK SPEED)));
 		
 			
 		
@@ -512,8 +529,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		DiamondTechSpacesuit = EnumHelper.addArmorMaterial("DiamondTechSpacesuit", "", 55, new int[] {5, 2, 8, 5}, 28, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
 		EmeraldTechSpacesuit = EnumHelper.addArmorMaterial("EmeraldTechSpacesuit", "", 60, new int[] {3, 2, 10, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
 		RedstoneTechSpacesuit = EnumHelper.addArmorMaterial("RedstoneTechSpacesuit", "", 25, new int[] {5, 5, 5, 5}, 33, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
+		Undertale = EnumHelper.addArmorMaterial("Undertale", "", 819, new int[]{0, 0, 0, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 		
-		
+		//272=2992
+		//273=3003
+		//Armor duribility is timesed by 11 
+		//e.g 11x819=9009 durability
 //===============================================================================================================================================================================================\\
 		
 		//ODST Armor
@@ -772,6 +793,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		RedstoneTechSpaceBoots.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.RedstoneTechSpaceBoots)); 
 		GameRegistry.register(RedstoneTechSpaceBoots);
 		
+		//ODST Armor
+		FadedRibbon = (ItemArmor) new ItemFadedRibbon(Undertale, EntityEquipmentSlot.HEAD).setUnlocalizedName("FadedRibbon");
+		FadedRibbon.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.FadedRibbon)); 
+		GameRegistry.register(FadedRibbon); 
 		
 //===============================================================================================================================================================================================\\
 			
@@ -948,6 +973,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  //===============================================================================================================================================================================================\\
 	
     	/**Armor*/
+    
     	//LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F),
     	//CHAIN("chainmail", 15, new int[]{1, 4, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0F),
     	//IRON("iron", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F),
@@ -1106,6 +1132,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		HotTechite.addRecipes();
 		ColdTechite.addRecipes();
 		CompressedTechite.addRecipes();
+		Stick.addRecipes();
 		
 //===============================================================================================================================================================================================\\
 																												//Texture Registry\\
@@ -1423,6 +1450,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(RedstoneTechSpaceBoots, RedstoneTechspacesuit4);
 		mesher.register(RedstoneTechSpaceBoots, 0, RedstoneTechspacesuit4);
 		
+		ModelResourceLocation FadedRibbon1 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.FadedRibbon, "inventory");
+		ModelLoader.registerItemVariants(FadedRibbon, FadedRibbon1);
+		mesher.register(FadedRibbon, 0, FadedRibbon1);
+		
 //===============================================================================================================================================================================================\\
 																															//Messers\\
 		
@@ -1670,6 +1701,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation fakediamond = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.FakeDiamond, "inventory");
 		ModelLoader.registerItemVariants(FakeDiamond, fakediamond);
 		mesher.register(FakeDiamond, 0, fakediamond);
+		
+		ModelResourceLocation toyknife2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.ToyKnife2, "inventory");
+		ModelLoader.registerItemVariants(ToyKnife2, toyknife2);
+		mesher.register(ToyKnife2, 0, toyknife2);
+		
+		ModelResourceLocation stick = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Stick, "inventory");
+		ModelLoader.registerItemVariants(Stick, stick);
+		mesher.register(Stick, 0, stick);
 		
 //===============================================================================================================================================================================================\\
 	

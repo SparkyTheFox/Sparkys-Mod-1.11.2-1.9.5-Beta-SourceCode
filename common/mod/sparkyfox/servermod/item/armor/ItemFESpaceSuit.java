@@ -76,7 +76,7 @@ public class ItemFESpaceSuit extends ItemArmor {
 
 
 		        		public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		        		return repair.getItem() == Items.EMERALD;
+		        		return repair.getItem() == ModItems.CraftingHammer;
 		        		
 		        		}
 

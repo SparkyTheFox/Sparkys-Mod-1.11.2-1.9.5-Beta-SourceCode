@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_door_pillar_6",
+     "down": "servermod:blocks/adventure/ruins_door_pillar_6",
+      "north": "servermod:blocks/adventure/ruins_door_pillar_6",
+      "south": "servermod:blocks/adventure/ruins_door_pillar_6",
+      "west": "servermod:blocks/adventure/ruins_door_pillar_6",
+      "east": "servermod:blocks/adventure/ruins_door_pillar_6"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "coal_block" },
+        "facing=south": { "model": "coal_block", "y": 180 },
+        "facing=west":  { "model": "coal_block", "y": 270 },
+        "facing=east":  { "model": "coal_block", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

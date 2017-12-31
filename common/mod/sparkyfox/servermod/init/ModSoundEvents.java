@@ -15,6 +15,10 @@ public class ModSoundEvents {
 	public static SoundEvent alarm;
 	public static SoundEvent switch1;
 	public static SoundEvent switch2;
+	public static SoundEvent sfx_fall;
+	public static SoundEvent sfx_mousesqueek;
+	public static SoundEvent sfx_savepoint;
+	public static SoundEvent sfx_savesucces;
 	public static SoundEvent soulbattleflash;
 	public static SoundEvent nosound;
 	
@@ -64,6 +68,16 @@ public class ModSoundEvents {
 		switch1 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "switch1")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "switch1"));
 		switch2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "switch2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "switch2"));
 		soulbattleflash = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "soulbattleflash")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "soulbattleflash"));
+		
+//===============================================================================================================================================================================================\\
+																									//Sound Initialisation: UTS\\	
+
+			sfx_mousesqueek = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_mousesqueek")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_mousesqueek"));
+			sfx_savepoint = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_savepoint")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_savepoint"));
+			sfx_savesucces = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_savesucces")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_savesucces"));
+			sfx_fall = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_fall")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_fall"));
+
+
 
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: UTM\\
@@ -134,6 +148,10 @@ public class ModSoundEvents {
 		registerSound(switch1);
 		registerSound(switch2);
 		registerSound(soulbattleflash);
+		registerSound(sfx_fall);
+		registerSound(sfx_mousesqueek);
+		registerSound(sfx_savepoint);
+		registerSound(sfx_savesucces);
 		//registerSound(song_90s);
 		//registerSound(FloweyHowdy);
 		//registerSound(FloweyKOBK);

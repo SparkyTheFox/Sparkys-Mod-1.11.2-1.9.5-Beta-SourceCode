@@ -65,7 +65,97 @@ RuinsCircle2servermod:RuinsCircle2.name=!?(RuinsCircle2)
 RuinsCircle3servermod:RuinsCircle3.name=!?(RuinsCircle3)
 RuinsHalfCircleservermod:RuinsHalfCircle.name=!?(RuinsHalfCircle)
 RuinsInvertedCircleservermod:RuinsInvertedCircle.name=!?(RuinsInvertedCircle)
-RuinsBridgeservermod:RuinsBridge.name=!?(RuinsBridge)
+RuinsBrideservermod:RuinsBridge.name=!?(RuinsBridge)
+
+BlueButtonservermod:BlueButton.name=!?(Blue Button)
+GreenButtonservermod:GreenButton.name=!?(Green Button)
+RedButton3servermod:RedButton3.name=!?(Red Button)
+
+tile.bridgeslabhalf.name=!?(RuinsBridge)
+tile.bridgeslabhalf2.name=!?(RuinsBridge)
+tile.bridgeslabhalf3.name=!?(RuinsBridge)
+tile.bridgeslabhalf4.name=!?(RuinsBridge)
+
+RuinsFadedWallBottom2servermod:RuinsFadedWallBottom2.name=!?(Faded Wall Bottom2)
+RuinsPadservermod:RuinsPad.name=!?(RuinsPad)
+RuinsFadedWallBottomVentLeftservermod:RuinsFadedWallBottomVentLeft.name=!?(RuinsFadedWallBottomVentLeft)
+RuinsFadedWallBottomVentMiddleservermod:RuinsFadedWallBottomVentMiddle.name=!?(RuinsFadedWallBottomVentMiddle)
+RuinsFadedWallBottomVentRightservermod:RuinsFadedWallBottomVentRight.name=!?(RuinsFadedWallBottomVentRight)
+RuinsFadedWallTopVentLeftservermod:RuinsFadedWallTopVentLeft.name=!?(RuinsFadedWallTopVentLeft)
+RuinsFadedWallTopVentMiddleservermod:RuinsFadedWallTopVentMiddle.name=!?(RuinsFadedWallTopVentMiddle)
+RuinsFadedWallTopVentRightservermod:RuinsFadedWallTopVentRight.name=!?(RuinsFadedWallTopVentRight)
+RuinsStoneservermod:RuinsStone.name=!?(RuinsStone)
+RuinsWindowservermod:RuinsWindow.name=!?(RuinsWindow)
+RuinsWindowCornerservermod:RuinsWindowCorner.name=!?(RuinsWindowCorner)
+RuinsWallSignservermod:RuinsWallSign.name=!?(RuinsSign)
+RuinsWallSignLeftservermod:RuinsWallSignLeft.name=!?(RuinsSignLeft)
+RuinsWallSignRightservermod:RuinsWallSignRight.name=!?(RuinsSignRight)
+RuinsWallGapLeftservermod:RuinsWallGapLeft.name=!?(RuinsWallGapLeft)
+RuinsWallGapMiddleservermod:RuinsWallGapMiddle.name=!?(RuinsWallGapMiddle)
+RuinsWallGapRightservermod:RuinsWallGapRight.name=!?(RuinsWallGapRight)
+RuinsWallArrowsservermod:RuinsWallArrows.name=!?(RuinsWallArrows)
+RuinsWallTextservermod:RuinsWallText.name=!?(RuinsWallText)
+RuinsWallMouseHouseservermod:RuinsWallMouseHouse.name=!?(RuinsWallMouseHouse)
+YellowFlowersservermod:YellowFlowers.name=!?(YellowFlowers)
+RedFlowersservermod:RedFlowers.name=!?(RedFlowers)
+
+RuinsDoorPillar1servermod:RuinsDoorPillar1.name=!?(RuinsDoorPillar1)
+BlockRuinsDoorPillar2servermod:RuinsDoorPillar2.name=!?(RuinsDoorPillar2)
+BlockRuinsDoorPillar3servermod:RuinsDoorPillar3.name=!?(RuinsDoorPillar3)
+RuinsDoorPillar4servermod:RuinsDoorPillar4.name=!?(RuinsDoorPillar4)
+BlockRuinsDoorPillar5servermod:RuinsDoorPillar5.name=!?(RuinsDoorPillar5)
+BlockRuinsDoorPillar6servermod:RuinsDoorPillar6.name=!?(RuinsDoorPillar6)
+BlockRuinsDoorPillar7servermod:RuinsDoorPillar7.name=!?(RuinsDoorPillar7)
+
+DoorPillar1servermod:DoorPillar1.name=!?(DoorPillar1)
+DoorPillar2servermod:DoorPillar2.name=!?(DoorPillar2)
+DoorPillar3servermod:DoorPillar3.name=!?(DoorPillar3)
+DoorPillar4servermod:DoorPillar4.name=!?(DoorPillar4)
+DoorPillar5servermod:DoorPillar5.name=!?(DoorPillar5)
+DoorPillar6servermod:DoorPillar6.name=!?(DoorPillar6)
+DoorPillar7servermod:DoorPillar7.name=!?(DoorPillar7)
+RuinsPathItem1servermod:RuinsPathItem1.name=!?(RuinsPathItem1)
+RuinsPathItem2servermod:RuinsPathItem2.name=!?(RuinsPathItem2)
+RuinsPathFlowerSideservermod:RuinsPathFlowerSide.name=!?(RuinsPathFlowerSide)
+RuinsPathFlowerCornerservermod:RuinsPathFlowerCorner.name=!?(RuinsPathFlowerCorner)
+RuinsPathFlowerBottomservermod:RuinsPathFlowerBottom.name=!?(RuinsPathFlowerBottom)
+RuinsMossPurpleservermod:RuinsMossPurple.name=!?(RuinsMossPurple)
+RuinsMossPurple3servermod:RuinsMossPurple3.name=!?(RuinsMossPurple3)
+RuinsDoorTopRightservermod:RuinsDoorTopRight.name=!?(RuinsDoorTopRight)
+RuinsDoorTopMiddleRightservermod:RuinsDoorTopMiddleRight.name=!?(RuinsDoorTopMiddle)
+RuinsDoorTopBottomRightservermod:RuinsDoorTopBottomRight.name=!?(RuinsDoorTopBottom)
+RuinsDoorTopLeftservermod:RuinsDoorTopLeft.name=!?(RuinsDoorTopLeft)
+RuinsDoorBottomLeftservermod:RuinsDoorBottomLeft.name=!?(RuinsDoorBottomLeft)
+RuinsDoorBottomRightservermod:RuinsDoorBottomRight.name=!?(RuinsDoorBottomRight)
+RuinsDoorMiddleLeftservermod:RuinsDoorMiddleLeft.name=!?(RuinsDoorMiddleLeft)
+RuinsDoorMiddleRightservermod:RuinsDoorMiddleRight.name=!?(RuinsDoorMiddleRight)
+RuinsGreyservermod:RuinsGrey.name=!?(Ruins Grey)
+RuinsLightGreyservermod:RuinsLightGrey.name=!?(Ruins LightGrey)
+RuinsWhiteservermod:RuinsWhite.name=!?(Ruins White)
+RuinsStairsservermod:RuinsStairs.name=!?(Ruins Stairs)
+
+
+
+
+
+
+tile.pillar_bottom.name=!?(Pillar Bottom)
+tile.pillar_middle.name=!?((Pillar Middle)
+tile.hole.name=!?(Hole)
+tile.hole2.name=!?(Hole)
+tile.webbig.name=!?(Huge Web)
+tile.websmall.name=!?(Small Web)
+tile.dummy.name=!?(Dummy)
+tile.candy.name=!?(Bowl of Candy)
+tile.candyspill.name=!?(Spilled Candy)
+tile.savestar.name=!?(Save Star)
+tile.mtable.name=!?(Mouse Table)
+tile.tutorial_stairs.name=!?(Ruins Window Corner)
+tile.tutorial_stairs2.name=!?(Ruins Window Corner 2)
+tile.tutorial_stairs3.name=!?(Ruins Window Corner 3)
+tile.tutorial_stairs4.name=!?(Ruins Window Corner 4)
+tile.tutorial_block.name=!?(some random block to make stairs work)
+tile.windowmiddleslabhalf.name=!?(Ruins Window Slab)
 
 
 
@@ -200,6 +290,9 @@ Pizza6servermod:Pizza6.name=Pizza
 Pizza7servermod:Pizza7.name=Pizza
 Pizza8servermod:Pizza8.name=The lone survivor Pizza
 FakeDiamondservermod:FakeDiamond.name=Diamond
+ToyKnife2servermod:ToyKnife2.name=Toy Knife 
+Stickservermod:Stick.name=Stick
+item.FadedRibbon.name=Faded Ribbon
 
 #################
 #    Liquids    #

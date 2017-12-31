@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_light_grey",
+     "down": "servermod:blocks/adventure/ruins_light_grey",
+      "north": "servermod:blocks/adventure/ruins_light_grey",
+      "south": "servermod:blocks/adventure/ruins_light_grey",
+      "west": "servermod:blocks/adventure/ruins_light_grey",
+      "east": "servermod:blocks/adventure/ruins_light_grey"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "silver_wool" },
+        "facing=south": { "model": "silver_wool", "y": 180 },
+        "facing=west":  { "model": "silver_wool", "y": 270 },
+        "facing=east":  { "model": "silver_wool", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

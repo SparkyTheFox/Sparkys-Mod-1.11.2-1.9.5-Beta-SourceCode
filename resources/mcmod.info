@@ -3,7 +3,7 @@
   "modid": "servermod",
   "name": "Sparky's Mod",
   "description": "We don't need no mods!, we make them ourselves!",
-  "version": "1.9.4",
+  "version": "1.9.5",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",

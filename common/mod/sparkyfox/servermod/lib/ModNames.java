@@ -151,7 +151,7 @@ public class ModNames {
 	public static final String Pizza7 = "Pizza7";
 	public static final String Pizza8 = "Pizza8";
 	public static final String mus_ruins = "mus_ruins";
-	
+	public static final String ToyKnife2 = "ToyKnife2";
 	
 	
 	
@@ -206,6 +206,7 @@ public class ModNames {
 	public static final String RuinsFadedWall = "RuinsFadedWall";
 	public static final String RuinsFadedWallTop = "RuinsFadedWallTop";
 	public static final String RuinsFadedWallBottom = "RuinsFadedWallBottom";
+	public static final String RuinsFadedWallBottom2 = "RuinsFadedWallBottom2";
     public static final String RuinsFadedWallCracked = "RuinsFadedWallCracked";
 	public static final String RuinsPurple = "RuinsPurple";
 	public static final String RuinsPurple2 = "RuinsPurple2";
@@ -233,10 +234,66 @@ public class ModNames {
 	public static final String BridgeDouble = "BridgeDouble";
 	public static final String BridgeHalf = "BridgeHalf";
 	public static final String RuinsBridge = "RuinsBridge";
-	
+	public static final String RuinsWallSignLeft = "RuinsWallSignLeft";
+	public static final String RuinsWallSign = "RuinsWallSign";
+	public static final String RuinsWindow = "RuinsWindow";
+	public static final String RuinsWindowCorner = "RuinsWindowCorner";
+	public static final String RuinsStone = "RuinsStone";
+	public static final String RuinsFadedWallBottomVentMiddle = "RuinsFadedWallBottomVentMiddle";
+	public static final String RuinsWallGapMiddle = "RuinsWallGapMiddle";
+	public static final String RuinsWallSignRight = "RuinsWallSignRight";
+	public static final String RuinsWallGapRight = "RuinsWallGapRight";
+	public static final String RuinsFadedWallBottomVentLeft = "RuinsFadedWallBottomVentLeft";
+	public static final String RuinsFadedWallBottomVentRight = "RuinsFadedWallBottomVentRight";
+	public static final String RuinsWallGapLeft = "RuinsWallGapLeft";
+	public static final String RuinsPad = "RuinsPad";
+	public static final String YellowFlowers = "YellowFlowers";
+	public static final String DoorPillar1 = "DoorPillar1";
+	public static final String DoorPillar2 = "DoorPillar2";
+	public static final String DoorPillar3 = "DoorPillar3";
+	public static final String DoorPillar4 = "DoorPillar4";
+	public static final String DoorPillar5 = "DoorPillar5";
+	public static final String DoorPillar6 = "DoorPillar6";
+	public static final String DoorPillar7 = "DoorPillar7";
+	public static final String RuinsDoorPillar1 = "RuinsDoorPillar1";
+	public static final String RuinsDoorPillar2 = "RuinsDoorPillar2";
+	public static final String RuinsDoorPillar3 = "RuinsDoorPillar3";
+	public static final String RuinsDoorPillar4 = "RuinsDoorPillar4";
+	public static final String RuinsDoorPillar5 = "RuinsDoorPillar5";
+	public static final String RuinsDoorPillar6 = "RuinsDoorPillar6";
+	public static final String RuinsDoorPillar7 = "RuinsDoorPillar7";
+	public static final String RuinsWallArrows = "RuinsWallArrows";
+	public static final String RuinsWallText = "RuinsWallText";
+	public static final String RuinsWallMouseHouse = "RuinsWallMouseHouse";
+	public static final String RedFlowers = "RedFlowers";
+	public static final String RuinsFadedWallTopVentLeft = "RuinsFadedWallTopVentLeft";
+	public static final String RuinsFadedWallTopVentMiddle = "RuinsFadedWallTopVentMiddle";
+	public static final String RuinsFadedWallTopVentRight = "RuinsFadedWallTopVentRight";
+	public static final String RuinsPathItem1 = "RuinsPathItem1";
+	public static final String RuinsPathItem2 = "RuinsPathItem2";
+	public static final String RuinsMossPurple3 = "RuinsMossPurple3";
+	public static final String RuinsMossPurple = "RuinsMossPurple";
+	public static final String RuinsPathFlowerBottom = "RuinsPathFlowerBottom";
+	public static final String RuinsPathFlowerCorner = "RuinsPathFlowerCorner";
+	public static final String RuinsPathFlowerSide = "RuinsPathFlowerSide";
+	public static final String RuinsStairs = "RuinsStairs";
+	public static final String RuinsGrey = "RuinsGrey";
+	public static final String RuinsLightGrey = "RuinsLightGrey";
+	public static final String RuinsWhite = "RuinsWhite";
+	public static final String RuinsDoorBottomRight = "RuinsDoorBottomRight";
+	public static final String RuinsDoorMiddleRight = "RuinsDoorMiddleRight";
+	public static final String RuinsDoorTopRight = "RuinsDoorTopRight";
+	public static final String RuinsDoorBottomLeft = "RuinsDoorBottomLeft";
+	public static final String RuinsDoorMiddleLeft = "RuinsDoorMiddleLeft";
+	public static final String RuinsDoorTopLeft = "RuinsDoorTopLeft";
+	public static final String FadedRibbon = "FadedRibbon";
+	public static final String RedButton3 = "RedButton3";
+	public static final String BlueButton = "BlueButton";
+	public static final String GreenButton = "GreenButton";
+	public static final String Stick = "Stick";
+
 
 	
-
 
 	
 }

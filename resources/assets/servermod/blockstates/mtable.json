@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": { "model": "servermod:mtable" },
+		"facing=north": { "model": "servermod:mtable" },
+        "facing=south": { "model": "servermod:mtable", "y": 180 },
+        "facing=west":  { "model": "servermod:mtable", "y": 270 },
+        "facing=east":  { "model": "servermod:mtable", "y": 90 }
+		
+    }
+}

@@ -33,7 +33,7 @@
         "subtitle": "DOOM BUTTON ACTIVATED!"
     },
     
-            "switch1": {
+        "switch1": {
         "category": "master",
         "sounds": [
        {"name":"servermod:switch1", "stream": true}
@@ -59,6 +59,44 @@
         ],
         "subtitle": "Secret Soul Flash"
     },
+    
+    
+        "sfx_fall": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:sfx_fall", "stream": true}
+            
+        ],
+        "subtitle": "Human Fall"
+    },
+
+        "sfx_mousesqueek": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:sfx_mousesqueek", "stream": true}
+            
+        ],
+        "subtitle": "Mouse Squeaks"
+    },
+
+        "sfx_savepoint": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:sfx_savepoint", "stream": true}
+            
+        ],
+        "subtitle": "Saving..."
+    },
+   
+        "sfx_savesucces": {
+        "category": "master",
+        "sounds": [
+        {"name":"servermod:sfx_savesucces", "stream": true}
+        ],
+           
+        "subtitle": "Save Successful" 
+    },   
+    
 
         "mus_ruins": {
         "category": "record",

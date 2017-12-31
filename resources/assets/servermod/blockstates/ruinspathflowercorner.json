@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_path_flower_corner",
+     "down": "servermod:blocks/adventure/ruins_path_flower_corner",
+      "north": "servermod:blocks/adventure/ruins_path_flower_corner",
+      "south": "servermod:blocks/adventure/ruins_path_flower_corner",
+      "west": "servermod:blocks/adventure/ruins_path_flower_corner",
+      "east": "servermod:blocks/adventure/ruins_path_flower_corner"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "purple_wool" },
+        "facing=south": { "model": "purple_wool", "y": 180 },
+        "facing=west":  { "model": "purple_wool", "y": 270 },
+        "facing=east":  { "model": "purple_wool", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

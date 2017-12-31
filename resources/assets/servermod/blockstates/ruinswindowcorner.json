@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_window_corner",
+     "down": "servermod:blocks/adventure/ruins_window_corner",
+      "north": "servermod:blocks/adventure/ruins_window_corner",
+      "south": "servermod:blocks/adventure/ruins_window_corner",
+      "west": "servermod:blocks/adventure/ruins_window_corner",
+      "east": "servermod:blocks/adventure/ruins_window_corner"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "purple_wool" },
+        "facing=south": { "model": "purple_wool", "y": 180 },
+        "facing=west":  { "model": "purple_wool", "y": 270 },
+        "facing=east":  { "model": "purple_wool", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

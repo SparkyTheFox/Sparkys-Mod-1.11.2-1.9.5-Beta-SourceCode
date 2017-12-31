@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/door_pillar_5",
+     "down": "servermod:blocks/adventure/door_pillar_5",
+      "north": "servermod:blocks/adventure/door_pillar_5",
+      "south": "servermod:blocks/adventure/door_pillar_5",
+      "west": "servermod:blocks/adventure/door_pillar_5",
+      "east": "servermod:blocks/adventure/door_pillar_5"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "coal_block" },
+        "facing=south": { "model": "coal_block", "y": 180 },
+        "facing=west":  { "model": "coal_block", "y": 270 },
+        "facing=east":  { "model": "coal_block", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

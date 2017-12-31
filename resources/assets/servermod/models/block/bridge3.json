@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "servermod:blocks/adventure/ruins_bridge3"
+    }
+}

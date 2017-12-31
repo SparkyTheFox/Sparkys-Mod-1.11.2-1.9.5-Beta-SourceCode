@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/yellow_flowers",
+     "down": "servermod:blocks/adventure/yellow_flowers",
+      "north": "servermod:blocks/adventure/yellow_flowers",
+      "south": "servermod:blocks/adventure/yellow_flowers",
+      "west": "servermod:blocks/adventure/yellow_flowers",
+      "east": "servermod:blocks/adventure/yellow_flowers"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "yellow_wool" },
+        "facing=south": { "model": "yellow_wool", "y": 180 },
+        "facing=west":  { "model": "yellow_wool", "y": 270 },
+        "facing=east":  { "model": "yellow_wool", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

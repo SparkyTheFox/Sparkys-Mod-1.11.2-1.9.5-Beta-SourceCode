@@ -1,7 +1,8 @@
 package mod.sparkyfox.servermod;
 
+import mod.sparkyfox.servermod.init.ModProps;
 import mod.sparkyfox.servermod.init.ModSlabs;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import mod.sparkyfox.servermod.init.ModStairs;
 
 public class RegistryHandler 
 {
@@ -18,6 +19,14 @@ public class RegistryHandler
 		
 		ModSlabs.init();
 		ModSlabs.register();
+
+		
+		ModStairs.init();
+		ModStairs.register();
+		
+		ModProps.init();
+		ModProps.register();
+		
 		
 		//ToolInit.init();
 		//ToolInit.register();

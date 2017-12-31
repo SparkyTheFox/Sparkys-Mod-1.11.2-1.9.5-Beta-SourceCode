@@ -13,39 +13,92 @@ import mod.sparkyfox.servermod.block.BlockRedButton2;
 import mod.sparkyfox.servermod.block.BlockSiliconBlock;
 import mod.sparkyfox.servermod.block.BlockTitaniumBlock;
 import mod.sparkyfox.servermod.block.BlockUraniumBlock;
+import mod.sparkyfox.servermod.block.adventure.BlockDoorPillar1;
+import mod.sparkyfox.servermod.block.adventure.BlockDoorPillar2;
+import mod.sparkyfox.servermod.block.adventure.BlockDoorPillar3;
+import mod.sparkyfox.servermod.block.adventure.BlockDoorPillar4;
+import mod.sparkyfox.servermod.block.adventure.BlockDoorPillar5;
+import mod.sparkyfox.servermod.block.adventure.BlockDoorPillar6;
+import mod.sparkyfox.servermod.block.adventure.BlockDoorPillar7;
 import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate;
 import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate2;
 import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate3;
 import mod.sparkyfox.servermod.block.adventure.BlockPadPressurePlate4;
+import mod.sparkyfox.servermod.block.adventure.BlockRedFlowers;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsBlack;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsBridge;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsCircle;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsCircle2;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsCircle3;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsCrackedBlock;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorBottomLeft;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorBottomRight;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorMiddleLeft;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorMiddleRight;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorPillar1;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorPillar2;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorPillar3;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorPillar4;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorPillar5;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorPillar6;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorPillar7;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorTopLeft;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoorTopRight;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWall;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallBottom;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallBottom2;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallBottomVentLeft;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallBottomVentMiddle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallBottomVentRight;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallCracked;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallTop;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallTopVentLeft;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallTopVentMiddle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsFadedWallTopVentRight;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsGrey;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsHalfCircle;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsInvertedCircle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsLightGrey;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsMossPurple;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsMossPurple3;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPad;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPathFlowerBottom;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPathFlowerCorner;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPathFlowerSide;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPathItem1;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsPathItem2;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple2;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple3;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsPurple4;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsStairs;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsStone;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsTriangle;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsTriangle2;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsWall;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallArrows;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallBottom;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallCracked;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallCracked2;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallCracked3;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallGapLeft;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallGapMiddle;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallGapRight;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallMouseHouse;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallSign;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallSignLeft;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallSignRight;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallText;
 import mod.sparkyfox.servermod.block.adventure.BlockRuinsWallTop;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWhite;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWindow;
+import mod.sparkyfox.servermod.block.adventure.BlockRuinsWindowCorner;
 import mod.sparkyfox.servermod.block.adventure.BlockSpikePressurePlate;
 import mod.sparkyfox.servermod.block.adventure.BlockSpikePressurePlate2;
 import mod.sparkyfox.servermod.block.adventure.BlockSwitch;
 import mod.sparkyfox.servermod.block.adventure.BlockSwitch2;
 import mod.sparkyfox.servermod.block.adventure.BlockSwitch3;
+import mod.sparkyfox.servermod.block.adventure.BlockYellowFlowers;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierButton;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierPDiorite;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierPressurePlate;
@@ -66,13 +119,15 @@ import mod.sparkyfox.servermod.block.ores.BlockUraniumOre;
 //import mod.sparkyfox.servermod.fluid.FluidTitaniumBlock;
 import mod.sparkyfox.servermod.industrialFreezer.TileEntityIndustrialFreezer;
 import mod.sparkyfox.servermod.lib.ModNames;
+import mod.sparkyfox.servermod.props.adventure.PropBlueButton;
+import mod.sparkyfox.servermod.props.adventure.PropGreenButton;
+import mod.sparkyfox.servermod.props.adventure.PropRedButton3;
 import net.minecraft.block.BlockPressurePlate.Sensitivity;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemSlab;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -133,6 +188,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockRuinsFadedWall RuinsFadedWall;
 	  public static BlockRuinsFadedWallTop RuinsFadedWallTop;
 	  public static BlockRuinsFadedWallBottom RuinsFadedWallBottom;
+	  public static BlockRuinsFadedWallBottom2 RuinsFadedWallBottom2;
 	  public static BlockRuinsFadedWallCracked RuinsFadedWallCracked;
 	  public static BlockRuinsPurple RuinsPurple;
 	  public static BlockRuinsPurple2 RuinsPurple2;
@@ -157,9 +213,68 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockRuinsHalfCircle RuinsHalfCircle ;
 	  public static BlockRuinsInvertedCircle RuinsInvertedCircle;
 	  public static BlockRuinsBridge RuinsBridge;
+	  public static BlockRuinsPad RuinsPad;
+	  public static BlockRuinsFadedWallBottomVentLeft RuinsFadedWallBottomVentLeft;
+	  public static BlockRuinsFadedWallBottomVentMiddle RuinsFadedWallBottomVentMiddle;
+	  public static BlockRuinsFadedWallBottomVentRight RuinsFadedWallBottomVentRight;
+	  public static BlockRuinsStone RuinsStone;
+	  public static BlockRuinsWindow RuinsWindow;
+	  public static BlockRuinsWindowCorner RuinsWindowCorner;
+	  public static BlockRuinsWallSign RuinsWallSign;
+	  public static BlockRuinsWallSignLeft RuinsWallSignLeft;
+	  public static BlockRuinsWallSignRight RuinsWallSignRight;
+	  public static BlockRuinsWallGapRight RuinsWallGapRight;
+	  public static BlockRuinsWallGapMiddle RuinsWallGapMiddle;
+	  public static BlockRuinsWallGapLeft RuinsWallGapLeft;
+	  public static BlockRuinsWallArrows RuinsWallArrows;
+	  public static BlockRuinsWallText RuinsWallText;
+	  public static BlockRuinsWallMouseHouse RuinsWallMouseHouse;
+	  public static BlockYellowFlowers YellowFlowers;
+	  public static BlockRedFlowers RedFlowers;
+	  public static BlockRuinsFadedWallTopVentLeft RuinsFadedWallTopVentLeft;
+	  public static BlockRuinsFadedWallTopVentMiddle RuinsFadedWallTopVentMiddle;
+	  public static BlockRuinsFadedWallTopVentRight RuinsFadedWallTopVentRight;
+	  public static BlockRuinsDoorPillar1 RuinsDoorPillar1;
+	  public static BlockRuinsDoorPillar2 RuinsDoorPillar2;
+	  public static BlockRuinsDoorPillar3 RuinsDoorPillar3;
+	  public static BlockRuinsDoorPillar4 RuinsDoorPillar4;
+	  public static BlockRuinsDoorPillar5 RuinsDoorPillar5;
+	  public static BlockRuinsDoorPillar6 RuinsDoorPillar6;
+	  public static BlockRuinsDoorPillar7 RuinsDoorPillar7;
+	  public static BlockDoorPillar1 DoorPillar1;
+	  public static BlockDoorPillar2 DoorPillar2;
+	  public static BlockDoorPillar3 DoorPillar3;
+	  public static BlockDoorPillar4 DoorPillar4;
+	  public static BlockDoorPillar5 DoorPillar5;
+	  public static BlockDoorPillar6 DoorPillar6;
+	  public static BlockDoorPillar7 DoorPillar7;
+	  public static BlockRuinsPathItem1 RuinsPathItem1;
+	  public static BlockRuinsPathItem2 RuinsPathItem2;
+	  public static BlockRuinsPathFlowerSide RuinsPathFlowerSide;
+	  public static BlockRuinsPathFlowerCorner RuinsPathFlowerCorner;
+	  public static BlockRuinsPathFlowerBottom RuinsPathFlowerBottom;
+	  public static BlockRuinsMossPurple RuinsMossPurple;
+	  public static BlockRuinsMossPurple3 RuinsMossPurple3;
 	  
-	
-		
+	  public static BlockRuinsDoorTopLeft  RuinsDoorTopLeft;
+	  public static BlockRuinsDoorMiddleLeft RuinsDoorMiddleLeft;
+	  public static BlockRuinsDoorBottomLeft  RuinsDoorBottomLeft;
+	  public static BlockRuinsDoorTopRight RuinsDoorTopRight;
+	  public static BlockRuinsDoorMiddleRight  RuinsDoorMiddleRight;
+	  public static BlockRuinsDoorBottomRight  RuinsDoorBottomRight;
+	  public static BlockRuinsWhite RuinsWhite;
+	  public static BlockRuinsLightGrey RuinsLightGrey;
+	  public static BlockRuinsGrey RuinsGrey;
+	  public static BlockRuinsStairs RuinsStairs;
+	  
+	  public static PropRedButton3 RedButton3;
+	  public static PropBlueButton BlueButton;
+	  public static PropGreenButton GreenButton;
+	  
+	  
+
+
+
 
 	  
 	  
@@ -425,6 +540,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GameRegistry.register(RuinsFadedWallBottom);
 		  GameRegistry.register(new ItemBlock(RuinsFadedWallBottom), FadedWallBottom);
 		  
+		  ResourceLocation FadedWallBottom2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallBottom2);
+		  RuinsFadedWallBottom2 = new BlockRuinsFadedWallBottom2();
+		  RuinsFadedWallBottom2.setRegistryName(FadedWallBottom2);
+		  GameRegistry.register(RuinsFadedWallBottom2);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallBottom2), FadedWallBottom2);
+		  
 		  ResourceLocation FadedWallCracked = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallCracked);
 		  RuinsFadedWallCracked = new BlockRuinsFadedWallCracked();
 		  RuinsFadedWallCracked.setRegistryName(FadedWallCracked);
@@ -568,6 +689,343 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  RuinsBridge.setRegistryName(Bridge);
 		  GameRegistry.register(RuinsBridge);
 		  GameRegistry.register(new ItemBlock(RuinsBridge), Bridge);
+		  
+		  ResourceLocation Pad = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPad);
+		  RuinsPad = new BlockRuinsPad();
+		  RuinsPad.setRegistryName(Pad);
+		  GameRegistry.register(RuinsPad);
+		  GameRegistry.register(new ItemBlock(RuinsPad), Pad);
+		  
+		  ResourceLocation FadedWallBottomVentLeft = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallBottomVentLeft);
+		  RuinsFadedWallBottomVentLeft = new BlockRuinsFadedWallBottomVentLeft();
+		  RuinsFadedWallBottomVentLeft.setRegistryName(FadedWallBottomVentLeft);
+		  GameRegistry.register(RuinsFadedWallBottomVentLeft);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallBottomVentLeft), FadedWallBottomVentLeft);
+		  
+		  ResourceLocation FadedWallBottomVentMiddle = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallBottomVentMiddle);
+		  RuinsFadedWallBottomVentMiddle = new BlockRuinsFadedWallBottomVentMiddle();
+		  RuinsFadedWallBottomVentMiddle.setRegistryName(FadedWallBottomVentMiddle);
+		  GameRegistry.register(RuinsFadedWallBottomVentMiddle);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallBottomVentMiddle), FadedWallBottomVentMiddle);
+		  
+		  ResourceLocation FadedWallBottomVentRight = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallBottomVentRight);
+		  RuinsFadedWallBottomVentRight = new BlockRuinsFadedWallBottomVentRight();
+		  RuinsFadedWallBottomVentRight.setRegistryName(FadedWallBottomVentRight);
+		  GameRegistry.register(RuinsFadedWallBottomVentRight);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallBottomVentRight), FadedWallBottomVentRight);
+		  
+		  ResourceLocation Stone = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsStone);
+		  RuinsStone = new BlockRuinsStone();
+		  RuinsStone.setRegistryName(Stone);
+		  GameRegistry.register(RuinsStone);
+		  GameRegistry.register(new ItemBlock(RuinsStone), Stone);
+		  
+		  ResourceLocation Window = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWindow);
+		  RuinsWindow = new BlockRuinsWindow();
+		  RuinsWindow.setRegistryName(Window);
+		  GameRegistry.register(RuinsWindow);
+		  GameRegistry.register(new ItemBlock(RuinsWindow), Window);
+		  
+		  ResourceLocation WindowCorner = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWindowCorner);
+		  RuinsWindowCorner = new BlockRuinsWindowCorner();
+		  RuinsWindowCorner.setRegistryName(WindowCorner);
+		  GameRegistry.register(RuinsWindowCorner);
+		  GameRegistry.register(new ItemBlock(RuinsWindowCorner), WindowCorner);
+		  
+		  ResourceLocation WallSign = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallSign);
+		  RuinsWallSign = new BlockRuinsWallSign();
+		  RuinsWallSign.setRegistryName(WallSign);
+		  GameRegistry.register(RuinsWallSign);
+		  GameRegistry.register(new ItemBlock(RuinsWallSign), WallSign);
+		  
+		  ResourceLocation WallSignLeft = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallSignLeft);
+		  RuinsWallSignLeft = new BlockRuinsWallSignLeft();
+		  RuinsWallSignLeft.setRegistryName(WallSignLeft);
+		  GameRegistry.register(RuinsWallSignLeft);
+		  GameRegistry.register(new ItemBlock(RuinsWallSignLeft), WallSignLeft);
+		  
+		  ResourceLocation WallSignRight = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallSignRight);
+		  RuinsWallSignRight = new BlockRuinsWallSignRight();
+		  RuinsWallSignRight.setRegistryName(WallSignRight);
+		  GameRegistry.register(RuinsWallSignRight);
+		  GameRegistry.register(new ItemBlock(RuinsWallSignRight), WallSignRight);
+		  
+		  ResourceLocation WallGapRight = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallGapRight);
+		  RuinsWallGapRight = new BlockRuinsWallGapRight();
+		  RuinsWallGapRight.setRegistryName(WallGapRight);
+		  GameRegistry.register(RuinsWallGapRight);
+		  GameRegistry.register(new ItemBlock(RuinsWallGapRight), WallGapRight);
+		  
+		  ResourceLocation WallGapMiddle = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallGapMiddle);
+		  RuinsWallGapMiddle = new BlockRuinsWallGapMiddle();
+		  RuinsWallGapMiddle.setRegistryName(WallGapMiddle);
+		  GameRegistry.register(RuinsWallGapMiddle);
+		  GameRegistry.register(new ItemBlock(RuinsWallGapMiddle), WallGapMiddle);
+		  
+		  ResourceLocation WallGapLeft = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallGapLeft);
+		  RuinsWallGapLeft = new BlockRuinsWallGapLeft();
+		  RuinsWallGapLeft.setRegistryName(WallGapLeft);
+		  GameRegistry.register(RuinsWallGapLeft);
+		  GameRegistry.register(new ItemBlock(RuinsWallGapLeft), WallGapLeft);
+		  
+		  ResourceLocation WallArrows = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallArrows);
+		  RuinsWallArrows = new BlockRuinsWallArrows();
+		  RuinsWallArrows.setRegistryName(WallArrows);
+		  GameRegistry.register(RuinsWallArrows);
+		  GameRegistry.register(new ItemBlock(RuinsWallArrows), WallArrows);
+		  
+		  ResourceLocation WallText = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallText);
+		  RuinsWallText = new BlockRuinsWallText();
+		  RuinsWallText.setRegistryName(WallText);
+		  GameRegistry.register(RuinsWallText);
+		  GameRegistry.register(new ItemBlock(RuinsWallText), WallText);
+		  
+		  ResourceLocation WallMouseHouse = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWallMouseHouse);
+		  RuinsWallMouseHouse = new BlockRuinsWallMouseHouse();
+		  RuinsWallMouseHouse.setRegistryName(WallMouseHouse);
+		  GameRegistry.register(RuinsWallMouseHouse);
+		  GameRegistry.register(new ItemBlock(RuinsWallMouseHouse), WallMouseHouse);
+		  
+		  ResourceLocation YFlowers = new ResourceLocation(ServerMod.MOD_ID, ModNames.YellowFlowers);
+		  YellowFlowers = new BlockYellowFlowers();
+		  YellowFlowers.setRegistryName(YFlowers);
+		  GameRegistry.register(YellowFlowers);
+		  GameRegistry.register(new ItemBlock(YellowFlowers), YFlowers);
+		  
+		  ResourceLocation RFlowers = new ResourceLocation(ServerMod.MOD_ID, ModNames.RedFlowers);
+		  RedFlowers = new BlockRedFlowers();
+		  RedFlowers.setRegistryName(RFlowers);
+		  GameRegistry.register(RedFlowers);
+		  GameRegistry.register(new ItemBlock(RedFlowers), RFlowers);
+		  
+		  ResourceLocation FadedWallTopVentLeft = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallTopVentLeft);
+		  RuinsFadedWallTopVentLeft = new BlockRuinsFadedWallTopVentLeft();
+		  RuinsFadedWallTopVentLeft.setRegistryName(FadedWallTopVentLeft);
+		  GameRegistry.register(RuinsFadedWallTopVentLeft);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallTopVentLeft), FadedWallTopVentLeft);
+		  
+		  ResourceLocation FadedWallTopVentMiddle = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallTopVentMiddle);
+		  RuinsFadedWallTopVentMiddle = new BlockRuinsFadedWallTopVentMiddle();
+		  RuinsFadedWallTopVentMiddle.setRegistryName(FadedWallTopVentMiddle);
+		  GameRegistry.register(RuinsFadedWallTopVentMiddle);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallTopVentMiddle), FadedWallTopVentMiddle);
+		  
+		  ResourceLocation FadedWallTopVentRight = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsFadedWallTopVentRight);
+		  RuinsFadedWallTopVentRight = new BlockRuinsFadedWallTopVentRight();
+		  RuinsFadedWallTopVentRight.setRegistryName(FadedWallTopVentRight);
+		  GameRegistry.register(RuinsFadedWallTopVentRight);
+		  GameRegistry.register(new ItemBlock(RuinsFadedWallTopVentRight), FadedWallTopVentRight);	
+		  
+		  ResourceLocation RDoorPillar1 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorPillar1);
+		  RuinsDoorPillar1 = new BlockRuinsDoorPillar1();
+		  RuinsDoorPillar1.setRegistryName(RDoorPillar1);
+		  GameRegistry.register(RuinsDoorPillar1);
+		  GameRegistry.register(new ItemBlock(RuinsDoorPillar1), RDoorPillar1);
+		  
+		  ResourceLocation RDoorPillar2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorPillar2);
+		  RuinsDoorPillar2 = new BlockRuinsDoorPillar2();
+		  RuinsDoorPillar2.setRegistryName(RDoorPillar2);
+		  GameRegistry.register(RuinsDoorPillar2);
+		  GameRegistry.register(new ItemBlock(RuinsDoorPillar2), RDoorPillar2);
+		  
+		  ResourceLocation RDoorPillar3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorPillar3);
+		  RuinsDoorPillar3 = new BlockRuinsDoorPillar3();
+		  RuinsDoorPillar3.setRegistryName(RDoorPillar3);
+		  GameRegistry.register(RuinsDoorPillar3);
+		  GameRegistry.register(new ItemBlock(RuinsDoorPillar3), RDoorPillar3);
+		  
+		  ResourceLocation RDoorPillar4 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorPillar4);
+		  RuinsDoorPillar4 = new BlockRuinsDoorPillar4();
+		  RuinsDoorPillar4.setRegistryName(RDoorPillar4);
+		  GameRegistry.register(RuinsDoorPillar4);
+		  GameRegistry.register(new ItemBlock(RuinsDoorPillar4), RDoorPillar4);
+		  
+		  ResourceLocation RDoorPillar5 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorPillar5);
+		  RuinsDoorPillar5 = new BlockRuinsDoorPillar5();
+		  RuinsDoorPillar5.setRegistryName(RDoorPillar5);
+		  GameRegistry.register(RuinsDoorPillar5);
+		  GameRegistry.register(new ItemBlock(RuinsDoorPillar5), RDoorPillar5);
+		  
+		  ResourceLocation RDoorPillar6 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorPillar6);
+		  RuinsDoorPillar6 = new BlockRuinsDoorPillar6();
+		  RuinsDoorPillar6.setRegistryName(RDoorPillar6);
+		  GameRegistry.register(RuinsDoorPillar6);
+		  GameRegistry.register(new ItemBlock(RuinsDoorPillar6), RDoorPillar6);
+		  
+		  ResourceLocation RDoorPillar7 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorPillar7);
+		  RuinsDoorPillar7 = new BlockRuinsDoorPillar7();
+		  RuinsDoorPillar7.setRegistryName(RDoorPillar7);
+		  GameRegistry.register(RuinsDoorPillar7);
+		  GameRegistry.register(new ItemBlock(RuinsDoorPillar7), RDoorPillar7);
+		  
+		  ResourceLocation HallDoorPillar1 = new ResourceLocation(ServerMod.MOD_ID, ModNames.DoorPillar1);
+		  DoorPillar1 = new BlockDoorPillar1();
+		  DoorPillar1.setRegistryName(HallDoorPillar1);
+		  GameRegistry.register(DoorPillar1);
+		  GameRegistry.register(new ItemBlock(DoorPillar1), HallDoorPillar1);
+		  
+		  ResourceLocation HallDoorPillar2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.DoorPillar2);
+		  DoorPillar2 = new BlockDoorPillar2();
+		  DoorPillar2.setRegistryName(HallDoorPillar2);
+		  GameRegistry.register(DoorPillar2);
+		  GameRegistry.register(new ItemBlock(DoorPillar2), HallDoorPillar2);
+		  
+		  ResourceLocation HallDoorPillar3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.DoorPillar3);
+		  DoorPillar3 = new BlockDoorPillar3();
+		  DoorPillar3.setRegistryName(HallDoorPillar3);
+		  GameRegistry.register(DoorPillar3);
+		  GameRegistry.register(new ItemBlock(DoorPillar3), HallDoorPillar3);
+		  
+		  ResourceLocation HallDoorPillar4 = new ResourceLocation(ServerMod.MOD_ID, ModNames.DoorPillar4);
+		  DoorPillar4 = new BlockDoorPillar4();
+		  DoorPillar4.setRegistryName(HallDoorPillar4);
+		  GameRegistry.register(DoorPillar4);
+		  GameRegistry.register(new ItemBlock(DoorPillar4), HallDoorPillar4);
+		  
+		  ResourceLocation HallDoorPillar5 = new ResourceLocation(ServerMod.MOD_ID, ModNames.DoorPillar5);
+		  DoorPillar5 = new BlockDoorPillar5();
+		  DoorPillar5.setRegistryName(HallDoorPillar5);
+		  GameRegistry.register(DoorPillar5);
+		  GameRegistry.register(new ItemBlock(DoorPillar5), HallDoorPillar5);
+		  
+		  ResourceLocation HallDoorPillar6 = new ResourceLocation(ServerMod.MOD_ID, ModNames.DoorPillar6);
+		  DoorPillar6 = new BlockDoorPillar6();
+		  DoorPillar6.setRegistryName(HallDoorPillar6);
+		  GameRegistry.register(DoorPillar6);
+		  GameRegistry.register(new ItemBlock(DoorPillar6), HallDoorPillar6);
+		  
+		  ResourceLocation HallDoorPillar7 = new ResourceLocation(ServerMod.MOD_ID, ModNames.DoorPillar7);
+		  DoorPillar7 = new BlockDoorPillar7();
+		  DoorPillar7.setRegistryName(HallDoorPillar7);
+		  GameRegistry.register(DoorPillar7);
+		  GameRegistry.register(new ItemBlock(DoorPillar7), HallDoorPillar7);
+		  
+		  ResourceLocation PathItem1 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPathItem1);
+		  RuinsPathItem1 = new BlockRuinsPathItem1();
+		  RuinsPathItem1.setRegistryName(PathItem1);
+		  GameRegistry.register(RuinsPathItem1);
+		  GameRegistry.register(new ItemBlock(RuinsPathItem1), PathItem1);
+		  
+		  ResourceLocation PathItem2 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPathItem2);
+		  RuinsPathItem2 = new BlockRuinsPathItem2();
+		  RuinsPathItem2.setRegistryName(PathItem2);
+		  GameRegistry.register(RuinsPathItem2);
+		  GameRegistry.register(new ItemBlock(RuinsPathItem2), PathItem2);
+		  
+		  ResourceLocation PathFlowerSide = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPathFlowerSide);
+		  RuinsPathFlowerSide = new BlockRuinsPathFlowerSide();
+		  RuinsPathFlowerSide.setRegistryName(PathFlowerSide);
+		  GameRegistry.register(RuinsPathFlowerSide);
+		  GameRegistry.register(new ItemBlock(RuinsPathFlowerSide), PathFlowerSide);
+		  
+		  ResourceLocation PathFlowerCorner = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPathFlowerCorner);
+		  RuinsPathFlowerCorner = new BlockRuinsPathFlowerCorner();
+		  RuinsPathFlowerCorner.setRegistryName(PathFlowerCorner);
+		  GameRegistry.register(RuinsPathFlowerCorner);
+		  GameRegistry.register(new ItemBlock(RuinsPathFlowerCorner), PathFlowerCorner);
+		  
+		  ResourceLocation PathFlowerBottom = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsPathFlowerBottom);
+		  RuinsPathFlowerBottom = new BlockRuinsPathFlowerBottom();
+		  RuinsPathFlowerBottom.setRegistryName(PathFlowerBottom);
+		  GameRegistry.register(RuinsPathFlowerBottom);
+		  GameRegistry.register(new ItemBlock(RuinsPathFlowerBottom), PathFlowerBottom);
+		  
+		  ResourceLocation MossPurple = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsMossPurple);
+		  RuinsMossPurple = new BlockRuinsMossPurple();
+		  RuinsMossPurple.setRegistryName(MossPurple);
+		  GameRegistry.register(RuinsMossPurple);
+		  GameRegistry.register(new ItemBlock(RuinsMossPurple), MossPurple);
+		  
+		  ResourceLocation MossPurple3 = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsMossPurple3);
+		  RuinsMossPurple3 = new BlockRuinsMossPurple3();
+		  RuinsMossPurple3.setRegistryName(MossPurple3);
+		  GameRegistry.register(RuinsMossPurple3);
+		  GameRegistry.register(new ItemBlock(RuinsMossPurple3), MossPurple3);
+		  
+		  ResourceLocation DoorTopRight = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorTopRight);
+		  RuinsDoorTopRight = new BlockRuinsDoorTopRight();
+		  RuinsDoorTopRight.setRegistryName(DoorTopRight);
+		  GameRegistry.register(RuinsDoorTopRight);
+		  GameRegistry.register(new ItemBlock(RuinsDoorTopRight), DoorTopRight);
+		  
+		  ResourceLocation DoorMiddleRight = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorMiddleRight);
+		  RuinsDoorMiddleRight = new BlockRuinsDoorMiddleRight();
+		  RuinsDoorMiddleRight.setRegistryName(DoorMiddleRight);
+		  GameRegistry.register(RuinsDoorMiddleRight);
+		  GameRegistry.register(new ItemBlock(RuinsDoorMiddleRight), DoorMiddleRight);
+		  
+		  ResourceLocation DoorBottomRight = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorBottomRight);
+		  RuinsDoorBottomRight = new BlockRuinsDoorBottomRight();
+		  RuinsDoorBottomRight.setRegistryName(DoorBottomRight);
+		  GameRegistry.register(RuinsDoorBottomRight);
+		  GameRegistry.register(new ItemBlock(RuinsDoorBottomRight), DoorBottomRight);
+		  
+		  ResourceLocation DoorTopLeft = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorTopLeft);
+		  RuinsDoorTopLeft = new BlockRuinsDoorTopLeft();
+		  RuinsDoorTopLeft.setRegistryName(DoorTopLeft);
+		  GameRegistry.register(RuinsDoorTopLeft);
+		  GameRegistry.register(new ItemBlock(RuinsDoorTopLeft), DoorTopLeft);
+		  
+		  ResourceLocation DoorMiddleLeft = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorMiddleLeft);
+		  RuinsDoorMiddleLeft = new BlockRuinsDoorMiddleLeft();
+		  RuinsDoorMiddleLeft.setRegistryName(DoorMiddleLeft);
+		  GameRegistry.register(RuinsDoorMiddleLeft);
+		  GameRegistry.register(new ItemBlock(RuinsDoorMiddleLeft), DoorMiddleLeft);
+		  
+		  ResourceLocation DoorBottomLeft = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsDoorBottomLeft);
+		  RuinsDoorBottomLeft = new BlockRuinsDoorBottomLeft();
+		  RuinsDoorBottomLeft.setRegistryName(DoorBottomLeft);
+		  GameRegistry.register(RuinsDoorBottomLeft);
+		  GameRegistry.register(new ItemBlock(RuinsDoorBottomLeft), DoorBottomLeft);
+		  
+		  ResourceLocation Grey = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsGrey);
+		  RuinsGrey = new BlockRuinsGrey();
+		  RuinsGrey.setRegistryName(Grey);
+		  GameRegistry.register(RuinsGrey);
+		  GameRegistry.register(new ItemBlock(RuinsGrey), Grey);
+		  
+		  ResourceLocation LightGrey = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsLightGrey);
+		  RuinsLightGrey = new BlockRuinsLightGrey();
+		  RuinsLightGrey.setRegistryName(LightGrey);
+		  GameRegistry.register(RuinsLightGrey);
+		  GameRegistry.register(new ItemBlock(RuinsLightGrey), LightGrey);
+		  
+		  ResourceLocation White = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsWhite);
+		  RuinsWhite = new BlockRuinsWhite();
+		  RuinsWhite.setRegistryName(White);
+		  GameRegistry.register(RuinsWhite);
+		  GameRegistry.register(new ItemBlock(RuinsWhite), White);
+		  
+		  ResourceLocation Stairs = new ResourceLocation(ServerMod.MOD_ID, ModNames.RuinsStairs);
+		  RuinsStairs = new BlockRuinsStairs();
+		  RuinsStairs.setRegistryName(Stairs);
+		  GameRegistry.register(RuinsStairs);
+		  GameRegistry.register(new ItemBlock(RuinsStairs), Stairs);
+		  
+		  ResourceLocation Red = new ResourceLocation(ServerMod.MOD_ID, ModNames.RedButton3);
+		  RedButton3 = new PropRedButton3();
+		  RedButton3.setRegistryName(Red);
+		  GameRegistry.register(RedButton3);
+		  GameRegistry.register(new ItemBlock(RedButton3), Red);
+		  
+		  ResourceLocation Blue = new ResourceLocation(ServerMod.MOD_ID, ModNames.BlueButton);
+		  BlueButton = new PropBlueButton();
+		  BlueButton.setRegistryName(Blue);
+		  GameRegistry.register(BlueButton);
+		  GameRegistry.register(new ItemBlock(BlueButton), Blue);
+		  
+		  ResourceLocation Green = new ResourceLocation(ServerMod.MOD_ID, ModNames.GreenButton);
+		  GreenButton = new PropGreenButton();
+		  GreenButton.setRegistryName(Green);
+		  GameRegistry.register(GreenButton);
+		  GameRegistry.register(new ItemBlock(GreenButton), Green);
+		  
+		  
+
+		 
+		  
+		  
+		  
 		  
 		  
 		  
@@ -832,6 +1290,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			    mesher.register(itemRuinsFadedWallBottom, 0, modelRuinsFadedWallBottom);{
 	  			}
 			    
+			    //Blocks: RuinsFadedWallBottom2
+			    Item itemRuinsFadedWallBottom2 = Item.getItemFromBlock(RuinsFadedWallBottom2);
+			    ModelResourceLocation modelRuinsFadedWallBottom2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallBottom2, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallBottom2, modelRuinsFadedWallBottom2);
+			    mesher.register(itemRuinsFadedWallBottom2, 0, modelRuinsFadedWallBottom2);{
+	  			}
+			    
 			    //Blocks: RuinsFadedWallCracked
 			    Item itemRuinsFadedWallCracked = Item.getItemFromBlock(RuinsFadedWallCracked);
 			    ModelResourceLocation modelRuinsFadedWallCracked = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallCracked, "inventory");
@@ -990,6 +1455,393 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			    ModelLoader.registerItemVariants(itemRuinsBridge, modelRuinsBridge);
 			    mesher.register(itemRuinsBridge, 0, modelRuinsBridge);{
 	  			}
+			    
+				//Blocks: RuinsPad
+			    Item itemRuinsPad = Item.getItemFromBlock(RuinsPad);
+			    ModelResourceLocation modelRuinsPad = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPad, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPad, modelRuinsPad);
+			    mesher.register(itemRuinsPad, 0, modelRuinsPad);{
+	  			}
+				
+				//Blocks: RuinsFadedWallBottomVentLeft
+			    Item itemRuinsFadedWallBottomVentLeft = Item.getItemFromBlock(RuinsFadedWallBottomVentLeft);
+			    ModelResourceLocation modelRuinsFadedWallBottomVentLeft = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallBottomVentLeft, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallBottomVentLeft, modelRuinsFadedWallBottomVentLeft);
+			    mesher.register(itemRuinsFadedWallBottomVentLeft, 0, modelRuinsFadedWallBottomVentLeft);{
+	  			}
+				
+				//Blocks: RuinsFadedWallBottomVentMiddle
+			    Item itemRuinsFadedWallBottomVentMiddle = Item.getItemFromBlock(RuinsFadedWallBottomVentMiddle);
+			    ModelResourceLocation modelRuinsFadedWallBottomVentMiddle = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallBottomVentMiddle, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallBottomVentMiddle, modelRuinsFadedWallBottomVentMiddle);
+			    mesher.register(itemRuinsFadedWallBottomVentMiddle, 0, modelRuinsFadedWallBottomVentMiddle);{
+	  			}
+				
+				//Blocks: RuinsFadedWallBottomVentRight
+			    Item itemRuinsFadedWallBottomVentRight = Item.getItemFromBlock(RuinsFadedWallBottomVentRight);
+			    ModelResourceLocation modelRuinsFadedWallBottomVentRight = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallBottomVentRight, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallBottomVentRight, modelRuinsFadedWallBottomVentRight);
+			    mesher.register(itemRuinsFadedWallBottomVentRight, 0, modelRuinsFadedWallBottomVentRight);{
+	  			}
+				
+				//Blocks: RuinsStone
+			    Item itemRuinsStone = Item.getItemFromBlock(RuinsStone);
+			    ModelResourceLocation modelRuinsStone = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsStone, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsStone, modelRuinsStone);
+			    mesher.register(itemRuinsStone, 0, modelRuinsStone);{
+	  			}
+				
+				//Blocks: RuinsWindow
+			    Item itemRuinsWindow = Item.getItemFromBlock(RuinsWindow);
+			    ModelResourceLocation modelRuinsWindow = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWindow, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWindow, modelRuinsWindow);
+			    mesher.register(itemRuinsWindow, 0, modelRuinsWindow);{
+	  			}
+				
+				//Blocks: RuinsWindowCorner
+			    Item itemRuinsWindowCorner = Item.getItemFromBlock(RuinsWindowCorner);
+			    ModelResourceLocation modelRuinsWindowCorner = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWindowCorner, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWindowCorner, modelRuinsWindowCorner);
+			    mesher.register(itemRuinsWindowCorner, 0, modelRuinsWindowCorner);{
+	  			}
+				
+				//Blocks: RuinsWallSign
+			    Item itemRuinsWallSign = Item.getItemFromBlock(RuinsWallSign);
+			    ModelResourceLocation modelRuinsWallSign = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallSign, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallSign, modelRuinsWallSign);
+			    mesher.register(itemRuinsWallSign, 0, modelRuinsWallSign);{
+	  			}
+				
+				//Blocks: RuinsWallSignLeft
+			    Item itemRuinsWallSignLeft = Item.getItemFromBlock(RuinsWallSignLeft);
+			    ModelResourceLocation modelRuinsWallSignLeft = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallSignLeft, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallSignLeft, modelRuinsWallSignLeft);
+			    mesher.register(itemRuinsWallSignLeft, 0, modelRuinsWallSignLeft);{
+	  			}
+				
+				//Blocks: RuinsWallSignRight
+			    Item itemRuinsWallSignRight = Item.getItemFromBlock(RuinsWallSignRight);
+			    ModelResourceLocation modelRuinsWallSignRight = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallSignRight, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallSignRight, modelRuinsWallSignRight);
+			    mesher.register(itemRuinsWallSignRight, 0, modelRuinsWallSignRight);{
+	  			}
+				
+				//Blocks: RuinsWallGapRight
+			    Item itemRuinsWallGapRight = Item.getItemFromBlock(RuinsWallGapRight);
+			    ModelResourceLocation modelRuinsWallGapRight = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallGapRight, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallGapRight, modelRuinsWallGapRight);
+			    mesher.register(itemRuinsWallGapRight, 0, modelRuinsWallGapRight);{
+	  			}
+				
+				//Blocks: RuinsWallGapMiddle
+			    Item itemRuinsWallGapMiddle = Item.getItemFromBlock(RuinsWallGapMiddle);
+			    ModelResourceLocation modelRuinsWallGapMiddle = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallGapMiddle, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallGapMiddle, modelRuinsWallGapMiddle);
+			    mesher.register(itemRuinsWallGapMiddle, 0, modelRuinsWallGapMiddle);{
+	  			}
+				
+				//Blocks: RuinsWallGapLeft
+			    Item itemRuinsWallGapLeft = Item.getItemFromBlock(RuinsWallGapLeft);
+			    ModelResourceLocation modelRuinsWallGapLeft = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallGapLeft, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallGapLeft, modelRuinsWallGapLeft);
+			    mesher.register(itemRuinsWallGapLeft, 0, modelRuinsWallGapLeft);{
+	  			}
+			    
+			    //Blocks: RuinsWallArrows
+			    Item itemRuinsWallArrows = Item.getItemFromBlock(RuinsWallArrows);
+			    ModelResourceLocation modelRuinsWallArrows = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallArrows, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallArrows, modelRuinsWallArrows);
+			    mesher.register(itemRuinsWallArrows, 0, modelRuinsWallArrows);{
+	  			}
+				
+				//Blocks: RuinsWallText
+			    Item itemRuinsWallText = Item.getItemFromBlock(RuinsWallText);
+			    ModelResourceLocation modelRuinsWallText = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallText, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallText, modelRuinsWallText);
+			    mesher.register(itemRuinsWallText, 0, modelRuinsWallText);{
+	  			}
+				
+				//Blocks: RuinsWallMouseHouse
+			    Item itemRuinsWallMouseHouse = Item.getItemFromBlock(RuinsWallMouseHouse);
+			    ModelResourceLocation modelRuinsWallMouseHouse = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWallMouseHouse, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWallMouseHouse, modelRuinsWallMouseHouse);
+			    mesher.register(itemRuinsWallMouseHouse, 0, modelRuinsWallMouseHouse);{
+	  			}
+				
+				//Blocks: YellowFlowers
+			    Item itemYellowFlowers = Item.getItemFromBlock(YellowFlowers);
+			    ModelResourceLocation modelYellowFlowers = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.YellowFlowers, "inventory");
+			    ModelLoader.registerItemVariants(itemYellowFlowers, modelYellowFlowers);
+			    mesher.register(itemYellowFlowers, 0, modelYellowFlowers);{
+	  			}
+				
+				//Blocks: RedFlowers
+			    Item itemRedFlowers = Item.getItemFromBlock(RedFlowers);
+			    ModelResourceLocation modelRedFlowers = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RedFlowers, "inventory");
+			    ModelLoader.registerItemVariants(itemRedFlowers, modelRedFlowers);
+			    mesher.register(itemRedFlowers, 0, modelRedFlowers);{
+	  			}
+				
+				//Blocks: RuinsFadedWallTopVentLeft
+			    Item itemRuinsFadedWallTopVentLeft = Item.getItemFromBlock(RuinsFadedWallTopVentLeft);
+			    ModelResourceLocation modelRuinsFadedWallTopVentLeft = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallTopVentLeft, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallTopVentLeft, modelRuinsFadedWallTopVentLeft);
+			    mesher.register(itemRuinsFadedWallTopVentLeft, 0, modelRuinsFadedWallTopVentLeft);{
+	  			}
+				
+				//Blocks: RuinsFadedWallTopVentMiddle
+			    Item itemRuinsFadedWallTopVentMiddle = Item.getItemFromBlock(RuinsFadedWallTopVentMiddle);
+			    ModelResourceLocation modelRuinsFadedWallTopVentMiddle = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallTopVentMiddle, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallTopVentMiddle, modelRuinsFadedWallTopVentMiddle);
+			    mesher.register(itemRuinsFadedWallTopVentMiddle, 0, modelRuinsFadedWallTopVentMiddle);{
+	  			}
+				
+				//Blocks: RuinsFadedWallTopVentRight
+			    Item itemRuinsFadedWallTopVentRight = Item.getItemFromBlock(RuinsFadedWallTopVentRight);
+			    ModelResourceLocation modelRuinsFadedWallTopVentRight = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsFadedWallTopVentRight, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsFadedWallTopVentRight, modelRuinsFadedWallTopVentRight);
+			    mesher.register(itemRuinsFadedWallTopVentRight, 0, modelRuinsFadedWallTopVentRight);{
+	  			}
+			    
+				//Blocks: RuinsDoorPillar1
+			    Item itemRuinsDoorPillar1 = Item.getItemFromBlock(RuinsDoorPillar1);
+			    ModelResourceLocation modelRuinsDoorPillar1 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorPillar1, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorPillar1, modelRuinsDoorPillar1);
+			    mesher.register(itemRuinsDoorPillar1, 0, modelRuinsDoorPillar1);{
+	  			}
+				
+				//Blocks: RuinsDoorPillar2
+			    Item itemRuinsDoorPillar2 = Item.getItemFromBlock(RuinsDoorPillar2);
+			    ModelResourceLocation modelRuinsDoorPillar2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorPillar2, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorPillar2, modelRuinsDoorPillar2);
+			    mesher.register(itemRuinsDoorPillar2, 0, modelRuinsDoorPillar2);{
+	  			}
+				
+				//Blocks: RuinsDoorPillar3
+			    Item itemRuinsDoorPillar3 = Item.getItemFromBlock(RuinsDoorPillar3);
+			    ModelResourceLocation modelRuinsDoorPillar3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorPillar3, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorPillar3, modelRuinsDoorPillar3);
+			    mesher.register(itemRuinsDoorPillar3, 0, modelRuinsDoorPillar3);{
+	  			}
+				
+				//Blocks: RuinsDoorPillar4
+			    Item itemRuinsDoorPillar4 = Item.getItemFromBlock(RuinsDoorPillar4);
+			    ModelResourceLocation modelRuinsDoorPillar4 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorPillar4, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorPillar4, modelRuinsDoorPillar4);
+			    mesher.register(itemRuinsDoorPillar4, 0, modelRuinsDoorPillar4);{
+	  			}
+				
+				//Blocks: RuinsDoorPillar5
+			    Item itemRuinsDoorPillar5 = Item.getItemFromBlock(RuinsDoorPillar5);
+			    ModelResourceLocation modelRuinsDoorPillar5 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorPillar5, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorPillar5, modelRuinsDoorPillar5);
+			    mesher.register(itemRuinsDoorPillar5, 0, modelRuinsDoorPillar5);{
+	  			}
+				
+				//Blocks: RuinsDoorPillar6
+			    Item itemRuinsDoorPillar6 = Item.getItemFromBlock(RuinsDoorPillar6);
+			    ModelResourceLocation modelRuinsDoorPillar6 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorPillar6, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorPillar6, modelRuinsDoorPillar6);
+			    mesher.register(itemRuinsDoorPillar6, 0, modelRuinsDoorPillar6);{
+	  			}
+				
+				//Blocks: RuinsDoorPillar7
+			    Item itemRuinsDoorPillar7 = Item.getItemFromBlock(RuinsDoorPillar7);
+			    ModelResourceLocation modelRuinsDoorPillar7 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorPillar7, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorPillar7, modelRuinsDoorPillar7);
+			    mesher.register(itemRuinsDoorPillar7, 0, modelRuinsDoorPillar7);{
+	  			}
+				
+				//Blocks: DoorPillar1
+			    Item itemDoorPillar1 = Item.getItemFromBlock(DoorPillar1);
+			    ModelResourceLocation modelDoorPillar1 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DoorPillar1, "inventory");
+			    ModelLoader.registerItemVariants(itemDoorPillar1, modelDoorPillar1);
+			    mesher.register(itemDoorPillar1, 0, modelDoorPillar1);{
+	  			}
+				
+				//Blocks: DoorPillar2
+			    Item itemDoorPillar2 = Item.getItemFromBlock(DoorPillar2);
+			    ModelResourceLocation modelDoorPillar2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DoorPillar2, "inventory");
+			    ModelLoader.registerItemVariants(itemDoorPillar2, modelDoorPillar2);
+			    mesher.register(itemDoorPillar2, 0, modelDoorPillar2);{
+	  			}
+				
+				//Blocks: DoorPillar3
+			    Item itemDoorPillar3 = Item.getItemFromBlock(DoorPillar3);
+			    ModelResourceLocation modelDoorPillar3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DoorPillar3, "inventory");
+			    ModelLoader.registerItemVariants(itemDoorPillar3, modelDoorPillar3);
+			    mesher.register(itemDoorPillar3, 0, modelDoorPillar3);{
+	  			}
+				
+				//Blocks: DoorPillar4
+			    Item itemDoorPillar4 = Item.getItemFromBlock(DoorPillar4);
+			    ModelResourceLocation modelDoorPillar4 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DoorPillar4, "inventory");
+			    ModelLoader.registerItemVariants(itemDoorPillar4, modelDoorPillar4);
+			    mesher.register(itemDoorPillar4, 0, modelDoorPillar4);{
+	  			}
+				
+				//Blocks: DoorPillar5
+			    Item itemDoorPillar5 = Item.getItemFromBlock(DoorPillar5);
+			    ModelResourceLocation modelDoorPillar5 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DoorPillar5, "inventory");
+			    ModelLoader.registerItemVariants(itemDoorPillar5, modelDoorPillar5);
+			    mesher.register(itemDoorPillar5, 0, modelDoorPillar5);{
+	  			}
+				
+				//Blocks: DoorPillar6
+			    Item itemDoorPillar6 = Item.getItemFromBlock(DoorPillar6);
+			    ModelResourceLocation modelDoorPillar6 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DoorPillar6, "inventory");
+			    ModelLoader.registerItemVariants(itemDoorPillar6, modelDoorPillar6);
+			    mesher.register(itemDoorPillar6, 0, modelDoorPillar6);{
+	  			}
+				
+				//Blocks: DoorPillar7
+			    Item itemDoorPillar7 = Item.getItemFromBlock(DoorPillar7);
+			    ModelResourceLocation modelDoorPillar7 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DoorPillar7, "inventory");
+			    ModelLoader.registerItemVariants(itemDoorPillar7, modelDoorPillar7);
+			    mesher.register(itemDoorPillar7, 0, modelDoorPillar7);{
+	  			}
+			    
+				//Blocks: RuinsPathItem1
+			    Item itemRuinsPathItem1 = Item.getItemFromBlock(RuinsPathItem1);
+			    ModelResourceLocation modelRuinsPathItem1 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPathItem1, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPathItem1, modelRuinsPathItem1);
+			    mesher.register(itemRuinsPathItem1, 0, modelRuinsPathItem1);{
+	  			}
+			    
+				//Blocks: RuinsPathItem2
+			    Item itemRuinsPathItem2 = Item.getItemFromBlock(RuinsPathItem2);
+			    ModelResourceLocation modelRuinsPathItem2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPathItem2, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPathItem2, modelRuinsPathItem2);
+			    mesher.register(itemRuinsPathItem2, 0, modelRuinsPathItem2);{
+	  			}
+			    
+				//Blocks: RuinsPathFlowerSide
+			    Item itemRuinsPathFlowerSide = Item.getItemFromBlock(RuinsPathFlowerSide);
+			    ModelResourceLocation modelRuinsPathFlowerSide = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPathFlowerSide, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPathFlowerSide, modelRuinsPathFlowerSide);
+			    mesher.register(itemRuinsPathFlowerSide, 0, modelRuinsPathFlowerSide);{
+	  			}
+			    
+				//Blocks: RuinsPathFlowerCorner
+			    Item itemRuinsPathFlowerCorner = Item.getItemFromBlock(RuinsPathFlowerCorner);
+			    ModelResourceLocation modelRuinsPathFlowerCorner = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPathFlowerCorner, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPathFlowerCorner, modelRuinsPathFlowerCorner);
+			    mesher.register(itemRuinsPathFlowerCorner, 0, modelRuinsPathFlowerCorner);{
+	  			}
+			    
+				//Blocks: RuinsPathFlowerBottom
+			    Item itemRuinsPathFlowerBottom = Item.getItemFromBlock(RuinsPathFlowerBottom);
+			    ModelResourceLocation modelRuinsPathFlowerBottom = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsPathFlowerBottom, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsPathFlowerBottom, modelRuinsPathFlowerBottom);
+			    mesher.register(itemRuinsPathFlowerBottom, 0, modelRuinsPathFlowerBottom);{
+	  			}
+			    
+				//Blocks: RuinsMossPurple
+			    Item itemRuinsMossPurple = Item.getItemFromBlock(RuinsMossPurple);
+			    ModelResourceLocation modelRuinsMossPurple = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsMossPurple, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsMossPurple, modelRuinsMossPurple);
+			    mesher.register(itemRuinsMossPurple, 0, modelRuinsMossPurple);{
+	  			}
+			    
+				//Blocks: RuinsMossPurple3
+			    Item itemRuinsMossPurple3 = Item.getItemFromBlock(RuinsMossPurple3);
+			    ModelResourceLocation modelRuinsMossPurple3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsMossPurple3, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsMossPurple3, modelRuinsMossPurple3);
+			    mesher.register(itemRuinsMossPurple3, 0, modelRuinsMossPurple3);{
+	  			}
+			    
+			    //Blocks: RuinsDoorTopRight
+			    Item itemRuinsDoorTopRight = Item.getItemFromBlock(RuinsDoorTopRight);
+			    ModelResourceLocation modelRuinsDoorTopRight = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorTopRight, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorTopRight, modelRuinsDoorTopRight);
+			    mesher.register(itemRuinsDoorTopRight, 0, modelRuinsDoorTopRight);{
+	  			}
+			    
+			    //Blocks: RuinsDoorMiddleRight
+			    Item itemRuinsDoorMiddleRight = Item.getItemFromBlock(RuinsDoorMiddleRight);
+			    ModelResourceLocation modelRuinsDoorMiddleRight = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorMiddleRight, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorMiddleRight, modelRuinsDoorMiddleRight);
+			    mesher.register(itemRuinsDoorMiddleRight, 0, modelRuinsDoorMiddleRight);{
+	  			}
+			    
+			    //Blocks: RuinsDoorBottomRight
+			    Item itemRuinsDoorBottomRight = Item.getItemFromBlock(RuinsDoorBottomRight);
+			    ModelResourceLocation modelRuinsDoorBottomRight = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorBottomRight, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorBottomRight, modelRuinsDoorBottomRight);
+			    mesher.register(itemRuinsDoorBottomRight, 0, modelRuinsDoorBottomRight);{
+	  			}
+			    
+			    //Blocks: RuinsDoorTopLeft
+			    Item itemRuinsDoorTopLeft = Item.getItemFromBlock(RuinsDoorTopLeft);
+			    ModelResourceLocation modelRuinsDoorTopLeft = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorTopLeft, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorTopLeft, modelRuinsDoorTopLeft);
+			    mesher.register(itemRuinsDoorTopLeft, 0, modelRuinsDoorTopLeft);{
+	  			}
+			    
+			    //Blocks: RuinsDoorMiddleLeft
+			    Item itemRuinsDoorMiddleLeft = Item.getItemFromBlock(RuinsDoorMiddleLeft);
+			    ModelResourceLocation modelRuinsDoorMiddleLeft = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorMiddleLeft, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorMiddleLeft, modelRuinsDoorMiddleLeft);
+			    mesher.register(itemRuinsDoorMiddleLeft, 0, modelRuinsDoorMiddleLeft);{
+	  			}
+			    
+			    //Blocks: RuinsDoorBottomLeft
+			    Item itemRuinsDoorBottomLeft = Item.getItemFromBlock(RuinsDoorBottomLeft);
+			    ModelResourceLocation modelRuinsDoorBottomLeft = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsDoorBottomLeft, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsDoorBottomLeft, modelRuinsDoorBottomLeft);
+			    mesher.register(itemRuinsDoorBottomLeft, 0, modelRuinsDoorBottomLeft);{
+	  			}
+			    
+			    //Blocks: RuinsGrey
+			    Item itemRuinsGrey = Item.getItemFromBlock(RuinsGrey);
+			    ModelResourceLocation modelRuinsGrey = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsGrey, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsGrey, modelRuinsGrey);
+			    mesher.register(itemRuinsGrey, 0, modelRuinsGrey);{
+	  			}
+			    
+			    //Blocks: RuinsLightGrey
+			    Item itemRuinsLightGrey = Item.getItemFromBlock(RuinsLightGrey);
+			    ModelResourceLocation modelRuinsLightGrey = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsLightGrey, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsLightGrey, modelRuinsLightGrey);
+			    mesher.register(itemRuinsLightGrey, 0, modelRuinsLightGrey);{
+	  			}
+			    
+			    //Blocks: RuinsWhite
+			    Item itemRuinsWhite = Item.getItemFromBlock(RuinsWhite);
+			    ModelResourceLocation modelRuinsWhite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsWhite, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsWhite, modelRuinsWhite);
+			    mesher.register(itemRuinsWhite, 0, modelRuinsWhite);{
+	  			}
+			    
+			    //Blocks: RuinsStairs
+			    Item itemRuinsStairs = Item.getItemFromBlock(RuinsStairs);
+			    ModelResourceLocation modelRuinsStairs = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RuinsStairs, "inventory");
+			    ModelLoader.registerItemVariants(itemRuinsStairs, modelRuinsStairs);
+			    mesher.register(itemRuinsStairs, 0, modelRuinsStairs);{
+	  			}
+			    
+			    //Blocks: RedButton3
+			    Item itemRedButton3 = Item.getItemFromBlock(RedButton3);
+			    ModelResourceLocation modelRedButton3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.RedButton3, "inventory");
+			    ModelLoader.registerItemVariants(itemRedButton3, modelRedButton3);
+			    mesher.register(itemRedButton3, 0, modelRedButton3);{
+	  			}
+			    
+			    //Blocks: BlueButton
+			    Item itemBlueButton = Item.getItemFromBlock(BlueButton);
+			    ModelResourceLocation modelBlueButton = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BlueButton, "inventory");
+			    ModelLoader.registerItemVariants(itemBlueButton, modelBlueButton);
+			    mesher.register(itemBlueButton, 0, modelBlueButton);{
+	  			}
+			    
+			    //Blocks: GreenButton
+			    Item itemGreenButton = Item.getItemFromBlock(GreenButton);
+			    ModelResourceLocation modelGreenButton = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.GreenButton, "inventory");
+			    ModelLoader.registerItemVariants(itemGreenButton, modelGreenButton);
+			    mesher.register(itemGreenButton, 0, modelGreenButton);{
+	  			}
+			    
+				
 
 
 			    

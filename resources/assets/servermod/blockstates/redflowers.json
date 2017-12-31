@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/red_flowers",
+     "down": "servermod:blocks/adventure/red_flowers",
+      "north": "servermod:blocks/adventure/red_flowers",
+      "south": "servermod:blocks/adventure/red_flowers",
+      "west": "servermod:blocks/adventure/red_flowers",
+      "east": "servermod:blocks/adventure/red_flowers"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "red_wool" },
+        "facing=south": { "model": "red_wool", "y": 180 },
+        "facing=west":  { "model": "red_wool", "y": 270 },
+        "facing=east":  { "model": "red_wool", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "servermod:windowmiddleslabbottom" },
+        "half=top": { "model": "servermod:windowmiddleslabtop" }
+    }
+}

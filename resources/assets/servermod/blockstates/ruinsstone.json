@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_stone",
+     "down": "servermod:blocks/adventure/ruins_stone",
+      "north": "servermod:blocks/adventure/ruins_stone",
+      "south": "servermod:blocks/adventure/ruins_stone",
+      "west": "servermod:blocks/adventure/ruins_stone",
+      "east": "servermod:blocks/adventure/ruins_stone"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "clay" },
+        "facing=south": { "model": "clay", "y": 180 },
+        "facing=west":  { "model": "clay", "y": 270 },
+        "facing=east":  { "model": "clay", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

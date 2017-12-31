@@ -3,12 +3,24 @@
   "defaults":{
     "transform":"forge:default-block",
     "model":"cube_all",
-    "textures":{
-      "all": "servermod:blocks/adventure/ruins_cracked_block"
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_cracked_block",
+     "down": "servermod:blocks/adventure/ruins_cracked_block",
+      "north": "servermod:blocks/adventure/ruins_cracked_block",
+      "south": "servermod:blocks/adventure/ruins_cracked_block",
+      "west": "servermod:blocks/adventure/ruins_cracked_block",
+      "east": "servermod:blocks/adventure/ruins_cracked_block"
     }
   },
-  "variants":{
+    "variants": {
+        "facing=north": { "model": "purple_wool" },
+        "facing=south": { "model": "purple_wool", "y": 180 },
+        "facing=west":  { "model": "purple_wool", "y": 270 },
+        "facing=east":  { "model": "purple_wool", "y": 90 },
     "inventory":[{}],
     "normal":[{}]
-  }
+    }
 }
+
+
+

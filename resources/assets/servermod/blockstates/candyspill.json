@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": { "model": "servermod:candyspill" },
+		"facing=north": { "model": "servermod:candyspill" },
+        "facing=south": { "model": "servermod:candyspill", "y": 180 },
+        "facing=west":  { "model": "servermod:candyspill", "y": 270 },
+        "facing=east":  { "model": "servermod:candyspill", "y": 90 }
+		
+    }
+}

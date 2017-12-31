@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=top": { "model": "servermod:bridge4" },
+        "half=bottom": { "model": "servermod:bridge4" }
+    }
+}
