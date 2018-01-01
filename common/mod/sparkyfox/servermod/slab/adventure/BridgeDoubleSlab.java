@@ -4,7 +4,7 @@ public class BridgeDoubleSlab extends BridgeSlab
 {
 	public BridgeDoubleSlab(String name, float hardness, float resistance) 
 	{
-		super(name, hardness, resistance);
+		super(name);
 		this.setBlockUnbreakable();	
         this.disableStats();
         this.setCreativeTab(null);

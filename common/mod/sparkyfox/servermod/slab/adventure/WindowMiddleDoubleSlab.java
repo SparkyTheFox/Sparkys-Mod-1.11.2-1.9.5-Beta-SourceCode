@@ -4,7 +4,7 @@ public class WindowMiddleDoubleSlab extends BridgeSlab
 {
 	public WindowMiddleDoubleSlab(String name, float hardness, float resistance) 
 	{
-		super(name, hardness, resistance);
+		super(name);
         this.setBlockUnbreakable();
         this.disableStats();
         this.setCreativeTab(null);

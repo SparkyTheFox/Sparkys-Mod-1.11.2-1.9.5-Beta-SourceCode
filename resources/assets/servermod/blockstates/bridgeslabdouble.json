@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=top": { "model": "servermod:bridge" },
-        "half=bottom": { "model": "servermod:bridge" }
+        "dummy=false,half=top": { "model": "servermod:bridge" },
+        "dummy=false,half=bottom": { "model": "servermod:bridge" }
     }
 }

@@ -3,18 +3,12 @@ package mod.sparkyfox.servermod.init;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import mod.sparkyfox.servermod.slab.adventure.BridgeDoubleSlab;
 import mod.sparkyfox.servermod.slab.adventure.BridgeHalfSlab;
 import mod.sparkyfox.servermod.slab.adventure.WindowMiddleDoubleSlab;
 import mod.sparkyfox.servermod.slab.adventure.WindowMiddleHalfSlab;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class ModSlabs
 {
@@ -50,11 +44,11 @@ public class ModSlabs
         BLOCKS = new ArrayList<>();
         ITEM_BLOCKS = new ArrayList<>();
 
-        addBlock(bridgeslabhalf = new BridgeHalfSlab("bridgeslabhalf", 2.5F, 6000001.0F));
-        addBlock(bridgeslabdouble = new BridgeDoubleSlab("bridgeslabdouble", 2.5F, 6000001.0F));
+        addBlock(bridgeslabhalf = (BridgeHalfSlab) new BridgeHalfSlab("bridgeslabhalf", 2.5F, 6000001.0F));
+        addBlock(bridgeslabdouble = (BridgeDoubleSlab) new BridgeDoubleSlab("bridgeslabdouble", 2.5F, 6000001.0F));
         
-        addBlock(bridgeslabhalf2 = new BridgeHalfSlab("bridgeslabhalf2", 2.5F, 6000001.0F));
-        addBlock(bridgeslabdouble2 = new BridgeDoubleSlab("bridgeslabdouble2", 2.5F, 6000001.0F));
+        addBlock(bridgeslabhalf2 = (BridgeHalfSlab) new BridgeHalfSlab("bridgeslabhalf2", 2.5F, 6000001.0F));
+        addBlock(bridgeslabdouble2 = (BridgeDoubleSlab) new BridgeDoubleSlab("bridgeslabdouble2", 2.5F, 6000001.0F));
         
         addBlock(bridgeslabhalf3 = new BridgeHalfSlab("bridgeslabhalf3", 2.5F, 6000001.0F));
         addBlock(bridgeslabdouble3 = new BridgeDoubleSlab("bridgeslabdouble3", 2.5F, 6000001.0F));
@@ -62,8 +56,8 @@ public class ModSlabs
         addBlock(bridgeslabhalf4 = new BridgeHalfSlab("bridgeslabhalf4", 2.5F, 6000001.0F));
         addBlock(bridgeslabdouble4 = new BridgeDoubleSlab("bridgeslabdouble4", 2.5F, 6000001.0F));
         
-        addBlock(windowmiddleslabhalf = new WindowMiddleHalfSlab("windowmiddleslabhalf", 2.5F, 6000001.0F));
-        addBlock(windowmiddleslabdouble = new WindowMiddleDoubleSlab("windowmiddleslabdouble", 2.5F, 6000001.0F));
+        addBlock(windowmiddleslabhalf = (WindowMiddleHalfSlab) new WindowMiddleHalfSlab("windowmiddleslabhalf", 2.5F, 6000001.0F));
+        addBlock(windowmiddleslabdouble = (WindowMiddleDoubleSlab) new WindowMiddleDoubleSlab("windowmiddleslabdouble", 2.5F, 6000001.0F));
     
     }
 
