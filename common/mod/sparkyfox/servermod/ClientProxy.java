@@ -118,7 +118,7 @@ public class ClientProxy extends CommonProxy {
 		ModItems.initClient(mesher);
 		ModBlocks.initClient(mesher);
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);  //Register the ore generatorY
-		RegistryHandler.Client();
+		RegistryHandler.client();
 	}
 	
 	@Override
