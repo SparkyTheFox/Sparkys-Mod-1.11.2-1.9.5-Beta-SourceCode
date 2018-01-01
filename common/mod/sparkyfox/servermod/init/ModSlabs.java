@@ -5,6 +5,7 @@ import mod.sparkyfox.servermod.slab.adventure.BridgeHalfSlab;
 import mod.sparkyfox.servermod.slab.adventure.WindowMiddleDoubleSlab;
 import mod.sparkyfox.servermod.slab.adventure.WindowMiddleHalfSlab;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -76,7 +77,8 @@ public class ModSlabs
 		item.setRegistryName(block.getRegistryName());
 		ForgeRegistries.ITEMS.register(item);
 		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+	//	ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
 	
 	public static void registerBlock(Block block, ItemBlock itemblock)
@@ -86,6 +88,7 @@ public class ModSlabs
 		itemblock.setRegistryName(block.getRegistryName());
 		ForgeRegistries.ITEMS.register(itemblock);
 		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+		//ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
 }

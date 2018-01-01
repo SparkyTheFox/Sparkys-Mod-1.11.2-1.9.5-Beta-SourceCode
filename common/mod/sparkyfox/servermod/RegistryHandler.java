@@ -6,13 +6,13 @@ import mod.sparkyfox.servermod.init.ModStairs;
 
 public class RegistryHandler 
 {
-	public static void Client()
+	public static void client()
 	{	
 		//RecipeHandler.registerCrafting();
 		//RecipeHandler.registerSmelting();
 	}
 	
-	public static void Common()
+	public static void common()
 	{
 		//ItemInit.init();
 		//ItemInit.register();
