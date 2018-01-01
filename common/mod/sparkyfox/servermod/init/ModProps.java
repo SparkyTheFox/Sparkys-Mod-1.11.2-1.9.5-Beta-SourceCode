@@ -2,6 +2,9 @@ package mod.sparkyfox.servermod.init;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import mod.sparkyfox.servermod.props.adventure.PropCandy;
 import mod.sparkyfox.servermod.props.adventure.PropCandySpill;
 import mod.sparkyfox.servermod.props.adventure.PropDummy;
@@ -21,9 +24,12 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
-public class ModProps 
-{
+public class ModProps {
 
+	
+    public static List<Block> BLOCKS;
+    public static List<ItemBlock> ITEM_BLOCKS;
+    
 	public static Block dummy;
 	public static Block candy;
 	public static Block candyspill;
@@ -36,63 +42,44 @@ public class ModProps
 	public static Block hole2;
 	//public static Block hole3;
 	//public static Block hole4;
+	
+    public static void addBlock(Block block) 
+    {
+        BLOCKS.add(block);
+        ITEM_BLOCKS.add((ItemBlock) new ItemBlock(block).setRegistryName(block.getRegistryName()));
+    }
 
 
 
-	public static void init()
-	{
-		dummy = new PropDummy("dummy", 2.5F, 4.5F, 2);
-		candy = new PropCandy("candy", 2.5F, 4.5F, 2);
-		candyspill = new PropCandySpill("candyspill", 2.5F, 4.5F, 2);
-		mtable = new PropMTable("mtable", 2.5F, 4.5F, 2);
-		vine = new PropVine("vine", 2.5F, 4.5F, 2);
-		webbig = new PropWebBig("webbig", 2.5F, 4.5F, 2);
-		websmall = new PropWebSmall("websmall", 2.5F, 4.5F, 2);
-		savestar = new PropSaveStar("savestar", 2.5F, 4.5F, 2);
-		hole = new PropHole("hole", 2.5F, 4.5F, 2);
-		hole2 = new PropHole2("hole2", 2.5F, 4.5F, 2);
+	public static void init() {
+		
+        BLOCKS = new ArrayList<>();
+        ITEM_BLOCKS = new ArrayList<>();
+	
+         addBlock(dummy = new PropDummy("dummy", 2.5F, 4.5F, 2));
+		 addBlock(candy = new PropCandy("candy", 2.5F, 4.5F, 2));
+		 addBlock(candyspill = new PropCandySpill("candyspill", 2.5F, 4.5F, 2));
+		 addBlock(mtable = new PropMTable("mtable", 2.5F, 4.5F, 2));
+		 addBlock(vine = new PropVine("vine", 2.5F, 4.5F, 2));
+		 addBlock(webbig = new PropWebBig("webbig", 2.5F, 4.5F, 2));
+		 addBlock(websmall = new PropWebSmall("websmall", 2.5F, 4.5F, 2));
+		 addBlock(savestar = new PropSaveStar("savestar", 2.5F, 4.5F, 2));
+		 addBlock(hole = new PropHole("hole", 2.5F, 4.5F, 2));
+		 addBlock(hole2 = new PropHole2("hole2", 2.5F, 4.5F, 2));
 		//hole3 = new PropHole3("hole3", 2.5F, 4.5F, 2);
 		//hole4 = new PropHole4("hole4", 2.5F, 4.5F, 2);
 		
-		
+    }
 
-		
-	}
-	
-	public static void register()
-	{
-		registerBlock(dummy);
-		registerBlock(candy);
-		registerBlock(candyspill);
-		registerBlock(mtable);
-		registerBlock(vine);
-		registerBlock(webbig);
-		registerBlock(websmall);
-		registerBlock(savestar);
-		registerBlock(hole);
-		registerBlock(hole2);
-		//registerBlock(hole3);
-		//registerBlock(hole4);
+    public static Block[] getBlocks()
+    {
+        if(BLOCKS == null) init();
+        return BLOCKS.toArray(new Block[BLOCKS.size()]);
+    }
 
-
-	}
-	
-	public static void registerBlock(Block block)
-	{
-		ForgeRegistries.BLOCKS.register(block);
-		ItemBlock item = new ItemBlock(block);
-		item.setRegistryName(block.getRegistryName());
-		ForgeRegistries.ITEMS.register(item);
-		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
-	}
-	
-	public static void registerBlock(Block block, ItemBlock itemblock)
-	{
-		ForgeRegistries.BLOCKS.register(block);
-		itemblock.setRegistryName(block.getRegistryName());
-		ForgeRegistries.ITEMS.register(itemblock);
-		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
-	}
+    public static ItemBlock[] getItemBlocks()
+    {
+        if(ITEM_BLOCKS == null) init();
+        return ITEM_BLOCKS.toArray(new ItemBlock[ITEM_BLOCKS.size()]);
+    }
 }

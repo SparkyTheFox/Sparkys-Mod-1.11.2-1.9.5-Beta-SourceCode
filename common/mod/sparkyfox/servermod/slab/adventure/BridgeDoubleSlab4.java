@@ -1,8 +1,8 @@
 package mod.sparkyfox.servermod.slab.adventure;
 
-public class BirdgeDoubleSlab4 extends BridgeSlab4
+public class BridgeDoubleSlab4 extends BridgeSlab4
 {
-	public BirdgeDoubleSlab4(String name, float hardness, float resistance) 
+	public BridgeDoubleSlab4(String name, float hardness, float resistance) 
 	{
 		super(name, hardness, resistance);
         this.setBlockUnbreakable();

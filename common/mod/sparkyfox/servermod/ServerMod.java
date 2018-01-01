@@ -1,10 +1,11 @@
 package mod.sparkyfox.servermod;
 
-import java.io.File;
-
 import mod.sparkyfox.servermod.industrialFreezer.ModGuiHandler;
 import mod.sparkyfox.servermod.init.ModEntities;
+import mod.sparkyfox.servermod.init.ModProps;
+import mod.sparkyfox.servermod.init.ModSlabs;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
+import mod.sparkyfox.servermod.init.ModStairs;
 import mod.sparkyfox.servermod.lib.OreDictionaryHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -81,6 +82,18 @@ public class ServerMod {
 	public void PostInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event); 
 		proxy.registerModels();
+		
+        //Run stuff after mods have initialized here
+
+       // ModSlabs.ITEMS = null;
+		ModSlabs.BLOCKS = null;
+		ModSlabs.ITEM_BLOCKS = null;
+		
+		ModStairs.BLOCKS = null;
+		ModStairs.ITEM_BLOCKS = null;
+		
+		ModProps.BLOCKS = null;
+		ModProps.ITEM_BLOCKS = null;
 			
 	}
 //===============================================================================================================================================================================================\\

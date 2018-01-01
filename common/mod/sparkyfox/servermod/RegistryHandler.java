@@ -17,15 +17,15 @@ public class RegistryHandler
 		//ItemInit.init();
 		//ItemInit.register();
 		
-		ModSlabs.init();
-		ModSlabs.register();
+		//ModSlabs.init();
+		//ModSlabs.register();
 
 		
-		ModStairs.init();
-		ModStairs.register();
+		//ModStairs.init();
+		//ModStairs.register();
 		
-		ModProps.init();
-		ModProps.register();
+		//ModProps.init();
+		//ModProps.register();
 		
 		
 		//ToolInit.init();

@@ -15,7 +15,7 @@ public abstract class BridgeSlab extends BlockSlab //NEEDS to be abstract (for s
 {
 	public BridgeSlab(String name, float hardness, float resistance)
 	{
-		super(Material.IRON);
+		super(Material.WOOD);
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setHardness(hardness);//i think this is the  2.5F, 4.5F vaules-float-paramters are in ModSlabs

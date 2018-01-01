@@ -6,8 +6,6 @@ import mod.sparkyfox.servermod.entity.EntityAK4URounds;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
-import mod.sparkyfox.servermod.init.ModSlabs;
-import mod.sparkyfox.servermod.init.ModStairs;
 import mod.sparkyfox.servermod.render.RenderAK4URounds;
 //import mod.sparkyfox.servermod.render.RenderFlowey;
 //import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
@@ -20,6 +18,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -29,6 +28,37 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 public class ClientProxy extends CommonProxy {
+	
+//===========================================================================================================================================================================================\\	
+																					//Bright Sparks Model Registry\\
+	
+    public static void regModel(Item item)
+    {
+        if(item instanceof ISubTypes && item.getHasSubtypes())
+            for(int meta = 0; meta < ((ISubTypes) item).getSubNames().length; meta++)
+                ModelLoader.setCustomModelResourceLocation(item, meta,
+                        new ModelResourceLocation(item.getRegistryName().toString() + "/" + ((ISubTypes) item).getSubNames()[meta], "inventory"));
+        else
+            regModel(item, 0);
+    }
+
+    public static void regModel(Block block)
+    {
+        Item item = Item.getItemFromBlock(block);
+        assert item != null : "Block has no Item!";
+        if(block instanceof ISubTypes)
+            for(int meta = 0; meta < ((ISubTypes) block).getSubNames().length; meta++)
+                ModelLoader.setCustomModelResourceLocation(item, meta,
+                        new ModelResourceLocation(item.getRegistryName().toString() + "/" + ((ISubTypes) block).getSubNames()[meta], "inventory"));
+        else
+            regModel(item);
+    }
+
+    public static void regModel(Item item, int meta)
+    {
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+    }
+
 	
 //===========================================================================================================================================================================================\\	
 																								//Model Registry\\
@@ -118,7 +148,7 @@ public class ClientProxy extends CommonProxy {
 		ModItems.initClient(mesher);
 		ModBlocks.initClient(mesher);
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);  //Register the ore generatorY
-		RegistryHandler.client();
+		//RegistryHandler.client();
 	}
 	
 	@Override

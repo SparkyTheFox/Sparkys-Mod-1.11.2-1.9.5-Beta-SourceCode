@@ -30,7 +30,7 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
 		ModItems.init();
 		ModBlocks.init();
-		RegistryHandler.common();
+		//RegistryHandler.common();
 		
 		
 	}
