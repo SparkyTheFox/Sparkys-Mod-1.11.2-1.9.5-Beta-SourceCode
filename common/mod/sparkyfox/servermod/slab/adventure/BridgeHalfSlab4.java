@@ -1,18 +1,19 @@
 package mod.sparkyfox.servermod.slab.adventure;
 
-public class BridgeHalfSlab4 extends BridgeSlab4
-{
-	public BridgeHalfSlab4(String name, float hardness, float resistance)
-	{
-		super(name, hardness, resistance);
-        this.setBlockUnbreakable();
-        this.disableStats();
-        this.setCreativeTab(null);
+/**
+ * A half slab which gets its properties from the tin slab
+ * 
+ * @author CJMinecraft
+ *
+ */
+public class BridgeHalfSlab4 extends BridgeSlab4 {
+
+	public BridgeHalfSlab4(String unlocalizedName) {
+		super(unlocalizedName);
 	}
-	
+
 	@Override
-	public boolean isDouble() 
-	{
+	public boolean isDouble() {
 		return false;
 	}
 

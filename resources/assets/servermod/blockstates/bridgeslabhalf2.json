@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom": { "model": "servermod:bridgeslabbottom2" },
-        "half=top": { "model": "servermod:bridgeslabtop2" }
+        "dummy=false,half=bottom": { "model": "servermod:bridgeslabbottom2" },
+        "dummy=false,half=top": { "model": "servermod:bridgeslabtop2" }
     }
 }

@@ -4,7 +4,7 @@ import java.util.Random;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModBlocks;
-import mod.sparkyfox.servermod.init.ModSlabs;
+import mod.sparkyfox.servermod.init.ModSlab;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -109,7 +109,7 @@ public abstract class BridgeSlab extends BlockSlab {
 	 */
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return Item.getItemFromBlock(ModSlabs.bridgeslabhalf);
+		return Item.getItemFromBlock(ModSlab.bridgeslabhalf);
 	}
 
 	/**
@@ -121,4 +121,3 @@ public abstract class BridgeSlab extends BlockSlab {
 	}
 
 }
-

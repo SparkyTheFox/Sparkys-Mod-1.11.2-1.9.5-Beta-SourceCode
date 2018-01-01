@@ -1,18 +1,19 @@
 package mod.sparkyfox.servermod.slab.adventure;
 
-public class WindowMiddleHalfSlab extends BridgeSlab
-{
-	public WindowMiddleHalfSlab(String name, float hardness, float resistance)
-	{
-		super(name);
-        this.setBlockUnbreakable();
-        this.disableStats();
-        this.setCreativeTab(null);	
+/**
+ * A half slab which gets its properties from the tin slab
+ * 
+ * @author CJMinecraft
+ *
+ */
+public class WindowMiddleHalfSlab extends WindowMiddleSlab {
+
+	public WindowMiddleHalfSlab(String unlocalizedName) {
+		super(unlocalizedName);
 	}
-	
+
 	@Override
-	public boolean isDouble() 
-	{
+	public boolean isDouble() {
 		return false;
 	}
 

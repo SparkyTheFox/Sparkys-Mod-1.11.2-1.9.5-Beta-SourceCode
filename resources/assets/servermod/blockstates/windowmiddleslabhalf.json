@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom": { "model": "servermod:windowmiddleslabbottom" },
-        "half=top": { "model": "servermod:windowmiddleslabtop" }
+        "dummy=false,half=bottom": { "model": "servermod:windowmiddleslabbottom" },
+        "dummy=false,half=top": { "model": "servermod:windowmiddleslabtop" }
     }
 }

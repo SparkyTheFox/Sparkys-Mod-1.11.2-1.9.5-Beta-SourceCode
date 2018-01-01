@@ -3,6 +3,7 @@ package mod.sparkyfox.servermod;
 import mod.sparkyfox.servermod.industrialFreezer.ModGuiHandler;
 import mod.sparkyfox.servermod.init.ModEntities;
 import mod.sparkyfox.servermod.init.ModProps;
+import mod.sparkyfox.servermod.init.ModSlab;
 import mod.sparkyfox.servermod.init.ModSlabs;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
 import mod.sparkyfox.servermod.init.ModStairs;
@@ -60,6 +61,8 @@ public class ServerMod {
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event); 
 		sounds = new ModSoundEvents();
+		ModSlab.init();
+		ModSlab.register();
 		proxy.registerRenderer();
 		
 		
