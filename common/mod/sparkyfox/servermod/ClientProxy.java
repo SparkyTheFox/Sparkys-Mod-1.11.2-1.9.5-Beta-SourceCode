@@ -148,9 +148,18 @@ public class ClientProxy extends CommonProxy {
 		ItemModelMesher mesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
 		ModItems.initClient(mesher);
 		ModBlocks.initClient(mesher);
-		ModSlab.registerRenders();
 		GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);  //Register the ore generatorY
 		//RegistryHandler.client();
+		
+	}
+
+	/**
+	 * Registers the renders
+	 */
+	@Override
+	public void registerRenders() {
+		ModSlab.registerRenders();
+
 	}
 	
 	@Override

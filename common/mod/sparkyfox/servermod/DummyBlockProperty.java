@@ -1,4 +1,4 @@
-package mod.sparkyfox.servermod.slab.adventure;
+package mod.sparkyfox.servermod;
 
 import java.util.Collection;
 

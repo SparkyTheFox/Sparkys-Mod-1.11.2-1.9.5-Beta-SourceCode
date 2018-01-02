@@ -1,6 +1,6 @@
 {
     "variants": {
         "dummy=false,half=top": { "model": "servermod:windowmiddle" },
-        "dummy=false,half=bottom": { "model": "servermod:windowmiddle" }
+		"dummy=false,half=bottom": { "model": "servermod:windowmiddle" }
     }
 }

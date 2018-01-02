@@ -1,9 +1,9 @@
-package mod.sparkyfox.servermod.init;
+package mod.sparkyfox.servermod;
 
+import org.apache.commons.codec.language.bm.Lang;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.sparkyfox.servermod.ServerMod;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
@@ -24,7 +24,7 @@ public class Utils {
 	 * called
 	 */
 	private static Logger logger;
-
+	//private static Lang lang;
 
 	/**
 	 * Returns the logger. This makes System.our.println look shabby
@@ -38,6 +38,11 @@ public class Utils {
 		return logger;
 	}
 
+	/**
+	 * Returns the language for the mod.
+	 * 
+	 * @return the {@link Lang}
+	 */
 
 
 	/**

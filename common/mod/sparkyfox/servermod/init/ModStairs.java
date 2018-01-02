@@ -25,6 +25,10 @@ public class ModStairs
 	public static Block tutorial_stairs2;
 	public static Block tutorial_stairs3;
 	public static Block tutorial_stairs4;
+	public static Block tutorial_stairs5;
+	//public static Block IRON_BLOCK;
+
+	
 	
 	public static Block pillar_bottom;
 	public static Block pillar_middle;
@@ -47,10 +51,12 @@ public class ModStairs
 		addBlock(tutorial_stairs2 = new CustomBlockStairs("tutorial_stairs2", tutorial_block.getDefaultState()));
 		addBlock(tutorial_stairs3 = new CustomBlockStairs("tutorial_stairs3", tutorial_block.getDefaultState()));
 		addBlock(tutorial_stairs4 = new CustomBlockStairs("tutorial_stairs4", tutorial_block.getDefaultState()));
-		
+		addBlock(tutorial_stairs5 = new CustomBlockStairs("tutorial_stairs5", tutorial_block.getDefaultState()));
 		addBlock(pillar_bottom = new PropPillarBottom("pillar_bottom", tutorial_block.getDefaultState()));
 		addBlock(pillar_middle = new PropPillarMiddle("pillar_middle", tutorial_block.getDefaultState()));
-
+		
+		//addBlock(pillar_middle = new PropPillarMiddle("iron_block", IRON_BLOCK.getDefaultState()));
+	
     }
 
     public static void regTileEntities()

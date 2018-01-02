@@ -122,6 +122,7 @@ import mod.sparkyfox.servermod.lib.ModNames;
 import mod.sparkyfox.servermod.props.adventure.PropBlueButton;
 import mod.sparkyfox.servermod.props.adventure.PropGreenButton;
 import mod.sparkyfox.servermod.props.adventure.PropRedButton3;
+import mod.sparkyfox.servermod.props.adventure.PropUTButton;
 import net.minecraft.block.BlockPressurePlate.Sensitivity;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
@@ -270,6 +271,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static PropRedButton3 RedButton3;
 	  public static PropBlueButton BlueButton;
 	  public static PropGreenButton GreenButton;
+	  public static PropUTButton UTButton;
 	  
 	  
 
@@ -1019,6 +1021,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GreenButton.setRegistryName(Green);
 		  GameRegistry.register(GreenButton);
 		  GameRegistry.register(new ItemBlock(GreenButton), Green);
+		  
+		  ResourceLocation UT = new ResourceLocation(ServerMod.MOD_ID, ModNames.UTButton);
+		  UTButton = new PropUTButton();
+		  UTButton.setRegistryName(UT);
+		  GameRegistry.register(UTButton);
+		  GameRegistry.register(new ItemBlock(UTButton), UT);
 		  
 		  
 
@@ -1839,6 +1847,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			    ModelResourceLocation modelGreenButton = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.GreenButton, "inventory");
 			    ModelLoader.registerItemVariants(itemGreenButton, modelGreenButton);
 			    mesher.register(itemGreenButton, 0, modelGreenButton);{
+	  			}
+			    
+			    //Blocks: UTButton
+			    Item itemUTButton = Item.getItemFromBlock(UTButton);
+			    ModelResourceLocation modelUTButton = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.UTButton, "inventory");
+			    ModelLoader.registerItemVariants(itemUTButton, modelUTButton);
+			    mesher.register(itemUTButton, 0, modelUTButton);{
 	  			}
 			    
 				

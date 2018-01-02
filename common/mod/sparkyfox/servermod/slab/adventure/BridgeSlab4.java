@@ -2,6 +2,7 @@ package mod.sparkyfox.servermod.slab.adventure;
 
 import java.util.Random;
 
+import mod.sparkyfox.servermod.DummyBlockProperty;
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModSlab;
@@ -35,11 +36,12 @@ public abstract class BridgeSlab4 extends BlockSlab {
 	 *            The block's unlocalizedName
 	 */
 	public BridgeSlab4(String unlocalizedName) {
-		super(Material.IRON); // Normal block stuff
+		super(Material.WOOD); // Normal block stuff
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, unlocalizedName));
-		this.setHardness(3);
-		this.setResistance(20);
+        this.setBlockUnbreakable();
+        this.disableStats();
+        this.setCreativeTab(null);
 
 		// Set the default state
 		IBlockState state = this.blockState.getBaseState();
@@ -109,7 +111,7 @@ public abstract class BridgeSlab4 extends BlockSlab {
 	 */
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return Item.getItemFromBlock(ModSlab.bridgeslabhalf);
+		return Item.getItemFromBlock(ModSlab.BridgeSlabHalf);
 	}
 
 	/**

@@ -64,7 +64,7 @@ public class ServerMod {
 		ModSlab.init();
 		ModSlab.register();
 		proxy.registerRenderer();
-		
+		proxy.registerRenders();
 		
 	}
 	@EventHandler

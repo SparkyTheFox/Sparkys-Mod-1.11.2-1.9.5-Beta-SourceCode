@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "servermod:blocks/adventure/ruins_stairs",
+        "top": "servermod:blocks/adventure/ruins_stairs",
+        "side": "servermod:blocks/adventure/ruins_stairs"
+    }
+}

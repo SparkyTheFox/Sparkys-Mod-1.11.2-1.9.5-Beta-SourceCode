@@ -70,11 +70,12 @@ RuinsBrideservermod:RuinsBridge.name=!?(RuinsBridge)
 BlueButtonservermod:BlueButton.name=!?(Blue Button)
 GreenButtonservermod:GreenButton.name=!?(Green Button)
 RedButton3servermod:RedButton3.name=!?(Red Button)
+UTButtonservermod:UTButton.name=!?(AdventureButton)
 
-tile.bridgeslabhalf.name=!?(RuinsBridge)
-tile.bridgeslabhalf2.name=!?(RuinsBridge)
-tile.bridgeslabhalf3.name=!?(RuinsBridge)
-tile.bridgeslabhalf4.name=!?(RuinsBridge)
+tile.bridge_slab_half.name=!?(RuinsBridge)
+tile.bridge_slab_half2.name=!?(RuinsBridge)
+tile.bridge_slab_half3.name=!?(RuinsBridge)
+tile.bridge_slab_half4.name=!?(RuinsBridge)
 
 RuinsFadedWallBottom2servermod:RuinsFadedWallBottom2.name=!?(Faded Wall Bottom2)
 RuinsPadservermod:RuinsPad.name=!?(RuinsPad)
@@ -154,8 +155,9 @@ tile.tutorial_stairs.name=!?(Ruins Window Corner)
 tile.tutorial_stairs2.name=!?(Ruins Window Corner 2)
 tile.tutorial_stairs3.name=!?(Ruins Window Corner 3)
 tile.tutorial_stairs4.name=!?(Ruins Window Corner 4)
+tile.tutorial_stairs5.name=!?(Ruins Stairs)
 tile.tutorial_block.name=!?(some random block to make stairs work)
-tile.windowmiddleslabhalf.name=!?(Ruins Window Slab)
+tile.windowmiddle_slab_half.name=!?(Ruins Window Slab)
 
 
 

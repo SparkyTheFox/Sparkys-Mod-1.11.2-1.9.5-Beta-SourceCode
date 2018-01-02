@@ -291,6 +291,7 @@ public class ModNames {
 	public static final String BlueButton = "BlueButton";
 	public static final String GreenButton = "GreenButton";
 	public static final String Stick = "Stick";
+	public static final String UTButton = "UTButton";
 
 
 	

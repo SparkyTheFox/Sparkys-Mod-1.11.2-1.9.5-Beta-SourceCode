@@ -1,4 +1,4 @@
-package mod.sparkyfox.servermod.block.barriers;
+package mod.sparkyfox.servermod.props.adventure;
 
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockBarrierButton extends BlockButton {
+public class PropUTButton extends BlockButton {
 	
 	@Override
 	public String getUnlocalizedName() {
-		return "BarrierButton" + ServerMod.RESOURCE_PREFIX + ModNames.BarrierButton;  // CobaltOre.ServerMod:CobaltOre
+		return "UTButton" + ServerMod.RESOURCE_PREFIX + ModNames.BarrierButton;  // CobaltOre.ServerMod:CobaltOre
 	}
 	
-    public BlockBarrierButton()
+    public PropUTButton()
     {
     	super(false);
 		this.setBlockUnbreakable();	

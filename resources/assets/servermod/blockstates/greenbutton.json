@@ -14,3 +14,4 @@
         "facing=north,powered=true":  { "model": "servermod:greenbutton_pressed", "uvlock": true, "x": 90 }
     }
 }
+

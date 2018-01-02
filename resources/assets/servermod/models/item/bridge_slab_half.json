@@ -1,5 +1,5 @@
 {
-    "parent": "servermod:block/bridgeslabbottom4",
+    "parent": "servermod:block/bridge_slab_bottom",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

@@ -1,6 +1,7 @@
 package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
+import mod.sparkyfox.servermod.Utils;
 import mod.sparkyfox.servermod.slab.adventure.BridgeDoubleSlab;
 import mod.sparkyfox.servermod.slab.adventure.BridgeHalfSlab;
 import mod.sparkyfox.servermod.slab.adventure.BridgeSlab;
@@ -55,20 +56,20 @@ public class ModSlab {
 	//public static BridgeHalfSlab bridgeslabhalf;
 	//public static BridgeDoubleSlab bridgeslabdouble;
 	
-	public static BridgeHalfSlab bridgeslabhalf;
-	public static BridgeDoubleSlab bridgeslabdouble;
+	public static BridgeHalfSlab BridgeSlabHalf;
+	public static BridgeDoubleSlab BridgeSlabDouble;
 	
-	public static BridgeHalfSlab bridgeslabhalf2;
-	public static BridgeDoubleSlab bridgeslabdouble2;
+	public static BridgeHalfSlab BridgeSlabHalf2;
+	public static BridgeDoubleSlab BridgeSlabDouble2;
 	
-	public static BridgeHalfSlab bridgeslabhalf3;
-	public static BridgeDoubleSlab bridgeslabdouble3;
+	public static BridgeHalfSlab BridgeSlabHalf3;
+	public static BridgeDoubleSlab BridgeSlabDouble3;
 	
-	public static BridgeHalfSlab bridgeslabhalf4;
-	public static BridgeDoubleSlab bridgeslabdouble4;
+	public static BridgeHalfSlab BridgeSlabHalf4;
+	public static BridgeDoubleSlab BridgeSlabDouble4;
 	
-	public static WindowMiddleHalfSlab windowmiddleslabhalf;
-	public static WindowMiddleDoubleSlab windowmiddleslabdouble;
+	public static WindowMiddleHalfSlab WindowMiddleSlabHalf;
+	public static WindowMiddleDoubleSlab WindowMiddleSlabDouble;
 
 
 	/*
@@ -84,22 +85,22 @@ public class ModSlab {
 		//bridgeslabhalf = new  BridgeHalfSlab("bridgeslabhalf", 2.5F, 6000001.0F);
 		//bridgeslabdouble = new BridgeDoubleSlab("bridgeslabdouble", 2.5F, 6000001.0F);
 		
-        bridgeslabhalf = new BridgeHalfSlab("bridgeslabhalf");
-        bridgeslabdouble = new BridgeDoubleSlab("bridgeslabdouble");
+        BridgeSlabHalf = new BridgeHalfSlab("bridge_slab_half");
+        BridgeSlabDouble = new BridgeDoubleSlab("bridge_slab_double");
         
-        bridgeslabhalf2 = new BridgeHalfSlab("bridgeslabhalf2");
-        bridgeslabdouble2 = new BridgeDoubleSlab("bridgeslabdouble2");
+        BridgeSlabHalf2 = new BridgeHalfSlab("bridge_slab_half2");
+        BridgeSlabDouble2 = new BridgeDoubleSlab("bridge_slab_double2");
         
-        bridgeslabhalf3 = new BridgeHalfSlab("bridgeslabhalf3");
-        bridgeslabdouble3 = new BridgeDoubleSlab("bridgeslabdouble3");
+        BridgeSlabHalf3 = new BridgeHalfSlab("bridge_slab_half3");
+        BridgeSlabDouble3 = new BridgeDoubleSlab("bridge_slab_double3");
         
-        bridgeslabhalf4 = new BridgeHalfSlab("bridgeslabhalf4");
-        bridgeslabdouble4 = new BridgeDoubleSlab("bridgeslabdouble4");
+        BridgeSlabHalf4 = new BridgeHalfSlab("bridge_slab_half4");
+        BridgeSlabDouble4 = new BridgeDoubleSlab("bridge_slab_double4");
         
-        windowmiddleslabhalf = new WindowMiddleHalfSlab("windowmiddleslabhalf");
-        windowmiddleslabdouble = new WindowMiddleDoubleSlab("windowmiddleslabdouble");
-
-
+        WindowMiddleSlabHalf = new WindowMiddleHalfSlab("windowmiddle_slab_half");
+        WindowMiddleSlabDouble = new WindowMiddleDoubleSlab("windowmiddle_slab_double");
+        
+ 
 
 		/*
 		 * Energy Blocks
@@ -112,20 +113,20 @@ public class ModSlab {
 	 */
 	public static void register() {
 
-		registerBlock(bridgeslabhalf, new ItemSlab(bridgeslabhalf, bridgeslabhalf, bridgeslabdouble));
-		GameRegistry.register(bridgeslabdouble); // Doesn't need an item
+		registerBlock(BridgeSlabHalf, new ItemSlab(BridgeSlabHalf, BridgeSlabHalf, BridgeSlabDouble));
+		GameRegistry.register(BridgeSlabDouble); // Doesn't need an item
 
-		registerBlock(bridgeslabhalf2, new ItemSlab(bridgeslabhalf2, bridgeslabhalf2, bridgeslabdouble2));
-		GameRegistry.register(bridgeslabdouble2); // Doesn't need an item
+		registerBlock(BridgeSlabHalf2, new ItemSlab(BridgeSlabHalf2, BridgeSlabHalf2, BridgeSlabDouble2));
+		GameRegistry.register(BridgeSlabDouble2); // Doesn't need an item
 		
-		registerBlock(bridgeslabhalf3, new ItemSlab(bridgeslabhalf3, bridgeslabhalf3, bridgeslabdouble3));
-		GameRegistry.register(bridgeslabdouble3); // Doesn't need an item
+		registerBlock(BridgeSlabHalf3, new ItemSlab(BridgeSlabHalf3, BridgeSlabHalf3, BridgeSlabDouble3));
+		GameRegistry.register(BridgeSlabDouble3); // Doesn't need an item
 		
-		registerBlock(bridgeslabhalf4, new ItemSlab(bridgeslabhalf4, bridgeslabhalf4, bridgeslabdouble4));
-		GameRegistry.register(bridgeslabdouble4); // Doesn't need an item
+		registerBlock(BridgeSlabHalf4, new ItemSlab(BridgeSlabHalf4, BridgeSlabHalf4, BridgeSlabDouble4));
+		GameRegistry.register(BridgeSlabDouble4); // Doesn't need an item
 		
-		registerBlock(windowmiddleslabhalf, new ItemSlab(windowmiddleslabhalf, windowmiddleslabhalf, windowmiddleslabdouble));
-		GameRegistry.register(windowmiddleslabdouble); // Doesn't need an item
+		registerBlock(WindowMiddleSlabHalf, new ItemSlab(WindowMiddleSlabHalf, WindowMiddleSlabHalf, WindowMiddleSlabDouble));
+		GameRegistry.register(WindowMiddleSlabDouble); // Doesn't need an item
 
 		/*
 		 * Energy Blocks
@@ -138,11 +139,11 @@ public class ModSlab {
 	 */
 	public static void registerRenders() {
 
-		registerRender(bridgeslabhalf);
-		registerRender(bridgeslabhalf2);
-		registerRender(bridgeslabhalf3);
-		registerRender(bridgeslabhalf4);
-		registerRender(windowmiddleslabhalf);
+		registerRender(BridgeSlabHalf);
+		registerRender(BridgeSlabHalf2);
+		registerRender(BridgeSlabHalf3);
+		registerRender(BridgeSlabHalf4);
+		registerRender(WindowMiddleSlabHalf);
 
 	}
 
