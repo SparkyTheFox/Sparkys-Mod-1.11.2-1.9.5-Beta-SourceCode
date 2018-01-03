@@ -17,13 +17,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class PropUTButton extends BlockButton {
 	
+	
+	
+	private boolean wooden;
+
 	@Override
 	public String getUnlocalizedName() {
 		return "UTButton" + ServerMod.RESOURCE_PREFIX + ModNames.BarrierButton;  // CobaltOre.ServerMod:CobaltOre
 	}
 	
-    public PropUTButton()
+   
+	 public PropUTButton()
     {
+    	
     	super(false);
 		this.setBlockUnbreakable();	
 		this.setResistance(6000001.0F);
@@ -56,6 +62,14 @@ public class PropUTButton extends BlockButton {
     public float getAmbientOcclusionLightValue(IBlockState state)
     {
         return 1.0F;
+    }
+    
+    /**
+     * How many world ticks before ticking
+     */
+    public int tickRate(World worldIn)
+    {
+        return this.wooden ? 1 : 1;
     }
     
     
