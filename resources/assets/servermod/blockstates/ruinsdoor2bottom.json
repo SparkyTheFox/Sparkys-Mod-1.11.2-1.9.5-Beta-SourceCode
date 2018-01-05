@@ -1,0 +1,26 @@
+{
+  "forge_marker":1,
+  "defaults":{
+    "transform":"forge:default-block",
+    "model":"cube_all",
+    "textures": {
+     "up": "servermod:blocks/adventure/ruins_door2_bottom",
+     "down": "servermod:blocks/adventure/ruins_door2_bottom",
+      "north": "servermod:blocks/adventure/ruins_door2_bottom",
+      "south": "servermod:blocks/adventure/ruins_door2_bottom",
+      "west": "servermod:blocks/adventure/ruins_door2_bottom",
+      "east": "servermod:blocks/adventure/ruins_door2_bottom"
+    }
+  },
+    "variants": {
+        "facing=north": { "model": "purple_wool" },
+        "facing=south": { "model": "purple_wool", "y": 180 },
+        "facing=west":  { "model": "purple_wool", "y": 270 },
+        "facing=east":  { "model": "purple_wool", "y": 90 },
+    "inventory":[{}],
+    "normal":[{}]
+    }
+}
+
+
+

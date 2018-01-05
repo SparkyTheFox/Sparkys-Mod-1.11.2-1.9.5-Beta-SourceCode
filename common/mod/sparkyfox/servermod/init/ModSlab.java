@@ -68,6 +68,9 @@ public class ModSlab {
 	public static BridgeHalfSlab BridgeSlabHalf4;
 	public static BridgeDoubleSlab BridgeSlabDouble4;
 	
+	public static BridgeHalfSlab BridgeSlabHalf5;
+	public static BridgeDoubleSlab BridgeSlabDouble5;
+	
 	public static WindowMiddleHalfSlab WindowMiddleSlabHalf;
 	public static WindowMiddleDoubleSlab WindowMiddleSlabDouble;
 
@@ -97,6 +100,9 @@ public class ModSlab {
         BridgeSlabHalf4 = new BridgeHalfSlab("bridge_slab_half4");
         BridgeSlabDouble4 = new BridgeDoubleSlab("bridge_slab_double4");
         
+        BridgeSlabHalf5 = new BridgeHalfSlab("bridge_slab_half5");
+        BridgeSlabDouble5 = new BridgeDoubleSlab("bridge_slab_double5");
+        
         WindowMiddleSlabHalf = new WindowMiddleHalfSlab("windowmiddle_slab_half");
         WindowMiddleSlabDouble = new WindowMiddleDoubleSlab("windowmiddle_slab_double");
         
@@ -125,6 +131,9 @@ public class ModSlab {
 		registerBlock(BridgeSlabHalf4, new ItemSlab(BridgeSlabHalf4, BridgeSlabHalf4, BridgeSlabDouble4));
 		GameRegistry.register(BridgeSlabDouble4); // Doesn't need an item
 		
+		registerBlock(BridgeSlabHalf5, new ItemSlab(BridgeSlabHalf5, BridgeSlabHalf5, BridgeSlabDouble5));
+		GameRegistry.register(BridgeSlabDouble5); // Doesn't need an item
+		
 		registerBlock(WindowMiddleSlabHalf, new ItemSlab(WindowMiddleSlabHalf, WindowMiddleSlabHalf, WindowMiddleSlabDouble));
 		GameRegistry.register(WindowMiddleSlabDouble); // Doesn't need an item
 
@@ -143,6 +152,7 @@ public class ModSlab {
 		registerRender(BridgeSlabHalf2);
 		registerRender(BridgeSlabHalf3);
 		registerRender(BridgeSlabHalf4);
+		registerRender(BridgeSlabHalf5);
 		registerRender(WindowMiddleSlabHalf);
 
 	}

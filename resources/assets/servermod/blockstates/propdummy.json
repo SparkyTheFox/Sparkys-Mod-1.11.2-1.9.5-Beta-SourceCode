@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": { "model": "servermod:dummy" },
+		"facing=north": { "model": "servermod:dummy" },
+        "facing=south": { "model": "servermod:dummy", "y": 180 },
+        "facing=west":  { "model": "servermod:dummy", "y": 270 },
+        "facing=east":  { "model": "servermod:dummy", "y": 90 }
+		
+    }
+}

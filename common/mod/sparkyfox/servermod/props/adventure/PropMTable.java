@@ -1,5 +1,6 @@
 package mod.sparkyfox.servermod.props.adventure;
 
+import mod.sparkyfox.servermod.ServerMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCarpet;
 import net.minecraft.block.BlockHorizontal;
@@ -17,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -29,16 +31,14 @@ public class PropMTable extends Block {
    
 	 public static final PropertyDirection FACING = BlockHorizontal.FACING;
     protected static final AxisAlignedBB CARPET_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.0625D, 1.0D);
-		public PropMTable(String name, float hardness, float resistance, int harvestLevel) 
+		public PropMTable(String unlocalizedName) 
 		{
 			super(Material.CARPET);
-			setRegistryName(name);
-			setUnlocalizedName(name);
-			setHardness(hardness);
-			setResistance(resistance);
-	       // this.setTickRandomly(true);
-			this.setCreativeTab(null);
+			this.setUnlocalizedName(unlocalizedName);
+			this.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, unlocalizedName));
 	        this.setBlockUnbreakable();
+	        this.disableStats();
+	        this.setCreativeTab(null);
 	        this.disableStats();
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}

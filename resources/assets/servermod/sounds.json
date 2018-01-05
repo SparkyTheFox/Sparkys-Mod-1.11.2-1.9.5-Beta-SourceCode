@@ -97,6 +97,42 @@
         "subtitle": "Save Successful" 
     },   
     
+        "sfx_monsterencounter": {
+        "category": "master",
+        "sounds": [
+        {"name":"servermod:sfx_monsterencounter", "stream": true}
+        ],
+           
+        "subtitle": "Monster Encountered"
+        
+    },   
+    
+        "sfx_soulgameoverhit": {
+        "category": "master",
+        "sounds": [
+        {"name":"servermod:sfx_soulgameoverhit", "stream": true}
+        ],
+           
+        "subtitle": "Soul Hit"  
+    },
+    
+        "sfx_soulgameoverhitbreak": {
+        "category": "master",
+        "sounds": [
+        {"name":"servermod:sfx_soulgameoverhitbreak", "stream": true}
+        ],
+           
+        "subtitle": "Soul Break"  
+    },   
+    
+        "sfx_soulbattlestart": {
+        "category": "master",
+        "sounds": [
+        {"name":"servermod:sfx_soulbattlestart", "stream": true}
+        ],
+           
+        "subtitle": "Battle Start"  
+    },   
 
         "mus_ruins": {
         "category": "record",
@@ -170,7 +206,7 @@
         "subtitle": "HoI"    
     },
     
-            "mus_snowy": {
+        "mus_snowy": {
         "category": "record",
         "sounds": [
        {"name":"servermod:mus_snowy", "stream": true}
@@ -232,6 +268,16 @@
             
         ],
         "subtitle": "* Oh...sorry..."
+            
+    },
+    
+     "mus_determination": {
+     "category": "record",
+        "sounds": [
+       {"name":"servermod:mus_determination", "stream": true}
+            
+        ],
+        "subtitle": "Stay Determined"
             
     },
 

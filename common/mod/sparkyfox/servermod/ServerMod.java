@@ -4,7 +4,7 @@ import mod.sparkyfox.servermod.industrialFreezer.ModGuiHandler;
 import mod.sparkyfox.servermod.init.ModEntities;
 import mod.sparkyfox.servermod.init.ModProps;
 import mod.sparkyfox.servermod.init.ModSlab;
-import mod.sparkyfox.servermod.init.ModSlabs;
+//import mod.sparkyfox.servermod.init.ModSlabs;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
 import mod.sparkyfox.servermod.init.ModStairs;
 import mod.sparkyfox.servermod.lib.OreDictionaryHandler;
@@ -63,6 +63,13 @@ public class ServerMod {
 		sounds = new ModSoundEvents();
 		ModSlab.init();
 		ModSlab.register();
+		
+		ModProps.init();
+		ModProps.register();
+		
+		ModStairs.init();
+		ModStairs.register();
+		
 		proxy.registerRenderer();
 		proxy.registerRenders();
 		
@@ -89,14 +96,9 @@ public class ServerMod {
         //Run stuff after mods have initialized here
 
        // ModSlabs.ITEMS = null;
-		ModSlabs.BLOCKS = null;
-		ModSlabs.ITEM_BLOCKS = null;
-		
-		ModStairs.BLOCKS = null;
-		ModStairs.ITEM_BLOCKS = null;
-		
-		ModProps.BLOCKS = null;
-		ModProps.ITEM_BLOCKS = null;
+	//	ModSlabs.BLOCKS = null;
+//		ModSlabs.ITEM_BLOCKS = null;
+
 			
 	}
 //===============================================================================================================================================================================================\\

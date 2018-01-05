@@ -1,21 +1,22 @@
 package mod.sparkyfox.servermod.props.adventure;
 
+import mod.sparkyfox.servermod.ServerMod;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.ResourceLocation;
 
 public class PropVine extends BlockVine{
 	
-	public PropVine(String name, float hardness, float resistance, int harvestLevel) 
+	public PropVine(String unlocalizedName) 
 	{
 		super();
-		setRegistryName(name);
-		setUnlocalizedName(name);
-		setHardness(hardness);
-		setResistance(resistance);
-		this.setCreativeTab(null);
+
 		this.setTickRandomly(true);
+		this.setUnlocalizedName(unlocalizedName);
+		this.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, unlocalizedName));
         this.setBlockUnbreakable();
         this.disableStats();
+        this.setCreativeTab(null);
 	}
 }

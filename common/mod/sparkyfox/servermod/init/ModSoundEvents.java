@@ -20,6 +20,10 @@ public class ModSoundEvents {
 	public static SoundEvent sfx_savepoint;
 	public static SoundEvent sfx_savesucces;
 	public static SoundEvent soulbattleflash;
+	public static SoundEvent sfx_monsterencounter;
+	public static SoundEvent sfx_soulgameoverhit;
+	public static SoundEvent sfx_soulgameoverhitbreak;
+	public static SoundEvent sfx_soulbattlestart;
 	public static SoundEvent nosound;
 	
 //===============================================================================================================================================================================================\\
@@ -39,7 +43,7 @@ public class ModSoundEvents {
 	public static SoundEvent mus_home;
 	public static SoundEvent mus_home2;
 	public static SoundEvent mus_boss2;
-	
+	public static SoundEvent mus_determination;
 //===============================================================================================================================================================================================\\
 																									//SONG Registry\\	
 	//public static SoundEvent song_90s;
@@ -76,6 +80,11 @@ public class ModSoundEvents {
 			sfx_savepoint = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_savepoint")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_savepoint"));
 			sfx_savesucces = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_savesucces")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_savesucces"));
 			sfx_fall = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_fall")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_fall"));
+			
+			sfx_monsterencounter = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_monsterencounter")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_monsterencounter"));
+			sfx_soulgameoverhit = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_soulgameoverhit")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_soulgameoverhit"));
+			sfx_soulgameoverhitbreak = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_soulgameoverhitbreak")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_soulgameoverhitbreak"));
+			sfx_soulbattlestart = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sfx_soulbattlestart")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sfx_soulbattlestart"));
 
 
 
@@ -97,6 +106,7 @@ public class ModSoundEvents {
 		mus_home = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_home")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_home"));
 		mus_home2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_home2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_home2"));
 		mus_boss2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_boss2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_boss2"));
+		mus_determination = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "mus_determination")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "mus_determination"));
 		
 //===============================================================================================================================================================================================\\
 																								//Sound Initialisation: SONGS\\
@@ -143,6 +153,7 @@ public class ModSoundEvents {
 		registerSound(mus_home);
 		registerSound(mus_home2);
 		registerSound(mus_boss2);
+		registerSound(mus_determination);
 		registerSound(song_ohmygodno);
 		registerSound(alarm);
 		registerSound(switch1);
@@ -152,6 +163,10 @@ public class ModSoundEvents {
 		registerSound(sfx_mousesqueek);
 		registerSound(sfx_savepoint);
 		registerSound(sfx_savesucces);
+		registerSound(sfx_monsterencounter);
+		registerSound(sfx_soulgameoverhit);
+		registerSound(sfx_soulgameoverhitbreak);
+		registerSound(sfx_soulbattlestart);
 		//registerSound(song_90s);
 		//registerSound(FloweyHowdy);
 		//registerSound(FloweyKOBK);

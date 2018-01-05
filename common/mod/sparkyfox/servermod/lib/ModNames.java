@@ -292,6 +292,14 @@ public class ModNames {
 	public static final String GreenButton = "GreenButton";
 	public static final String Stick = "Stick";
 	public static final String UTButton = "UTButton";
+	public static final String RuinsDoor2Top = "RuinsDoor2Top";
+	public static final String RuinsDoor2Bottom = "RuinsDoor2Bottom";
+	public static final String RuinsDoor3TopLeft = "RuinsDoor3TopLeft";
+	public static final String RuinsDoor3MiddleLeft = "RuinsDoor3MiddleLeft";
+	public static final String RuinsDoor3BottomLeft = "RuinsDoor3BottomLeft";
+	public static final String RuinsDoor3TopRight = "RuinsDoor3TopRight";
+	public static final String RuinsDoor3MiddleRight = "RuinsDoor3MiddleRight";
+	public static final String RuinsDoor3BottomRight = "RuinsDoor3BottomRight";
 
 
 	

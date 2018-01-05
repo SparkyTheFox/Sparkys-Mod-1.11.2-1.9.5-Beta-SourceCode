@@ -6,7 +6,9 @@ import mod.sparkyfox.servermod.entity.EntityAK4URounds;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
+import mod.sparkyfox.servermod.init.ModProps;
 import mod.sparkyfox.servermod.init.ModSlab;
+import mod.sparkyfox.servermod.init.ModStairs;
 import mod.sparkyfox.servermod.render.RenderAK4URounds;
 //import mod.sparkyfox.servermod.render.RenderFlowey;
 //import mod.sparkyfox.servermod.render.RenderFriendlynessPellet;
@@ -159,6 +161,8 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerRenders() {
 		ModSlab.registerRenders();
+		ModStairs.registerRenders();
+		ModProps.registerRenders();
 
 	}
 	

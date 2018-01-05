@@ -76,6 +76,7 @@ tile.bridge_slab_half.name=!?(RuinsBridge)
 tile.bridge_slab_half2.name=!?(RuinsBridge)
 tile.bridge_slab_half3.name=!?(RuinsBridge)
 tile.bridge_slab_half4.name=!?(RuinsBridge)
+tile.bridge_slab_half5.name=!?(RuinsPurpleSlabs)
 
 RuinsFadedWallBottom2servermod:RuinsFadedWallBottom2.name=!?(Faded Wall Bottom2)
 RuinsPadservermod:RuinsPad.name=!?(RuinsPad)
@@ -99,7 +100,6 @@ RuinsWallTextservermod:RuinsWallText.name=!?(RuinsWallText)
 RuinsWallMouseHouseservermod:RuinsWallMouseHouse.name=!?(RuinsWallMouseHouse)
 YellowFlowersservermod:YellowFlowers.name=!?(YellowFlowers)
 RedFlowersservermod:RedFlowers.name=!?(RedFlowers)
-
 RuinsDoorPillar1servermod:RuinsDoorPillar1.name=!?(RuinsDoorPillar1)
 BlockRuinsDoorPillar2servermod:RuinsDoorPillar2.name=!?(RuinsDoorPillar2)
 BlockRuinsDoorPillar3servermod:RuinsDoorPillar3.name=!?(RuinsDoorPillar3)
@@ -134,6 +134,15 @@ RuinsGreyservermod:RuinsGrey.name=!?(Ruins Grey)
 RuinsLightGreyservermod:RuinsLightGrey.name=!?(Ruins LightGrey)
 RuinsWhiteservermod:RuinsWhite.name=!?(Ruins White)
 RuinsStairsservermod:RuinsStairs.name=!?(Ruins Stairs)
+RuinsDoor2Topservermod:RuinsDoor2Top.name=!?(RuinsDoor2Top)
+RuinsDoor2Bottomservermod:RuinsDoor2Bottom.name=!?(RuinsDoor2Bottom)
+RuinsDoor3TopLeftservermod:RuinsDoor3TopLeft.name=!?(RuinsDoor3TopLeft)
+RuinsDoor3MiddleLeftservermod:RuinsDoor3MiddleLeft.name=!?(RuinsDoor3MiddleLeft)
+RuinsDoor3BottomLeftservermod:RuinsDoor3BottomLeft.name=!?(RuinsDoor3BottomLeft)
+RuinsDoor3TopRightservermod:RuinsDoor3TopRight.name=!?(RuinsDoor3TopBottom)
+RuinsDoor3MiddleRightservermod:RuinsDoor3MiddleRight.name=!?(RuinsDoor3MiddleRight)
+RuinsDoor3BottomRightservermod:RuinsDoor3BottomRight.name=!?(RuinsDoor3BottomRight)
+UTButtonservermod:BarrierButton.name=!?(F4stBLutt0n)
 
 
 
@@ -156,8 +165,10 @@ tile.tutorial_stairs2.name=!?(Ruins Window Corner 2)
 tile.tutorial_stairs3.name=!?(Ruins Window Corner 3)
 tile.tutorial_stairs4.name=!?(Ruins Window Corner 4)
 tile.tutorial_stairs5.name=!?(Ruins Stairs)
+tile.tutorial_stairs6.name=!?(Ruins Stairs)
 tile.tutorial_block.name=!?(some random block to make stairs work)
 tile.windowmiddle_slab_half.name=!?(Ruins Window Slab)
+tile.purple_slab_half.name=!?(Ruins Slab)
 
 
 
