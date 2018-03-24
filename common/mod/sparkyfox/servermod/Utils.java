@@ -14,7 +14,7 @@ import net.minecraftforge.oredict.OreDictionary;
 /**
  * This is where useful methods will be
  * 
- * @author CJMinecraft
+ * @author Sparky
  *
  */
 public class Utils {
@@ -28,6 +28,7 @@ public class Utils {
 
 	/**
 	 * Returns the logger. This makes System.our.println look shabby
+	 * @param string 
 	 * 
 	 * @return The {@link Logger}
 	 */

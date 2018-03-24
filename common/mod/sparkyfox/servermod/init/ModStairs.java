@@ -2,14 +2,9 @@ package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.Utils;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor2Bottom;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor2Top;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor3BottomLeft;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor3BottomRight;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor3MiddleLeft;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor3MiddleRight;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor3TopLeft;
-import mod.sparkyfox.servermod.block.adventure.BlockRuinsDoor3TopRight;
+import mod.sparkyfox.servermod.block.stairs.StairsIron;
+import mod.sparkyfox.servermod.block.stairs.StairsGold;
+import mod.sparkyfox.servermod.block.stairs.StairsDiamond;
 import mod.sparkyfox.servermod.props.adventure.PropPillarBottom;
 import mod.sparkyfox.servermod.props.adventure.PropPillarMiddle;
 import mod.sparkyfox.servermod.stair.adventure.CustomIngotBlock;
@@ -19,7 +14,12 @@ import mod.sparkyfox.servermod.stair.adventure.WindowCorner3;
 import mod.sparkyfox.servermod.stair.adventure.WindowCorner4;
 import mod.sparkyfox.servermod.stair.adventure.WindowCorner5;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
@@ -30,7 +30,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * This class handles the registration of our blocks and also the rendering of
  * them
  * 
- * @author CJMinecraft
+ * @author Sparky
  *
  */
 public class ModStairs {
@@ -39,7 +39,12 @@ public class ModStairs {
 	 * State our blocks
 	 */
 	
+	//Vanilla\\
+	public static StairsIron StairsIron;
+	public static StairsGold StairsGold;
+	public static StairsDiamond StairsDiamond;
 	
+	//Adventure\\
 	public static Block tutorial_block;
 	public static WindowCorner WindowCorner;
 	public static WindowCorner2 WindowCorner2;
@@ -58,7 +63,28 @@ public class ModStairs {
 	 */
 	public static void init() {
 		
+	//Vanilla\\
+	StairsIron = new StairsIron("stairs_iron", Blocks.IRON_BLOCK.getDefaultState());
+	StairsGold = new StairsGold("stairs_gold", Blocks.IRON_BLOCK.getDefaultState());
+	StairsDiamond = new StairsDiamond("stairs_diamond", Blocks.DIAMOND_BLOCK.getDefaultState());
+//	StairsWool = new StairsDiamond("stairs_wool", Blocks.WOOL.getDefaultState());
+//	StairsOrangeWool = new StairsDiamond("stairs_orange_wool", Blocks.WOOL.getDefaultState());
+//	StairsMagentaWool = new StairsDiamond("stairs_magenta_wool", Blocks.WOOL.getDefaultState());
+//	StairsLightBlueWool = new StairsDiamond("stairs_light_blue_wool", Blocks.WOOL.getDefaultState());
+//	StairsYellowWool = new StairsDiamond("stairs_yellow_wool", Blocks.WOOL.getDefaultState());
+//	StairsPinkWool = new StairsDiamond("stairs_pink_wool", Blocks.WOOL.getDefaultState());
+//	StairsGrayWool = new StairsDiamond("stairs_gray_wool", Blocks.WOOL.getDefaultState());
+//	StairsSilverWool = new StairsDiamond("stairs_silver_wool", Blocks.WOOL.getDefaultState());
+//	StairsCyanWool = new StairsDiamond("stairs_cyan_wool", Blocks.WOOL.getDefaultState());
+//	StairsPurpleWool = new StairsDiamond("stairs_purple_wool", Blocks.WOOL.getDefaultState());
+//	StairsBlueWool = new StairsDiamond("stairs_blue_wool", Blocks.WOOL.getDefaultState());
+//	StairsBrownWool = new StairsDiamond("stairs_brown_wool", Blocks.WOOL.getDefaultState());
+//	StairsGreenWool = new StairsDiamond("stairs_green_wool", Blocks.WOOL.getDefaultState());
+//	StairsRedWool = new StairsDiamond("stairs_red_wool", Blocks.WOOL.getDefaultState());
+//	StairsBlackWool = new StairsDiamond("stairs_black_wool", Blocks.WOOL.getDefaultState());
 
+	
+	//Adventure\\
 	tutorial_block = new CustomIngotBlock("tutorial_block");
 	WindowCorner = new WindowCorner("tutorial_stairs", tutorial_block.getDefaultState());
 	WindowCorner2 = new WindowCorner2("tutorial_stairs2", tutorial_block.getDefaultState());
@@ -88,6 +114,13 @@ public class ModStairs {
 	 */
 	public static void register() {
 		
+		//Vanilla\\
+	
+		registerBlock(StairsIron);
+		registerBlock(StairsGold);
+		registerBlock(StairsDiamond);
+		
+		//Adventure\\
 		registerBlock(tutorial_block);
 		registerBlock(WindowCorner);
 		registerBlock(WindowCorner2);
@@ -106,7 +139,12 @@ public class ModStairs {
 	 */
 	public static void registerRenders() {
 		
-
+		//Vanilla\\
+		registerRender(StairsIron);
+		registerRender(StairsGold);
+		registerRender(StairsDiamond);
+		
+		//Adventure\\
 		registerRender(tutorial_block);
 		registerRender(WindowCorner);
 		registerRender(WindowCorner2);
@@ -181,7 +219,13 @@ public class ModStairs {
 				new ModelResourceLocation(new ResourceLocation(ServerMod.MOD_ID, fileName), "inventory"));
 		Utils.getLogger().info("Registered render for " + block.getUnlocalizedName().substring(5));
 	}
+	
+	  public static void initRecipes() {
+			StairsDiamond.addRecipes();
+			StairsGold.addRecipes();
+			StairsIron.addRecipes();
 
+	  }
 }
 
 

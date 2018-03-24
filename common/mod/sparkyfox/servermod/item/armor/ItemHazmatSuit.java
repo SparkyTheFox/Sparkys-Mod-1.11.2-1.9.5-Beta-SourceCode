@@ -17,9 +17,9 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ItemAnimieSpaceSuit extends ItemArmor {
+public class ItemHazmatSuit extends ItemArmor {
 
-	public ItemAnimieSpaceSuit(ArmorMaterial materialIn, EntityEquipmentSlot equipmentSlotIn) {
+	public ItemHazmatSuit(ArmorMaterial materialIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, 0, equipmentSlotIn);
 		 this.setCreativeTab(null);
 		
@@ -30,10 +30,8 @@ public class ItemAnimieSpaceSuit extends ItemArmor {
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-		if (slot == EntityEquipmentSlot.HEAD || slot == EntityEquipmentSlot.CHEST || slot == EntityEquipmentSlot.FEET) {
-			return ServerMod.MOD_ID + ":textures/armor/planetessuit_layer_1.png";
-		} else if (slot == EntityEquipmentSlot.CHEST || slot == EntityEquipmentSlot.LEGS) {
-			return ServerMod.MOD_ID + ":textures/armor/planetessuit_layer_2.png";
+		if (slot == EntityEquipmentSlot.HEAD || slot == EntityEquipmentSlot.CHEST || slot == EntityEquipmentSlot.FEET|| slot == EntityEquipmentSlot.LEGS) {
+			return ServerMod.MOD_ID + ":textures/armor/hazmat.png";
 		} else {
 			return null;
 	}

@@ -7,6 +7,7 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -64,7 +65,8 @@ public class ItemOdstArmor extends ItemArmor {
 		  @Override
 		  public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 		  if (itemStack.getItem().equals(ModItems.OdstHelmet))
-		      player.addPotionEffect(new PotionEffect(Potion.getPotionById(16)));
+			  	player.addPotionEffect(new PotionEffect(Potion.getPotionById(16)));
+
 		  {
 			  if (itemStack.getItem().equals(ModItems.OdstChestplate))
 			      player.addPotionEffect(new PotionEffect(Potion.getPotionById(13)));
@@ -80,7 +82,10 @@ public class ItemOdstArmor extends ItemArmor {
 	 }
 
 }  
-				// TODO Auto-generated method stub
+		    // TODO Auto-generated method stub
+		   // PotionEffect(int id, int effectDuration, int effectAmplifier, boolean ambient, boolean showParticles)
+		  //Ambient: If it came from a beacon or not( ambient determines the type of particles it produces)
+	  	 // player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, -60, 30, true, false));
 		  
 		  
 																//Anvil Repair\\

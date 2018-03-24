@@ -7,15 +7,20 @@ import mod.sparkyfox.servermod.init.ModSlab;
 //import mod.sparkyfox.servermod.init.ModSlabs;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
 import mod.sparkyfox.servermod.init.ModStairs;
+import mod.sparkyfox.servermod.init.ModTools;
 import mod.sparkyfox.servermod.lib.OreDictionaryHandler;
+import mod.sparkyfox.servermod.lib.OreRecipeHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod(modid = ServerMod.MOD_ID,
 	name = ServerMod.MOD_NAME,
@@ -44,7 +49,7 @@ public class ServerMod {
 	
 	@SidedProxy(clientSide = "mod.sparkyfox.servermod.ClientProxy", serverSide = "mod.sparkyfox.servermod.CommonProxy")
 	public static CommonProxy proxy;
-	
+		
 //===============================================================================================================================================================================================\\
 																									//Warnings\\
 	
@@ -70,6 +75,9 @@ public class ServerMod {
 		ModStairs.init();
 		ModStairs.register();
 		
+		ModTools.init();
+		ModTools.register();
+		
 		proxy.registerRenderer();
 		proxy.registerRenders();
 		
@@ -77,7 +85,15 @@ public class ServerMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event); 
+		
+		/** CFM RecipieAPI */
+		//FMLInterModComms.sendMessage("cfm", "register", "com.mrcrayfish.food.FurnitureRecipes.register");
+		FMLInterModComms.sendMessage("cfm", "register", "mod.sparkyfox.servermod.lib.FurnitureRecipes.register");
+		
+		
 		OreDictionaryHandler.registerOreDictionary();
+		OreRecipeHandler.registerCraftingRecipes();
+		OreRecipeHandler.registerFurnaceRecipes();
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new ModGuiHandler());
 		entity = new ModEntities();//this is causing the server side problem
 		//if i take out "entity = new ModEntities();" and put in

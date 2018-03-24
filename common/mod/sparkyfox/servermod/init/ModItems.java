@@ -18,12 +18,14 @@ import mod.sparkyfox.servermod.item.ItemTechite;
 import mod.sparkyfox.servermod.item.ItemTitaniumNugget;
 import mod.sparkyfox.servermod.item.ItemUniverseFabric;
 import mod.sparkyfox.servermod.item.armor.ItemAdventureSpaceSuit;
+import mod.sparkyfox.servermod.item.armor.ItemPlanetesSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemAuzSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemDiamondTechSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemEmeraldArmor;
 import mod.sparkyfox.servermod.item.armor.ItemEmeraldTechSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemFESpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemFadedRibbon;
+import mod.sparkyfox.servermod.item.armor.ItemHazmatSuit;
 import mod.sparkyfox.servermod.item.armor.ItemKerbalSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemLapisArmor;
 import mod.sparkyfox.servermod.item.armor.ItemLapisArmorHeavy;
@@ -162,12 +164,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemSpade EmeraldShovel;
 	public static ItemHoe EmeraldHoe;
 	
+	
 	public static ToolMaterial Lapis = EnumHelper.addToolMaterial(ServerMod.RESOURCE_PREFIX + "Lapis", 3, 800, 12.0F, 2.0F, 16);
 	public static ItemPickaxe LapisPickaxe;
 	public static ItemPickaxe unobtainable_pickaxe ;
 	public static ItemLapisAxe LapisAxe;
 	public static ItemSpade LapisShovel;
 	public static ItemHoe LapisHoe;
+	
+	//public static ToolMaterial Astral = EnumHelper.addToolMaterial(ServerMod.RESOURCE_PREFIX + "Astral", 3, 5000, 20.0F, 18.0F, 30);
+	//public static ItemPickaxe AstroHammer;
+	
+
 	
 	
 //===============================================================================================================================================================================================\\
@@ -298,6 +306,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemArmor RedstoneTechSpaceLeggings;
 	public static ItemArmor RedstoneTechSpaceBoots;
 	
+	public static ArmorMaterial Hazmatsuit;
+	public static ItemArmor HazmatHelmet;
+	public static ItemArmor HazmatChestplate;
+	public static ItemArmor HazmatLeggings;
+	public static ItemArmor HazmatBoots;
+	
+	public static ArmorMaterial PlanetesSpacesuit;
+	public static ItemArmor PlanetesSpaceHelmet;
+	public static ItemArmor PlanetesSpaceChestplate;
+	public static ItemArmor PlanetesSpaceLeggings;
+	public static ItemArmor PlanetesSpaceBoots;
+	
 	public static ArmorMaterial Undertale;
 	public static ItemArmor FadedRibbon;
 	
@@ -386,6 +406,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		Stick.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.Stick)); 
 		GameRegistry.register(Stick); 
 		
+	//	AstroHammer = (ItemAstroHammer) new ItemAstroHammer(EnumHelper.addToolMaterial("Astril", 3, 5000, 0.0F, 20.0F, 30), -2.8F);
+		//AstroHammer.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AstroHammer)); 
+		//GameRegistry.register(AstroHammer);
+		
+		
 		//addToolMaterial("Scarlet((NAME))", 0, 2000((AMMOUNT OF USSES)), 0.0F, 9.0F((Attack Damage= 1.0F= 1heart)), 30((ENCHANTMENT LEVEL))), -2.4F((ATTACK SPEED)));
 		
 			
@@ -414,6 +439,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		EmeraldPickaxe = (ItemEmeraldPickaxe) new ItemEmeraldPickaxe(Emerald);
 		EmeraldPickaxe.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.EmeraldPickaxe)); 
 		GameRegistry.register(EmeraldPickaxe); 
+		
+		//Tools- Initialisation	
+	//	AstroHammer = (ItemAstroHammer) new ItemAstroHammer(Astral, -3.5F);
+	//	AstroHammer.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AstroHammer)); 
+	//	GameRegistry.register(AstroHammer); 
 		
 		EmeraldAxe = (ItemEmeraldAxe) new ItemEmeraldAxe(Emerald, 13.0F, -3.0F); //0.0F[ATTACK DAMAGE]+(0.0F=1) || -3.0F[ATTACK SPEED]+(-3.0F=1)
 		EmeraldAxe.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.EmeraldAxe)); 
@@ -530,7 +560,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		EmeraldTechSpacesuit = EnumHelper.addArmorMaterial("EmeraldTechSpacesuit", "", 60, new int[] {3, 2, 10, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
 		RedstoneTechSpacesuit = EnumHelper.addArmorMaterial("RedstoneTechSpacesuit", "", 25, new int[] {5, 5, 5, 5}, 33, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 		Undertale = EnumHelper.addArmorMaterial("Undertale", "", 819, new int[]{0, 0, 0, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
-		
+		PlanetesSpacesuit = EnumHelper.addArmorMaterial("PlanetesSpacesuit", "", 80, new int[] {4, 2, 10, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 5.0F);
+		Hazmatsuit = EnumHelper.addArmorMaterial("Hazmatsuit", "", 5, new int[] {1, 1, 1, 1}, 2, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 		//272=2992
 		//273=3003
 		//Armor duribility is timesed by 11 
@@ -793,10 +824,44 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		RedstoneTechSpaceBoots.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.RedstoneTechSpaceBoots)); 
 		GameRegistry.register(RedstoneTechSpaceBoots);
 		
-		//ODST Armor
+		//Undertale Armor
 		FadedRibbon = (ItemArmor) new ItemFadedRibbon(Undertale, EntityEquipmentSlot.HEAD).setUnlocalizedName("FadedRibbon");
 		FadedRibbon.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.FadedRibbon)); 
 		GameRegistry.register(FadedRibbon); 
+		
+		//Planetes Spacesuit
+		PlanetesSpaceHelmet = (ItemArmor) new ItemPlanetesSpaceSuit(PlanetesSpacesuit, EntityEquipmentSlot.HEAD).setUnlocalizedName("PlanetesSpaceHelmet");
+		PlanetesSpaceHelmet.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.PlanetesSpaceHelmet)); 
+		GameRegistry.register(PlanetesSpaceHelmet); 
+			
+		PlanetesSpaceChestplate = (ItemArmor) new ItemPlanetesSpaceSuit(PlanetesSpacesuit, EntityEquipmentSlot.CHEST).setUnlocalizedName("PlanetesSpaceChestplate");
+		PlanetesSpaceChestplate.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.PlanetesSpaceChestplate)); 
+		GameRegistry.register(PlanetesSpaceChestplate);
+			
+		PlanetesSpaceLeggings = (ItemArmor) new ItemPlanetesSpaceSuit(PlanetesSpacesuit, EntityEquipmentSlot.LEGS).setUnlocalizedName("PlanetesSpaceLeggings");
+		PlanetesSpaceLeggings.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.PlanetesSpaceLeggings)); 
+		GameRegistry.register(PlanetesSpaceLeggings); 
+    		
+		PlanetesSpaceBoots = (ItemArmor) new ItemPlanetesSpaceSuit(PlanetesSpacesuit, EntityEquipmentSlot.FEET).setUnlocalizedName("PlanetesSpaceBoots");
+		PlanetesSpaceBoots.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.PlanetesSpaceBoots)); 
+		GameRegistry.register(PlanetesSpaceBoots);
+		
+		//Hazmat suit
+		HazmatHelmet = (ItemArmor) new ItemHazmatSuit(Hazmatsuit, EntityEquipmentSlot.HEAD).setUnlocalizedName("HazmatHelmet");
+		HazmatHelmet.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.HazmatHelmet)); 
+		GameRegistry.register(HazmatHelmet); 
+			
+		HazmatChestplate = (ItemArmor) new ItemHazmatSuit(Hazmatsuit, EntityEquipmentSlot.CHEST).setUnlocalizedName("HazmatChestplate");
+		HazmatChestplate.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.HazmatChestplate)); 
+		GameRegistry.register(HazmatChestplate);
+			
+		HazmatLeggings = (ItemArmor) new ItemHazmatSuit(Hazmatsuit, EntityEquipmentSlot.LEGS).setUnlocalizedName("HazmatLeggings");
+		HazmatLeggings.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.HazmatLeggings)); 
+		GameRegistry.register(HazmatLeggings); 
+    		
+		HazmatBoots = (ItemArmor) new ItemHazmatSuit(Hazmatsuit, EntityEquipmentSlot.FEET).setUnlocalizedName("HazmatBoots");
+		HazmatBoots.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.HazmatBoots)); 
+		GameRegistry.register(HazmatBoots);
 		
 //===============================================================================================================================================================================================\\
 			
@@ -946,7 +1011,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		
 		/**Swords*/
 		//addToolMaterial("Scarlet((NAME))", 0, 2000((AMMOUNT OF USSES)), 0.0F, 9.0F((Attack Damage= 1.0F= 1heart)), 30((ENCHANTMENT LEVEL))), -2.4F((ATTACK SPEED)));
-    	
+    
 	
 	
 		
@@ -1454,6 +1519,40 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelLoader.registerItemVariants(FadedRibbon, FadedRibbon1);
 		mesher.register(FadedRibbon, 0, FadedRibbon1);
 		
+		//Planetes Space Suit
+		ModelResourceLocation Planetesspacesuit = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PlanetesSpaceHelmet, "inventory");
+		ModelLoader.registerItemVariants(PlanetesSpaceHelmet, Planetesspacesuit);
+		mesher.register(PlanetesSpaceHelmet, 0, Planetesspacesuit); 
+			
+		ModelResourceLocation Planetesspacesuit2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PlanetesSpaceChestplate, "inventory");
+		ModelLoader.registerItemVariants(PlanetesSpaceChestplate, Planetesspacesuit2);
+		mesher.register(PlanetesSpaceChestplate, 0, Planetesspacesuit2); 
+		
+		ModelResourceLocation Planetesspacesuit3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PlanetesSpaceLeggings, "inventory");
+		ModelLoader.registerItemVariants(PlanetesSpaceLeggings,Planetesspacesuit3);
+		mesher.register(PlanetesSpaceLeggings, 0, Planetesspacesuit3); 
+		
+		ModelResourceLocation Planetesspacesuit4 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.PlanetesSpaceBoots, "inventory");
+		ModelLoader.registerItemVariants(PlanetesSpaceBoots, Planetesspacesuit4);
+		mesher.register(PlanetesSpaceBoots, 0, Planetesspacesuit4); 
+		
+		//Hazmat Suit
+		ModelResourceLocation Hazmatsuit = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.HazmatHelmet, "inventory");
+		ModelLoader.registerItemVariants(HazmatHelmet, Hazmatsuit);
+		mesher.register(HazmatHelmet, 0, Hazmatsuit); 
+			
+		ModelResourceLocation Hazmatsuit2 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.HazmatChestplate, "inventory");
+		ModelLoader.registerItemVariants(HazmatChestplate, Hazmatsuit2);
+		mesher.register(HazmatChestplate, 0, Hazmatsuit2); 
+		
+		ModelResourceLocation Hazmatsuit3 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.HazmatLeggings, "inventory");
+		ModelLoader.registerItemVariants(HazmatLeggings,Hazmatsuit3);
+		mesher.register(HazmatLeggings, 0, Hazmatsuit3); 
+		
+		ModelResourceLocation Hazmatsuit4 = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.HazmatBoots, "inventory");
+		ModelLoader.registerItemVariants(HazmatBoots, Hazmatsuit4);
+		mesher.register(HazmatBoots, 0, Hazmatsuit4); 
+		
 //===============================================================================================================================================================================================\\
 																															//Messers\\
 		
@@ -1661,6 +1760,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation emeraldpickaxe = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.EmeraldPickaxe, "inventory");
 		ModelLoader.registerItemVariants(EmeraldPickaxe, emeraldpickaxe);
 		mesher.register(EmeraldPickaxe, 0, emeraldpickaxe); 
+		
 
 		ModelResourceLocation emeraldaxe = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.EmeraldAxe, "inventory");
 		ModelLoader.registerItemVariants(EmeraldAxe, emeraldaxe);
@@ -1709,6 +1809,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation stick = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Stick, "inventory");
 		ModelLoader.registerItemVariants(Stick, stick);
 		mesher.register(Stick, 0, stick);
+		
+		//ModelResourceLocation astrohammer = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.AstroHammer, "inventory");
+		//ModelLoader.registerItemVariants(AstroHammer, astrohammer);
+		//mesher.register(AstroHammer, 0, astrohammer); 
+		
+		
 		
 //===============================================================================================================================================================================================\\
 	

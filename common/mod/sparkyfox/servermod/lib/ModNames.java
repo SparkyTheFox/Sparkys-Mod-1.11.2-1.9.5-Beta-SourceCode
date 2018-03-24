@@ -127,6 +127,18 @@ public class ModNames {
 	public static final String RedstoneTechSpaceChestplate = "RedstoneTechSpaceChestplate";
 	public static final String RedstoneTechSpaceLeggings = "RedstoneTechSpaceLeggings";
 	public static final String RedstoneTechSpaceBoots = "RedstoneTechSpaceBoots";
+	
+	public static final String PlanetesSpacesuit = "PlanetesSpacesuit";
+	public static final String PlanetesSpaceHelmet = "PlanetesSpaceHelmet";
+	public static final String PlanetesSpaceChestplate = "PlanetesSpaceChestplate";
+	public static final String PlanetesSpaceLeggings = "PlanetesSpaceLeggings";
+	public static final String PlanetesSpaceBoots = "PlanetesSpaceBoots";
+	public static final String Hazmatsuit = "Hazmatsuit";
+	public static final String HazmatHelmet = "HazmatHelmet";
+	public static final String HazmatChestplate = "HazmatChestplate";
+	public static final String HazmatLeggings = "HazmatLeggings";
+	public static final String HazmatBoots = "HazmatBoots";
+	
 	public static final String LapisSword = "LapisSword";
 	public static final String LapisPickaxe = "LapisPickaxe";
 	public static final String LapisAxe = "LapisAxe";
@@ -300,6 +312,7 @@ public class ModNames {
 	public static final String RuinsDoor3TopRight = "RuinsDoor3TopRight";
 	public static final String RuinsDoor3MiddleRight = "RuinsDoor3MiddleRight";
 	public static final String RuinsDoor3BottomRight = "RuinsDoor3BottomRight";
+	//public static final String AstroHammer = "AstroHammer";
 
 
 	

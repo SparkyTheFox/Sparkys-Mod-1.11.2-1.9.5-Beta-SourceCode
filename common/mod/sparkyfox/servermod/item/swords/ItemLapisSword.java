@@ -23,7 +23,7 @@ public class ItemLapisSword extends ItemSword {
 	
 	
     public ItemLapisSword(ToolMaterial material, float attackSpeed) {
-        super(material);;
+        super(material);
 		this.attackSpeed = attackSpeed;
 		this.attackDamage = 0.0F + material.getDamageVsEntity();
 		

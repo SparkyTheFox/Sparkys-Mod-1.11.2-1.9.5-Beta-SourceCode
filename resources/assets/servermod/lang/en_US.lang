@@ -28,6 +28,10 @@ RedButton2servermod:RedButton2.name=The Red Button
 TechiteOreservermod:TechiteOre.name=Techite Ore
 IndustrialFreezerservermod:IndustrialFreezer.name=Industrial Freezer
 
+tile.stairs_diamond.name=Diamond Stairs
+tile.stairs_gold.name=Gold Stairs
+tile.stairs_iron.name=Iron Stairs 
+
 
  ####################
  # Adventure Blocks #
@@ -306,6 +310,17 @@ FakeDiamondservermod:FakeDiamond.name=Diamond
 ToyKnife2servermod:ToyKnife2.name=Toy Knife 
 Stickservermod:Stick.name=Stick
 item.FadedRibbon.name=Faded Ribbon
+item.AstroHammer.name=Astro Hammer
+
+item.PlanetesSpaceHelmet.name=Planetes Helmet
+item.PlanetesSpaceChestplate.name=Planetes Spacesuit
+item.PlanetesSpaceLeggings.name=Planetes Overalls
+item.PlanetesSpaceBoots.name=Planetes Space Boots
+
+item.HazmatHelmet.name=Hazmat Helmet
+item.HazmatChestplate.name=Hazmat Chestplate
+item.HazmatLeggings.name=Hazmat Leggings
+item.HazmatBoots.name=Hazmat Boots
 
 #################
 #    Liquids    #
