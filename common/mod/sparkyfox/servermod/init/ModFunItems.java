@@ -46,7 +46,6 @@ import net.minecraftforge.oredict.OreDictionary;
    
    public static void Load()
    {
-     //vcrecipes_book = new ItemVCRecipesBook().register("vcrecipes_book");
      
      coin_wood = new ItemHidden().register("coin_wood");
      coin_stone = new ItemHidden().register("coin_stone");

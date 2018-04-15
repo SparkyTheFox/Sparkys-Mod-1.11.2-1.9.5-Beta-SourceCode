@@ -26,7 +26,6 @@ import net.minecraft.world.World;
    public BlockPlaceholder() {
      super(Material.ROCK);
      setSoundType(SoundType.WOOD);
-//     setCreativeTab(VCTabs.BLOCKS);
    }
    
    public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase entity, ItemStack stack)

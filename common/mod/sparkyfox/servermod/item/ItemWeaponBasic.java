@@ -12,7 +12,7 @@ import net.minecraft.item.ItemSword;
    
    public ItemWeaponBasic(Item.ToolMaterial material) {
      super(material);
-     //setCreativeTab(VCTabs.WEAPONS);
+    
    }
    
    public ItemWeaponBasic(Item.ToolMaterial material, int damage) {

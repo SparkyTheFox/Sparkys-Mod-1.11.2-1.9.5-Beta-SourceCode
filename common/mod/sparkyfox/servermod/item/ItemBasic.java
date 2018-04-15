@@ -11,14 +11,13 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
- //import noppes.vc.VariedCommodities;
+
  
  public class ItemBasic extends Item
  {
    private boolean damageAble = true;
    
    public ItemBasic() {
-    // setCreativeTab(noppes.vc.VCTabs.ITEMS);
    }
    
    public void setUnDamageable() {

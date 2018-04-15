@@ -30,7 +30,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
      setLightLevel(0.8F);
      setHardness(5.0F);
      setResistance(10.0F);
-     //setCreativeTab(VCTabs.BLOCKS);
    }
    
    public boolean isOpaqueCube(IBlockState state)

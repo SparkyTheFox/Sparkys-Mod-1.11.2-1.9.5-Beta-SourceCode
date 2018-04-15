@@ -127,8 +127,3 @@
 /*     */   }
 /*     */ }
 
-
-/* Location:              C:\Users\Sparky\Desktop\VariedCommodities_1.11.2(29oct17).jar!\noppes\vc\client\ModelPlaneRenderer.class
- * Java compiler version: 6 (50.0)
- * JD-Core Version:       0.7.1
- */

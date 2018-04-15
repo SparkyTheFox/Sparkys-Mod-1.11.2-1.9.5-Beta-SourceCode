@@ -24,8 +24,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-//import noppes.vc.client.VCSounds;
-//import noppes.vc.enchants.ModEnchant;
  
  public class ItemStaff extends ItemBasic {
    private ModToolMaterial material;
@@ -33,7 +31,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
    public ItemStaff(ModToolMaterial material)
    {
      this.material = material;
-     //setCreativeTab(noppes.vc.VCTabs.WEAPONS);
      setFull3D();
      setMaxStackSize(1);
      

@@ -16,7 +16,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
      setFull3D();
      setMaxStackSize(1);
 	 setMaxDamage(material.getMaxUses() * 5);
-     //setCreativeTab(VCTabs.WEAPONS);
    }
    
    public net.minecraft.item.Item register(String name) {

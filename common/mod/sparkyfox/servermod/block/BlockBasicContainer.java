@@ -16,7 +16,6 @@ package mod.sparkyfox.servermod.block;
      super(materialIn);
      this.setHardness(5.0F);
      this.setResistance(10.0F);
-     //setCreativeTab(VCTabs.BLOCKS);
    }
    
    public Block register(String name, int meta, Class<? extends ItemBlock> itemclass)
