@@ -4,6 +4,7 @@ package mod.sparkyfox.servermod.init;
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.block.BlockBrassBlock;
 import mod.sparkyfox.servermod.block.BlockCobaltBlock;
+import mod.sparkyfox.servermod.block.BlockDemonicBlock;
 import mod.sparkyfox.servermod.block.BlockIndustrialFreezer;
 import mod.sparkyfox.servermod.block.BlockMagnesiumBlock;
 import mod.sparkyfox.servermod.block.BlockNickelBlock;
@@ -114,8 +115,29 @@ import mod.sparkyfox.servermod.block.barriers.BlockBarrierRedClay;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierTitanium;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierWhiteClay;
 import mod.sparkyfox.servermod.block.barriers.BlockBarrierWood;
+import mod.sparkyfox.servermod.block.glass.BlockBigWindow;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlass;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassBlack;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassBlue;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassBrown;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassCyan;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassGreen;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassGrey;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassLightBlue;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassLightGrey;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassLime;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassMagenta;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassOrange;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassPink;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassPurple;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassRed;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassWhite;
+import mod.sparkyfox.servermod.block.glass.BlockBulletProofGlassYellow;
+import mod.sparkyfox.servermod.block.glass.BlockReinforcedGlass;
+import mod.sparkyfox.servermod.block.glass.BlockWindow;
 import mod.sparkyfox.servermod.block.ores.BlockBrassOre;
 import mod.sparkyfox.servermod.block.ores.BlockCobaltOre;
+import mod.sparkyfox.servermod.block.ores.BlockDemonicOre;
 import mod.sparkyfox.servermod.block.ores.BlockMagnesiumOre;
 import mod.sparkyfox.servermod.block.ores.BlockNickelOre;
 import mod.sparkyfox.servermod.block.ores.BlockPlatinumOre;
@@ -158,6 +180,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockPlatinumOre PlatinumOre;
 	  public static BlockUraniumOre UraniumOre;
 	  public static BlockTechiteOre TechiteOre;
+	  public static BlockDemonicOre DemonicOre;
 //===============================================================================================================================================================================================\\
 	  																								//Block Registry\\
 	  
@@ -178,11 +201,37 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  public static BlockBarrierButton BarrierButton;
 	  public static BlockRedButton RedButton;
 	  public static BlockRedButton2 RedButton2;
-	//===============================================================================================================================================================================================\\
+	  public static BlockDemonicBlock DemonicBlock;
+//===============================================================================================================================================================================================\\
 																									//Logic Registry\\
 	  
 	  public static BlockIndustrialFreezer IndustrialFreezer;
 	  //public static FluidTitanium FluidTitanium;
+	  
+//===============================================================================================================================================================================================\\
+	  																							//Glass Registry\\	
+	  
+	   public static BlockBulletProofGlass BulletProofGlass;
+	   public static BlockBulletProofGlassWhite BulletProofGlassWhite;
+	   public static BlockBulletProofGlassOrange BulletProofGlassOrange;
+	   public static BlockBulletProofGlassMagenta BulletProofGlassMagenta;
+	   public static BlockBulletProofGlassLightBlue BulletProofGlassLightBlue;
+	   public static BlockBulletProofGlassYellow BulletProofGlassYellow;
+	   public static BlockBulletProofGlassLime BulletProofGlassLime;
+	   public static BlockBulletProofGlassPink BulletProofGlassPink;
+	   public static BlockBulletProofGlassGrey BulletProofGlassGrey;
+	   public static BlockBulletProofGlassLightGrey BulletProofGlassLightGrey;
+	   public static BlockBulletProofGlassCyan BulletProofGlassCyan;
+	   public static BlockBulletProofGlassPurple BulletProofGlassPurple;
+	   public static BlockBulletProofGlassBlue BulletProofGlassBlue;
+	   public static BlockBulletProofGlassBrown BulletProofGlassBrown;
+	   public static BlockBulletProofGlassGreen BulletProofGlassGreen;
+	   public static BlockBulletProofGlassRed BulletProofGlassRed;
+	   public static BlockBulletProofGlassBlack BulletProofGlassBlack;
+	   
+	   public static BlockWindow Window;
+	   public static BlockBigWindow BigWindow;
+	   public static BlockReinforcedGlass ReinforcedGlass;
 	
 	  
 //===============================================================================================================================================================================================\\
@@ -371,6 +420,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	  	  TechiteOre.setRegistryName(location7a);
 	  	  GameRegistry.register(TechiteOre);
 	  	  GameRegistry.register(new ItemBlock(TechiteOre), location7a);
+	  	  
+		  //Demonic Ore\\
+	  	  ResourceLocation location7b = new ResourceLocation(ServerMod.MOD_ID, ModNames.DemonicOre);
+	  	  DemonicOre = new BlockDemonicOre();
+	  	  DemonicOre.setRegistryName(location7b);
+	  	  GameRegistry.register(DemonicOre);
+	  	  GameRegistry.register(new ItemBlock(DemonicOre), location7b);
 			 
 			  {
 				  
@@ -493,6 +549,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GameRegistry.register(RedButton2);
 		  GameRegistry.register(new ItemBlock(RedButton2), location16h);
 		  
+		  //Demonic Block\\
+		  ResourceLocation location16i = new ResourceLocation(ServerMod.MOD_ID, ModNames.DemonicBlock);
+		  DemonicBlock = new BlockDemonicBlock();
+		  DemonicBlock.setRegistryName(location16i);
+		  GameRegistry.register(DemonicBlock);
+		  GameRegistry.register(new ItemBlock(DemonicBlock), location16i);
+		  
 //===============================================================================================================================================================================================\\
 																										//Initialise: Logic\\
 		  
@@ -502,6 +565,149 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GameRegistry.register(IndustrialFreezer);
 		  GameRegistry.register(new ItemBlock(IndustrialFreezer), industrialfreezer);
 		  GameRegistry.registerTileEntity(TileEntityIndustrialFreezer.class, "industrialfreezer_tile_entity");
+
+//===============================================================================================================================================================================================\\
+																										//Initialise: Glass\\		  
+		  
+		  //BulletProofGlass\\
+		  ResourceLocation bpg = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlass);
+		  BulletProofGlass = new BlockBulletProofGlass();
+		  BulletProofGlass.setRegistryName(bpg);
+		  GameRegistry.register(BulletProofGlass);
+		  GameRegistry.register(new ItemBlock(BulletProofGlass), bpg);
+		  
+		  //BulletProofGlassWhite\\
+          ResourceLocation bpgwhite = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassWhite);
+          BulletProofGlassWhite = new BlockBulletProofGlassWhite();
+          BulletProofGlassWhite.setRegistryName(bpgwhite);
+          GameRegistry.register(BulletProofGlassWhite);
+          GameRegistry.register(new ItemBlock(BulletProofGlassWhite), bpgwhite);
+		  
+		  //BulletProofGlassOrange\\
+          ResourceLocation bpgorange = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassOrange);
+          BulletProofGlassOrange = new BlockBulletProofGlassOrange();
+          BulletProofGlassOrange.setRegistryName(bpgorange);
+          GameRegistry.register(BulletProofGlassOrange);
+          GameRegistry.register(new ItemBlock(BulletProofGlassOrange), bpgorange);
+		  
+		  //BulletProofGlassMagenta\\
+          ResourceLocation bpgmagenta = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassMagenta);
+          BulletProofGlassMagenta = new BlockBulletProofGlassMagenta();
+          BulletProofGlassMagenta.setRegistryName(bpgmagenta);
+          GameRegistry.register(BulletProofGlassMagenta);
+          GameRegistry.register(new ItemBlock(BulletProofGlassMagenta), bpgmagenta);		  
+		  
+		  //BulletProofGlassLightBlue\\
+          ResourceLocation bpglightblue = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassLightBlue);
+          BulletProofGlassLightBlue = new BlockBulletProofGlassLightBlue();
+          BulletProofGlassLightBlue.setRegistryName(bpglightblue);
+          GameRegistry.register(BulletProofGlassLightBlue);
+          GameRegistry.register(new ItemBlock(BulletProofGlassLightBlue), bpglightblue);	
+
+		  //BulletProofGlassYellow\\
+          ResourceLocation bpgyellow = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassYellow);
+          BulletProofGlassYellow = new BlockBulletProofGlassYellow();
+          BulletProofGlassYellow.setRegistryName(bpgyellow);
+          GameRegistry.register(BulletProofGlassYellow);
+          GameRegistry.register(new ItemBlock(BulletProofGlassYellow), bpgyellow);
+
+		  //BulletProofGlassLime\\
+          ResourceLocation bpglime = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassLime);
+          BulletProofGlassLime = new BlockBulletProofGlassLime();
+          BulletProofGlassLime.setRegistryName(bpglime);
+          GameRegistry.register(BulletProofGlassLime);
+          GameRegistry.register(new ItemBlock(BulletProofGlassLime), bpglime);		  
+		  
+		  //BulletProofGlassPink\\
+          ResourceLocation bpgpink = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassPink);
+          BulletProofGlassPink = new BlockBulletProofGlassPink();
+          BulletProofGlassPink.setRegistryName(bpgpink);
+          GameRegistry.register(BulletProofGlassPink);
+          GameRegistry.register(new ItemBlock(BulletProofGlassPink), bpgpink);		  
+		  
+		  //BulletProofGlassGrey\\
+          ResourceLocation bpggrey = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassGrey);
+          BulletProofGlassGrey = new BlockBulletProofGlassGrey();
+          BulletProofGlassGrey.setRegistryName(bpggrey);
+          GameRegistry.register(BulletProofGlassGrey);
+          GameRegistry.register(new ItemBlock(BulletProofGlassGrey), bpggrey);
+
+		  //BulletProofGlassLightgrey\\
+          ResourceLocation bpglightgrey = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassLightGrey);
+          BulletProofGlassLightGrey = new BlockBulletProofGlassLightGrey();
+          BulletProofGlassLightGrey.setRegistryName(bpglightgrey);
+          GameRegistry.register(BulletProofGlassLightGrey);
+          GameRegistry.register(new ItemBlock(BulletProofGlassLightGrey), bpglightgrey);		  
+		  
+		  //BulletProofGlassCyan\\
+          ResourceLocation bpgcyan = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassCyan);
+          BulletProofGlassCyan = new BlockBulletProofGlassCyan();
+          BulletProofGlassCyan.setRegistryName(bpgcyan);
+          GameRegistry.register(BulletProofGlassCyan);
+          GameRegistry.register(new ItemBlock(BulletProofGlassCyan), bpgcyan);
+		  
+		  //BulletProofGlassPurple\\
+          ResourceLocation bpgpurple = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassPurple);
+          BulletProofGlassPurple = new BlockBulletProofGlassPurple();
+          BulletProofGlassPurple.setRegistryName(bpgpurple);
+          GameRegistry.register(BulletProofGlassPurple);
+          GameRegistry.register(new ItemBlock(BulletProofGlassPurple), bpgpurple);		  
+		  
+		  //BulletProofGlassBlue\\
+          ResourceLocation bpgblue = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassBlue);
+          BulletProofGlassBlue = new BlockBulletProofGlassBlue();
+          BulletProofGlassBlue.setRegistryName(bpgblue);
+          GameRegistry.register(BulletProofGlassBlue);
+          GameRegistry.register(new ItemBlock(BulletProofGlassBlue), bpgblue);		  
+		  
+		  //BulletProofGlassBrown\\
+          ResourceLocation bpgbrown = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassBrown);
+          BulletProofGlassBrown = new BlockBulletProofGlassBrown();
+          BulletProofGlassBrown.setRegistryName(bpgbrown);
+          GameRegistry.register(BulletProofGlassBrown);
+          GameRegistry.register(new ItemBlock(BulletProofGlassBrown), bpgbrown);		  
+		  
+		  //BulletProofGlassGreen\\
+          ResourceLocation bpggreen = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassGreen);
+          BulletProofGlassGreen = new BlockBulletProofGlassGreen();
+          BulletProofGlassGreen.setRegistryName(bpggreen);
+          GameRegistry.register(BulletProofGlassGreen);
+          GameRegistry.register(new ItemBlock(BulletProofGlassGreen), bpggreen);
+		  
+		  //BulletProofGlassRed\\
+          ResourceLocation bpgred = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassRed);
+          BulletProofGlassRed = new BlockBulletProofGlassRed();
+          BulletProofGlassRed.setRegistryName(bpgred);
+          GameRegistry.register(BulletProofGlassRed);
+          GameRegistry.register(new ItemBlock(BulletProofGlassRed), bpgred);
+		  
+		  //BulletProofGlassBlack\\
+          ResourceLocation bpgblack = new ResourceLocation(ServerMod.MOD_ID, ModNames.BulletProofGlassBlack);
+          BulletProofGlassBlack = new BlockBulletProofGlassBlack();
+          BulletProofGlassBlack.setRegistryName(bpgblack);
+          GameRegistry.register(BulletProofGlassBlack);
+          GameRegistry.register(new ItemBlock(BulletProofGlassBlack), bpgblack);
+          
+		  //ReinforcedGlass\\
+          ResourceLocation reglass = new ResourceLocation(ServerMod.MOD_ID, ModNames.ReinforcedGlass);
+          ReinforcedGlass = new BlockReinforcedGlass();
+          ReinforcedGlass.setRegistryName(reglass);
+          GameRegistry.register(ReinforcedGlass);
+          GameRegistry.register(new ItemBlock(ReinforcedGlass), reglass);
+          
+		  //Window\\
+		  ResourceLocation window = new ResourceLocation(ServerMod.MOD_ID, ModNames.Window);
+		  Window = new BlockWindow();
+		  Window.setRegistryName(window);
+		  GameRegistry.register(Window);
+		  GameRegistry.register(new ItemBlock(Window), window);
+		  
+		  //Window\\
+		  ResourceLocation bigwindow = new ResourceLocation(ServerMod.MOD_ID, ModNames.BigWindow);
+		  BigWindow = new BlockBigWindow();
+		  BigWindow.setRegistryName(bigwindow);
+		  GameRegistry.register(BigWindow);
+		  GameRegistry.register(new ItemBlock(BigWindow), bigwindow);
 		  
 //===============================================================================================================================================================================================\\
 																										//Initialise: Adventure\\
@@ -1184,6 +1390,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		    mesher.register(item7a, 0, model7a);{
 		    }
 		    
+			//Ores: Demonic
+			Item item7b = Item.getItemFromBlock(DemonicOre);
+		    ModelResourceLocation model7b = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DemonicOre, "inventory");
+		    ModelLoader.registerItemVariants(item7b, model7b);
+		    mesher.register(item7b, 0, model7b);{
+		    }
+		    
 //===============================================================================================================================================================================================\\
 																											//Model Meshes: BLOCKS\\
 		    
@@ -1292,11 +1505,142 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			ModelLoader.registerItemVariants(item16h, model16h);
 			mesher.register(item16h, 0, model16h);{	
 				
+			
+			}	
+			Item item16i = Item.getItemFromBlock(DemonicBlock);
+			ModelResourceLocation model16i = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DemonicBlock, "inventory");
+			ModelLoader.registerItemVariants(item8, model16i);
+			mesher.register(item16i, 0, model16i);{
+	  						
+				
 			}
 			Item itemindustrialfreezer = Item.getItemFromBlock(IndustrialFreezer);
 			ModelResourceLocation industrialfreezer = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.IndustrialFreezer, "inventory");
 			ModelLoader.registerItemVariants(itemindustrialfreezer, industrialfreezer);
 			mesher.register(itemindustrialfreezer, 0, industrialfreezer);{	
+//===============================================================================================================================================================================================\\
+																										//Model Meshes: Glass\\			
+				
+			}	
+			Item itembpg = Item.getItemFromBlock(BulletProofGlass);
+			ModelResourceLocation modelbpg = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlass, "inventory");
+			ModelLoader.registerItemVariants(itembpg, modelbpg);
+			mesher.register(itembpg, 0, modelbpg);{
+			
+			}	
+			Item itembpgwhite = Item.getItemFromBlock(BulletProofGlassWhite);
+			ModelResourceLocation modelbpgwhite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassWhite, "inventory");
+			ModelLoader.registerItemVariants(itembpgwhite, modelbpgwhite);
+			mesher.register(itembpgwhite, 0, modelbpgwhite);{			
+			
+			}	
+			Item itembpgorange = Item.getItemFromBlock(BulletProofGlassOrange);
+			ModelResourceLocation modelbpgorange = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassOrange, "inventory");
+			ModelLoader.registerItemVariants(itembpgorange, modelbpgorange);
+			mesher.register(itembpgorange, 0, modelbpgorange);{			
+			
+			}	
+			Item itembpgmagenta = Item.getItemFromBlock(BulletProofGlassMagenta);
+			ModelResourceLocation modelbpgmagenta = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassMagenta, "inventory");
+			ModelLoader.registerItemVariants(itembpgmagenta, modelbpgmagenta);
+			mesher.register(itembpgmagenta, 0, modelbpgmagenta);{				
+			
+			}	
+			Item itembpglightblue = Item.getItemFromBlock(BulletProofGlassLightBlue);
+			ModelResourceLocation modelbpglightblue = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassLightBlue, "inventory");
+			ModelLoader.registerItemVariants(itembpglightblue, modelbpglightblue);
+			mesher.register(itembpglightblue, 0, modelbpglightblue);{	
+
+			}	
+			Item itembpgyellow = Item.getItemFromBlock(BulletProofGlassYellow);
+			ModelResourceLocation modelbpgyellow = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassYellow, "inventory");
+			ModelLoader.registerItemVariants(itembpgyellow, modelbpgyellow);
+			mesher.register(itembpgyellow, 0, modelbpgyellow);{				
+			
+			}	
+			Item itembpglime = Item.getItemFromBlock(BulletProofGlassLime);
+			ModelResourceLocation modelbpglime = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassLime, "inventory");
+			ModelLoader.registerItemVariants(itembpglime, modelbpglime);
+			mesher.register(itembpglime, 0, modelbpglime);{				
+			
+			}	
+			Item itembpgpink = Item.getItemFromBlock(BulletProofGlassPink);
+			ModelResourceLocation modelbpgpink = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassPink, "inventory");
+			ModelLoader.registerItemVariants(itembpgpink, modelbpgpink);
+			mesher.register(itembpgpink, 0, modelbpgpink);{				
+			
+			}	
+			Item itembpggrey = Item.getItemFromBlock(BulletProofGlassGrey);
+			ModelResourceLocation modelbpggrey = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassGrey, "inventory");
+			ModelLoader.registerItemVariants(itembpggrey, modelbpggrey);
+			mesher.register(itembpggrey, 0, modelbpggrey);{				
+			
+			}	
+			Item itembpglightgrey = Item.getItemFromBlock(BulletProofGlassLightGrey);
+			ModelResourceLocation modelbpglightgrey = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassLightGrey, "inventory");
+			ModelLoader.registerItemVariants(itembpglightgrey, modelbpglightgrey);
+			mesher.register(itembpglightgrey, 0, modelbpglightgrey);{			
+
+			}	
+			Item itembpgcyan = Item.getItemFromBlock(BulletProofGlassCyan);
+			ModelResourceLocation modelbpgcyan = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassCyan, "inventory");
+			ModelLoader.registerItemVariants(itembpgcyan, modelbpgcyan);
+			mesher.register(itembpgcyan, 0, modelbpgcyan);{				
+			
+			}	
+			Item itembpgpurple = Item.getItemFromBlock(BulletProofGlassPurple);
+			ModelResourceLocation modelbpgpurple = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassPurple, "inventory");
+			ModelLoader.registerItemVariants(itembpgpurple, modelbpgpurple);
+			mesher.register(itembpgpurple, 0, modelbpgpurple);{				
+			
+			}	
+			Item itembpgblue = Item.getItemFromBlock(BulletProofGlassBlue);
+			ModelResourceLocation modelbpgblue = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassBlue, "inventory");
+			ModelLoader.registerItemVariants(itembpgblue, modelbpgblue);
+			mesher.register(itembpgblue, 0, modelbpgblue);{				
+			
+			}	
+			Item itembpgbrown = Item.getItemFromBlock(BulletProofGlassBrown);
+			ModelResourceLocation modelbpgbrown = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassBrown, "inventory");
+			ModelLoader.registerItemVariants(itembpgbrown, modelbpgbrown);
+			mesher.register(itembpgbrown, 0, modelbpgbrown);{				
+			
+			}	
+			Item itembpggreen = Item.getItemFromBlock(BulletProofGlassGreen);
+			ModelResourceLocation modelbpggreen = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassGreen, "inventory");
+			ModelLoader.registerItemVariants(itembpggreen, modelbpggreen);
+			mesher.register(itembpggreen, 0, modelbpggreen);{				
+			
+			}	
+			Item itembpgred = Item.getItemFromBlock(BulletProofGlassRed);
+			ModelResourceLocation modelbpgred = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassRed, "inventory");
+			ModelLoader.registerItemVariants(itembpgred, modelbpgred);
+			mesher.register(itembpgred, 0, modelbpgred);{				
+			
+			}	
+			Item itembpgblack = Item.getItemFromBlock(BulletProofGlassBlack);
+			ModelResourceLocation modelbpgblack = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BulletProofGlassBlack, "inventory");
+			ModelLoader.registerItemVariants(itembpgblack, modelbpgblack);
+			mesher.register(itembpgblack, 0, modelbpgblack);{				
+				
+			}	
+			Item itemreglass = Item.getItemFromBlock(ReinforcedGlass);
+			ModelResourceLocation modelreglass = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.ReinforcedGlass, "inventory");
+			ModelLoader.registerItemVariants(itemreglass, modelreglass);
+			mesher.register(itemreglass, 0, modelreglass);{
+			
+			}	
+			Item itemwindow = Item.getItemFromBlock(Window);
+			ModelResourceLocation modelwindow = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.Window, "inventory");
+			ModelLoader.registerItemVariants(itemwindow, modelwindow);
+			mesher.register(itemwindow, 0, modelwindow);{	
+				
+			}	
+			Item itembigwindow = Item.getItemFromBlock(BigWindow);
+			ModelResourceLocation modelbigwindow = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.BigWindow, "inventory");
+			ModelLoader.registerItemVariants(itembigwindow, modelbigwindow);
+			mesher.register(itembigwindow, 0, modelbigwindow);{			
+			
 				
 //===============================================================================================================================================================================================\\
 																										//Model Meshes: Adventrue\\

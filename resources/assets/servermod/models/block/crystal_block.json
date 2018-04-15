@@ -1,0 +1,7 @@
+{
+    "parent": "block/leaves",
+    "textures": {
+        "all": "servermod:blocks/crystal_block"
+    }
+}
+

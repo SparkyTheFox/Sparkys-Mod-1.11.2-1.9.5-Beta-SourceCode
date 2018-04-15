@@ -30,7 +30,7 @@ public class WorldGenOre implements IWorldGenerator
 			if (dimension == -1)
 			{
 				
-				//nether genSurfaceNether(world, random, chunkX * 16, chunkZ * 16); //each one of these calls one of the methods
+				genSurfaceNether(world, random, chunkX * 16, chunkZ * 16); //each one of these calls one of the methods
 				
 			}
 			if (dimension == 1)
@@ -40,6 +40,11 @@ public class WorldGenOre implements IWorldGenerator
 				
 			}
 		}
+		
+	}
+	private void genSurfaceNether(World world, Random random, int chunkX, int chunkZ)
+	{
+		addOreSpawn(ModBlocks.DemonicOre.getDefaultState(), world, random, chunkX, chunkZ, 16, 16, 8, 30, 1, 120, BlockMatcher.forBlock(Blocks.NETHERRACK)); //the set of numbers meanings are in order, maxX and maxZ in each chunk(leave at 16) max ore blocks per vein, spawn chance, minimum y value, maximum y value   
 		
 	}
 	private void genSurfaceOverworld(World world, Random random, int chunkX, int chunkZ)

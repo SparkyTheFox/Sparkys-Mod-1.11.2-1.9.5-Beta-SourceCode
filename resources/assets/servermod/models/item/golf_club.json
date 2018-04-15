@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/bronze_spear",
+	"textures": {
+		"layer0": "servermod:items/golf_club"
+	}
+}
+

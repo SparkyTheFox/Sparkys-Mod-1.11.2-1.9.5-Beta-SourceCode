@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/bear_claw",
+	"textures": {
+		"layer0": "servermod:items/steel_claw"
+	}
+}
+

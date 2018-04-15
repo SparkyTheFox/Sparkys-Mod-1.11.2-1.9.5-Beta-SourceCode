@@ -43,8 +43,11 @@ public class PropDummy extends Block {
 	     
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}
-		
+		@Override
+		public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+		// no creative items, nono
 
+		}
 
 	    /**
 	     * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed

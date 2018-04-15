@@ -9,6 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -122,7 +123,6 @@ public class ItemOdstArmor extends ItemArmor {
 			        	   GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstBoots), "   ", "T T", "T T", 'T', ModItems.TitaniumIngot); 	
 		
 			        		}
-			        		
 						}
 /**
 GameRegistry.addShapedRecipe(new ItemStack(ModItems.OdstHelmet), "TDT", "TGT", "TTT", 'T', ModItems.TitaniumIngot, 'D',

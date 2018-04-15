@@ -7,6 +7,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemCredit extends Item {
@@ -14,7 +15,14 @@ public class ItemCredit extends Item {
 	public ItemCredit() {
 		this.setCreativeTab(CreativeTabs.MISC);
 		this.setMaxStackSize(50);
-		
+		/**
+	    this.setCreativeTab(null);
+	  }
+
+	  @Override
+	  public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	    // no creative items, nono
+		*/
 	}
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {

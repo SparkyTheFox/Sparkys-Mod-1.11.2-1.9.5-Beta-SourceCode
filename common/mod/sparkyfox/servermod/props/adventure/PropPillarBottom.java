@@ -2,6 +2,10 @@ package mod.sparkyfox.servermod.props.adventure;
 
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 
 public class PropPillarBottom extends BlockStairs 
 {
@@ -14,6 +18,11 @@ public class PropPillarBottom extends BlockStairs
 		this.setCreativeTab(null);
         this.setBlockUnbreakable();
         this.disableStats();
+	}
+	@Override
+	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	// no creative items, nono
+
 	}
 
 }

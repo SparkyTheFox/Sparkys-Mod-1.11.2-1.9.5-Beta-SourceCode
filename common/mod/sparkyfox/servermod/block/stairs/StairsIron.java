@@ -32,7 +32,7 @@ public class StairsIron extends BlockStairs
 		public void addRecipes() {
 		
 				
-				GameRegistry.addShapedRecipe(new ItemStack(this),"III", "II ", "I  ", 'I', Blocks.IRON_BLOCK);
+				GameRegistry.addShapedRecipe(new ItemStack(this, 4),"III", "II ", "I  ", 'I', Blocks.IRON_BLOCK);
 
 	}
 }

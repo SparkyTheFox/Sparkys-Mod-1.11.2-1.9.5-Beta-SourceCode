@@ -1,0 +1,7 @@
+{
+    "parent": "servermod:item/basic_shield_blocking",
+	"textures": {
+		"layer0": "servermod:items/heater_shield"
+	}   
+}
+

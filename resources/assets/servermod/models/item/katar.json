@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_claw",
+	"textures": {
+		"layer0": "servermod:items/katar"
+	}
+}
+

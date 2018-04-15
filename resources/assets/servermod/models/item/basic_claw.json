@@ -1,0 +1,29 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "servermod:items/bear_claw"
+	},
+	"display": {
+        "thirdperson_righthand": {
+            "rotation": [ 0, 90, -45 ],
+            "translation": [ 2, -2, 0 ],
+            "scale": [ 0.9, 0.9, 0.9 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 0, -90, 45 ],
+            "translation": [ 2, -2, 0 ],
+            "scale": [ 0.9, 0.9, 0.9 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, -90, 55 ],
+            "translation": [ 1.13, 3.2, 1.13 ],
+            "scale": [ 0.68, 0.68, 0.68 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 90, -55 ],
+            "translation": [ 1.13, 3.2, 1.13 ],
+            "scale": [ 0.68, 0.68, 0.68 ]
+        }
+	}
+}
+

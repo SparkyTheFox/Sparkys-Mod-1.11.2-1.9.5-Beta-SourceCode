@@ -11,8 +11,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 
 /**
@@ -42,6 +44,13 @@ public abstract class WindowMiddleSlab extends BlockSlab {
         this.setBlockUnbreakable();
         this.disableStats();
         this.setCreativeTab(null);
+        
+    }
+	 
+	 @Override
+	 public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	 // no creative items, nono
+
 
 		// Set the default state
 		IBlockState state = this.blockState.getBaseState();

@@ -1,0 +1,15 @@
+{
+	"parent": "servermod:item/basic_shield",
+	"textures": {
+		"layer0": "servermod:items/emerald_shield"
+	},
+    "overrides": [
+        {
+            "predicate": {
+                "blocking": 1
+            },
+            "model": "servermod:item/emerald_shield_blocking"
+        }
+    ]    
+}
+

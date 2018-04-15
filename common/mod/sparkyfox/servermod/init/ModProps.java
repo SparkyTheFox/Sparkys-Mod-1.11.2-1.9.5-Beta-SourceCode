@@ -2,6 +2,7 @@ package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.Utils;
+import mod.sparkyfox.servermod.block.glass.PaneGlass;
 import mod.sparkyfox.servermod.props.adventure.PropCandy;
 import mod.sparkyfox.servermod.props.adventure.PropCandySpill;
 import mod.sparkyfox.servermod.props.adventure.PropDummy;
@@ -12,15 +13,10 @@ import mod.sparkyfox.servermod.props.adventure.PropSaveStar;
 import mod.sparkyfox.servermod.props.adventure.PropVine;
 import mod.sparkyfox.servermod.props.adventure.PropWebBig;
 import mod.sparkyfox.servermod.props.adventure.PropWebSmall;
-import mod.sparkyfox.servermod.slab.adventure.BridgeDoubleSlab;
-import mod.sparkyfox.servermod.slab.adventure.BridgeHalfSlab;
-import mod.sparkyfox.servermod.slab.adventure.WindowMiddleDoubleSlab;
-import mod.sparkyfox.servermod.slab.adventure.WindowMiddleHalfSlab;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemSlab;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -48,7 +44,7 @@ public class ModProps {
 	public static PropSaveStar SaveStar;
 	public static PropHole Hole;
 	public static PropHole2 Hole2;
-	
+
 
 
 	/**
@@ -68,6 +64,7 @@ public class ModProps {
         SaveStar = new PropSaveStar("savestar");
         Hole = new PropHole("hole");
         Hole2 = new PropHole2("hole2");
+ 
 		
 
 
@@ -109,7 +106,6 @@ public class ModProps {
 		registerRender(SaveStar);
 		registerRender(Hole);
 		registerRender(Hole2);
-
 
 		
 

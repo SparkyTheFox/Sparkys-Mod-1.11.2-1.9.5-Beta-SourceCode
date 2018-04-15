@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "variedcommodities:copyblock", "y": 180 }
+    }
+}

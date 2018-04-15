@@ -7,7 +7,11 @@ import mod.sparkyfox.servermod.init.ModProps;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWeb;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -24,7 +28,11 @@ public class PropSaveStar extends BlockWeb {
         this.disableStats();
         this.setCreativeTab(null);
 	}
-	
+	@Override
+	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	// no creative items, nono
+
+	}
 
     /**
      * Called When an Entity Collided with the Block

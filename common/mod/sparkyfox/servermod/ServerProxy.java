@@ -17,9 +17,4 @@ public class ServerProxy extends CommonProxy {
         
     }
 
-    @Override
-    public void postInit(FMLPostInitializationEvent e) {
-        super.postInit(e);
-    }
-
 }

@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_scythe",
+	"textures": {
+		"layer0": "servermod:items/wooden_scythe"
+	}
+}
+

@@ -13,12 +13,10 @@ import mod.sparkyfox.servermod.item.ItemKevlar;
 import mod.sparkyfox.servermod.item.ItemLegacyPermit;
 import mod.sparkyfox.servermod.item.ItemNasaFabric;
 import mod.sparkyfox.servermod.item.ItemPremiumPermit;
-import mod.sparkyfox.servermod.item.ItemRecipeBook;
 import mod.sparkyfox.servermod.item.ItemTechite;
 import mod.sparkyfox.servermod.item.ItemTitaniumNugget;
 import mod.sparkyfox.servermod.item.ItemUniverseFabric;
 import mod.sparkyfox.servermod.item.armor.ItemAdventureSpaceSuit;
-import mod.sparkyfox.servermod.item.armor.ItemPlanetesSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemAuzSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemDiamondTechSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemEmeraldArmor;
@@ -32,6 +30,7 @@ import mod.sparkyfox.servermod.item.armor.ItemLapisArmorHeavy;
 import mod.sparkyfox.servermod.item.armor.ItemLapisTechSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemNasaSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemOdstArmor;
+import mod.sparkyfox.servermod.item.armor.ItemPlanetesSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemRedstoneTechSpaceSuit;
 import mod.sparkyfox.servermod.item.armor.ItemTitaniumArmor;
 import mod.sparkyfox.servermod.item.armor.ItemUssrSpaceSuit;
@@ -47,12 +46,12 @@ import mod.sparkyfox.servermod.item.food.ItemPizza7;
 import mod.sparkyfox.servermod.item.food.ItemPizza8;
 import mod.sparkyfox.servermod.item.guns.ItemAK4U;
 import mod.sparkyfox.servermod.item.guns.ItemAK4URounds;
-import mod.sparkyfox.servermod.item.guns.ItemSMG;
 import mod.sparkyfox.servermod.item.guns.ItemSMGBullet;
 import mod.sparkyfox.servermod.item.guns.ItemSMGBulletCasing;
 import mod.sparkyfox.servermod.item.guns.ItemSMGRounds;
 import mod.sparkyfox.servermod.item.ingots.ItemBrassIngot;
 import mod.sparkyfox.servermod.item.ingots.ItemCobaltIngot;
+import mod.sparkyfox.servermod.item.ingots.ItemDemonicIngot;
 import mod.sparkyfox.servermod.item.ingots.ItemMagnesiumIngot;
 import mod.sparkyfox.servermod.item.ingots.ItemNickelIngot;
 import mod.sparkyfox.servermod.item.ingots.ItemPlatinumIngot;
@@ -67,6 +66,7 @@ import mod.sparkyfox.servermod.item.knifes.ItemStoneKnife;
 import mod.sparkyfox.servermod.item.knifes.ItemToyKnife;
 import mod.sparkyfox.servermod.item.knifes.ItemToyKnife2;
 import mod.sparkyfox.servermod.item.knifes.ItemWoodenKnife;
+import mod.sparkyfox.servermod.item.recipebook.ItemRecipeBook;
 import mod.sparkyfox.servermod.item.swords.ItemDiamondMesser;
 import mod.sparkyfox.servermod.item.swords.ItemEmeraldSword;
 import mod.sparkyfox.servermod.item.swords.ItemGoldMesser;
@@ -138,9 +138,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemIronKnife IronKnife;
 	public static ItemGoldKnife GoldKnife;
 	public static ItemDiamondKnife DiamondKnife;
-	public static ItemSMG SMG;
+	//public static ItemSMG SMG;
 	public static ItemSMGRounds SMGRounds;
-	public static ItemAK4U AK4U;
+	//public static ItemAK4U AK4U;
 	public static ItemAK4URounds AK4URounds;
 	//public static ToolMaterial Titanium;
 	//public static ToolMaterial Emerald;
@@ -209,6 +209,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemFakeDiamond FakeDiamond;
 	public static ItemToyKnife2 ToyKnife2;
 	public static ItemStick Stick;
+	public static ItemDemonicIngot DemonicIngot;
 	//public static ItemModRecord ModRecord_2;
 
 	//public static ItemTitaniumShield TitaniumShield;
@@ -522,13 +523,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //===============================================================================================================================================================================================\\
 
 		//Guns- Initialisation
-		SMG = (ItemSMG) new ItemSMG();
-		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
-		GameRegistry.register(SMG); 
+//		SMG = (ItemSMG) new ItemSMG();
+//		SMG.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SMG)); 
+//		GameRegistry.register(SMG);  
 			
-		AK4U = (ItemAK4U) new ItemAK4U();
-		AK4U.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AK4U)); 
-		GameRegistry.register(AK4U); 
+		//AK4U = (ItemAK4U) new ItemAK4U();
+		//AK4U.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AK4U)); 
+		//GameRegistry.register(AK4U); 
 			
 //===============================================================================================================================================================================================\\
 		
@@ -966,6 +967,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		FakeDiamond.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.FakeDiamond)); 
 		GameRegistry.register(FakeDiamond);
 		
+		DemonicIngot = (ItemDemonicIngot) new ItemDemonicIngot();
+		DemonicIngot.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.DemonicIngot)); 
+		GameRegistry.register(DemonicIngot); 
+		
 		//ModRecord_1 = (ItemModRecord) new ItemModRecord("mus_ruins", ModSoundEvents.mus_ruins);
 		//ModRecord_1.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.CD_1)); 
 		//GameRegistry.register(ModRecord_1);
@@ -1105,7 +1110,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		DiamondKnife.addRecipes();
 		//SMG.addRecipes();
 		//SMGRounds.addRecipes();
-		AK4U.addRecipes();
+		//AK4U.addRecipes();
 		AK4URounds.addRecipes();
 		Kevlar.addRecipes();
 		TitaniumIngot.addRecipes();
@@ -1198,6 +1203,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ColdTechite.addRecipes();
 		CompressedTechite.addRecipes();
 		Stick.addRecipes();
+		DemonicIngot.addRecipes();
 		
 //===============================================================================================================================================================================================\\
 																												//Texture Registry\\
@@ -1602,9 +1608,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //===============================================================================================================================================================================================\\
 																											//Guns\\
 		
-		ModelResourceLocation smg = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMG, "inventory");
-		ModelLoader.registerItemVariants(SMG, smg);
-		mesher.register(SMG, 0, smg); 
+		//ModelResourceLocation smg = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMG, "inventory");
+		//ModelLoader.registerItemVariants(SMG, smg);
+		//mesher.register(SMG, 0, smg); 
 	
 		ModelResourceLocation smgrounds = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMGRounds, "inventory");
 		ModelLoader.registerItemVariants(SMGRounds, smgrounds);
@@ -1613,9 +1619,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //===============================================================================================================================================================================================\\
 																											//Ammo\\
 		
-		ModelResourceLocation ak4u = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.AK4U, "inventory");
-		ModelLoader.registerItemVariants(AK4U, ak4u);
-		mesher.register(AK4U, 0, ak4u); 
+	//	ModelResourceLocation ak4u = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.AK4U, "inventory");
+	//	ModelLoader.registerItemVariants(AK4U, ak4u);
+	//	mesher.register(AK4U, 0, ak4u); 
 	
 		ModelResourceLocation ak4urounds = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.AK4URounds, "inventory");
 		ModelLoader.registerItemVariants(AK4URounds, ak4urounds);
@@ -1723,6 +1729,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation compressedtechite = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.CompressedTechite, "inventory");
 		ModelLoader.registerItemVariants(CompressedTechite, compressedtechite);
 		mesher.register(CompressedTechite, 0, compressedtechite);
+		
+		ModelResourceLocation demonicingot = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.DemonicIngot, "inventory");
+		ModelLoader.registerItemVariants(DemonicIngot, demonicingot);
+		mesher.register(DemonicIngot, 0, demonicingot); 
 		
 		
 //===============================================================================================================================================================================================\\

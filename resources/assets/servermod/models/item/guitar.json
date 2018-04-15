@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/banjo",
+	"textures": {
+		"layer0": "servermod:items/guitar"
+	}
+}
+

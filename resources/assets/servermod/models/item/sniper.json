@@ -1,0 +1,7 @@
+{
+    "parent": "servermod:item/sniperbasic",
+    "textures": {
+        "layer0": "servermod:items/sniper"
+    }
+}
+

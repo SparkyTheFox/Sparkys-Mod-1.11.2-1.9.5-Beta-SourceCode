@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_gun",
+	"textures": {
+		"layer0": "servermod:items/iron_gun"
+	}
+}
+

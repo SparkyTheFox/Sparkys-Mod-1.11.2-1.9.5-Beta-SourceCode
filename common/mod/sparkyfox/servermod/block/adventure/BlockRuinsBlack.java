@@ -5,6 +5,10 @@ import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 
 
 
@@ -29,7 +33,12 @@ public class BlockRuinsBlack extends Block {
 
 	}
     
-    
+
+ @Override
+ public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+   // no creative items, nono
+ 
+	}
 																		//Crafting Recipe//
 
 

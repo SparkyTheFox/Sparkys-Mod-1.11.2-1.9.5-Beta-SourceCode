@@ -1,0 +1,29 @@
+{
+    "parent": "item/handheld",
+	"textures": {
+		"layer0": "servermod:items/clarinet"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [180, 0, -145],
+			"translation": [0, -5.75, 0.2],
+			"scale": [1.1, 1.1, 1.1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [180, 180, 145],
+			"translation": [0, -5.75, 0.2],
+			"scale": [1.1, 1.1, 1.1]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 180, 50],
+			"translation": [0, 2, 2],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 0, -50],
+			"translation": [0, 2, 2],
+			"scale": [0.6, 0.6, 0.6]
+		}
+	}
+}
+

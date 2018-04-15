@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_battleaxe",
+	"textures": {
+		"layer0": "servermod:items/bronze_battleaxe"
+	}
+}
+

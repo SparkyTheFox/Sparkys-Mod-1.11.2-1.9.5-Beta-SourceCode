@@ -44,9 +44,9 @@ public class OreRecipeHandler {
 		
 	    
 		/**@Stairs*/
-		GameRegistry.addRecipe(new ItemStack(ModStairs.StairsDiamond), new Object[] { "D  ", "DD ", "DDD", 'D', Blocks.DIAMOND_BLOCK });
-		GameRegistry.addRecipe(new ItemStack(ModStairs.StairsGold), new Object[] { "G  ", "GG ", "GGG", 'G', Blocks.GOLD_BLOCK });
-		GameRegistry.addRecipe(new ItemStack(ModStairs.StairsIron), new Object[] { "I  ", "II ", "III", 'I', Blocks.IRON_BLOCK });
+		GameRegistry.addRecipe(new ItemStack(ModStairs.StairsDiamond, 4), new Object[] { "D  ", "DD ", "DDD", 'D', Blocks.DIAMOND_BLOCK });
+		GameRegistry.addRecipe(new ItemStack(ModStairs.StairsGold, 4), new Object[] { "G  ", "GG ", "GGG", 'G', Blocks.GOLD_BLOCK });
+		GameRegistry.addRecipe(new ItemStack(ModStairs.StairsIron, 4), new Object[] { "I  ", "II ", "III", 'I', Blocks.IRON_BLOCK });
 		
 		/**Titanium Tools*/
 		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.TitaniumPickaxe, new Object[] { "III", " A ", " A ", 'I', "ingotTitanium", 'A', Items.STICK }));

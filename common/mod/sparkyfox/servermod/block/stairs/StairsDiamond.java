@@ -32,7 +32,7 @@ public class StairsDiamond extends BlockStairs
 		public void addRecipes() {
 		
 				
-				GameRegistry.addShapedRecipe(new ItemStack(this),"DDD", "DD ", "D  ", 'D', Blocks.DIAMOND_BLOCK);
+				GameRegistry.addShapedRecipe(new ItemStack(this, 4),"DDD", "DD ", "D  ", 'D', Blocks.DIAMOND_BLOCK);
 
 	}
 

@@ -1,0 +1,15 @@
+{
+	"parent": "servermod:item/basic_shield",
+	"textures": {
+		"layer0": "servermod:items/demonic_shield_round"
+	},
+    "overrides": [
+        {
+            "predicate": {
+                "blocking": 1
+            },
+            "model": "servermod:item/demonic_shield_round_blocking"
+        }
+    ]    
+}
+

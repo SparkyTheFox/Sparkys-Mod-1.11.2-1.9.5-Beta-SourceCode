@@ -302,6 +302,23 @@ public class FurnitureRecipes {
 		OdstBoots.setInput(new ItemStack(ModItems.OdstBoots));
 		registry.registerRecipe(RecipeType.WASHING_MACHINE, OdstBoots);
 		
+		//Animie Armor
+		RecipeVariables AnimieHelmet = new RecipeVariables();
+		AnimieHelmet.setInput(new ItemStack(ModItems.PlanetesSpaceHelmet));
+		registry.registerRecipe(RecipeType.WASHING_MACHINE, AnimieHelmet);
+		
+		RecipeVariables AnimieChestplate = new RecipeVariables();
+		AnimieChestplate.setInput(new ItemStack(ModItems.PlanetesSpaceChestplate));
+		registry.registerRecipe(RecipeType.WASHING_MACHINE, AnimieChestplate);
+		
+		RecipeVariables AnimieLeggings = new RecipeVariables();
+		AnimieLeggings.setInput(new ItemStack(ModItems.PlanetesSpaceLeggings));
+		registry.registerRecipe(RecipeType.WASHING_MACHINE, AnimieLeggings);
+		
+		RecipeVariables AnimieBoots = new RecipeVariables();
+		AnimieBoots.setInput(new ItemStack(ModItems.PlanetesSpaceBoots));
+		registry.registerRecipe(RecipeType.WASHING_MACHINE, AnimieBoots);
+		
 		//Scarlet
 		RecipeVariables Scarlet = new RecipeVariables();
 		Scarlet.setInput(new ItemStack(ModItems.Scarlet));

@@ -6,6 +6,7 @@ import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemHotTechite extends Item {
@@ -13,7 +14,12 @@ public class ItemHotTechite extends Item {
 	public ItemHotTechite() {
 		this.setCreativeTab(CreativeTabs.MATERIALS);
 		this.setMaxStackSize(64);
-		
+	    this.setCreativeTab(null);
+	  }
+
+	  @Override
+	  public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	    // no creative items, nono
 	}
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {

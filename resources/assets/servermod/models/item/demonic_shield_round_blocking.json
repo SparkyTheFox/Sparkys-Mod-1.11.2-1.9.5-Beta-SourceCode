@@ -1,0 +1,6 @@
+{
+    "parent": "servermod:item/basic_shield_blocking",
+	"textures": {
+		"layer0": "servermod:items/demonic_shield_round"
+	}
+}

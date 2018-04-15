@@ -1,0 +1,8 @@
+{
+    "ambientocclusion": false,
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "servermod:blocks/placeholder_6"
+    }
+}
+

@@ -9,12 +9,16 @@ import net.minecraft.block.BlockPressurePlate;
 import net.minecraft.block.BlockPressurePlateWeighted;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -39,6 +43,11 @@ public class BlockSpikePressurePlate extends BlockPressurePlateWeighted {
         this.disableStats();
         this.setCreativeTab(null);
         
+		}
+	 @Override
+	 public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	   // no creative items, nono
+	 
 		}
         @SideOnly(Side.CLIENT)
         public BlockRenderLayer getBlockLayer()

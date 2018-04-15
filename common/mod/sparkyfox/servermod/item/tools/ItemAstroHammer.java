@@ -9,16 +9,19 @@ import mod.sparkyfox.servermod.ServerMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 //import net.minecraft.util.BlockPos;
 import net.minecraft.util.math.BlockPos;
@@ -38,6 +41,12 @@ public class ItemAstroHammer extends ItemPickaxe {
 		this.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, unlocalizedName));
 		this.attackSpeed = attackSpeed;
 		this.attackDamage = 1.0F + material.getDamageVsEntity();
+	    this.setCreativeTab(null);
+	  }
+
+	  @Override
+	  public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	    // no creative items, nono	
     }
     
 													//Anvil Repair\\
@@ -152,8 +161,9 @@ public class ItemAstroHammer extends ItemPickaxe {
     
 	@Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
-        tooltip.add(TextFormatting.BLUE + "LEEEEGEEEND!!! Of the Astro Hammer!");
+        tooltip.add(TextFormatting.BLUE + "LEEEEGEEEND!!! Of the Astal Hammer!");
         tooltip.add(TextFormatting.RED + "If found, please return to: Angus McFife, the thirteenth");
+        tooltip.add(TextFormatting.GREEN + "...or Shan");
         super.addInformation(stack, playerIn, tooltip, advanced);
         }
 }

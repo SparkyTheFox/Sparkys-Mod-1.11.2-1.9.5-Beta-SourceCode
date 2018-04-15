@@ -6,9 +6,13 @@ import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.block.BlockButton;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -39,6 +43,12 @@ public class PropUTButton extends BlockButton {
         
       
      }
+	 
+	 @Override
+	 public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+	 // no creative items, nono
+
+	 }
         
       
        /**

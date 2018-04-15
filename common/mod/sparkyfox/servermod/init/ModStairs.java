@@ -2,9 +2,10 @@ package mod.sparkyfox.servermod.init;
 
 import mod.sparkyfox.servermod.ServerMod;
 import mod.sparkyfox.servermod.Utils;
-import mod.sparkyfox.servermod.block.stairs.StairsIron;
-import mod.sparkyfox.servermod.block.stairs.StairsGold;
 import mod.sparkyfox.servermod.block.stairs.StairsDiamond;
+import mod.sparkyfox.servermod.block.stairs.StairsGold;
+import mod.sparkyfox.servermod.block.stairs.StairsGrass;
+import mod.sparkyfox.servermod.block.stairs.StairsIron;
 import mod.sparkyfox.servermod.props.adventure.PropPillarBottom;
 import mod.sparkyfox.servermod.props.adventure.PropPillarMiddle;
 import mod.sparkyfox.servermod.stair.adventure.CustomIngotBlock;
@@ -14,17 +15,18 @@ import mod.sparkyfox.servermod.stair.adventure.WindowCorner3;
 import mod.sparkyfox.servermod.stair.adventure.WindowCorner4;
 import mod.sparkyfox.servermod.stair.adventure.WindowCorner5;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.ColorizerGrass;
+import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * This class handles the registration of our blocks and also the rendering of
@@ -43,6 +45,7 @@ public class ModStairs {
 	public static StairsIron StairsIron;
 	public static StairsGold StairsGold;
 	public static StairsDiamond StairsDiamond;
+	public static StairsGrass StairsGrass;
 	
 	//Adventure\\
 	public static Block tutorial_block;
@@ -67,6 +70,7 @@ public class ModStairs {
 	StairsIron = new StairsIron("stairs_iron", Blocks.IRON_BLOCK.getDefaultState());
 	StairsGold = new StairsGold("stairs_gold", Blocks.IRON_BLOCK.getDefaultState());
 	StairsDiamond = new StairsDiamond("stairs_diamond", Blocks.DIAMOND_BLOCK.getDefaultState());
+	StairsGrass = new StairsGrass("stairs_grass", Blocks.GRASS.getDefaultState());
 //	StairsWool = new StairsDiamond("stairs_wool", Blocks.WOOL.getDefaultState());
 //	StairsOrangeWool = new StairsDiamond("stairs_orange_wool", Blocks.WOOL.getDefaultState());
 //	StairsMagentaWool = new StairsDiamond("stairs_magenta_wool", Blocks.WOOL.getDefaultState());
@@ -100,7 +104,20 @@ public class ModStairs {
 	
 	
 	
-	
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static void regColours()
+    {
+        FMLClientHandler.instance().getClient().getBlockColors().registerBlockColorHandler(
+                (state, worldIn, pos, tintIndex) ->
+                        worldIn != null && pos != null ? BiomeColorHelper.getGrassColorAtPos(worldIn, pos) : ColorizerGrass.getGrassColor(0.5D, 1.0D),
+                        		StairsGrass);
+        FMLClientHandler.instance().getClient().getItemColors().registerItemColorHandler(
+                (stack, tintIndex) ->
+                        ColorizerGrass.getGrassColor(0.5D, 1.0D),
+                StairsGrass);
+    
 	
 	
 	
@@ -119,7 +136,7 @@ public class ModStairs {
 		registerBlock(StairsIron);
 		registerBlock(StairsGold);
 		registerBlock(StairsDiamond);
-		
+		registerBlock(StairsGrass);
 		//Adventure\\
 		registerBlock(tutorial_block);
 		registerBlock(WindowCorner);
@@ -143,6 +160,7 @@ public class ModStairs {
 		registerRender(StairsIron);
 		registerRender(StairsGold);
 		registerRender(StairsDiamond);
+		registerRender(StairsGrass);
 		
 		//Adventure\\
 		registerRender(tutorial_block);
@@ -155,6 +173,8 @@ public class ModStairs {
 		registerRender(pillar_bottom);
 		registerRender(pillar_middle);
 
+		
+	}
 
 
 
@@ -162,7 +182,7 @@ public class ModStairs {
 		
 
 
-	}
+	
 
 
 	/**

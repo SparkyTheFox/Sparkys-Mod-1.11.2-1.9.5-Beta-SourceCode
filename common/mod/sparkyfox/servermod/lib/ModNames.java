@@ -20,6 +20,10 @@ public class ModNames {
 	public static final String GoldKnife = "GoldKnife";
 	public static final String DiamondKnife = "DiamondKnife";
 	public static final String SMG = "SMG";
+	public static final String SMG2 = "SMG2";
+	public static final String AssaultRifle = "AssaultRifle";
+	public static final String Sniper = "Sniper";
+	public static final String Pistol = "Pistol";
 	public static final String SMGRounds = "SMGRounds";
 	public static final String AK4U = "AK4U";
 	public static final String AK4URounds = "AK4URounds";
@@ -313,6 +317,30 @@ public class ModNames {
 	public static final String RuinsDoor3MiddleRight = "RuinsDoor3MiddleRight";
 	public static final String RuinsDoor3BottomRight = "RuinsDoor3BottomRight";
 	//public static final String AstroHammer = "AstroHammer";
+	public static final String Mana = "Mana";
+	public static final String DemonicBlock = "DemonicBlock";
+	public static final String DemonicOre = "DemonicOre";
+	public static final String DemonicIngot = "DemonicIngot";
+	public static final String BulletProofGlass = "BulletProofGlass";
+	public static final String BulletProofGlassWhite = "BulletProofGlassWhite";
+	public static final String BulletProofGlassOrange = "BulletProofGlassOrange";
+	public static final String BulletProofGlassMagenta = "BulletProofGlassMagenta";
+	public static final String BulletProofGlassLightBlue = "BulletProofGlassLightBlue";
+	public static final String BulletProofGlassYellow = "BulletProofGlassYellow";
+	public static final String BulletProofGlassLime = "BulletProofGlassLime";
+	public static final String BulletProofGlassPink = "BulletProofGlassPink";
+	public static final String BulletProofGlassGrey = "BulletProofGlassGrey";
+	public static final String BulletProofGlassLightGrey = "BulletProofGlassLightGrey";
+	public static final String BulletProofGlassCyan = "BulletProofGlassCyan";
+	public static final String BulletProofGlassPurple = "BulletProofGlassPurple";
+	public static final String BulletProofGlassBlue = "BulletProofGlassBlue";
+	public static final String BulletProofGlassBrown = "BulletProofGlassBrown";
+	public static final String BulletProofGlassGreen = "BulletProofGlassGreen";
+	public static final String BulletProofGlassRed = "BulletProofGlassRed";
+	public static final String BulletProofGlassBlack = "BulletProofGlassBlack";
+	public static final String ReinforcedGlass = "ReinforcedGlass";
+	public static final String Window = "Window";
+	public static final String BigWindow = "BigWindow";	
 
 
 	

@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_staff",
+	"textures": {
+		"layer0": "servermod:items/elemental_staff"
+	}
+}
+

@@ -31,7 +31,7 @@ public class StairsGold extends BlockStairs
 		public void addRecipes() {
 		
 				
-				GameRegistry.addShapedRecipe(new ItemStack(this),"GGG", "GG ", "G  ", 'G', Blocks.GOLD_BLOCK);
+				GameRegistry.addShapedRecipe(new ItemStack(this, 4),"GGG", "GG ", "G  ", 'G', Blocks.GOLD_BLOCK);
 
 	}
 

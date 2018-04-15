@@ -25,6 +25,18 @@ public class ModSoundEvents {
 	public static SoundEvent sfx_soulgameoverhitbreak;
 	public static SoundEvent sfx_soulbattlestart;
 	public static SoundEvent nosound;
+	public static SoundEvent noclip;
+	public static SoundEvent smgreload;
+	public static SoundEvent sniper;
+	public static SoundEvent sniperreload;
+	public static SoundEvent smg2;
+	public static SoundEvent smg2reload;
+	public static SoundEvent assaultrifle;
+	public static SoundEvent assaultriflereload;
+	public static SoundEvent magnum;
+	public static SoundEvent magnumreload;
+	public static SoundEvent charge;
+	public static SoundEvent shot;
 	
 //===============================================================================================================================================================================================\\
 																									//UTM Registry\\
@@ -72,6 +84,20 @@ public class ModSoundEvents {
 		switch1 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "switch1")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "switch1"));
 		switch2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "switch2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "switch2"));
 		soulbattleflash = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "soulbattleflash")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "soulbattleflash"));
+		noclip = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "noclip")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "noclip"));
+		smgreload = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "smgreload")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "smgreload"));
+		sniper = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sniper")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sniper"));
+		sniperreload = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "sniperreload")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "sniperreload"));
+		charge = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "charge")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "charge"));
+		shot = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "shot")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "shot"));
+		smg2 = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "smg2")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "smg2"));
+		smg2reload = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "smg2reload")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "smg2reload"));
+		assaultrifle = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "assaultrifle")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "assaultrifle"));
+		assaultriflereload = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "assaultriflereload")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "assaultriflereload"));
+		magnum = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "magnum")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "magnum"));
+		magnumreload = new SoundEvent(new ResourceLocation(ServerMod.MOD_ID, "magnumreload")).setRegistryName(new ResourceLocation(ServerMod.MOD_ID, "magnumreload"));
+		
+		
 		
 //===============================================================================================================================================================================================\\
 																									//Sound Initialisation: UTS\\	
@@ -167,6 +193,18 @@ public class ModSoundEvents {
 		registerSound(sfx_soulgameoverhit);
 		registerSound(sfx_soulgameoverhitbreak);
 		registerSound(sfx_soulbattlestart);
+		registerSound(noclip);
+		registerSound(smgreload);
+		registerSound(sniper);
+		registerSound(sniperreload);
+		registerSound(smg2);
+		registerSound(smg2reload);
+		registerSound(assaultrifle);
+		registerSound(assaultriflereload);
+		registerSound(magnum);
+		registerSound(magnumreload);
+		registerSound(charge);
+		registerSound(shot);
 		//registerSound(song_90s);
 		//registerSound(FloweyHowdy);
 		//registerSound(FloweyKOBK);

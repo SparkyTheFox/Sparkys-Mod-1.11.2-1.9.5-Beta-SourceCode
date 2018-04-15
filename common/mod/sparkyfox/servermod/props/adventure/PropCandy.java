@@ -41,7 +41,11 @@ public class PropCandy extends Block {
 	        this.setCreativeTab(null);
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}
-		
+		@Override
+		public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+		// no creative items, nono
+
+		}
 
 
 	    /**

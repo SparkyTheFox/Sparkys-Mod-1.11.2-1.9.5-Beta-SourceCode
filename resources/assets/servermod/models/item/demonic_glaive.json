@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_glaive",
+	"textures": {
+		"layer0": "servermod:items/demonic_glaive"
+	}
+}
+

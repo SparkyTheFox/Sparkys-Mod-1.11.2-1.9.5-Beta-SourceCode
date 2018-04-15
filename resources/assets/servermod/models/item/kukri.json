@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/bronze_dagger",
+	"textures": {
+		"layer0": "servermod:items/kukri"
+	}
+}
+

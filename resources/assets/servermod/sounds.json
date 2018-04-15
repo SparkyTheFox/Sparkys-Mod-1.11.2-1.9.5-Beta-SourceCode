@@ -353,6 +353,117 @@
         ],
         "subtitle": "*yOu NaIVe IdIoT!"
     },
+	
+	    "smgreload": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:smgreload", "pitch":0.1}
+        ],
+           
+        "subtitle": "Chic-chich"
+    },
+	
+		"sniper": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:sniper", "pitch":1.0}
+        ],
+           
+        "subtitle": "BOOM!"
+    },
+	
+		"sniperreload": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:sniperreload", "pitch":1.0}
+        ],
+           
+        "subtitle": "Chic-chich"
+    },
+    
+        
+        "assaultrifle": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:assaultrifle", "pitch":1.0}
+        ],
+           
+        "subtitle": "brbrb"
+    },
+    
+        "assaultriflereload": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:assaultriflereload", "pitch":1.0}
+        ],
+           
+        "subtitle": "Chic-chich"
+    },
+    
+        
+        "magnum": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:magnum", "pitch":1.0}
+        ],
+           
+        "subtitle": "Bang"
+    },
+    
+        "magnumreload": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:magnumreload", "pitch":1.0}
+        ],
+           
+        "subtitle": "Chic-chich"
+    },
+    
+        
+        "smg2": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:smg2", "pitch":1.0}
+        ],
+           
+        "subtitle": "Loud Pew"
+    },
+    
+        "smg2reload": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:smg2reload", "pitch":1.0}
+        ],
+           
+        "subtitle": "Chic-chich"
+    },
+	
+		"noclip": {
+        "category": "player",
+        "sounds": [
+        {"name":"servermod:noclip", "pitch":0.1}
+        ],
+           
+        "subtitle": "Click"
+    },
+	
+	    "charge": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:charge", "stream": true}
+       
+        ],
+        "subtitle": "ffffwwwope"
+    },
+	
+		"shot": {
+        "category": "master",
+        "sounds": [
+       {"name":"servermod:shot", "stream": true}
+       
+        ],
+        "subtitle": "ffshee"
+    },
 
 
         "smg": {

@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_dagger",
+	"textures": {
+		"layer0": "servermod:items/sai"
+	}
+}
+

@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_spear",
+	"textures": {
+		"layer0": "servermod:items/iron_halberd"
+	}
+}
+

@@ -1,258 +1,176 @@
 package mod.sparkyfox.servermod.item.guns;
 
-import javax.annotation.Nullable;
-
 import mod.sparkyfox.servermod.ServerMod;
+import mod.sparkyfox.servermod.entity.EntityProjectile;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.init.ModSoundEvents;
+import mod.sparkyfox.servermod.init.ModWeapons;
+import mod.sparkyfox.servermod.item.ItemBasic;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Enchantments;
-import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.IItemPropertyGetter;
-import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.StatList;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemAK4U extends ItemBow
-{
+public class ItemAK4U extends ItemBasic {
+	
+	 @Override
+	 public String getUnlocalizedName(ItemStack stack) {
+	 	return "AK4U" + ServerMod.RESOURCE_PREFIX + ModNames.AK4U;
+	 }
 
-@Override
-public String getUnlocalizedName(ItemStack stack) {
 
-	return "AK4U" + ServerMod.RESOURCE_PREFIX + ModNames.AK4U;
+  public ItemAK4U() {
+     this.setMaxDamage(10900);
+     this.setCreativeTab(CreativeTabs.COMBAT);
+     this.setFull3D();
+     this.setMaxStackSize(1);
+     this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter() 
+     {
 
-}
-    public ItemAK4U()
-    {
-	this.maxStackSize = 1;
-    this.setMaxDamage(1000);//384 //768
-    this.setCreativeTab(CreativeTabs.COMBAT);
-    this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
-    {
-    	 @SideOnly(Side.CLIENT)
-         public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-         {
-             return entityIn == null ? -10.0F : (entityIn.getActiveItemStack().getItem() != ModItems.AK4U ? -10.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F);//20.0F
-         }//
+///////////////////////////////////////////	 
+      @SideOnly(Side.CLIENT)
+      public float apply(ItemStack stack, World worldIn, EntityLivingBase entityIn) {
+         if (entityIn == null) {
+           return 0.0F;
+        }
+         ItemStack itemstack = entityIn.getActiveItemStack();
+        // return (itemstack != null) && (itemstack.getItem() == ItemSMG.this) ? (stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F : 0.0F;
+         
+         return entityIn == null ? -10.0F : (entityIn.getActiveItemStack().getItem() != ItemAK4U.this ? -10.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F);//20.0F
+      }	  
+	  
      });
-    this.addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter()
-    {
-        @SideOnly(Side.CLIENT)
-        public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-        {
-            return entityIn != null && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 0.5F : 0.0F; //1.0= duribilty( 1 arrow = 1 point)
-        }
+     
+     
+///////////////////////////////////////////	      
+     
+     addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter() {
+      @SideOnly(Side.CLIENT)
+      public float apply(ItemStack stack, World worldIn, EntityLivingBase entityIn) {
+         //return (entityIn != null) && (entityIn.isHandActive()) && (entityIn.getActiveItemStack() == stack) ? 1.0F : 0.0F;
+         return entityIn != null && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 0.5F : 0.0F; /**1.0= duribilty( 1 arrow = 1 point)*/
+      }
     });
-}
-
-private ItemStack findAmmo(EntityPlayer player)
-{
-    if (this.isArrow(player.getHeldItem(EnumHand.OFF_HAND)))
-    {
-        return player.getHeldItem(EnumHand.OFF_HAND);
+  }
+///////////////////////////////////////////	  
+  
+  public void onPlayerStoppedUsing(ItemStack stack, World par2World, EntityLivingBase entity, int count)
+  {
+     if (!(entity instanceof EntityPlayer)) {
+       return;
     }
-    else if (this.isArrow(player.getHeldItem(EnumHand.MAIN_HAND)))
-    {
-        return player.getHeldItem(EnumHand.MAIN_HAND);
+     EntityPlayer player = (EntityPlayer)entity;
+     if (player.capabilities.isCreativeMode) {
+       return;
     }
-    else
-    {
-        for (int i = 0; i < player.inventory.getSizeInventory(); ++i)
-        {
-            ItemStack itemstack = player.inventory.getStackInSlot(i);
-
-            if (this.isArrow(itemstack))
-            {
-                return itemstack;
-            }
+     NBTTagCompound compound = stack.getTagCompound();
+     if (compound == null) {
+       stack.setTagCompound(compound = new NBTTagCompound());
+    }
+     int ticks = getMaxItemUseDuration(stack) - count;
+     int shotsleft = compound.getInteger("ShotsLeft") - ticks / 6;
+     if (compound.getBoolean("Reloading2")) {
+       shotsleft = ticks / 5;
+       if (ticks > 1)//reload, how long you can shoot for before reloading(higher the number, the less you can shoot)(i set this at 1)
+         shotsleft = 150;//Higher the number, the more it will shoot before reloading(128=768(12 stacks))(150=900 bullets(14 stacks+4 bullets))
+       if (shotsleft > 1) {//Translation:if the shotsleft is more than 1
+         compound.setInteger("ShotsLeft", shotsleft);//Translation:set the compound to shotsleft
+         compound.setBoolean("Reloading2", false);//Translation: set the compound to not reloading
+      }
+    }
+     else if (shotsleft <= 0) {//Translation:aswell, if the shots left is less than 0
+       compound.setBoolean("Reloading2", true);//Translation: set the compound to reloading2
+      stack.damageItem(900, player);//damage after reloading
+    }
+    else {
+       compound.setInteger("ShotsLeft", shotsleft);//Translation: aswell, as set the compound to shots left
+    }
+  }
+///////////////////////////////////////////	  
+  public void onUsingTick(ItemStack stack, EntityLivingBase entity, int count) {
+     if (entity.world.isRemote) {
+       return;
+    }
+    
+     int ticks = getMaxItemUseDuration(stack) - count;
+     if (ticks % 0.5 != 0) {//0.5= fire rate lower the faster (0.5)
+       return;
+    }
+    
+     if ((entity instanceof EntityPlayer)) {
+       EntityPlayer player = (EntityPlayer)entity;
+       NBTTagCompound compound = stack.getTagCompound();
+       if (compound == null) {
+         stack.setTagCompound(compound = new NBTTagCompound());
+      }
+       int shotsleft = compound.getInteger("ShotsLeft") - ticks / 6;
+       if (!player.capabilities.isCreativeMode) {
+         if ((compound.getBoolean("Reloading2")) && (hasItem(player, ModItems.SMGRounds))) {
+           if ((ticks > 0) && (ticks <= 1)) {//how long it will take to reload?
+               int ticks2 = getMaxItemUseDuration(stack) - count;//set the fire duration
+               if (ticks2 % 1 != 0) {//0.5= fire rate lower the faster
+                 return;
+               }
+             playSound(player, ModSoundEvents.smg2reload, 1.0F, 1.0F);
+          }
+           return;
         }
-
-        return ItemStack.EMPTY;
-    }
-}
-
-protected boolean isArrow(ItemStack stack)
-{
-    return stack.getItem() instanceof ItemAK4URounds;
-}
-
-/**
- * Called when the player stops using an Item (stops holding the right mouse button).
- */
-public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBase entityLiving, int timeLeft)
-{
-    if (entityLiving instanceof EntityPlayer)
-    {
-        EntityPlayer entityplayer = (EntityPlayer)entityLiving;
-        boolean flag = entityplayer.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, stack) > 0;
-        ItemStack itemstack = this.findAmmo(entityplayer);
-
-        int i = this.getMaxItemUseDuration(stack) - timeLeft;
-        i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(stack, worldIn, entityplayer, i, !itemstack.isEmpty() || flag);
-        if (i < 0) return;
-
-        if (!itemstack.isEmpty() || flag)
-        {
-            if (itemstack.isEmpty())
-            {
-                itemstack = new ItemStack(ModItems.AK4URounds);
-            }
-
-            float f = getArrowVelocity(i);
-
-            if ((double)f >= -10000.0D)//bow charge
-            {
-                boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemAK4URounds && ((ItemAK4URounds) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
-
-                if (!worldIn.isRemote)
-                {
-                    ItemAK4URounds itemarrow = (ItemAK4URounds)((ItemAK4URounds)(itemstack.getItem() instanceof ItemAK4URounds ? itemstack.getItem() : ModItems.AK4URounds));
-                    EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
-                    entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-
-                    if (f == 1.0F)
-                    {
-                        entityarrow.setIsCritical(true);
-                        entityarrow.setDamage(4.0F);
-                    }
-
-                    int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
-
-                    if (j > 100)
-                    {
-                        entityarrow.setDamage(entityarrow.getDamage() + (double)j * 100.5D + 100.5D);
-                    }
-
-                    int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);
-
-                    if (k > 100)
-                    {
-                        entityarrow.setKnockbackStrength(k);
-                    }
-
-                    if (EnchantmentHelper.getEnchantmentLevel(Enchantments.FLAME, stack) > 100)
-                    {
-                        entityarrow.setFire(100);
-                    }
-
-                    stack.damageItem(1, entityplayer);
-
-                    if (flag1 || entityplayer.capabilities.isCreativeMode && (itemstack.getItem() == Items.SPECTRAL_ARROW || itemstack.getItem() == Items.TIPPED_ARROW))
-                    {
-                        entityarrow.pickupStatus = EntityArrow.PickupStatus.CREATIVE_ONLY;
-                    }
-
-                    worldIn.spawnEntity(entityarrow);
-                }
-
-                worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSoundEvents.ak4u, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-
-                if (!flag1 && !entityplayer.capabilities.isCreativeMode)
-                {
-                    itemstack.shrink(1);
-
-                    if (itemstack.isEmpty())
-                    {
-                        entityplayer.inventory.deleteStack(itemstack);
-                    }
-                }
-
-                entityplayer.addStat(StatList.getObjectUseStats(this));
-            }
+         if ((shotsleft <= 0) || (!hasItem(player, ModItems.SMGRounds)))//if smg has no rounds left
+         {  
+             int ticks1 = getMaxItemUseDuration(stack) - count;//set the fire duration
+             if (ticks1 % 1111.5 != 0) {//0.5= fire rate lower the faster
+               return;
+             }
+           playSound(player, ModSoundEvents.noclip, 1.0F, 1.0F);
+           return;
         }
+      }
+      
+       if (!player.capabilities.isCreativeMode) {//if (!)? Player only is in creative mode
+         consumeItem(player, ModItems.SMGRounds);//Use SMG Rounds
+      }
+       compound.removeTag("Reloading2");//Doesnt reload
     }
-}
+    
+     EntityProjectile projectile = new EntityProjectile(entity.world, entity, new ItemStack(ModWeapons.bullet, 1, 0));
+     projectile.damage = 8.0F;
+     projectile.setSpeed(40);
+     projectile.shoot(0.5F);
+    
+     playSound(entity, ModSoundEvents.smg, 0.9F, itemRand.nextFloat() * 0.3F + 0.8F);
+     entity.world.spawnEntity(projectile);
+  }
+///////////////////////////////////////////	  
 
-/**
- * Gets the velocity of the arrow entity from the bow's charge
- */
-public static float getArrowVelocity(int charge)
-{
-    float f = (float)charge / 0.0000001F;//Arrow Fire distance
-    f = (f * f + f * 2.0F) / 3.0F;
-
-    if (f > 1.0F)
-    {
-        f = 1.0F;
+  public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand)
+  {
+     ItemStack itemstack = player.getHeldItem(hand);
+     if ((!player.capabilities.isCreativeMode) && (!hasItem(player, ModItems.SMGRounds)))//if player is in creative mode and (!)Doesnt have Item(smg rounds)
+       itemstack.setTagInfo("Reloading2", new net.minecraft.nbt.NBTTagByte((byte)1));
+     player.setActiveHand(hand);
+     return new ActionResult(net.minecraft.util.EnumActionResult.SUCCESS, itemstack);
+  }
+///////////////////////////////////////////	   
+  public int getMaxItemUseDuration(ItemStack par1ItemStack)
+  {
+     return 7200;
+  }
+///////////////////////////////////////////	   
+  public EnumAction getItemUseAction(ItemStack stack)
+  {
+     if ((!stack.hasTagCompound()) || (!stack.getTagCompound().getBoolean("Reloading2"))) {
+       return EnumAction.BOW;
     }
-
-    return f;
+     return EnumAction.BLOCK;
+  }
 }
-
-/**
- * How long it takes to use or consume an item
- */
-public int getMaxItemUseDuration(ItemStack stack)
-{
-    return 102000;//72000
-}
-
-/**
- * returns the action that specifies what animation to play when the items is being used
- */
-public EnumAction getItemUseAction(ItemStack stack)
-{
-    return EnumAction.BOW;
-}
-
-public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
-{
-    ItemStack itemstack = playerIn.getHeldItem(handIn);
-    boolean flag = !this.findAmmo(playerIn).isEmpty();
-
-    ActionResult<ItemStack> ret = net.minecraftforge.event.ForgeEventFactory.onArrowNock(itemstack, worldIn, playerIn, handIn, flag);
-    if (ret != null) return ret;
-
-    if (!playerIn.capabilities.isCreativeMode && !flag)
-    {
-        return flag ? new ActionResult(EnumActionResult.PASS, itemstack) : new ActionResult(EnumActionResult.FAIL, itemstack);
-    }
-    else
-    {
-        playerIn.setActiveHand(handIn);
-        return new ActionResult(EnumActionResult.SUCCESS, itemstack);
-    }
-}
-
-/**
- * Return the enchantability factor of the item, most of the time is based on material.
- */
-public int getItemEnchantability()
-{
-    return 1;
-}
-
-																		//Anvil Repair\\
-
-
-							public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-							return repair.getItem() == Items.IRON_INGOT;
-							}
-
-																		//Crafting Recipe\\
-
-
-							public void addRecipes() {
-							GameRegistry.addShapedRecipe(new ItemStack(this), " G ", "WIB", "WT ", 'G', Items.GOLD_INGOT, 'W',
-							new ItemStack (Blocks.PLANKS), 'I', new ItemStack (Blocks.IRON_BLOCK), 'B', new ItemStack (Items.IRON_INGOT), 'T', new ItemStack (Blocks.WOODEN_BUTTON));	
-}
-
-}
-
-

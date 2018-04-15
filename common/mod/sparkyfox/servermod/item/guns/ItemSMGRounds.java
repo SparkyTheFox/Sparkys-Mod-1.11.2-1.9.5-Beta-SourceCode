@@ -8,17 +8,16 @@ import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemArrow;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ItemSMGRounds extends ItemArrow {
+public class ItemSMGRounds extends Item {
 	
 	
 
 
-	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 
 	return "SMGRounds" + ServerMod.RESOURCE_PREFIX + ModNames.SMGRounds; 

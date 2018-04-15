@@ -1,0 +1,7 @@
+{
+	"parent": "servermod:item/basic_warhammer",
+	"textures": {
+		"layer0": "servermod:items/iron_warhammer"
+	}
+}
+
