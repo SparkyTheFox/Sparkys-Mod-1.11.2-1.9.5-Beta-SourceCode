@@ -1,6 +1,7 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
+		"particle": "servermod:blocks/adventure/candy",
         "0": "servermod:blocks/adventure/ruins_purple6",
         "1": "servermod:blocks/adventure/ruins_purple5",
         "2": "servermod:blocks/adventure/candy"

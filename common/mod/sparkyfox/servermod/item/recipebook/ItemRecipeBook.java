@@ -2,8 +2,8 @@
  
  //import mod.sparkyfox.servermod.Server;
 import mod.sparkyfox.servermod.ServerMod;
-import mod.sparkyfox.servermod.gui.GuiType;
-import mod.sparkyfox.servermod.gui.PacketClient;
+//import mod.sparkyfox.servermod.gui.GuiType;
+//import mod.sparkyfox.servermod.gui.PacketClient;
 import mod.sparkyfox.servermod.lib.ModNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;

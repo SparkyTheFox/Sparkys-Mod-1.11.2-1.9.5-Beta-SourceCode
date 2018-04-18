@@ -2,15 +2,15 @@ package mod.sparkyfox.servermod;
 
 import java.util.Random;
 
-import com.google.common.base.Function;
-
+//import mod.sparkyfox.servermod.CarpantryBench.ContainerCarpentryBench;
 import mod.sparkyfox.servermod.entity.EntityAK4URounds;
 import mod.sparkyfox.servermod.entity.EntityElementalStaffFX;
 import mod.sparkyfox.servermod.entity.EntityProjectile;
 //import mod.sparkyfox.servermod.entity.EntityFlowey;
 //import mod.sparkyfox.servermod.entity.EntityFriendlynessPellet;
 import mod.sparkyfox.servermod.entity.EntitySMGRounds;
-import mod.sparkyfox.servermod.init.ModArmors;
+//import mod.sparkyfox.servermod.gui.GuiCarpentryBench;
+//import mod.sparkyfox.servermod.gui.GuiType;
 import mod.sparkyfox.servermod.init.ModBlocks;
 import mod.sparkyfox.servermod.init.ModItems;
 import mod.sparkyfox.servermod.init.ModProps;
@@ -25,26 +25,24 @@ import mod.sparkyfox.servermod.render.RenderSMGRounds;
 import mod.sparkyfox.servermod.world.WorldGenOre;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleFlame;
 import net.minecraft.client.particle.ParticleSmokeNormal;
 import net.minecraft.client.renderer.ItemModelMesher;
-import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.client.event.ModelBakeEvent;
-import net.minecraftforge.client.model.IModel;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -52,10 +50,7 @@ import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ClientProxy extends CommonProxy {
 	
@@ -287,6 +282,47 @@ public class ClientProxy extends CommonProxy {
        ObfuscationReflectionHelper.setPrivateValue(ParticleSmokeNormal.class, (ParticleSmokeNormal)fx, Float.valueOf(scale), 0);
      }
    }
+   /**
+   public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+   {
+     if (ID > GuiType.values().length)
+       return null;
+     GuiType gui = GuiType.values()[ID];
+     Container container = getContainer(gui, player, world, x, y, z);
+     return getGui(gui, container, x, y, z);
+   }
+   
+   private GuiScreen getGui(GuiType gui, Container container, int x, int y, int z) {
+     if (gui == GuiType.CARPENTRY_BENCH) {
+       return new GuiCarpentryBench((ContainerCarpentryBench)container);
+     }
+	return null;
+
+   }
+   
+   public void openGui(GuiType gui, int x, int y, int z)
+   {
+     Minecraft minecraft = Minecraft.getMinecraft();
+     
+     Container container = getContainer(gui, minecraft.player, minecraft.world, x, y, z);
+     GuiScreen guiscreen = getGui(gui, container, x, y, z);
+     
+     if (guiscreen != null) {
+       minecraft.displayGuiScreen(guiscreen);
+     }
+   }
+   
+   public void openGui(EntityPlayer player, Object guiscreen)
+   {
+     Minecraft minecraft = Minecraft.getMinecraft();
+     if ((!player.world.isRemote) || (!(guiscreen instanceof GuiScreen))) {
+       return;
+     }
+     if (guiscreen != null) {
+       minecraft.displayGuiScreen((GuiScreen)guiscreen);
+     }
+   }
+ /**
    /**
 	// Model related
 	

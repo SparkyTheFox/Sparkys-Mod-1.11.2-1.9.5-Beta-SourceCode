@@ -340,7 +340,11 @@ public class ModNames {
 	public static final String BulletProofGlassBlack = "BulletProofGlassBlack";
 	public static final String ReinforcedGlass = "ReinforcedGlass";
 	public static final String Window = "Window";
-	public static final String BigWindow = "BigWindow";	
+	public static final String BigWindow = "BigWindow";
+	public static final String SniperRounds = "SniperRounds";	
+	public static final String AssaultRifleRounds = "AssaultRifleRounds";
+	public static final String MagnumRounds = "MagnumRounds";
+	public static final String CarpentryBench = "CarpentryBench";
 
 
 	

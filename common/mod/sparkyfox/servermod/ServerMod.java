@@ -3,6 +3,7 @@ package mod.sparkyfox.servermod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+//import mod.sparkyfox.servermod.CarpentryBench.ModGuiHandlerCarpentryBench;
 import mod.sparkyfox.servermod.entity.EntityMagicProjectile;
 import mod.sparkyfox.servermod.entity.EntityProjectile;
 import mod.sparkyfox.servermod.industrialFreezer.ModGuiHandler;
@@ -80,6 +81,8 @@ public class ServerMod {
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event); 
 		sounds = new ModSoundEvents();
+		//MinecraftForge.EVENT_BUS.register(new ServerEventsHandler());
+	//	NetworkRegistry.INSTANCE.registerGuiHandler(this, proxy);
 		Channel = NetworkRegistry.INSTANCE.newEventDrivenChannel("servermod");
 		ModSlab.init();
 		ModSlab.register();
@@ -119,6 +122,7 @@ public class ServerMod {
 		OreRecipeHandler.registerCraftingRecipes();
 		OreRecipeHandler.registerFurnaceRecipes();
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new ModGuiHandler());
+		//NetworkRegistry.INSTANCE.registerGuiHandler(instance, new ModGuiHandlerCarpentryBench());
 		entity = new ModEntities();//this is causing the server side problem
 		//if i take out "entity = new ModEntities();" and put in
 		/**

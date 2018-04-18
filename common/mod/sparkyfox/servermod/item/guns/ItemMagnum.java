@@ -85,7 +85,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
          }
        
        if (!player.capabilities.isCreativeMode)//Translation: if the player is not in creative mode 
-         consumeItem(player, ModItems.SMGRounds);//Translation: then the magnum WILL use Ammo
+         consumeItem(player, ModItems.MagnumRounds);//Translation: then the magnum WILL use Ammo
        compound.setBoolean("IsLoaded2", false);//Translation: then the magnum will not be loaded after its used ammo
      }
      
@@ -112,7 +112,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
      int ticks = getMaxItemUseDuration(stack) - count;
      
      if ((!player.capabilities.isCreativeMode) && (stack.hasTagCompound()) && 
-       (stack.getTagCompound().getBoolean("Reloading2")) && (hasItem(player, ModItems.SMGRounds)) && 
+       (stack.getTagCompound().getBoolean("Reloading2")) && (hasItem(player, ModItems.MagnumRounds)) && 
        (ticks == 2)) {//how long it takes to reload
        playSound(player, ModSoundEvents.magnumreload, 1.0F, 1.0F);
        stack.setTagInfo("IsLoaded2", new NBTTagByte((byte)1));
@@ -127,7 +127,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
      NBTTagCompound compound = itemstack.getTagCompound();
      if (compound == null)
        itemstack.setTagCompound(compound = new NBTTagCompound());
-     if ((!player.capabilities.isCreativeMode) && (hasItem(player, ModItems.SMGRounds)) && (!compound.getBoolean("IsLoaded2")))
+     if ((!player.capabilities.isCreativeMode) && (hasItem(player, ModItems.MagnumRounds)) && (!compound.getBoolean("IsLoaded2")))
        itemstack.setTagInfo("Reloading2", new NBTTagByte((byte)1));
      player.setActiveHand(hand);
      return new ActionResult(net.minecraft.util.EnumActionResult.SUCCESS, itemstack);

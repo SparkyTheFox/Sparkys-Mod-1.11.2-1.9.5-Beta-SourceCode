@@ -27,6 +27,8 @@ RedButtonservermod:RedButton.name=The Big Red Button
 RedButton2servermod:RedButton2.name=The Red Button
 TechiteOreservermod:TechiteOre.name=Techite Ore
 IndustrialFreezerservermod:IndustrialFreezer.name=Industrial Freezer
+CarpentryBenchservermod:CarpentryBench.name=Carpentry Bench
+
 
 tile.stairs_diamond.name=Diamond Stairs
 tile.stairs_gold.name=Gold Stairs
@@ -187,8 +189,15 @@ item.OdstHelmet.name=ODST Helmet
 item.OdstChestplate.name=ODST Chestplate
 item.OdstLeggings.name=ODST Leggings
 item.OdstBoots.name=ODST Boots
-SMGservermod:SMG.name=M7S Submachine Gun
+SMGservermod:SMG.name=Silenced M7S Submachine Gun
+SMG2servermod:SMG2.name=M7S Submachine Gun
+AssaultRifleservermod:AssaultRifle.name=MA3 Assault Rifle
+Magnumservermod:Magnum.name=M6C/SOCOM Magnum
+Sniperservermod:Sniper.name=SRS99C-S2 Anti-Materiel Sniper Rifle
 SMGRoundsservermod:SMGRounds.name=5x23mmRounds
+SniperRoundsservermod:SniperRounds.name=14.5×114mmRounds
+MagnumRoundsservermod:MagnumRounds.name12.7×40mmRounds
+AssaultRifleRoundsservermod:AssaultRifleRounds.name=7.62×51mm FMJ-APRounds
 AK4Uservermod:AK4U.name=AK-47
 AK4URoundsservermod:AK4URounds.name=7.62x39mmRounds
 Kevlarservermod:Kevlar.name=Kevlar

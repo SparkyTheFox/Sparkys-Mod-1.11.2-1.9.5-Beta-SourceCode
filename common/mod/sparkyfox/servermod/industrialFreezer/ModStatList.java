@@ -32,10 +32,12 @@ public class ModStatList extends StatList
 {
 
     public static final StatBase INDUSTRIAL_FREEZER_INTERACTION = (new StatBasic("stat.industrialfreezerInteraction", new TextComponentTranslation("stat.industrialfreezerInteraction", new Object[0]))).registerStat();
-   
+    public static final StatBase CARPENTRY_BENCH_INTERACTION = (new StatBasic("stat.carpentrybenchInteraction", new TextComponentTranslation("stat.carpentrybenchInteraction", new Object[0]))).registerStat();
+    
     private static void replaceAllSimilarBlocks(StatBase[] stat, boolean useItemIds)
     {
         mergeStatBases(stat, Blocks.LIT_FURNACE, ModBlocks.IndustrialFreezer, useItemIds);
+        mergeStatBases(stat, Blocks.CRAFTING_TABLE, ModBlocks.CarpentryBench, useItemIds);
 
     }
 

@@ -1,6 +1,7 @@
  package mod.sparkyfox.servermod.init;
  
- import mod.sparkyfox.servermod.item.ItemBasic;
+ //import mod.sparkyfox.servermod.CarpantryBench.ItemCarpentryBench;
+import mod.sparkyfox.servermod.item.ItemBasic;
 import mod.sparkyfox.servermod.item.ItemHidden;
 //import mod.sparkyfox.servermod.item.ItemOrb;
 import net.minecraft.item.Item;
@@ -42,6 +43,7 @@ import net.minecraftforge.oredict.OreDictionary;
    public static Item orb;
    public static Item orb_broken;
    public static Item lighter;
+   public static Item CarpentryBench;
 
    
    public static void Load()
@@ -80,6 +82,7 @@ import net.minecraftforge.oredict.OreDictionary;
      spell_holy = new ItemHidden().register("spell_holy");
 
      broken_arrow = new ItemHidden().register("broken_arrow");
+    // CarpentryBench = new ItemCarpentryBench();
 
 
      

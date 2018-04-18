@@ -115,7 +115,7 @@ public class ItemAssaultRifle extends ItemBasic {
       }
        int shotsleft = compound.getInteger("ShotsLeft") - ticks / 6;
        if (!player.capabilities.isCreativeMode) {
-         if ((compound.getBoolean("Reloading2")) && (hasItem(player, ModItems.SMGRounds))) {
+         if ((compound.getBoolean("Reloading2")) && (hasItem(player, ModItems.AssaultRifleRounds))) {
            if ((ticks > 0) && (ticks <= 1)) {//how long it will take to reload?
                int ticks2 = getMaxItemUseDuration(stack) - count;//set the fire duration
                if (ticks2 % 1 != 0) {//0.5= fire rate lower the faster
@@ -125,7 +125,7 @@ public class ItemAssaultRifle extends ItemBasic {
           }
            return;
         }
-         if ((shotsleft <= 0) || (!hasItem(player, ModItems.SMGRounds)))//if smg has no rounds left
+         if ((shotsleft <= 0) || (!hasItem(player, ModItems.AssaultRifleRounds)))//if smg has no rounds left
          {  
              int ticks1 = getMaxItemUseDuration(stack) - count;//set the fire duration
              if (ticks1 % 1111.5 != 0) {//0.5= fire rate lower the faster
@@ -137,7 +137,7 @@ public class ItemAssaultRifle extends ItemBasic {
       }
       
        if (!player.capabilities.isCreativeMode) {//if (!)? Player only is in creative mode
-         consumeItem(player, ModItems.SMGRounds);//Use SMG Rounds
+         consumeItem(player, ModItems.AssaultRifleRounds);//Use SMG Rounds
       }
        compound.removeTag("Reloading2");//Doesnt reload
     }
@@ -155,7 +155,7 @@ public class ItemAssaultRifle extends ItemBasic {
   public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand)
   {
      ItemStack itemstack = player.getHeldItem(hand);
-     if ((!player.capabilities.isCreativeMode) && (!hasItem(player, ModItems.SMGRounds)))//if player is in creative mode and (!)Doesnt have Item(smg rounds)
+     if ((!player.capabilities.isCreativeMode) && (!hasItem(player, ModItems.AssaultRifleRounds)))//if player is in creative mode and (!)Doesnt have Item(smg rounds)
        itemstack.setTagInfo("Reloading2", new net.minecraft.nbt.NBTTagByte((byte)1));
      player.setActiveHand(hand);
      return new ActionResult(net.minecraft.util.EnumActionResult.SUCCESS, itemstack);

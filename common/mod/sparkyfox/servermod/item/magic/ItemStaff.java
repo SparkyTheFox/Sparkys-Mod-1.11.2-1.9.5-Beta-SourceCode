@@ -163,7 +163,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
      if ((stack.getItem() == ModWeapons.iron_staff) || (stack.getItem() == ModWeapons.mithril_staff)) {
        return new ItemStack(ModFunItems.spell_holy);
      }
-     if (stack.getItem() == ModWeapons.bronze_staff) {
+     if (stack.getItem() == ModWeapons.brass_staff) {
        return new ItemStack(ModFunItems.spell_lightning);
      }
      if (stack.getItem() == ModWeapons.golden_staff) {
@@ -188,7 +188,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
        ServerMod.proxy.spawnParticle(entity, "Spell", new Object[] { Integer.valueOf(5649239), Integer.valueOf(2) });
        ServerMod.proxy.spawnParticle(entity, "Spell", new Object[] { Integer.valueOf(4400964), Integer.valueOf(2) });
      }
-     else if (stack.getItem() == ModWeapons.bronze_staff) {
+     else if (stack.getItem() == ModWeapons.brass_staff) {
        ServerMod.proxy.spawnParticle(entity, "Spell", new Object[] { Integer.valueOf(8648694), Integer.valueOf(2) });
        ServerMod.proxy.spawnParticle(entity, "Spell", new Object[] { Integer.valueOf(6091007), Integer.valueOf(2) });
      }

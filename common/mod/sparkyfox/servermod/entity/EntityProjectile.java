@@ -60,7 +60,7 @@ public class EntityProjectile extends EntityThrowable
    public boolean destroyedOnEntityHit = true;
    private EntityLivingBase thrower;
    private String throwerName = null;
-   private int ticksInGround;
+ //  private int ticksInGround;
    public int ticksInAir = 0;
    private double accelerationX;
    private double accelerationY;
@@ -157,7 +157,7 @@ public class EntityProjectile extends EntityThrowable
      this.accelerationX = (par1 / f2 * 0.1D);
      this.accelerationY = (par3 / f2 * 0.1D);
      this.accelerationZ = (par5 / f2 * 0.1D);
-     this.ticksInGround = 0;
+   //  this.ticksInGround = 0;
   }
   
 
@@ -204,7 +204,7 @@ public class EntityProjectile extends EntityThrowable
       
        if ((axisalignedbb != null) && (((List) axisalignedbb).contains(new Vec3d(this.posX, this.posY, this.posZ))))
       {
-         this.inGround = true;
+      //   this.inGround = true;
       }
     }
     
@@ -215,9 +215,10 @@ public class EntityProjectile extends EntityThrowable
      if (this.inGround) {
        int j = block.getMetaFromState(state);
        if ((block == this.inTile) && (j == this.inData)) {
-         this.ticksInGround += 1;
+        // this.ticksInGround += 1;
         
-         if (this.ticksInGround == 1200) {
+      //   if (this.ticksInGround == 1200)
+         {
            setDead();
         }
       }
@@ -226,7 +227,7 @@ public class EntityProjectile extends EntityThrowable
          this.motionX *= this.rand.nextFloat() * 0.2F;
          this.motionY *= this.rand.nextFloat() * 0.2F;
          this.motionZ *= this.rand.nextFloat() * 0.2F;
-         this.ticksInGround = 0;
+         //this.ticksInGround = 0;
          this.ticksInAir = 0;
       }
     }
@@ -490,7 +491,7 @@ public class EntityProjectile extends EntityThrowable
        this.posX -= this.motionX / f2 * 0.05000000074505806D;
        this.posY -= this.motionY / f2 * 0.05000000074505806D;
        this.posZ -= this.motionZ / f2 * 0.05000000074505806D;
-       this.inGround = true;
+     //  this.inGround = true;
        this.arrowShake = 7;
       
        if (!hasGravity()) {

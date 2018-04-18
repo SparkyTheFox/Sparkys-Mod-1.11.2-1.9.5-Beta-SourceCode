@@ -2,7 +2,7 @@
     "ambientocclusion": false,
     "textures": {
 		"cross2": "servermod:blocks/adventure/savestar",
-        "particle": "#cross"
+        "particle": "servermod:blocks/adventure/savestar"
     },
     "elements": [
         {   "from": [ 0.8, 0, 8 ],

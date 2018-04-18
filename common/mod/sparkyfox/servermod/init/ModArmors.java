@@ -31,10 +31,10 @@ import net.minecraftforge.common.util.EnumHelper;
    public static Item full_golden_chest;
    public static Item full_diamond_head;
    public static Item full_diamond_chest;
-   public static Item full_bronze_head;
-   public static Item full_bronze_chest;
-   public static Item full_bronze_legs;
-   public static Item full_bronze_boots;
+   public static Item full_brass_head;
+   public static Item full_brass_chest;
+   public static Item full_brass_legs;
+   public static Item full_brass_boots;
    public static Item full_wooden_head;
    public static Item full_wooden_chest;
    public static Item full_wooden_legs;
@@ -79,7 +79,7 @@ import net.minecraftforge.common.util.EnumHelper;
    public static Item iron_skirt;
    public static Item diamond_skirt;
    public static Item emerald_skirt;
-   public static Item bronze_skirt;
+   public static Item brass_skirt;
    public static Item demonic_skirt;
    public static Item mithril_skirt;
    
@@ -87,7 +87,7 @@ import net.minecraftforge.common.util.EnumHelper;
    {
      Class<?>[] types = { String.class, Integer.TYPE, int[].class, Integer.TYPE, SoundEvent.class, Float.TYPE };
      ItemArmor.ArmorMaterial armorMithril = (ItemArmor.ArmorMaterial)EnumHelper.addEnum(ItemArmor.ArmorMaterial.class, "MITHRIL", types, new Object[] { "", 40, new int[] {3, 6, 8, 3}, Integer.valueOf(20), SoundEvents.ITEM_ARMOR_EQUIP_IRON, Float.valueOf(2.0F) });
-     ItemArmor.ArmorMaterial armorBronze = (ItemArmor.ArmorMaterial)EnumHelper.addEnum(ItemArmor.ArmorMaterial.class, "BRONZE", types, new Object[] { "", 7, new int[] { 2, 5, 6, 2 }, Integer.valueOf(20), SoundEvents.ITEM_ARMOR_EQUIP_IRON, Float.valueOf(0.0F) });
+     ItemArmor.ArmorMaterial armorBrass = (ItemArmor.ArmorMaterial)EnumHelper.addEnum(ItemArmor.ArmorMaterial.class, "BRASS", types, new Object[] { "", 7, new int[] { 2, 5, 6, 2 }, Integer.valueOf(20), SoundEvents.ITEM_ARMOR_EQUIP_IRON, Float.valueOf(0.0F) });
      ItemArmor.ArmorMaterial armorEmerald = (ItemArmor.ArmorMaterial)EnumHelper.addEnum(ItemArmor.ArmorMaterial.class, "EMERALD", types, new Object[] { "", 35, new int[] { 3, 6, 8, 3 }, Integer.valueOf(5), SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Float.valueOf(2.0F) });
 
 
@@ -119,10 +119,10 @@ import net.minecraftforge.common.util.EnumHelper;
      full_diamond_head = new ItemArmorBasic(ItemArmor.ArmorMaterial.DIAMOND, EntityEquipmentSlot.HEAD, "full_diamond").register("full_diamond_head");
      full_diamond_chest = new ItemArmorBasic(ItemArmor.ArmorMaterial.DIAMOND, EntityEquipmentSlot.CHEST, "full_diamond").register("full_diamond_chest");
      
-     full_bronze_head = new ItemArmorBasic(armorBronze, EntityEquipmentSlot.HEAD, "full_bronze").register("full_bronze_head");
-     full_bronze_chest = new ItemArmorBasic(armorBronze, EntityEquipmentSlot.CHEST, "full_bronze").register("full_bronze_chest");
-     full_bronze_legs = new ItemArmorBasic(armorBronze, EntityEquipmentSlot.LEGS, "full_bronze").register("full_bronze_legs");
-     full_bronze_boots = new ItemArmorBasic(armorBronze, EntityEquipmentSlot.FEET, "full_bronze").register("full_bronze_boots");
+     full_brass_head = new ItemArmorBasic(armorBrass, EntityEquipmentSlot.HEAD, "full_brass").register("full_brass_head");
+     full_brass_chest = new ItemArmorBasic(armorBrass, EntityEquipmentSlot.CHEST, "full_brass").register("full_brass_chest");
+     full_brass_legs = new ItemArmorBasic(armorBrass, EntityEquipmentSlot.LEGS, "full_brass").register("full_brass_legs");
+     full_brass_boots = new ItemArmorBasic(armorBrass, EntityEquipmentSlot.FEET, "full_brass").register("full_brass_boots");
      
      
      full_wooden_head = new ItemArmorBasic(ItemArmor.ArmorMaterial.LEATHER, EntityEquipmentSlot.HEAD, "full_wooden").register("full_wooden_head");
@@ -182,7 +182,7 @@ import net.minecraftforge.common.util.EnumHelper;
 //     iron_skirt = new ItemArmorSkirt(ItemArmor.ArmorMaterial.IRON, "iron_layer").register("iron_skirt");
 //     diamond_skirt = new ItemArmorSkirt(ItemArmor.ArmorMaterial.DIAMOND, "diamond_layer").register("diamond_skirt");
 //     emerald_skirt = new ItemArmorSkirt(armorEmerald, "variedcommodities", "fullemerald").register("emerald_skirt");
-//     bronze_skirt = new ItemArmorSkirt(armorBronze, "variedcommodities", "fullbronze").register("bronze_skirt");
+//     brass_skirt = new ItemArmorSkirt(armorBrass, "variedcommodities", "fullbrass").register("brass_skirt");
 //     demonic_skirt = new ItemArmorSkirt(ItemArmor.ArmorMaterial.DIAMOND, "variedcommodities", "demonic").register("demonic_skirt");
 //     mithril_skirt = new ItemArmorSkirt(armorMithril, "variedcommodities", "mithril").register("mithril_skirt");
    }

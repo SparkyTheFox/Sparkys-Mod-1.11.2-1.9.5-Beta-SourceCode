@@ -2,6 +2,7 @@ package mod.sparkyfox.servermod.init;
 
 
 import mod.sparkyfox.servermod.ServerMod;
+import mod.sparkyfox.servermod.CarpentryBench.BlockCarpentryBench;
 import mod.sparkyfox.servermod.block.BlockBrassBlock;
 import mod.sparkyfox.servermod.block.BlockCobaltBlock;
 import mod.sparkyfox.servermod.block.BlockDemonicBlock;
@@ -206,6 +207,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 																									//Logic Registry\\
 	  
 	  public static BlockIndustrialFreezer IndustrialFreezer;
+	  public static BlockCarpentryBench CarpentryBench;
 	  //public static FluidTitanium FluidTitanium;
 	  
 //===============================================================================================================================================================================================\\
@@ -565,6 +567,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		  GameRegistry.register(IndustrialFreezer);
 		  GameRegistry.register(new ItemBlock(IndustrialFreezer), industrialfreezer);
 		  GameRegistry.registerTileEntity(TileEntityIndustrialFreezer.class, "industrialfreezer_tile_entity");
+		  
+		  ResourceLocation Carpentrybench = new ResourceLocation(ServerMod.MOD_ID, ModNames.CarpentryBench);
+		  CarpentryBench = new BlockCarpentryBench(false);
+		  CarpentryBench.setRegistryName(Carpentrybench);
+		  GameRegistry.register(CarpentryBench);
+		  GameRegistry.register(new ItemBlock(CarpentryBench), Carpentrybench);
+		 // GameRegistry.registerTileEntity(TileEntityCarpentryBench.class, "Carpentry_bench_tile_entity");
 
 //===============================================================================================================================================================================================\\
 																										//Initialise: Glass\\		  
@@ -1518,6 +1527,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			ModelResourceLocation industrialfreezer = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.IndustrialFreezer, "inventory");
 			ModelLoader.registerItemVariants(itemindustrialfreezer, industrialfreezer);
 			mesher.register(itemindustrialfreezer, 0, industrialfreezer);{	
+				
+			}
+			Item itemCarpentrybench = Item.getItemFromBlock(CarpentryBench);
+			ModelResourceLocation Carpentrybench = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.CarpentryBench, "inventory");
+			ModelLoader.registerItemVariants(itemCarpentrybench, Carpentrybench);
+			mesher.register(itemCarpentrybench, 0, Carpentrybench);{		
 //===============================================================================================================================================================================================\\
 																										//Model Meshes: Glass\\			
 				
@@ -2366,6 +2381,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			RedButton.addRecipes();
 			RedButton2.addRecipes();
 			IndustrialFreezer.addRecipes();
+			CarpentryBench.addRecipes();
 	  }
 	  
 //===============================================================================================================================================================================================\\

@@ -44,11 +44,13 @@ import mod.sparkyfox.servermod.item.food.ItemPizza5;
 import mod.sparkyfox.servermod.item.food.ItemPizza6;
 import mod.sparkyfox.servermod.item.food.ItemPizza7;
 import mod.sparkyfox.servermod.item.food.ItemPizza8;
-import mod.sparkyfox.servermod.item.guns.ItemAK4U;
 import mod.sparkyfox.servermod.item.guns.ItemAK4URounds;
+import mod.sparkyfox.servermod.item.guns.ItemAssaultRifleRounds;
+import mod.sparkyfox.servermod.item.guns.ItemMagnumRounds;
 import mod.sparkyfox.servermod.item.guns.ItemSMGBullet;
 import mod.sparkyfox.servermod.item.guns.ItemSMGBulletCasing;
 import mod.sparkyfox.servermod.item.guns.ItemSMGRounds;
+import mod.sparkyfox.servermod.item.guns.ItemSniperRounds;
 import mod.sparkyfox.servermod.item.ingots.ItemBrassIngot;
 import mod.sparkyfox.servermod.item.ingots.ItemCobaltIngot;
 import mod.sparkyfox.servermod.item.ingots.ItemDemonicIngot;
@@ -140,6 +142,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 	public static ItemDiamondKnife DiamondKnife;
 	//public static ItemSMG SMG;
 	public static ItemSMGRounds SMGRounds;
+	public static ItemSniperRounds SniperRounds;
+	public static ItemMagnumRounds MagnumRounds;
+	public static ItemAssaultRifleRounds AssaultRifleRounds;
 	//public static ItemAK4U AK4U;
 	public static ItemAK4URounds AK4URounds;
 	//public static ToolMaterial Titanium;
@@ -541,6 +546,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		AK4URounds = (ItemAK4URounds) new ItemAK4URounds();
 		AK4URounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AK4URounds)); 
 		GameRegistry.register(AK4URounds); 
+		
+		SniperRounds = (ItemSniperRounds) new ItemSniperRounds();
+		SniperRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.SniperRounds)); 
+		GameRegistry.register(SniperRounds); 
+		
+		AssaultRifleRounds = (ItemAssaultRifleRounds) new ItemAssaultRifleRounds();
+		AssaultRifleRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.AssaultRifleRounds)); 
+		GameRegistry.register(AssaultRifleRounds); 
+		
+		MagnumRounds = (ItemMagnumRounds) new ItemMagnumRounds();
+		MagnumRounds.setRegistryName(new ResourceLocation(ServerMod.MOD_ID, ModNames.MagnumRounds)); 
+		GameRegistry.register(MagnumRounds); 
 			
 //===============================================================================================================================================================================================\\
 				
@@ -1615,7 +1632,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		ModelResourceLocation smgrounds = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SMGRounds, "inventory");
 		ModelLoader.registerItemVariants(SMGRounds, smgrounds);
 		mesher.register(SMGRounds, 0, smgrounds); 
+		
+		ModelResourceLocation Sniperrounds = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.SniperRounds, "inventory");
+		ModelLoader.registerItemVariants(SniperRounds, Sniperrounds);
+		mesher.register(SniperRounds, 0, Sniperrounds); 
+		
+		ModelResourceLocation AssaultRiflerounds = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.AssaultRifleRounds, "inventory");
+		ModelLoader.registerItemVariants(AssaultRifleRounds, AssaultRiflerounds);
+		mesher.register(AssaultRifleRounds, 0, AssaultRiflerounds); 
 			
+		ModelResourceLocation Magnumrounds = new ModelResourceLocation(ServerMod.RESOURCE_PREFIX + ModNames.MagnumRounds, "inventory");
+		ModelLoader.registerItemVariants(MagnumRounds, Magnumrounds);
+		mesher.register(MagnumRounds, 0, Magnumrounds); 
 //===============================================================================================================================================================================================\\
 																											//Ammo\\
 		
